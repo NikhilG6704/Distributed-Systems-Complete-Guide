@@ -1,8 +1,10 @@
 # Distributed Systems Fieldnotes
 
-A visual, chapter-based guide to the supplied distributed-systems notes. The site includes standalone chapter pages, hundreds of source diagrams, animated topic flows, searchable chapter summaries, mind maps, a local file reader, explicit read/unread controls, bookmarks, collapsible sidebars, light and dark themes, and private notes. Formulas are typeset as MathML for offline rendering.
+A visual, chapter-based guide to the supplied distributed-systems notes. The site includes standalone chapter pages, hundreds of source diagrams, animated topic flows, searchable chapter summaries, mind maps, a local file reader with HTML-to-Markdown export, explicit read/unread controls, bookmarks, collapsible sidebars, light and dark themes, and private notes. Formulas are typeset as MathML for offline rendering.
 
-The root index and every generated chapter page carry the credit **Made by Nikhil Gupta**. The credit is part of the page source and is added to chapter pages by the generator. Because this is a collection of editable local HTML and source files, no client-side footer can be made technically impossible to remove; regenerating chapters restores the generated credit.
+Visit the [GitHub project](https://github.com/NikhilG6704/Distributed-Systems-Complete-Guide) for the source and updates. When sharing or adapting these notes, please credit the project and link back to its repository.
+
+This is a static site, so it cannot securely prevent visitors from copying text, downloading files, or viewing page source. A browser-side lock or disabled copy controls would be easy to bypass and would interfere with normal reading. The site instead makes the project link and reuse request visible on the index and chapter pages.
 
 ## Open the site
 
@@ -26,7 +28,7 @@ Then visit [http://localhost:8000](http://localhost:8000).
 | `build_chapters.py` | Builds the chapter HTML pages and embeds chapter data into the index. Uses Pandoc and Bleach. |
 | `styles.css` | Main responsive layout and dark theme. |
 | `light-mode.css` | High-contrast light theme overrides. |
-| `chapter-tools.js` | Notes, mind maps, file opening, read state, themes, and sidebar controls. |
+| `chapter-tools.js` | Notes, mind maps, file opening and HTML-to-Markdown conversion, read state, themes, and sidebar controls. |
 | `chapter-tools.css` | Chapter tools, transitions, overlays, and control layout. |
 | `visual-tools.css` | Flow diagrams and local file preview styles. |
 | `README.md` | Project guide, contribution notes, and roadmap. |

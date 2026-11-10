@@ -207,6 +207,83 @@
     panel.querySelector('[data-close-flow]').addEventListener('click', closeOverlay);
   }
 
+  function inlineMarkdown(node) {
+    if (node.nodeType === Node.TEXT_NODE) return node.nodeValue.replace(/\s+/g, ' ');
+    if (node.nodeType !== Node.ELEMENT_NODE) return '';
+    const tag = node.tagName.toLowerCase();
+    if (['script', 'style', 'noscript', 'svg', 'iframe', 'button', 'input'].includes(tag)) return '';
+    const inner = [...node.childNodes].map(inlineMarkdown).join('').replace(/\s+/g, ' ').trim();
+    if (!inner && tag !== 'img' && tag !== 'br') return '';
+    if (tag === 'strong' || tag === 'b') return `**${inner}**`;
+    if (tag === 'em' || tag === 'i') return `*${inner}*`;
+    if (tag === 'del' || tag === 's') return `~~${inner}~~`;
+    if (tag === 'code') return `\`${inner}\``;
+    if (tag === 'br') return '  \n';
+    if (tag === 'img') return `![${node.getAttribute('alt') || ''}](${node.getAttribute('src') || ''})`;
+    if (tag === 'a') {
+      const href = node.getAttribute('href') || '';
+      return href ? `[${inner || href}](${href})` : inner;
+    }
+    return inner;
+  }
+
+  function blockMarkdown(node, depth = 0) {
+    if (node.nodeType === Node.TEXT_NODE) return node.nodeValue.trim();
+    if (node.nodeType !== Node.ELEMENT_NODE) return '';
+    const tag = node.tagName.toLowerCase();
+    const cls = node.classList;
+    if (['script', 'style', 'noscript', 'svg', 'iframe', 'button', 'input', 'nav', 'aside'].includes(tag)
+      || ['topbar', 'sidebar', 'toc', 'site-footer', 'chapter-nav', 'article-meta'].some((name) => cls.contains(name))) return '';
+    const children = [...node.childNodes];
+    const blocks = () => children.map((child) => blockMarkdown(child, depth)).filter(Boolean).join('\n\n');
+    if (/^h[1-6]$/.test(tag)) return `${'#'.repeat(Number(tag[1]))} ${inlineMarkdown(node).trim()}`;
+    if (tag === 'pre') {
+      const code = node.querySelector('code');
+      const language = code?.className.match(/language-([\w+-]+)/)?.[1] || '';
+      return `\`\`\`${language}\n${(code || node).textContent.trim()}\n\`\`\``;
+    }
+    if (tag === 'ul' || tag === 'ol') {
+      return [...node.children].filter((child) => child.tagName.toLowerCase() === 'li').map((item, i) => {
+        const nested = [...item.children].filter((child) => ['ul', 'ol'].includes(child.tagName.toLowerCase()));
+        const lead = [...item.childNodes].filter((child) => !(child.nodeType === Node.ELEMENT_NODE && ['ul', 'ol'].includes(child.tagName.toLowerCase()))).map(inlineMarkdown).join('').trim();
+        const marker = tag === 'ol' ? `${i + 1}.` : '-';
+        const sub = nested.map((list) => blockMarkdown(list, depth + 1)).filter(Boolean).join('\n').replace(/^/gm, '  ');
+        return `${'  '.repeat(depth)}${marker} ${lead}${sub ? `\n${sub}` : ''}`;
+      }).join('\n');
+    }
+    if (tag === 'blockquote') return blocks().split('\n').map((line) => `> ${line}`).join('\n');
+    if (tag === 'hr') return '---';
+    if (tag === 'table') {
+      const rows = [...node.querySelectorAll('tr')].map((row) => [...row.children].map((cell) => inlineMarkdown(cell).replace(/\|/g, '\\|').trim()));
+      if (!rows.length) return '';
+      const line = (cells) => `| ${cells.join(' | ')} |`;
+      return [line(rows[0]), line(rows[0].map(() => '---')), ...rows.slice(1).map(line)].join('\n');
+    }
+    if (['p', 'div', 'section', 'article', 'main', 'header', 'figure', 'figcaption', 'dl', 'dt', 'dd'].includes(tag)) return blocks();
+    return inlineMarkdown(node);
+  }
+
+  function htmlToMarkdown(source, fallbackTitle = 'Converted document') {
+    const doc = new DOMParser().parseFromString(source, 'text/html');
+    const article = doc.querySelector('.article');
+    const content = article?.querySelector('.prose') || article || doc.querySelector('main') || doc.body;
+    const title = article?.querySelector('h1')?.textContent.trim() || doc.querySelector('h1')?.textContent.trim() || doc.title.trim() || fallbackTitle.replace(/\.(html?|xhtml)$/i, '');
+    const deck = article?.querySelector('.article-deck')?.textContent.trim();
+    let markdown = blockMarkdown(content).replace(/\n{3,}/g, '\n\n').trim();
+    if (title && markdown.startsWith(`# ${title}`)) markdown = markdown.slice(title.length + 2).trimStart();
+    return `${title ? `# ${title}\n\n` : ''}${deck ? `${deck}\n\n` : ''}${markdown}\n`;
+  }
+
+  function downloadMarkdown(markdown, name) {
+    const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = name.replace(/\.(html?|xhtml)$/i, '') + '.md';
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   async function openFile(file) {
     if (!file) return;
     const name = file.name || 'Local file';
@@ -234,13 +311,17 @@
     } else {
       content = `<div class="file-unavailable"><div class="file-symbol">↧</div><h3>${esc(name)}</h3><p>This file type is not previewable in the browser. Download it to open it with a compatible app.</p></div>`;
     }
+    const isHtml = ['html', 'htm', 'xhtml'].includes(ext);
     const mapAction = isText
       ? '<button class="tool-btn" data-map-file>Make mind map</button>'
+      : '';
+    const markdownAction = isHtml
+      ? '<button class="tool-btn" data-convert-markdown>Convert to .md</button>'
       : '';
     const panel = createOverlay(
       'file', name, `${(file.type || 'FILE').toUpperCase()} · ${size} · LOCAL PREVIEW`,
       `<div class="file-preview">${content}</div>`,
-      `<footer class="tool-foot"><span>Opened locally in this browser</span><div class="tool-actions">${mapAction}<button class="tool-btn" data-download-file>Download</button><button class="tool-btn primary" data-close-file>Close</button></div></footer>`,
+      `<footer class="tool-foot"><span>Opened locally in this browser</span><div class="tool-actions">${mapAction}${markdownAction}<button class="tool-btn" data-download-file>Download</button><button class="tool-btn primary" data-close-file>Close</button></div></footer>`,
     );
     activeObjectUrl = objectUrl;
     panel.querySelector('[data-close-file]').addEventListener('click', closeOverlay);
@@ -252,6 +333,9 @@
     panel.querySelector('[data-map-file]')?.addEventListener('click', () => {
       closeOverlay();
       openMindMap(outlineFromMarkdown(rawText || '', name.replace(/\.[^.]+$/, '')));
+    });
+    panel.querySelector('[data-convert-markdown]')?.addEventListener('click', () => {
+      downloadMarkdown(htmlToMarkdown(rawText || '', name), name);
     });
   }
 
@@ -308,6 +392,10 @@
     if (event.target.closest('[data-open-flow]')) openFlow();
     if (event.target.closest('[data-open-map-file]')) q('#map-file-input')?.click();
     if (event.target.closest('[data-open-file]')) q('#local-file-input')?.click();
+    if (event.target.closest('[data-export-markdown]')) {
+      const article = q('.article');
+      if (article) downloadMarkdown(htmlToMarkdown(article.outerHTML, pageTitle()), pageTitle());
+    }
     if (event.target.closest('#menu-toggle')) {
       if (!window.matchMedia('(max-width: 850px)').matches) toggleSide('left');
     }
