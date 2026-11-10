@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1240" viewBox="0 0 1440 1240">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="1240" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Two-Phase Commit: message sequence</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A YES vote is a durable promise to remain prepared until the global decision is learned.</text>
+<text x="1392" y="1220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="42.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="130.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">COORDINATOR</text>
+<line x1="130.0" y1="195" x2="130.0" y2="1060" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="632.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PARTICIPANT 1</text>
+<line x1="720.0" y1="195" x2="720.0" y2="1060" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="1222.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1310.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PARTICIPANT 2</text>
+<line x1="1310.0" y1="195" x2="1310.0" y2="1060" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="55" y="212" width="1330" height="36" rx="6" fill="#EAF2FB" stroke="none" stroke-width="0"/>
+<text x="75" y="236" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="start" style="">PHASE 1  •  PREPARE / VOTING</text>
+<line x1="130.0" y1="277" x2="720.0" y2="277" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="267" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(tx)</text>
+<line x1="130.0" y1="334" x2="1310.0" y2="334" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="324" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(tx)</text>
+<path d="M 720.0 391 C 835.0 361, 835.0 421, 720.0 396" fill="none" stroke="#148A83" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-teal)"/>
+<text x="720.0" y="381" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">force PREPARED + hold locks</text>
+<path d="M 1310.0 448 C 1425.0 418, 1425.0 478, 1310.0 453" fill="none" stroke="#148A83" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-teal)"/>
+<text x="1310.0" y="438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">force PREPARED + hold locks</text>
+<line x1="720.0" y1="505" x2="130.0" y2="505" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="425.0" y="495" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">YES vote</text>
+<line x1="1310.0" y1="562" x2="130.0" y2="562" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="720.0" y="552" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">YES vote</text>
+<rect x="55" y="596" width="1330" height="36" rx="6" fill="#F1EDFA" stroke="none" stroke-width="0"/>
+<text x="75" y="620" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="start" style="">PHASE 2  •  DURABLE DECISION</text>
+<path d="M 130.0 661 C 245.0 631, 245.0 691, 130.0 666" fill="none" stroke="#7257A8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-purple)"/>
+<text x="130.0" y="651" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">log COMMIT before sending</text>
+<line x1="130.0" y1="718" x2="720.0" y2="718" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="708" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">COMMIT(tx)</text>
+<line x1="130.0" y1="775" x2="1310.0" y2="775" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="765" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">COMMIT(tx)</text>
+<line x1="720.0" y1="832" x2="130.0" y2="832" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="822" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">ACK</text>
+<line x1="1310.0" y1="889" x2="130.0" y2="889" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="879" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">ACK</text>
+<rect x="80" y="936" width="1280" height="90" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="96" y="961" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">PROTOCOL NOTE</text>
+<text x="96" y="985.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">If either participant votes NO (or times out before becoming prepared), coordinator logs ABORT and sends ABORT to all participants.</text>
+<rect x="80" y="1040" width="1280" height="120" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.6"/>
+<text x="96" y="1065" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="start" style="">ALTERNATE NO-VOTE BRANCH</text>
+<text x="96" y="1089.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">If either participant votes NO, the coordinator records ABORT durably and sends ABORT to both participants. This branch is an alternative to the all-YES COMMIT</text>
+<text x="96" y="1106.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">path above.</text>
+</svg>

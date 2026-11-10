@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">SQS visibility timeout and redelivery</title><desc id="desc">Receipt hides a message temporarily; delete completes it. A worker crash can make the message visible again.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">SQS visibility timeout and redelivery</text>
+<text class="subtitle" x="66" y="88">Receipt hides a message temporarily; delete completes it. A worker crash can make the message visible again.</text>
+
+<rect x="90" y="320" width="205" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="90" y="320" width="205" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="108" y="359" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">SQS queue</text>
+<text x="108" y="387" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="108" dy="0">message M-42</tspan>
+<tspan x="108" dy="22">visible</tspan>
+</text>
+<rect x="430" y="320" width="210" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="430" y="320" width="210" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="448" y="359" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Worker A</text>
+<text x="448" y="387" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="448" dy="0">receive message</tspan>
+<tspan x="448" dy="22">visibility timer starts</tspan>
+</text>
+<rect x="780" y="205" width="230" height="130" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="780" y="205" width="230" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="798" y="244" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Success path</text>
+<text x="798" y="272" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="798" dy="0">process then DeleteMessage</tspan>
+</text>
+<rect x="780" y="475" width="230" height="130" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="780" y="475" width="230" height="9" rx="5" fill="#C43D4B" stroke="#C43D4B" stroke-width="0"/>
+<text x="798" y="514" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Failure path</text>
+<text x="798" y="542" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="798" dy="0">crash before delete</tspan>
+</text>
+<rect x="1130" y="475" width="230" height="130" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1130" y="475" width="230" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="1148" y="514" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Worker B</text>
+<text x="1148" y="542" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1148" dy="0">redelivery after timeout</tspan>
+</text>
+<path d="M295,385 L430,385" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="362.5" y="360" text-anchor="middle" style="fill:#2563EB;font-weight:650;font-size:13px">ReceiveMessage</text>
+<path d="M640 355 H710 V270 H780" fill="none" stroke="#0B8A67" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<path d="M640 420 H710 V540 H780" fill="none" stroke="#C43D4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-red)"/>
+<path d="M1010,540 L1130,540" fill="none" stroke="#C17A0B" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+<text x="1070.0" y="515" text-anchor="middle" style="fill:#C17A0B;font-weight:650;font-size:13px">timeout expires</text>
+<text x="895" y="685" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Processing longer than the timeout?</text>
+<text x="895" y="710" text-anchor="middle" style="fill:#5F7087;font-size:14px">Extend visibility or design for safe duplicate handling.</text>
+<rect x="160" y="590" width="190" height="30" rx="15" fill="#F1EDFF" stroke="#7052C7" stroke-width="1.1"/>
+<text x="255.0" y="610" text-anchor="middle" style="fill:#7052C7;font-weight:700;font-size:13px">Idempotent consumer</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

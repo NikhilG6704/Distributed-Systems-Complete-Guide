@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Observed-Remove Set concurrent updates">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Observed-Remove Set concurrent updates</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">Unique add-tags preserve a concurrent add even when another replica removes an older observed tag</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="70" y="180" width="1460" height="560" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="94" y="218" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#7957C8" text-anchor="start">Element = “task-7”</text>
+<rect x="130" y="280" width="390" height="145" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="130" y="280" width="9" height="145" rx="5" fill="#D84B4B"/>
+<text x="158" y="318" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Replica A · observed remove</text>
+<text x="158" y="348" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="158" dy="0">Saw tag (A,12)</tspan>
+<tspan x="158" dy="22">Remove tombstones only (A,12)</tspan>
+</text>
+<rect x="1080" y="280" width="390" height="145" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1080" y="280" width="9" height="145" rx="5" fill="#0F9D8A"/>
+<text x="1108" y="318" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Replica B · concurrent add</text>
+<text x="1108" y="348" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1108" dy="0">Adds same element with tag (B,9)</tspan>
+<tspan x="1108" dy="22">Has not observed (A,12)</tspan>
+</text>
+<line x1="520" y1="350" x2="1070" y2="350" stroke="#7957C8" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-purple)"/>
+<text x="795.0" y="332.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7957C8" text-anchor="middle">updates cross after partition heals</text>
+<rect x="570" y="500" width="460" height="145" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="570" y="500" width="9" height="145" rx="5" fill="#27845B"/>
+<text x="598" y="538" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Merged OR-Set state</text>
+<text x="598" y="568" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="598" dy="0">Removed tags: {(A,12)}</tspan>
+<tspan x="598" dy="22">Live tags: {(B,9)}</tspan>
+<tspan x="598" dy="22">Element remains present</tspan>
+</text>
+<rect x="925" y="514" width="91" height="29" rx="14" fill="#E8F5ED"/>
+<text x="970.5" y="534" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#27845B" text-anchor="middle">PRESENT</text>
+<line x1="325" y1="425" x2="670" y2="500" stroke="#D84B4B" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="6 6"/>
+<line x1="1275" y1="425" x2="930" y2="500" stroke="#0F9D8A" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="6 6"/>
+<rect x="575" y="690" width="450" height="34" rx="17" fill="#E8F5ED"/>
+<text x="800.0" y="713" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#27845B" text-anchor="middle">Observed-remove semantics</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">If the add had been observed before remove, the corresponding tag would be removed; unique tags prevent accidental deletion of unseen concurrent adds.</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Consistent hashing</title><desc id="desc">A hash ring assigns keys to nodes while limiting remapping when membership changes.</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+ <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6d82"/></marker>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+</defs>
+<rect width="1280" height="760" fill="#f4f7fb"/>
+<rect x="0" y="0" width="1280" height="11" fill="#2563eb"/>
+<text x="54" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2563eb">DISTRIBUTED SYSTEMS  /  TRAFFIC MANAGEMENT</text>
+<text x="54" y="94" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#14243a">Consistent hashing</text>
+<text x="54" y="126" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#5d6d82">A hash ring assigns keys to nodes while limiting remapping when membership changes.</text>
+<line x1="54" y1="148" x2="1226" y2="148" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<circle cx="420" cy="420" r="210" fill="none" stroke="#cbd5e1" stroke-width="22"/>
+<circle cx="420" cy="210" r="35" fill="#2563eb" stroke="#ffffff" stroke-width="4"/>
+<text x="420" y="216" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#ffffff">A</text>
+<circle cx="601.86" cy="525.0" r="35" fill="#0f9d75" stroke="#ffffff" stroke-width="4"/>
+<text x="601.86" y="531.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#ffffff">B</text>
+<circle cx="238.14000000000001" cy="525.0" r="35" fill="#7556c8" stroke="#ffffff" stroke-width="4"/>
+<text x="238.14000000000001" y="531.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#ffffff">C</text>
+<circle cx="420.0" cy="175.0" r="7" fill="#0891b2" stroke="none" stroke-width="1"/>
+<circle cx="542.5" cy="207.8237760728125" r="7" fill="#e2e8f0" stroke="none" stroke-width="1"/>
+<circle cx="632.1762239271875" cy="297.5" r="7" fill="#0891b2" stroke="none" stroke-width="1"/>
+<circle cx="665.0" cy="420.0" r="7" fill="#e2e8f0" stroke="none" stroke-width="1"/>
+<circle cx="632.1762239271875" cy="542.5" r="7" fill="#0891b2" stroke="none" stroke-width="1"/>
+<circle cx="542.5" cy="632.1762239271875" r="7" fill="#e2e8f0" stroke="none" stroke-width="1"/>
+<circle cx="420.0" cy="665.0" r="7" fill="#0891b2" stroke="none" stroke-width="1"/>
+<circle cx="297.50000000000006" cy="632.1762239271875" r="7" fill="#e2e8f0" stroke="none" stroke-width="1"/>
+<circle cx="207.82377607281256" cy="542.5000000000001" r="7" fill="#0891b2" stroke="none" stroke-width="1"/>
+<circle cx="175.0" cy="420.00000000000006" r="7" fill="#e2e8f0" stroke="none" stroke-width="1"/>
+<circle cx="207.82377607281254" cy="297.5" r="7" fill="#0891b2" stroke="none" stroke-width="1"/>
+<circle cx="297.4999999999999" cy="207.8237760728126" r="7" fill="#e2e8f0" stroke="none" stroke-width="1"/>
+<text x="420" y="414" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800" fill="#14243a">HASH</text>
+<text x="420" y="442" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800" fill="#14243a">RING</text>
+<rect x="790" y="245" width="360" height="110" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="790" y="245" width="7" height="110" rx="4" fill="#0891b2"/>
+<text x="812" y="276" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Key K</text>
+<circle cx="815" cy="301" r="3" fill="#0891b2" stroke="none" stroke-width="1"/>
+<text x="828" y="305" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Hash key → clockwise successor</text>
+<circle cx="815" cy="319" r="3" fill="#0891b2" stroke="none" stroke-width="1"/>
+<text x="828" y="323" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Current owner: Node B</text>
+<rect x="790" y="390" width="360" height="110" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="790" y="390" width="7" height="110" rx="4" fill="#7556c8"/>
+<text x="812" y="421" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Virtual nodes</text>
+<circle cx="815" cy="446" r="3" fill="#7556c8" stroke="none" stroke-width="1"/>
+<text x="828" y="450" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Several positions per physical node</text>
+<circle cx="815" cy="464" r="3" fill="#7556c8" stroke="none" stroke-width="1"/>
+<text x="828" y="468" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Smoother ownership distribution</text>
+<rect x="790" y="535" width="360" height="90" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="790" y="535" width="7" height="90" rx="4" fill="#0f9d75"/>
+<text x="812" y="566" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Membership change</text>
+<circle cx="815" cy="591" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="828" y="595" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Only keys in affected arc remap</text>
+<line x1="650" y1="420" x2="770" y2="300" stroke="#2563eb" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="54" y="654" width="1172" height="64" rx="13" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="72" y="669" width="101.2" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="122.6" y="687" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">DESIGN NOTE</text>
+<text x="190" y="681" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Virtual nodes improve balance; replication and hot-key mitigation are still needed for skewed workloads.</text>
+<text x="1224" y="741" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="500" fill="#5d6d82">consistent-hashing-load-balancing.svg</text>
+</svg>

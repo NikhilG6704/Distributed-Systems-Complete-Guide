@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Load-balancer architecture components</title><desc id="desc">Separate the request data path from configuration, health, and telemetry.</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+ <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6d82"/></marker>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+</defs>
+<rect width="1280" height="760" fill="#f4f7fb"/>
+<rect x="0" y="0" width="1280" height="11" fill="#2563eb"/>
+<text x="54" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2563eb">DISTRIBUTED SYSTEMS  /  TRAFFIC MANAGEMENT</text>
+<text x="54" y="94" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#14243a">Load-balancer architecture components</text>
+<text x="54" y="126" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#5d6d82">Separate the request data path from configuration, health, and telemetry.</text>
+<line x1="54" y1="148" x2="1226" y2="148" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<circle cx="640" cy="410" r="85" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="640" y="400" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#2563eb">LOAD</text>
+<text x="640" y="426" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#2563eb">BALANCER</text>
+<line x1="640.0" y1="315.0" x2="640.0" y2="285.0" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="540.0" y="178.0" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="540.0" y="178.0" width="7" height="104" rx="4" fill="#2563eb"/>
+<text x="562.0" y="209.0" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Frontend listener</text>
+<circle cx="565.0" cy="234.0" r="3" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="578.0" y="238.0" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">VIP • port • TLS</text>
+<line x1="714.2739908344629" y1="350.76846882342033" x2="702.5465185974424" y2="332.0637747676583" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="680.7296668442453" y="245.77183566542794" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="680.7296668442453" y="245.77183566542794" width="7" height="104" rx="4" fill="#0891b2"/>
+<text x="702.7296668442453" y="276.77183566542794" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Routing engine</text>
+<circle cx="705.7296668442453" cy="301.77183566542794" r="3" fill="#0891b2" stroke="none" stroke-width="1"/>
+<text x="718.7296668442453" y="305.77183566542794" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Rules • algorithm •</text>
+<line x1="732.6181516572733" y1="431.13948872584984" x2="717.994232974546" y2="437.8151167445393" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="715.4870241927283" y="398.0537681121366" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="715.4870241927283" y="398.0537681121366" width="7" height="104" rx="4" fill="#0f9d75"/>
+<text x="737.4870241927283" y="429.0537681121366" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Target groups</text>
+<circle cx="740.4870241927283" cy="454.0537681121366" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="753.4870241927283" y="458.0537681121366" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Service-specific</text>
+<line x1="681.2189552161681" y1="495.5920424507298" x2="674.7106991294046" y2="522.6211084878024" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="618.0990730411604" y="520.1743962224355" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="618.0990730411604" y="520.1743962224355" width="7" height="104" rx="4" fill="#7556c8"/>
+<text x="640.0990730411604" y="551.1743962224355" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Health subsystem</text>
+<circle cx="643.0990730411604" cy="576.1743962224355" r="3" fill="#7556c8" stroke="none" stroke-width="1"/>
+<text x="656.0990730411604" y="580.1743962224355" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Active + passive</text>
+<line x1="598.7810447838319" y1="495.5920424507298" x2="605.2893008705954" y2="522.6211084878024" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="461.9009269588396" y="520.1743962224355" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="461.9009269588396" y="520.1743962224355" width="7" height="104" rx="4" fill="#d97706"/>
+<text x="483.9009269588396" y="551.1743962224355" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Backend instances</text>
+<circle cx="486.9009269588396" cy="576.1743962224355" r="3" fill="#d97706" stroke="none" stroke-width="1"/>
+<text x="499.9009269588396" y="580.1743962224355" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Registered endpoints</text>
+<line x1="547.3818483427267" y1="431.1394887258499" x2="562.0057670254541" y2="437.8151167445393" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="364.51297580727174" y="398.0537681121366" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="364.51297580727174" y="398.0537681121366" width="7" height="104" rx="4" fill="#dc5252"/>
+<text x="386.51297580727174" y="429.0537681121366" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Control plane</text>
+<circle cx="389.51297580727174" cy="454.0537681121366" r="3" fill="#dc5252" stroke="none" stroke-width="1"/>
+<text x="402.51297580727174" y="458.0537681121366" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Config rollout •</text>
+<line x1="565.7260091655371" y1="350.76846882342033" x2="577.4534814025576" y2="332.06377476765834" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="399.27033315575466" y="245.771835665428" width="200" height="104" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="399.27033315575466" y="245.771835665428" width="7" height="104" rx="4" fill="#64748b"/>
+<text x="421.27033315575466" y="276.771835665428" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Telemetry</text>
+<circle cx="424.27033315575466" cy="301.771835665428" r="3" fill="#64748b" stroke="none" stroke-width="1"/>
+<text x="437.27033315575466" y="305.771835665428" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Metrics • logs •</text>
+<rect x="54" y="654" width="1172" height="64" rx="13" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="72" y="669" width="101.2" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="122.6" y="687" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">DESIGN NOTE</text>
+<text x="190" y="681" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Control-plane changes configure the data plane; they should not sit synchronously in every request path.</text>
+<text x="1224" y="741" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="500" fill="#5d6d82">load-balancer-components.svg</text>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">RabbitMQ exchange routing</title><desc id="desc">The exchange applies routing rules and bindings; queues hold deliveries for consumers.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">RabbitMQ exchange routing</text>
+<text class="subtitle" x="66" y="88">The exchange applies routing rules and bindings; queues hold deliveries for consumers.</text>
+
+<rect x="70" y="370" width="175" height="120" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="70" y="370" width="175" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="88" y="409" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Producer</text>
+<text x="88" y="437" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="88" dy="0">publish + routing key</tspan>
+</text>
+<rect x="355" y="350" width="220" height="160" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="355" y="350" width="220" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="373" y="389" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Exchange</text>
+<text x="373" y="417" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="373" dy="0">route by type</tspan>
+<tspan x="373" dy="22">and binding</tspan>
+</text>
+<path d="M245,430 L355,430" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="650" y="185" width="245" height="125" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="650" y="185" width="245" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="668" y="224" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Direct</text>
+<text x="668" y="252" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="668" dy="0">exact key match</tspan>
+</text>
+<path d="M575 430 H615 V247 H650" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="920" y="190" width="210" height="110" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="920" y="190" width="210" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="938" y="229" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:17px">Queue 1</text>
+<text x="938" y="257" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="938" dy="0">consumer ACK</tspan>
+</text>
+<path d="M895,247 L920,247" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="950" y="185" width="245" height="125" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="950" y="185" width="245" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="968" y="224" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Fanout</text>
+<text x="968" y="252" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="968" dy="0">all bound queues</tspan>
+</text>
+<path d="M575 430 H615 V247 H650" fill="none" stroke="#0B8A67" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="1220" y="190" width="210" height="110" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1220" y="190" width="210" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="1238" y="229" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:17px">Queue 2</text>
+<text x="1238" y="257" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1238" dy="0">consumer ACK</tspan>
+</text>
+<path d="M1195,247 L1220,247" fill="none" stroke="#0B8A67" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+<rect x="650" y="440" width="245" height="125" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="650" y="440" width="245" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="668" y="479" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Topic</text>
+<text x="668" y="507" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="668" dy="0">pattern match</tspan>
+</text>
+<path d="M575 430 H615 V502 H650" fill="none" stroke="#C17A0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<rect x="920" y="445" width="210" height="110" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="920" y="445" width="210" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="938" y="484" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:17px">Queue 3</text>
+<text x="938" y="512" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="938" dy="0">consumer ACK</tspan>
+</text>
+<path d="M895,502 L920,502" fill="none" stroke="#C17A0B" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+<rect x="950" y="440" width="245" height="125" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="950" y="440" width="245" height="9" rx="5" fill="#0E8AA8" stroke="#0E8AA8" stroke-width="0"/>
+<text x="968" y="479" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Headers</text>
+<text x="968" y="507" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="968" dy="0">header predicates</tspan>
+</text>
+<path d="M575 430 H615 V502 H650" fill="none" stroke="#0E8AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1220" y="445" width="210" height="110" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1220" y="445" width="210" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="1238" y="484" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:17px">Queue 4</text>
+<text x="1238" y="512" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1238" dy="0">consumer ACK</tspan>
+</text>
+<path d="M1195,502 L1220,502" fill="none" stroke="#0E8AA8" stroke-width="2" stroke-linecap="round"/>
+<text x="720" y="775" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Publisher confirms and consumer acknowledgments protect different sides of the delivery path.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

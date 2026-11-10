@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Two-Phase Commit (2PC)</title><desc id="desc">Coordinator collects durable YES/NO votes, records one global decision, then distributes that decision to all participants.</desc>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Two-Phase Commit (2PC)</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Coordinator collects durable YES/NO votes, records one global decision, then distributes that decision to all participants.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="65" y="205" width="1470" height="110" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<text x="85" y="237" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Coordinator</text>
+<rect x="65" y="355" width="1470" height="110" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<text x="85" y="387" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Participant A</text>
+<rect x="65" y="505" width="1470" height="110" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<text x="85" y="537" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Participant B</text>
+<rect x="65" y="655" width="1470" height="110" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<text x="85" y="687" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Participant C</text>
+<rect x="285" y="225" width="185" height="70" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="303" y="256" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">BEGIN TX</text>
+<text x="303" y="285" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Assign transaction ID</text>
+<line x1="470" y1="260" x2="625" y2="400" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="610" y="375" width="150" height="32" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="685.0" y="397.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">PREPARE</text>
+<rect x="805" y="361" width="190" height="78" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="823" y="392" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Vote YES</text>
+<text x="823" y="421" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Log prepared state</text>
+<line x1="760" y1="400" x2="805" y2="400" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="995" y1="400" x2="1120" y2="260" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="470" y1="260" x2="625" y2="550" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="610" y="525" width="150" height="32" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="685.0" y="547.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">PREPARE</text>
+<rect x="805" y="511" width="190" height="78" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="823" y="542" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Vote YES</text>
+<text x="823" y="571" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Log prepared state</text>
+<line x1="760" y1="550" x2="805" y2="550" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="995" y1="550" x2="1120" y2="260" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="470" y1="260" x2="625" y2="700" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="610" y="675" width="150" height="32" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="685.0" y="697.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">PREPARE</text>
+<rect x="805" y="661" width="190" height="78" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="823" y="692" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Vote YES</text>
+<text x="823" y="721" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Log prepared state</text>
+<line x1="760" y1="700" x2="805" y2="700" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="995" y1="700" x2="1120" y2="260" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1120" y="225" width="190" height="70" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="1138" y="256" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Decision log</text>
+<text x="1138" y="285" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">COMMIT durable</text>
+<rect x="1330" y="240" width="150" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1405.0" y="262.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">COMMIT</text>
+<line x1="1310" y1="260" x2="1370" y2="400" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1325" y="375" width="160" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1405.0" y="397.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">COMMIT</text>
+<line x1="1310" y1="260" x2="1370" y2="550" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1325" y="525" width="160" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1405.0" y="547.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">COMMIT</text>
+<line x1="1310" y1="260" x2="1370" y2="700" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1325" y="675" width="160" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1405.0" y="697.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">COMMIT</text>
+<rect x="270" y="790" width="390" height="55" rx="10" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="290" y="824" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#B63C43" font-weight="700" text-anchor="start" font-style="normal">Coordinator loss after YES → in-doubt</text>
+<rect x="700" y="790" width="380" height="55" rx="10" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="720" y="824" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#A76512" font-weight="700" text-anchor="start" font-style="normal">Participant recovery consults durable log</text>
+<rect x="1120" y="790" width="380" height="55" rx="10" fill="#F1EDFA" stroke="#6D55A5" stroke-width="1"/>
+<text x="1140" y="824" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#6D55A5" font-weight="700" text-anchor="start" font-style="normal">Do not unilaterally abort after YES</text>
+<line x1="54" y1="846" x2="1546" y2="846" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="875" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">2PC provides atomic commit coordination, not consensus or a complete isolation model; prepared participants may block.</text>
+</svg>

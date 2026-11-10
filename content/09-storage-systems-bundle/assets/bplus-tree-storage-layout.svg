@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">B+ tree storage layout</title><desc id="desc">Internal pages route searches; linked leaf pages hold ordered entries and record references.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">B+ tree storage layout</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">Internal pages route searches; linked leaf pages hold ordered entries and record references.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="565" y="145" width="310" height="75" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="565" y="145" width="7" height="75" rx="4" fill="#7656C8"/>
+<text x="583" y="174" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Root page</text>
+<text x="583" y="198" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="583" dy="0">[ 40 | 80 ]</tspan></text>
+<rect x="245" y="310" width="260" height="78" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="245" y="310" width="7" height="78" rx="4" fill="#2F6FED"/>
+<text x="263" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Internal page A</text>
+<text x="263" y="363" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="263" dy="0">[ 10 | 20 | 30 ]</tspan></text>
+<rect x="650" y="310" width="260" height="78" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="650" y="310" width="7" height="78" rx="4" fill="#2F6FED"/>
+<text x="668" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Internal page B</text>
+<text x="668" y="363" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="668" dy="0">[ 50 | 60 | 70 ]</tspan></text>
+<rect x="1055" y="310" width="260" height="78" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="1055" y="310" width="7" height="78" rx="4" fill="#2F6FED"/>
+<text x="1073" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Internal page C</text>
+<text x="1073" y="363" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1073" dy="0">[ 90 | 100 | 110 ]</tspan></text>
+<path d="M720,220 V260 H375 V310" fill="none" stroke="#2F6FED" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M720,220 V260 H780 V310" fill="none" stroke="#2F6FED" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M720,220 V260 H1185 V310" fill="none" stroke="#2F6FED" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<rect x="65" y="500" width="230" height="105" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="65" y="500" width="7" height="105" rx="4" fill="#119A8A"/>
+<text x="83" y="529" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Leaf page 1</text>
+<text x="83" y="553" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="83" dy="0">keys: 1–19</tspan><tspan x="83" dy="18.46">record / TID pointers</tspan></text>
+<rect x="335" y="500" width="230" height="105" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="335" y="500" width="7" height="105" rx="4" fill="#119A8A"/>
+<text x="353" y="529" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Leaf page 2</text>
+<text x="353" y="553" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="353" dy="0">keys: 21–39</tspan><tspan x="353" dy="18.46">record / TID pointers</tspan></text>
+<rect x="605" y="500" width="230" height="105" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="605" y="500" width="7" height="105" rx="4" fill="#119A8A"/>
+<text x="623" y="529" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Leaf page 3</text>
+<text x="623" y="553" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="623" dy="0">keys: 41–59</tspan><tspan x="623" dy="18.46">record / TID pointers</tspan></text>
+<rect x="875" y="500" width="230" height="105" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="875" y="500" width="7" height="105" rx="4" fill="#119A8A"/>
+<text x="893" y="529" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Leaf page 4</text>
+<text x="893" y="553" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="893" dy="0">keys: 61–79</tspan><tspan x="893" dy="18.46">record / TID pointers</tspan></text>
+<rect x="1145" y="500" width="230" height="105" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1145" y="500" width="7" height="105" rx="4" fill="#119A8A"/>
+<text x="1163" y="529" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Leaf page 5</text>
+<text x="1163" y="553" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1163" dy="0">keys: 81–99</tspan><tspan x="1163" dy="18.46">record / TID pointers</tspan></text>
+<path d="M375,388 V440 H180 V500" fill="none" stroke="#5E7086" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M375,388 V440 H450 V500" fill="none" stroke="#5E7086" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M780,388 V440 H720 V500" fill="none" stroke="#5E7086" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M780,388 V440 H990 V500" fill="none" stroke="#5E7086" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M1185,388 V440 H1260 V500" fill="none" stroke="#5E7086" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M295,555 L330,555" fill="none" stroke="#119A8A" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<path d="M565,555 L600,555" fill="none" stroke="#119A8A" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<path d="M835,555 L870,555" fill="none" stroke="#119A8A" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<path d="M1105,555 L1140,555" fill="none" stroke="#119A8A" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="72" y="640" width="165" height="28" rx="14" fill="#E6F6F3" stroke="#E6F6F3" stroke-width="1"/>
+<text x="154.5" y="659" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#119A8A" text-anchor="middle" style="">Leaf sibling links</text>
+<text x="280" y="660" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#119A8A" text-anchor="start" style="">Range scan follows adjacent leaves without returning to the root.</text>
+<path d="M720,220 V270 H780 V310 V440 H720 V500" fill="none" stroke="#D94B4B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-red)"/>
+<rect x="910" y="145" width="155" height="28" rx="14" fill="#FDECEC" stroke="#FDECEC" stroke-width="1"/>
+<text x="987.5" y="164" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#D94B4B" text-anchor="middle" style="">Point lookup path</text>
+<path d="M910,160 H895 V185 H875" fill="none" stroke="#D94B4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-red)"/>
+<path d="M180,605 H990" fill="none" stroke="#119A8A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<rect x="1050" y="645" width="160" height="28" rx="14" fill="#E6F6F3" stroke="#E6F6F3" stroke-width="1"/>
+<text x="1130.0" y="664" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#119A8A" text-anchor="middle" style="">Range scan</text>
+<rect x="1010" y="720" width="340" height="78" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1010" y="720" width="7" height="78" rx="4" fill="#D58A19"/>
+<text x="1028" y="749" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#23364D" text-anchor="start" style="">Page-oriented design</text>
+<text x="1028" y="773" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1028" dy="0">A page read brings many separator keys or leaf entries into memory.</tspan></text>
+<text x="720" y="850" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#5E7086" text-anchor="middle" style="">High fan-out keeps tree height small; actual fan-out depends on page size, key width, pointers, and fill factor.</text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">bplus-tree-storage-layout.svg</text>
+</svg>

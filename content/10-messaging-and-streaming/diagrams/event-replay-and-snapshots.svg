@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Event replay and snapshots</title><desc id="desc">Restore from a known snapshot, then replay only subsequent events to reconstruct state efficiently.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Event replay and snapshots</text>
+<text class="subtitle" x="66" y="88">Restore from a known snapshot, then replay only subsequent events to reconstruct state efficiently.</text>
+
+<text x="90" y="170" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">Event stream · sequence order</text>
+<rect x="90" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.7"/>
+<text x="134" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E1</text>
+<text x="134" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">1</text>
+<rect x="195" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.7"/>
+<text x="239" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E2</text>
+<text x="239" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">2</text>
+<rect x="300" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.7"/>
+<text x="344" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E3</text>
+<text x="344" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">3</text>
+<rect x="405" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.7"/>
+<text x="449" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E4</text>
+<text x="449" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">4</text>
+<rect x="510" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.7"/>
+<text x="554" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E5</text>
+<text x="554" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">5</text>
+<rect x="615" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.7"/>
+<text x="659" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E6</text>
+<text x="659" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">6</text>
+<rect x="720" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.7"/>
+<text x="764" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E7</text>
+<text x="764" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">7</text>
+<rect x="825" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.7"/>
+<text x="869" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E8</text>
+<text x="869" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">8</text>
+<rect x="930" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.7"/>
+<text x="974" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E9</text>
+<text x="974" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">9</text>
+<rect x="1035" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.7"/>
+<text x="1079" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E10</text>
+<text x="1079" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">10</text>
+<rect x="1140" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.7"/>
+<text x="1184" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E11</text>
+<text x="1184" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">11</text>
+<rect x="1245" y="225" width="88" height="72" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.7"/>
+<text x="1289" y="253" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">E12</text>
+<text x="1289" y="278" text-anchor="middle" style="fill:#5F7087;font-size:12px">12</text>
+<rect x="710" y="190" width="10" height="145" rx="3" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="715" y="365" text-anchor="middle" style="fill:#C17A0B;font-weight:700;font-size:14px">Snapshot at seq 6</text>
+<path d="M710 390 V450 H320 V500" fill="none" stroke="#C17A0B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-amber)"/>
+<rect x="100" y="500" width="330" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="100" y="500" width="330" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="118" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Load snapshot</text>
+<text x="118" y="567" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="118" dy="0">State after event 6</tspan>
+<tspan x="118" dy="22">e.g. balance = $420</tspan>
+</text>
+<rect x="555" y="500" width="330" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="555" y="500" width="330" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="573" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Replay E7–E12</text>
+<text x="573" y="567" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="573" dy="0">Apply later events in order</tspan>
+<tspan x="573" dy="22">to reach current state</tspan>
+</text>
+<rect x="1010" y="500" width="330" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1010" y="500" width="330" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="1028" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Recovered aggregate</text>
+<text x="1028" y="567" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1028" dy="0">Same logical state</tspan>
+<tspan x="1028" dy="22">without replaying full history</tspan>
+</text>
+<path d="M430,565 L555,565" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M885,565 L1010,565" fill="none" stroke="#0B8A67" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+<text x="720" y="735" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Replay handlers must be deterministic; external side effects must be suppressed or separately controlled.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

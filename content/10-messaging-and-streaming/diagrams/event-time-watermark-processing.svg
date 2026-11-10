@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Event time, watermarks and late records</title><desc id="desc">Watermarks estimate event-time progress; a record arriving behind the watermark follows the configured late-data policy.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Event time, watermarks and late records</text>
+<text class="subtitle" x="66" y="88">Watermarks estimate event-time progress; a record arriving behind the watermark follows the configured late-data policy.</text>
+
+<text x="90" y="160" text-anchor="start" style="fill:#5F7087;font-size:16px">Arrival order (top) differs from event timestamp order (bottom).</text>
+<rect x="85" y="210" width="205" height="95" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="85" y="210" width="205" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="103" y="249" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">arrive 1</text>
+<text x="103" y="277" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="103" dy="0">10:00:10</tspan>
+</text>
+<rect x="340" y="210" width="205" height="95" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="340" y="210" width="205" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="358" y="249" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">arrive 2</text>
+<text x="358" y="277" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="358" dy="0">10:00:25</tspan>
+</text>
+<rect x="595" y="210" width="205" height="95" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="595" y="210" width="205" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="613" y="249" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">arrive 3</text>
+<text x="613" y="277" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="613" dy="0">10:00:18</tspan>
+</text>
+<rect x="850" y="210" width="205" height="95" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="850" y="210" width="205" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="868" y="249" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">arrive 4</text>
+<text x="868" y="277" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="868" dy="0">10:01:05</tspan>
+</text>
+<rect x="1105" y="210" width="205" height="95" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1105" y="210" width="205" height="9" rx="5" fill="#C43D4B" stroke="#C43D4B" stroke-width="0"/>
+<text x="1123" y="249" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">arrive 5</text>
+<text x="1123" y="277" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="1123" dy="0">10:00:30</tspan>
+</text>
+<path d="M100,360 L1330,360" fill="none" stroke="#CAD5E2" stroke-width="2" stroke-linecap="round"/>
+<path d="M120,350 L120,370" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="120" y="395" text-anchor="middle" style="fill:#5F7087;font-size:12px">10:00:00</text>
+<path d="M405,350 L405,370" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="405" y="395" text-anchor="middle" style="fill:#5F7087;font-size:12px">10:00:20</text>
+<path d="M690,350 L690,370" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="690" y="395" text-anchor="middle" style="fill:#5F7087;font-size:12px">10:00:40</text>
+<path d="M975,350 L975,370" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="975" y="395" text-anchor="middle" style="fill:#5F7087;font-size:12px">10:01:00</text>
+<path d="M1260,350 L1260,370" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="1260" y="395" text-anchor="middle" style="fill:#5F7087;font-size:12px">10:01:20</text>
+<path d="M690,450 L690,645" fill="none" stroke="#7052C7" stroke-width="4" stroke-linecap="round"/>
+<rect x="595" y="420" width="205" height="30" rx="15" fill="#F1EDFF" stroke="#7052C7" stroke-width="1.1"/>
+<text x="697.5" y="440" text-anchor="middle" style="fill:#7052C7;font-weight:700;font-size:13px">Watermark = 10:00:40</text>
+<rect x="100" y="515" width="350" height="120" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="100" y="515" width="350" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="118" y="554" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">On-time window</text>
+<text x="118" y="582" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="118" dy="0">Events up to the watermark</tspan>
+<tspan x="118" dy="22">may be emitted as complete</tspan>
+</text>
+<rect x="545" y="515" width="350" height="120" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="545" y="515" width="350" height="9" rx="5" fill="#C43D4B" stroke="#C43D4B" stroke-width="0"/>
+<text x="563" y="554" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Late event</text>
+<text x="563" y="582" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="563" dy="0">10:00:30 arrives after watermark</tspan>
+<tspan x="563" dy="22">route / revise / drop by policy</tspan>
+</text>
+<rect x="990" y="515" width="350" height="120" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="990" y="515" width="350" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="1008" y="554" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Allowed lateness</text>
+<text x="1008" y="582" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1008" dy="0">Keep state for a defined grace</tspan>
+<tspan x="1008" dy="22">period, then clean it up</tspan>
+</text>
+<path d="M450,575 L545,575" fill="none" stroke="#C43D4B" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+<path d="M895,575 L990,575" fill="none" stroke="#C17A0B" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+<text x="720" y="735" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">A watermark is a progress estimate, not proof that an earlier event can never arrive.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

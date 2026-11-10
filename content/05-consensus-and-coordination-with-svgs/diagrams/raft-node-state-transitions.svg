@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Raft node states and transitions</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Terms are logical epochs. Randomized election timeouts reduce repeated split votes.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="100" y="310" width="300" height="150" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="250.0" y="339" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#2864A6" text-anchor="middle" style="">FOLLOWER</text>
+<text x="250.0" y="362.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">receives heartbeats</text>
+<text x="250.0" y="383.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">accepts AppendEntries</text>
+<text x="250.0" y="405.2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">may grant one vote per term</text>
+<rect x="570" y="310" width="300" height="150" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="339" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#C7861A" text-anchor="middle" style="">CANDIDATE</text>
+<text x="720.0" y="362.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">increments term</text>
+<text x="720.0" y="383.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">self-votes</text>
+<text x="720.0" y="405.2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">requests votes</text>
+<rect x="1040" y="310" width="300" height="150" rx="16" fill="#EAF5EE" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1190.0" y="339" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">LEADER</text>
+<text x="1190.0" y="362.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">serves clients</text>
+<text x="1190.0" y="383.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">replicates log</text>
+<text x="1190.0" y="405.2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#203247" text-anchor="middle" style="">sends heartbeats</text>
+<line x1="400" y1="370" x2="570" y2="370" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<text x="485" y="350" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#C7861A" text-anchor="middle" style="">election timeout</text>
+<line x1="870" y1="370" x2="1040" y2="370" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="955" y="350" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">majority votes</text>
+<path d="M 720 310 C 720 205, 320 205, 250 310" fill="none" stroke="#C34C4C" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<text x="480" y="200" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">higher-term RPC → follower</text>
+<path d="M 1185 310 C 1185 135, 320 135, 250 310" fill="none" stroke="#C34C4C" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<text x="730" y="130" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">higher term or lost quorum check → step down</text>
+<path d="M 700 460 C 650 590, 805 590, 740 460" fill="none" stroke="#C7861A" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-amber)"/>
+<text x="725" y="610" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">new randomized timeout → next term</text>
+<rect x="85" y="690" width="590" height="105" rx="12" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.6"/>
+<text x="101" y="715" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="start" style="">FOLLOWER SELF-TRANSITIONS</text>
+<text x="101" y="739.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Valid AppendEntries resets election timer. RequestVote handling records a</text>
+<text x="101" y="756.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">vote if term and log rules permit.</text>
+<rect x="735" y="690" width="620" height="105" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.6"/>
+<text x="751" y="715" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="start" style="">LEADER / CANDIDATE</text>
+<text x="751" y="739.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Any RPC with a higher term updates currentTerm and causes transition to</text>
+<text x="751" y="756.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">follower.</text>
+</svg>

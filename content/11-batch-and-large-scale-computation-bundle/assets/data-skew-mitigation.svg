@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Data skew mitigation: salting a hot key</title><desc id="desc">A hot key overloads one reducer; salting fans it out, then a second aggregation combines partial results.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Data skew mitigation: salting a hot key</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">A hot key overloads one reducer; salting fans it out, then a second aggregation combines partial results.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="45" y="160" width="460" height="520" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#BA4B4B" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="63" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#BA4B4B" text-anchor="start">Before: skewed partitioning</text>
+<rect x="85" y="225" width="170" height="110" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="256" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Input keys</text>
+<text x="103" y="285" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">many ordinary</text>
+<text x="103" y="310" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">keys</text>
+<rect x="305" y="225" width="160" height="110" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="323" y="256" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Hash partitioner</text>
+<text x="323" y="285" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">same hot key</text>
+<text x="323" y="310" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">always same</text>
+<rect x="85" y="390" width="170" height="70" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="421" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Reducer 1</text>
+<text x="103" y="450" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">small workload</text>
+<rect x="85" y="485" width="170" height="70" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="516" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Reducer 2</text>
+<text x="103" y="545" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">small workload</text>
+<rect x="85" y="580" width="170" height="70" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="611" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Reducer 3</text>
+<text x="103" y="640" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">small workload</text>
+<rect x="305" y="485" width="160" height="135" rx="18" fill="#FCE4E4" stroke="#BA4B4B" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="323" y="516" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="start">Hot reducer</text>
+<text x="323" y="545" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">35% of all events</text>
+<text x="323" y="570" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">long task / spill</text>
+<path d="M 255,280 L 305,280" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="222.0" y="256.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="280.0" y="275.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">key hash</text>
+<path d="M 385,335 L 385,485" fill="none" stroke="#BA4B4B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-warning)"/>
+<rect x="327.0" y="386.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="385.0" y="405.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#BA4B4B" text-anchor="middle">hot key</text>
+<rect x="560" y="160" width="990" height="520" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#3F8750" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="578" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#3F8750" text-anchor="start">After: two-stage salted aggregation</text>
+<rect x="605" y="225" width="210" height="110" rx="18" fill="#FFF1D9" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="623" y="256" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Salt hot key</text>
+<text x="623" y="285" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">key + salt 0…N</text>
+<text x="623" y="310" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">fan-out subkeys</text>
+<rect x="900" y="225" width="250" height="110" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="918" y="256" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Stage 1 reducers</text>
+<text x="918" y="285" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">partial aggregate per</text>
+<text x="918" y="310" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">salt</text>
+<rect x="1250" y="225" width="250" height="110" rx="18" fill="#E6F4E7" stroke="#3F8750" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1268" y="256" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Stage 2 aggregate</text>
+<text x="1268" y="285" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">remove salt</text>
+<text x="1268" y="310" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">sum partial counts</text>
+<rect x="610" y="410" width="180" height="65" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="628" y="441" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Shard 1</text>
+<rect x="610" y="505" width="180" height="65" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="628" y="536" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Shard 2</text>
+<rect x="610" y="600" width="180" height="65" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="628" y="631" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Shard 3</text>
+<path d="M 815,280 L 865,280 L 865,442 L 900,442" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<path d="M 815,280 L 865,280 L 865,537 L 900,537" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<path d="M 815,280 L 865,280 L 865,632 L 900,632" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<path d="M 1150,280 L 1250,280" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1142.0" y="256.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1200.0" y="275.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">partial sums</text>
+<path d="M 1500,280 L 1500,390" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1442.0" y="311.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1500.0" y="330.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">final value</text>
+<text x="1040" y="735" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">Salting adds a second aggregation and must preserve semantics; use it for hot-key aggregation, not every join.</text>
+</svg>

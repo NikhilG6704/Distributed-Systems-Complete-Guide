@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Read-your-writes consistency">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Read-your-writes consistency</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">After a session writes version 18, its later reads must not return a version older than 18.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<rect x="55" y="135" width="500" height="390" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="55" y="135" width="7" height="390" rx="3" fill="#C63D4B"/>
+<text x="73" y="163" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">WITHOUT READ-YOUR-WRITES</text>
+<text x="73" y="187" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="73" dy="0">1. Client writes profile photo → Replica A.</tspan>
+<tspan x="73" dy="18">2. A acknowledges version 18.</tspan>
+<tspan x="73" dy="18">3. Refresh is routed to lagging Replica B (v16).</tspan>
+<tspan x="73" dy="18">4. B returns old photo; user sees regression.</tspan>
+</text>
+<rect x="100" y="260" width="150" height="70" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="175.0" y="284" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Replica A</text>
+<text x="175.0" y="303" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">v18 · new image</text>
+<rect x="350" y="260" width="150" height="70" rx="13" fill="#FFF3DD" stroke="#B96B08" stroke-width="1.4"/>
+<text x="425.0" y="284" font-size="16" font-weight="bold" fill="#B96B08" text-anchor="middle">Replica B</text>
+<text x="425.0" y="303" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">v16 · old image</text>
+<line x1="250" y1="295" x2="350" y2="295" stroke="#C63D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<rect x="235" y="330" width="120" height="27" rx="13" fill="#FCEBED"/>
+<text x="295.0" y="348" font-size="12" font-weight="semibold" fill="#C63D4B" text-anchor="middle">stale response</text>
+<rect x="645" y="135" width="500" height="390" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="645" y="135" width="7" height="390" rx="3" fill="#24845B"/>
+<text x="663" y="163" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">WITH READ-YOUR-WRITES</text>
+<text x="663" y="187" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="663" dy="0">1. Write returns token: minimum_version=18.</tspan>
+<tspan x="663" dy="18">2. Next read carries that token.</tspan>
+<tspan x="663" dy="18">3. B waits until v18 or router redirects to A.</tspan>
+<tspan x="663" dy="18">4. Client sees v18 (or a newer version).</tspan>
+</text>
+<rect x="690" y="260" width="150" height="70" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="765.0" y="284" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Replica A</text>
+<text x="765.0" y="303" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">v18 · new image</text>
+<rect x="940" y="260" width="150" height="70" rx="13" fill="#FFF3DD" stroke="#B96B08" stroke-width="1.4"/>
+<text x="1015.0" y="284" font-size="16" font-weight="bold" fill="#B96B08" text-anchor="middle">Replica B</text>
+<text x="1015.0" y="303" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">v16 → v18</text>
+<line x1="840" y1="295" x2="940" y2="295" stroke="#24845B" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-green)"/>
+<rect x="865" y="330" width="155" height="27" rx="13" fill="#E7F5ED"/>
+<text x="942.5" y="348" font-size="12" font-weight="semibold" fill="#24845B" text-anchor="middle">wait / reroute</text>
+<text x="600" y="575" font-size="14" font-weight="semibold" fill="#5F7188" text-anchor="middle">Session guarantee: minimum version 18 — not necessarily the newest version in the entire database.</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

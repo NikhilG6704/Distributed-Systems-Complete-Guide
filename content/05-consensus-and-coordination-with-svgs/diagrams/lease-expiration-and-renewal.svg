@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Lease expiration and renewal</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Service-side expiry and client knowledge are different events; fencing protects the resource after reassignment.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<text x="95" y="210" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#142B4A" text-anchor="start" style="">CLIENT A</text>
+<line x1="235" y1="210" x2="1360" y2="210" stroke="#CBD5DF" stroke-width="1.5"/>
+<text x="95" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#142B4A" text-anchor="start" style="">LEASE SERVICE</text>
+<line x1="235" y1="390" x2="1360" y2="390" stroke="#CBD5DF" stroke-width="1.5"/>
+<text x="95" y="570" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#142B4A" text-anchor="start" style="">RESOURCE</text>
+<line x1="235" y1="570" x2="1360" y2="570" stroke="#CBD5DF" stroke-width="1.5"/>
+<line x1="310" y1="145" x2="310" y2="620" stroke="#E0E6ED" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="310" y="135" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#607286" text-anchor="middle" style="">t0</text>
+<line x1="590" y1="145" x2="590" y2="620" stroke="#E0E6ED" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="590" y="135" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#607286" text-anchor="middle" style="">t0 + T/3</text>
+<line x1="850" y1="145" x2="850" y2="620" stroke="#E0E6ED" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="850" y="135" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#607286" text-anchor="middle" style="">t0 + 2T/3</text>
+<line x1="1080" y1="145" x2="1080" y2="620" stroke="#E0E6ED" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="1080" y="135" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#607286" text-anchor="middle" style="">t_expire</text>
+<line x1="1280" y1="145" x2="1280" y2="620" stroke="#E0E6ED" stroke-width="1" stroke-dasharray="4 5"/>
+<text x="1280" y="135" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#607286" text-anchor="middle" style="">B grant</text>
+<line x1="310" y1="390" x2="310" y2="210" stroke="#148A83" stroke-width="2" marker-end="url(#arr-teal)"/>
+<text x="350" y="245" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="start" style="">grant lease ID, TTL=T</text>
+<line x1="590" y1="210" x2="590" y2="390" stroke="#2864A6" stroke-width="2" marker-end="url(#arr-blue)"/>
+<text x="675" y="280" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#2864A6" text-anchor="start" style="">renew / keepalive</text>
+<line x1="850" y1="210" x2="850" y2="390" stroke="#2864A6" stroke-width="2" marker-end="url(#arr-blue)"/>
+<text x="915" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C34C4C" text-anchor="start" style="">missed renewal</text>
+<line x1="1080" y1="390" x2="1080" y2="570" stroke="#C34C4C" stroke-width="2" marker-end="url(#arr-red)"/>
+<text x="1135" y="475" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C34C4C" text-anchor="start" style="">A expires; B may acquire</text>
+<line x1="1280" y1="390" x2="1280" y2="210" stroke="#7257A8" stroke-width="2" marker-end="url(#arr-purple)"/>
+<text x="1285" y="245" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7257A8" text-anchor="start" style="">B gets token 42</text>
+<path d="M 1080 210 C 1150 140, 1240 140, 1280 210" fill="none" stroke="#C34C4C" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<rect x="80" y="680" width="600" height="110" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="96" y="705" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">CLIENT UNCERTAINTY</text>
+<text x="96" y="729.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">A may still believe it owns the lease while paused or partitioned. It may</text>
+<text x="96" y="746.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">only discover expiry after resuming or attempting renewal.</text>
+<rect x="735" y="680" width="630" height="110" rx="12" fill="#E8F6F4" stroke="#148A83" stroke-width="1.6"/>
+<text x="751" y="705" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="start" style="">PROTECT THE RESOURCE</text>
+<text x="751" y="729.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">B writes with a higher fencing token. Resource rejects delayed writes from A</text>
+<text x="751" y="746.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">with the older token, even after A resumes.</text>
+</svg>

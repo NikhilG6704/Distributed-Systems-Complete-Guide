@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Viewstamped Replication: normal operation and view change</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A primary orders requests; backups persist them; a new view reconciles logs and preserves committed operations.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<text x="75" y="155" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#142B4A" text-anchor="start" style="">NORMAL OPERATION  •  VIEW v</text>
+<rect x="80" y="210" width="270" height="95" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="215.0" y="239" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">CLIENT</text>
+<text x="215.0" y="262.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">request op</text>
+<rect x="580" y="210" width="270" height="95" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="715.0" y="239" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#148A83" text-anchor="middle" style="">PRIMARY</text>
+<text x="715.0" y="262.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">assign op number</text>
+<rect x="1080" y="160" width="270" height="95" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1215.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">BACKUP 1</text>
+<text x="1215.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">log PREPARE</text>
+<rect x="1080" y="300" width="270" height="95" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1215.0" y="329" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">BACKUP 2</text>
+<text x="1215.0" y="352.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">log PREPARE</text>
+<line x1="350" y1="255" x2="580" y2="255" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<line x1="850" y1="245" x2="1080" y2="205" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="850" y1="270" x2="1080" y2="345" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="1080" y1="240" x2="850" y2="410" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="1080" y1="340" x2="850" y2="430" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="965" y="395" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="middle" style="">PREPARE-OK quorum</text>
+<rect x="380" y="450" width="650" height="82" rx="12" fill="#F3F6FA" stroke="#2D8A57" stroke-width="1.6"/>
+<text x="396" y="475" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="start" style="">COMMIT</text>
+<text x="396" y="499.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Primary advances commit number after required backup acknowledgments, sends</text>
+<text x="396" y="516.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">COMMIT, and replies to client.</text>
+<text x="75" y="585" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#142B4A" text-anchor="start" style="">VIEW CHANGE  •  PRIMARY FAILURE</text>
+<rect x="85" y="640" width="290" height="90" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="230.0" y="669" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">OLD PRIMARY</text>
+<text x="230.0" y="692.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">failed</text>
+<rect x="535" y="640" width="300" height="90" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="685.0" y="669" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#7257A8" text-anchor="middle" style="">NEW PRIMARY</text>
+<text x="685.0" y="692.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">collects view-change</text>
+<text x="685.0" y="710.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">operation / commit state</text>
+<rect x="1030" y="640" width="300" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1180.0" y="669" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">BACKUPS</text>
+<text x="1180.0" y="692.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">send VIEW-CHANGE</text>
+<text x="1180.0" y="710.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">logs + commit numbers</text>
+<line x1="1030" y1="685" x2="835" y2="685" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<line x1="535" y1="730" x2="375" y2="730" stroke="#C34C4C" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<text x="705" y="790" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">Synchronize safe log → enter next view → resume requests</text>
+</svg>

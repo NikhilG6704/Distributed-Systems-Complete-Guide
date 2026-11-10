@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">WAL crash recovery timeline</title><desc id="desc">The log reaches the configured durability boundary before the client is told that the transaction committed.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">WAL crash recovery timeline</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">The log reaches the configured durability boundary before the client is told that the transaction committed.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<text x="70" y="165" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="800" fill="#14263D" text-anchor="start" style="">TRANSACTION TIMELINE</text>
+<circle cx="130" cy="225" r="9" fill="#2F6FED"/>
+<text x="130" y="192" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#2F6FED" text-anchor="middle" style="">BEGIN</text>
+<text x="130" y="258" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#5E7086" text-anchor="middle" style="">T begins</text>
+<path d="M142,225 L338,225" fill="none" stroke="#CAD5E2" stroke-width="2" stroke-linecap="round"/>
+<circle cx="350" cy="225" r="9" fill="#2F6FED"/>
+<text x="350" y="192" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#2F6FED" text-anchor="middle" style="">APPEND</text>
+<text x="350" y="258" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#5E7086" text-anchor="middle" style="">Update log records</text>
+<path d="M362,225 L568,225" fill="none" stroke="#CAD5E2" stroke-width="2" stroke-linecap="round"/>
+<circle cx="580" cy="225" r="9" fill="#2F6FED"/>
+<text x="580" y="192" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#2F6FED" text-anchor="middle" style="">COMMIT</text>
+<text x="580" y="258" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#5E7086" text-anchor="middle" style="">Commit record</text>
+<path d="M592,225 L798,225" fill="none" stroke="#CAD5E2" stroke-width="2" stroke-linecap="round"/>
+<circle cx="810" cy="225" r="9" fill="#119A8A"/>
+<text x="810" y="192" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#119A8A" text-anchor="middle" style="">FLUSH</text>
+<text x="810" y="258" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#5E7086" text-anchor="middle" style="">WAL durable</text>
+<path d="M822,225 L1028,225" fill="none" stroke="#CAD5E2" stroke-width="2" stroke-linecap="round"/>
+<circle cx="1040" cy="225" r="9" fill="#D94B4B"/>
+<text x="1040" y="192" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#D94B4B" text-anchor="middle" style="">CRASH</text>
+<text x="1040" y="258" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#5E7086" text-anchor="middle" style="">Power/process loss</text>
+<path d="M1052,225 L1248,225" fill="none" stroke="#CAD5E2" stroke-width="2" stroke-linecap="round"/>
+<circle cx="1260" cy="225" r="9" fill="#2F6FED"/>
+<text x="1260" y="192" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#2F6FED" text-anchor="middle" style="">RESTART</text>
+<text x="1260" y="258" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#5E7086" text-anchor="middle" style="">Recovery</text>
+<path d="M1040,275 V320" fill="none" stroke="#D94B4B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-red)"/>
+<rect x="965" y="325" width="150" height="28" rx="14" fill="#FDECEC" stroke="#FDECEC" stroke-width="1"/>
+<text x="1040.0" y="344" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#D94B4B" text-anchor="middle" style="">Crash boundary</text>
+<rect x="70" y="390" width="1300" height="150" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="70" y="390" width="7" height="150" rx="4" fill="#D58A19"/>
+<text x="88" y="419" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">WAL / log lane</text>
+<text x="88" y="443" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="88" dy="0">LSN 100: debit account  •  LSN 101: credit account  •  LSN 102: COMMIT</tspan></text>
+<path d="M115,475 L840,475" fill="none" stroke="#D58A19" stroke-width="3" stroke-linecap="round"/>
+<circle cx="150" cy="475" r="8" fill="#D58A19"/>
+<text x="150" y="510" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#23364D" text-anchor="middle" style="">100</text>
+<circle cx="400" cy="475" r="8" fill="#D58A19"/>
+<text x="400" y="510" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#23364D" text-anchor="middle" style="">101</text>
+<circle cx="650" cy="475" r="8" fill="#D58A19"/>
+<text x="650" y="510" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#23364D" text-anchor="middle" style="">102 COMMIT</text>
+<rect x="700" y="405" width="200" height="28" rx="14" fill="#E6F6F3" stroke="#E6F6F3" stroke-width="1"/>
+<text x="800.0" y="424" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#119A8A" text-anchor="middle" style="">fsync / durable boundary</text>
+<rect x="70" y="590" width="650" height="145" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="70" y="590" width="7" height="145" rx="4" fill="#2F6FED"/>
+<text x="88" y="619" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Data-page lane</text>
+<text x="88" y="643" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="88" dy="0">Page remains dirty in buffer pool</tspan><tspan x="88" dy="21.299999999999997">Background writer may flush later</tspan></text>
+<rect x="790" y="590" width="580" height="145" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5"/>
+<rect x="790" y="590" width="7" height="145" rx="4" fill="#119A8A"/>
+<text x="808" y="619" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Recovery lane</text>
+<text x="808" y="643" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="808" dy="0">1. Analysis: identify transactions and dirty pages</tspan><tspan x="808" dy="19.88">2. Redo: repeat required logged changes</tspan><tspan x="808" dy="19.88">3. Undo: roll back incomplete transactions (engine-dependent)</tspan></text>
+<path d="M1040,475 V560 H1080 V590" fill="none" stroke="#D94B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-red)"/>
+<path d="M720,665 H790" fill="none" stroke="#119A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<text x="720" y="795" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#14263D" text-anchor="middle" style="">Core rule: the log record needed to recover a page must be durable before that page is allowed to reach durable storage.</text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">write-ahead-log-crash-recovery.svg</text>
+</svg>

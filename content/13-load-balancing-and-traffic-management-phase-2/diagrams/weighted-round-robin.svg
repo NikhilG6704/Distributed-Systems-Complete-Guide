@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Weighted round-robin</title><desc id="desc">Weights 5:3:2 produce approximate traffic shares of 50%, 30%, and 20%.</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+ <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6d82"/></marker>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+</defs>
+<rect width="1280" height="760" fill="#f4f7fb"/>
+<rect x="0" y="0" width="1280" height="11" fill="#2563eb"/>
+<text x="54" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2563eb">DISTRIBUTED SYSTEMS  /  TRAFFIC MANAGEMENT</text>
+<text x="54" y="94" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#14243a">Weighted round-robin</text>
+<text x="54" y="126" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#5d6d82">Weights 5:3:2 produce approximate traffic shares of 50%, 30%, and 20%.</text>
+<line x1="54" y1="148" x2="1226" y2="148" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<rect x="54.0" y="225" width="370.6666666666667" height="130" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="54.0" y="225" width="7" height="130" rx="4" fill="#2563eb"/>
+<text x="76.0" y="256" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Weight 5</text>
+<circle cx="79.0" cy="281" r="3" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="92.0" y="285" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">A • 50% • 5 of 10 slots</text>
+<rect x="76.0" y="320" width="86.8" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="119.4" y="338" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">SELECTION</text>
+<rect x="454.6666666666667" y="225" width="370.6666666666667" height="130" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="454.6666666666667" y="225" width="7" height="130" rx="4" fill="#2563eb"/>
+<text x="476.6666666666667" y="256" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Weight 3</text>
+<circle cx="479.6666666666667" cy="281" r="3" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="492.6666666666667" y="285" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">B • 30% • 3 of 10 slots</text>
+<rect x="476.6666666666667" y="320" width="86.8" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="520.0666666666667" y="338" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">SELECTION</text>
+<rect x="855.3333333333334" y="225" width="370.6666666666667" height="130" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="855.3333333333334" y="225" width="7" height="130" rx="4" fill="#2563eb"/>
+<text x="877.3333333333334" y="256" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Weight 2</text>
+<circle cx="880.3333333333334" cy="281" r="3" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="893.3333333333334" y="285" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">C • 20% • 2 of 10 slots</text>
+<rect x="877.3333333333334" y="320" width="86.8" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="920.7333333333333" y="338" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">SELECTION</text>
+<rect x="54" y="654" width="1172" height="64" rx="13" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="72" y="669" width="101.2" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="122.6" y="687" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">DESIGN NOTE</text>
+<text x="190" y="681" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Weights represent relative capacity or policy preference; the exact short-term sequence depends on the implementation.</text>
+<text x="1224" y="741" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="500" fill="#5d6d82">weighted-round-robin.svg</text>
+</svg>

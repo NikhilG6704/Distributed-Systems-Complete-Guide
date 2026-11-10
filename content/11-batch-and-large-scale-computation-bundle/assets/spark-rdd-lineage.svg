@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">RDD lineage and fault recovery</title><desc id="desc">Immutable RDD dependencies let Spark recompute lost partitions; persisted partitions can avoid repeating earlier work.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">RDD lineage and fault recovery</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">Immutable RDD dependencies let Spark recompute lost partitions; persisted partitions can avoid repeating earlier work.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="55" y="260" width="200" height="130" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="73" y="291" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Source RDD</text>
+<text x="73" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">file partitions</text>
+<text x="73" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">P0 · P1 · P2 · P3</text>
+<rect x="320" y="260" width="200" height="130" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="338" y="291" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Map RDD</text>
+<text x="338" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">map / parse</text>
+<text x="338" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">narrow dependency</text>
+<rect x="585" y="260" width="200" height="130" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="603" y="291" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Filter RDD</text>
+<text x="603" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">filter valid rows</text>
+<text x="603" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">narrow dependency</text>
+<rect x="850" y="260" width="200" height="130" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="868" y="291" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">reduceByKey RDD</text>
+<text x="868" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">wide dependency</text>
+<text x="868" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">shuffle boundary</text>
+<rect x="1120" y="260" width="200" height="130" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1138" y="291" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Result RDD</text>
+<text x="1138" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">aggregate output</text>
+<text x="1138" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">partitioned</text>
+<text x="1138" y="370" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">result</text>
+<rect x="1370" y="260" width="175" height="130" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1388" y="291" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Action</text>
+<text x="1388" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">save / count</text>
+<text x="1388" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">job completes</text>
+<path d="M 255,325 L 320,325" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="229.5" y="301.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="287.5" y="320.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">narrow</text>
+<path d="M 520,325 L 585,325" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="494.5" y="301.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="552.5" y="320.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">narrow</text>
+<path d="M 785,325 L 850,325" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="759.5" y="301.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="817.5" y="320.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">wide</text>
+<path d="M 1050,325 L 1120,325" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1027.0" y="301.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1085.0" y="320.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">narrow</text>
+<path d="M 1320,325 L 1370,325" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="1287.0" y="301.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1345.0" y="320.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">action</text>
+<rect x="320" y="465" width="465" height="190" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#3F8750" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="338" y="494" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#3F8750" text-anchor="start">Persisted intermediate</text>
+<rect x="365" y="515" width="170" height="105" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="383" y="546" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Cache blocks</text>
+<text x="383" y="575" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">RDD partitions</text>
+<text x="383" y="600" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">in memory / disk</text>
+<rect x="575" y="515" width="170" height="105" rx="18" fill="#FCE4E4" stroke="#BA4B4B" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="593" y="546" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Executor loss</text>
+<text x="593" y="575" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">cached P2 lost</text>
+<text x="593" y="600" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">recompute</text>
+<path d="M 420,390 L 450,515" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="377.0" y="428.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="435.0" y="447.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">persist</text>
+<path d="M 535,570 L 575,570" fill="none" stroke="#BA4B4B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-warning)"/>
+<rect x="497.0" y="546.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="555.0" y="565.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#BA4B4B" text-anchor="middle">loss</text>
+<rect x="850" y="465" width="470" height="190" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#7955A6" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="868" y="494" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#7955A6" text-anchor="start">Lineage-based recomputation</text>
+<rect x="900" y="515" width="165" height="105" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="918" y="546" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Parent RDDs</text>
+<text x="918" y="575" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">re-run map</text>
+<text x="918" y="600" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">re-run filter</text>
+<rect x="1110" y="515" width="165" height="105" rx="18" fill="#E6F4E7" stroke="#3F8750" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1128" y="546" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Rebuilt P2</text>
+<text x="1128" y="575" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">restore output</text>
+<text x="1128" y="600" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">continue stage</text>
+<path d="M 745,570 L 900,570" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="764.5" y="546.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="822.5" y="565.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">trace parents</text>
+<path d="M 1065,570 L 1110,570" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1029.5" y="546.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1087.5" y="565.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">recompute</text>
+<text x="800" y="735" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">Checkpointing can truncate long lineage by materializing a stable recovery point.</text>
+</svg>

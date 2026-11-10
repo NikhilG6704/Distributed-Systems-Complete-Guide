@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Shard rebalancing lifecycle">
+<title>Shard rebalancing lifecycle</title><desc>Online rebalancing moves partition ownership through snapshot, change capture, catch-up, validation, fencing, and routing cutover.</desc>
+<defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#63788D"/></marker>
+          <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#3977B8"/></marker>
+          <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#11998E"/></marker>
+          <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#E79A35"/></marker>
+          <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#D95F59"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#19344D" flood-opacity="0.08"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="56" y="54" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Shard rebalancing lifecycle</text>
+<text x="56" y="86" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Online rebalancing moves partition ownership through snapshot, change capture, catch-up, validation, fencing, and routing cutover.</text>
+<line x1="56" y1="108" x2="1384" y2="108" stroke="#D7E1EA" stroke-width="2" stroke-linecap="round"/>
+<rect x="56" y="140" width="1328" height="300" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="140" width="7" height="300" rx="3" fill="#3977B8" stroke="none" stroke-width="1.5"/>
+<text x="80" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Cluster expansion: before and after</text>
+<text x="80" y="201" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Illustrative partition placement; colors identify logical partitions, not physical machine identity.</text>
+<text x="110" y="225" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="750" fill="#63788D" text-anchor="start" opacity="1" style="">BEFORE · 3 NODES</text>
+<rect x="95" y="250" width="200" height="130" rx="14" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="195" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Node 1</text>
+<rect x="110" y="310" width="52" height="30" rx="15" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="136.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#3977B8" text-anchor="middle" opacity="1" style="">P1</text>
+<rect x="168" y="310" width="52" height="30" rx="15" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="194.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#11998E" text-anchor="middle" opacity="1" style="">P2</text>
+<rect x="226" y="310" width="52" height="30" rx="15" fill="#F0EBF8" stroke="none" stroke-width="1.5"/>
+<text x="252.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#8064B4" text-anchor="middle" opacity="1" style="">P3</text>
+<rect x="340" y="250" width="200" height="130" rx="14" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="440" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Node 2</text>
+<rect x="355" y="310" width="52" height="30" rx="15" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="381.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#3977B8" text-anchor="middle" opacity="1" style="">P4</text>
+<rect x="413" y="310" width="52" height="30" rx="15" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="439.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#11998E" text-anchor="middle" opacity="1" style="">P5</text>
+<rect x="471" y="310" width="52" height="30" rx="15" fill="#F0EBF8" stroke="none" stroke-width="1.5"/>
+<text x="497.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#8064B4" text-anchor="middle" opacity="1" style="">P6</text>
+<rect x="585" y="250" width="200" height="130" rx="14" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="685" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Node 3</text>
+<rect x="600" y="310" width="52" height="30" rx="15" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="626.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#3977B8" text-anchor="middle" opacity="1" style="">P7</text>
+<rect x="658" y="310" width="52" height="30" rx="15" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="684.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#11998E" text-anchor="middle" opacity="1" style="">P8</text>
+<rect x="716" y="310" width="52" height="30" rx="15" fill="#F0EBF8" stroke="none" stroke-width="1.5"/>
+<text x="742.0" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#8064B4" text-anchor="middle" opacity="1" style="">P9</text>
+<line x1="825" y1="315" x2="930" y2="315" stroke="#3977B8" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+<text x="878" y="290" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#3977B8" text-anchor="middle" opacity="1" style="">Add capacity</text>
+<text x="975" y="225" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="750" fill="#63788D" text-anchor="start" opacity="1" style="">AFTER · 4 NODES</text>
+<rect x="960" y="250" width="105" height="130" rx="12" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="1012" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">N1</text>
+<rect x="972" y="290" width="81" height="21" rx="5" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="1012" y="305" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P1</text>
+<rect x="972" y="315" width="81" height="21" rx="5" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="1012" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P2</text>
+<rect x="1060" y="250" width="105" height="130" rx="12" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="1112" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">N2</text>
+<rect x="1072" y="290" width="81" height="21" rx="5" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="1112" y="305" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P3</text>
+<rect x="1072" y="315" width="81" height="21" rx="5" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="1112" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P4</text>
+<rect x="1160" y="250" width="105" height="130" rx="12" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="1212" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">N3</text>
+<rect x="1172" y="290" width="81" height="21" rx="5" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="1212" y="305" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P5</text>
+<rect x="1172" y="315" width="81" height="21" rx="5" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="1212" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P6</text>
+<rect x="1260" y="250" width="105" height="130" rx="12" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="1.5"/>
+<text x="1312" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">N4</text>
+<rect x="1272" y="290" width="81" height="21" rx="5" fill="#E8F1FA" stroke="none" stroke-width="1.5"/>
+<text x="1312" y="305" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P7</text>
+<rect x="1272" y="315" width="81" height="21" rx="5" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="1312" y="330" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P8</text>
+<rect x="1272" y="340" width="81" height="21" rx="5" fill="#F0EBF8" stroke="none" stroke-width="1.5"/>
+<text x="1312" y="355" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#17324D" text-anchor="middle" opacity="1" style="">P9</text>
+<rect x="56" y="475" width="1328" height="325" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="475" width="7" height="325" rx="3" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="80" y="511" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Safe online migration sequence</text>
+<text x="80" y="536" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Writes continue during copy; ownership changes only after destination catch-up and a guarded cutover.</text>
+<rect x="85" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="107" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="107" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">1</text>
+<text x="152.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Plan</text>
+<text x="152.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">scope + capacity</text>
+<line x1="220" y1="657" x2="226" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="228" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="250" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="250" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">2</text>
+<text x="295.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Snapshot</text>
+<text x="295.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">consistent at S0</text>
+<line x1="363" y1="657" x2="369" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="371" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="393" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="393" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">3</text>
+<text x="438.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">CDC</text>
+<text x="438.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">capture new writes</text>
+<line x1="506" y1="657" x2="512" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="514" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="536" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="536" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">4</text>
+<text x="581.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Catch up</text>
+<text x="581.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">apply change stream</text>
+<line x1="649" y1="657" x2="655" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="657" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="679" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="679" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">5</text>
+<text x="724.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Validate</text>
+<text x="724.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">counts + checksums</text>
+<line x1="792" y1="657" x2="798" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="800" y="600" width="135" height="115" rx="12" fill="#FCEBE9" stroke="#D95F59" stroke-width="1.2"/>
+<circle cx="822" cy="620" r="13" fill="#D95F59" stroke="none" stroke-width="1.5"/>
+<text x="822" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">6</text>
+<text x="867.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Fence</text>
+<text x="867.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">epoch / write barrier</text>
+<line x1="935" y1="657" x2="941" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="943" y="600" width="135" height="115" rx="12" fill="#EAF5EC" stroke="#4C9A66" stroke-width="1.2"/>
+<circle cx="965" cy="620" r="13" fill="#4C9A66" stroke="none" stroke-width="1.5"/>
+<text x="965" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">7</text>
+<text x="1010.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Cut over</text>
+<text x="1010.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">switch routing</text>
+<line x1="1078" y1="657" x2="1084" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1086" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="1108" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="1108" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">8</text>
+<text x="1153.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Observe</text>
+<text x="1153.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">lag + errors</text>
+<line x1="1221" y1="657" x2="1227" y2="657" stroke="#63788D" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1229" y="600" width="135" height="115" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.2"/>
+<circle cx="1251" cy="620" r="13" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="1251" y="625" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="750" fill="#FFFFFF" text-anchor="middle" opacity="1" style="">9</text>
+<text x="1296.5" y="656" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Clean up</text>
+<text x="1296.5" y="682" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">retire old copy</text>
+<text x="90" y="760" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#63788D" text-anchor="start" opacity="1" style="">Before cutover: rollback can discard the staged destination. After destination writes begin,</text>
+<text x="90" y="780" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#63788D" text-anchor="start" opacity="1" style="">rollback requires reverse replication or a new migration—not simply flipping the route back.</text>
+<text x="56" y="876" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Migration must preserve a single authoritative write owner, track changes, validate data, and make cutover observable.</text>
+</svg>

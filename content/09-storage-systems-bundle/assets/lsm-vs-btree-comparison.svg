@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">LSM tree vs B+ tree write paths</title><desc id="desc">The central design choice: update an existing page versus append and merge immutable sorted structures.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">LSM tree vs B+ tree write paths</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">The central design choice: update an existing page versus append and merge immutable sorted structures.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="55" y="145" width="640" height="600" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="745" y="145" width="640" height="600" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="85" y="185" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" fill="#2F6FED" text-anchor="start" style="">B+ TREE / B-TREE</text>
+<text x="775" y="185" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" fill="#119A8A" text-anchor="start" style="">LSM TREE</text>
+<rect x="85" y="210" width="180" height="28" rx="14" fill="#EAF1FF" stroke="#EAF1FF" stroke-width="1"/>
+<text x="175.0" y="229" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#2F6FED" text-anchor="middle" style="">Page-oriented update</text>
+<rect x="775" y="210" width="180" height="28" rx="14" fill="#E6F6F3" stroke="#E6F6F3" stroke-width="1"/>
+<text x="865.0" y="229" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#119A8A" text-anchor="middle" style="">Append + merge</text>
+<rect x="100" y="290" width="185" height="90" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="100" y="290" width="7" height="90" rx="4" fill="#2F6FED"/>
+<text x="118" y="319" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Client update</text>
+<text x="118" y="343" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="118" dy="0">key → new value</tspan></text>
+<rect x="360" y="290" width="250" height="90" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="360" y="290" width="7" height="90" rx="4" fill="#2F6FED"/>
+<text x="378" y="319" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Buffer pool page</text>
+<text x="378" y="343" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="378" dy="0">Locate leaf; latch / modify</tspan></text>
+<rect x="360" y="445" width="250" height="100" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="360" y="445" width="7" height="100" rx="4" fill="#D58A19"/>
+<text x="378" y="474" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">WAL record</text>
+<text x="378" y="498" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="378" dy="0">Log before dirty page flush</tspan></text>
+<rect x="100" y="475" width="185" height="100" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5"/>
+<rect x="100" y="475" width="7" height="100" rx="4" fill="#7656C8"/>
+<text x="118" y="504" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Leaf page</text>
+<text x="118" y="528" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="118" dy="0">May split if page is full</tspan></text>
+<path d="M285,335 H360" fill="none" stroke="#2F6FED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M485,380 V445" fill="none" stroke="#D58A19" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<path d="M360,495 H285" fill="none" stroke="#7656C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<text x="105" y="635" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#14263D" text-anchor="start" style="">Foreground work</text>
+<text x="105" y="665" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="105" dy="0">Random page access may occur.</tspan><tspan x="105" dy="21">Splits and index maintenance happen</tspan><tspan x="105" dy="21">as part of the page-update path.</tspan></text>
+<rect x="790" y="290" width="155" height="90" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="790" y="290" width="7" height="90" rx="4" fill="#2F6FED"/>
+<text x="808" y="319" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Client update</text>
+<text x="808" y="343" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="808" dy="0">key → new value</tspan></text>
+<rect x="990" y="290" width="165" height="90" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="990" y="290" width="7" height="90" rx="4" fill="#D58A19"/>
+<text x="1008" y="319" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">WAL + memtable</text>
+<text x="1008" y="343" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1008" dy="0">Append + buffer</tspan></text>
+<rect x="1190" y="290" width="155" height="90" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5"/>
+<rect x="1190" y="290" width="7" height="90" rx="4" fill="#119A8A"/>
+<text x="1208" y="319" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Flush</text>
+<text x="1208" y="343" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1208" dy="0">Write sorted SST</tspan></text>
+<rect x="990" y="455" width="355" height="105" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5"/>
+<rect x="990" y="455" width="7" height="105" rx="4" fill="#7656C8"/>
+<text x="1008" y="484" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">SSTable levels</text>
+<text x="1008" y="508" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1008" dy="0">L0 → L1 → L2+</tspan><tspan x="1008" dy="19.88">Background compaction</tspan></text>
+<path d="M945,335 H990" fill="none" stroke="#2F6FED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M1155,335 H1190" fill="none" stroke="#119A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<path d="M1267,380 V455" fill="none" stroke="#D58A19" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<text x="790" y="635" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#14263D" text-anchor="start" style="">Foreground vs background work</text>
+<text x="790" y="665" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="790" dy="0">Foreground write is often sequential and buffered.</tspan><tspan x="790" dy="21">Compaction later performs substantial read/write</tspan><tspan x="790" dy="21">work and can affect tail latency if it falls behind.</tspan></text>
+<rect x="55" y="775" width="1330" height="70" rx="12" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="1"/>
+<text x="78" y="805" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="800" fill="#14263D" text-anchor="start" style="">Trade-off:</text>
+<text x="180" y="805" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#2F6FED" text-anchor="start" style="">B+ tree → direct reads / ordered ranges; page-write and split costs</text>
+<text x="180" y="828" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#119A8A" text-anchor="start" style="">LSM → high ingest efficiency; manage read, write, and space amplification</text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">lsm-vs-btree-comparison.svg</text>
+</svg>

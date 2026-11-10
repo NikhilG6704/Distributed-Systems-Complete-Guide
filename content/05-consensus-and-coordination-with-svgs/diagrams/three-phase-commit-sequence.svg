@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1320" viewBox="0 0 1440 1320">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="1320" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Three-Phase Commit: three message phases</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">The extra PRE-COMMIT state reduces ambiguity only under a stronger timing and partition model.</text>
+<text x="1392" y="1300" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="42.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="130.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">COORDINATOR</text>
+<line x1="130.0" y1="195" x2="130.0" y2="1140" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="632.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PARTICIPANT 1</text>
+<line x1="720.0" y1="195" x2="720.0" y2="1140" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="1222.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1310.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PARTICIPANT 2</text>
+<line x1="1310.0" y1="195" x2="1310.0" y2="1140" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="55" y="212" width="1330" height="36" rx="6" fill="#EAF2FB" stroke="none" stroke-width="0"/>
+<text x="75" y="236" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="start" style="">PHASE 1  •  CAN COMMIT</text>
+<line x1="130.0" y1="277" x2="720.0" y2="277" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="267" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">CAN_COMMIT?</text>
+<line x1="130.0" y1="334" x2="1310.0" y2="334" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="324" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">CAN_COMMIT?</text>
+<line x1="720.0" y1="391" x2="130.0" y2="391" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="425.0" y="381" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">YES</text>
+<line x1="1310.0" y1="448" x2="130.0" y2="448" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="720.0" y="438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">YES</text>
+<rect x="55" y="482" width="1330" height="36" rx="6" fill="#F1EDFA" stroke="none" stroke-width="0"/>
+<text x="75" y="506" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="start" style="">PHASE 2  •  PRE-COMMIT</text>
+<line x1="130.0" y1="547" x2="720.0" y2="547" stroke="#7257A8" stroke-width="2.5" marker-end="url(#arr-purple)"/>
+<text x="425.0" y="537" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">PRE_COMMIT</text>
+<line x1="130.0" y1="604" x2="1310.0" y2="604" stroke="#7257A8" stroke-width="2.5" marker-end="url(#arr-purple)"/>
+<text x="720.0" y="594" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">PRE_COMMIT</text>
+<line x1="720.0" y1="661" x2="130.0" y2="661" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="425.0" y="651" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">ACK</text>
+<line x1="1310.0" y1="718" x2="130.0" y2="718" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="720.0" y="708" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">ACK</text>
+<rect x="55" y="752" width="1330" height="36" rx="6" fill="#F3F6FA" stroke="none" stroke-width="0"/>
+<text x="75" y="776" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2D8A57" text-anchor="start" style="">PHASE 3  •  DO COMMIT</text>
+<line x1="130.0" y1="817" x2="720.0" y2="817" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="807" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">DO_COMMIT</text>
+<line x1="130.0" y1="874" x2="1310.0" y2="874" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="864" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">DO_COMMIT</text>
+<line x1="720.0" y1="931" x2="130.0" y2="931" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="921" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">ACK</text>
+<line x1="1310.0" y1="988" x2="130.0" y2="988" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="978" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">ACK</text>
+<rect x="80" y="1035" width="1280" height="90" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="96" y="1060" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">PROTOCOL NOTE</text>
+<text x="96" y="1084.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">A NO vote leads to ABORT. If the coordinator fails after PRE_COMMIT, a recovery coordinator queries participant states; non-blocking progress depends on</text>
+<text x="96" y="1101.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">bounded-delay / bounded-processing assumptions and partition constraints.</text>
+<rect x="80" y="1140" width="1280" height="100" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="96" y="1165" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">COORDINATOR CRASH AFTER PRE-COMMIT</text>
+<text x="96" y="1189.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">A recovery coordinator queries participant states and applies the textbook recovery rules. The progress argument requires bounded communication and processing</text>
+<text x="96" y="1206.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">delays plus partition constraints; it does not hold in a fully asynchronous partitionable network.</text>
+</svg>

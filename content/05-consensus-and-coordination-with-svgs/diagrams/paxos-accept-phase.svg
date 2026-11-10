@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="1100" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Paxos Phase 2: Accept and Accepted</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A quorum accepting the same proposal chooses its value. Acceptor promises constrain later ballots.</text>
+<text x="1392" y="1080" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="42.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="130.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PROPOSER</text>
+<line x1="130.0" y1="195" x2="130.0" y2="920" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="278.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="366.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">A1</text>
+<line x1="366.0" y1="195" x2="366.0" y2="920" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="514.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="602.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">A2</text>
+<line x1="602.0" y1="195" x2="602.0" y2="920" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="750.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="838.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">A3</text>
+<line x1="838.0" y1="195" x2="838.0" y2="920" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="986.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1074.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">A4</text>
+<line x1="1074.0" y1="195" x2="1074.0" y2="920" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="1222.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1310.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">A5</text>
+<line x1="1310.0" y1="195" x2="1310.0" y2="920" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="55" y="212" width="1330" height="36" rx="6" fill="#F1EDFA" stroke="none" stroke-width="0"/>
+<text x="75" y="236" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="start" style="">SAFE VALUE SELECTION</text>
+<path d="M 130.0 277 C 245.0 247, 245.0 307, 130.0 282" fill="none" stroke="#7257A8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-purple)"/>
+<text x="130.0" y="267" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">choose v* = highest accepted value; else own value</text>
+<rect x="55" y="311" width="1330" height="36" rx="6" fill="#EAF2FB" stroke="none" stroke-width="0"/>
+<text x="75" y="335" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="start" style="">PHASE 2A  •  ACCEPT</text>
+<line x1="130.0" y1="376" x2="366.0" y2="376" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="248.0" y="366" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">ACCEPT(n, v*)</text>
+<line x1="130.0" y1="433" x2="602.0" y2="433" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="366.0" y="423" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">ACCEPT(n, v*)</text>
+<line x1="130.0" y1="490" x2="838.0" y2="490" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="484.0" y="480" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">ACCEPT(n, v*)</text>
+<line x1="130.0" y1="547" x2="1074.0" y2="547" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="602.0" y="537" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">ACCEPT(n, v*)</text>
+<line x1="130.0" y1="604" x2="1310.0" y2="604" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="594" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">ACCEPT(n, v*)</text>
+<path d="M 366.0 661 C 481.0 631, 481.0 691, 366.0 666" fill="none" stroke="#148A83" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-teal)"/>
+<text x="366.0" y="651" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">check n ≥ promised; persist accepted</text>
+<path d="M 602.0 718 C 717.0 688, 717.0 748, 602.0 723" fill="none" stroke="#148A83" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-teal)"/>
+<text x="602.0" y="708" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">check n ≥ promised; persist accepted</text>
+<path d="M 838.0 775 C 953.0 745, 953.0 805, 838.0 780" fill="none" stroke="#148A83" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-teal)"/>
+<text x="838.0" y="765" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">check n ≥ promised; persist accepted</text>
+<line x1="366.0" y1="832" x2="130.0" y2="832" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="248.0" y="822" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">ACCEPTED</text>
+<line x1="602.0" y1="889" x2="130.0" y2="889" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="366.0" y="879" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">ACCEPTED</text>
+<line x1="838.0" y1="946" x2="130.0" y2="946" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="484.0" y="936" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">ACCEPTED</text>
+<rect x="80" y="993" width="1280" height="90" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.6"/>
+<text x="96" y="1018" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="start" style="">PROTOCOL NOTE</text>
+<text x="96" y="1042.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">At the third durable acceptance, the value is CHOSEN (3/5). Never substitute a fresh value when Phase 1 found a previously accepted value.</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Flink distributed execution</title><desc id="desc">JobManager schedules the job graph; TaskManagers execute parallel operator subtasks in task slots.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Flink distributed execution</text>
+<text class="subtitle" x="66" y="88">JobManager schedules the job graph; TaskManagers execute parallel operator subtasks in task slots.</text>
+
+<rect x="520" y="135" width="400" height="120" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="520" y="135" width="400" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="538" y="174" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">JobManager</text>
+<text x="538" y="202" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="538" dy="0">job graph · scheduling · checkpoint coordination</tspan>
+</text>
+<rect x="65" y="330" width="1310" height="440" rx="22" fill="#F9FBFE" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="87" y="367" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">TaskManagers · parallel operator execution</text>
+<rect x="87" y="380" width="56" height="4" rx="2" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<rect x="115" y="435" width="300" height="235" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="115" y="435" width="300" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="133" y="474" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">TaskManager 1</text>
+<text x="133" y="502" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="133" dy="0">Slot 1: Source / Map</tspan>
+<tspan x="133" dy="21">Slot 2: KeyBy / Window</tspan>
+<tspan x="133" dy="21">Slot 3: Sink / Output</tspan>
+</text>
+<path d="M720 255 V300 H265 V435" fill="none" stroke="#7052C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<rect x="520" y="435" width="300" height="235" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="520" y="435" width="300" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="538" y="474" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">TaskManager 2</text>
+<text x="538" y="502" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="538" dy="0">Slot 1: Source / Map</tspan>
+<tspan x="538" dy="21">Slot 2: KeyBy / Window</tspan>
+<tspan x="538" dy="21">Slot 3: Sink / Output</tspan>
+</text>
+<path d="M720 255 V300 H670 V435" fill="none" stroke="#7052C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<rect x="925" y="435" width="300" height="235" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="925" y="435" width="300" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="943" y="474" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">TaskManager 3</text>
+<text x="943" y="502" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="943" dy="0">Slot 1: Source / Map</tspan>
+<tspan x="943" dy="21">Slot 2: KeyBy / Window</tspan>
+<tspan x="943" dy="21">Slot 3: Sink / Output</tspan>
+</text>
+<path d="M720 255 V300 H1075 V435" fill="none" stroke="#7052C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<path d="M415 550 H520" fill="none" stroke="#2563EB" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<path d="M820 550 H925" fill="none" stroke="#2563EB" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<text x="720" y="725" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Network exchanges redistribute keyed records; operator chaining can combine compatible tasks.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

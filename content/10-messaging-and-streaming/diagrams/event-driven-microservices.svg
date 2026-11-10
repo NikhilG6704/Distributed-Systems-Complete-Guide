@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Event-driven microservices</title><desc id="desc">Each service owns its data; integration events flow through a broker to independently deployed consumers.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Event-driven microservices</text>
+<text class="subtitle" x="66" y="88">Each service owns its data; integration events flow through a broker to independently deployed consumers.</text>
+
+<rect x="80" y="345" width="230" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="80" y="345" width="230" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="98" y="384" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Order service</text>
+<text x="98" y="412" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="98" dy="0">owns Order DB</tspan>
+<tspan x="98" dy="22">writes OrderCreated</tspan>
+</text>
+<rect x="590" y="320" width="250" height="190" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="590" y="320" width="250" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="608" y="359" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Event broker</text>
+<text x="608" y="387" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="608" dy="0">OrderCreated</tspan>
+<tspan x="608" dy="21">PaymentCompleted</tspan>
+<tspan x="608" dy="21">InventoryReserved</tspan>
+</text>
+<path d="M310,415 L590,415" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="450.0" y="390" text-anchor="middle" style="fill:#2563EB;font-weight:650;font-size:13px">publish via outbox</text>
+<rect x="990" y="170" width="175" height="165" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="990" y="170" width="175" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="1008" y="209" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Inventory</text>
+<text x="1008" y="237" text-anchor="start" style="fill:#5F7087;font-size:13px">
+<tspan x="1008" dy="0">Inventory DB</tspan>
+<tspan x="1008" dy="19">reserve stock</tspan>
+</text>
+<path d="M840 415 H920 V250 H990" fill="none" stroke="#0B8A67" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="1195" y="170" width="175" height="165" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1195" y="170" width="175" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="1213" y="209" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Payment</text>
+<text x="1213" y="237" text-anchor="start" style="fill:#5F7087;font-size:13px">
+<tspan x="1213" dy="0">Payment DB</tspan>
+<tspan x="1213" dy="19">authorize charge</tspan>
+</text>
+<path d="M840 415 H920 V250 H990" fill="none" stroke="#C17A0B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<rect x="990" y="440" width="175" height="165" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="990" y="440" width="175" height="9" rx="5" fill="#0E8AA8" stroke="#0E8AA8" stroke-width="0"/>
+<text x="1008" y="479" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Shipping</text>
+<text x="1008" y="507" text-anchor="start" style="fill:#5F7087;font-size:13px">
+<tspan x="1008" dy="0">Shipment DB</tspan>
+<tspan x="1008" dy="19">create shipment</tspan>
+</text>
+<path d="M840 415 H920 V520 H990" fill="none" stroke="#0E8AA8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1195" y="440" width="175" height="165" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1195" y="440" width="175" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="1213" y="479" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Analytics</text>
+<text x="1213" y="507" text-anchor="start" style="fill:#5F7087;font-size:13px">
+<tspan x="1213" dy="0">warehouse</tspan>
+<tspan x="1213" dy="19">aggregate events</tspan>
+</text>
+<path d="M840 415 H920 V520 H990" fill="none" stroke="#7052C7" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-purple)"/>
+<text x="710" y="690" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">No shared database transaction</text>
+<text x="710" y="718" text-anchor="middle" style="fill:#5F7087;font-size:14px">Retries, idempotency and workflow state handle partial progress.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

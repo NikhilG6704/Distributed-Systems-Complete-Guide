@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Consistency models across replicas">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Consistency models across replicas</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">One update, different visibility times — the contract determines what a reader is allowed to observe.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<rect x="70" y="125" width="300" height="118" rx="14" fill="#E5F6F1" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="70" y="125" width="7" height="118" rx="3" fill="#0F8B78"/>
+<text x="88" y="153" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">INDIA</text>
+<text x="88" y="177" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="88" dy="0">v11 · current</tspan>
+<tspan x="88" dy="18">Database replica</tspan>
+</text>
+<rect x="435" y="125" width="300" height="118" rx="14" fill="#FFF3DD" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="435" y="125" width="7" height="118" rx="3" fill="#B96B08"/>
+<text x="453" y="153" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">EUROPE</text>
+<text x="453" y="177" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="453" dy="0">v10 · lagging</tspan>
+<tspan x="453" dy="18">Database replica</tspan>
+</text>
+<rect x="800" y="125" width="300" height="118" rx="14" fill="#FFF3DD" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="800" y="125" width="7" height="118" rx="3" fill="#B96B08"/>
+<text x="818" y="153" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">UNITED STATES</text>
+<text x="818" y="177" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="818" dy="0">v10 · lagging</tspan>
+<tspan x="818" dy="18">Database replica</tspan>
+</text>
+<rect x="145" y="285" width="150" height="66" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="220.0" y="309" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Client IN</text>
+<text x="220.0" y="328" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">writes v11</text>
+<rect x="510" y="285" width="150" height="66" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="585.0" y="309" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">Client EU</text>
+<text x="585.0" y="328" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">reads key</text>
+<rect x="875" y="285" width="150" height="66" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="950.0" y="309" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">Client US</text>
+<text x="950.0" y="328" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">reads key</text>
+<line x1="220" y1="285" x2="220" y2="243" stroke="#0F8B78" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="585" y1="285" x2="585" y2="243" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="950" y1="285" x2="950" y2="243" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="370" y1="184" x2="435" y2="184" stroke="#B96B08" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#arr-amber)"/>
+<line x1="735" y1="184" x2="800" y2="184" stroke="#B96B08" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#arr-amber)"/>
+<rect x="365" y="145" width="74" height="27" rx="13" fill="#FFF3DD"/>
+<text x="402.0" y="163" font-size="12" font-weight="semibold" fill="#B96B08" text-anchor="middle">lag</text>
+<rect x="730" y="145" width="74" height="27" rx="13" fill="#FFF3DD"/>
+<text x="767.0" y="163" font-size="12" font-weight="semibold" fill="#B96B08" text-anchor="middle">lag</text>
+<text x="600" y="391" font-size="16" font-weight="bold" fill="#C63D4B" text-anchor="middle">EU read before propagation → may return v10</text>
+<line x1="585" y1="352" x2="585" y2="365" stroke="#C63D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<line x1="220" y1="365" x2="950" y2="365" stroke="#0F8B78" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<text x="585" y="419" font-size="13" font-weight="semibold" fill="#0F8B78" text-anchor="middle">Later: replication / repair brings all replicas to v11</text>
+<rect x="55" y="445" width="345" height="145" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="55" y="445" width="7" height="145" rx="3" fill="#2563EB"/>
+<text x="73" y="473" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">LINEARIZABLE READ</text>
+<text x="73" y="497" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="73" dy="0">Must reflect the latest completed write.</tspan>
+<tspan x="73" dy="18">Wait, validate a quorum, or route to a</tspan>
+<tspan x="73" dy="18">safe authoritative read path.</tspan>
+</text>
+<rect x="427" y="445" width="345" height="145" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="427" y="445" width="7" height="145" rx="3" fill="#7652C8"/>
+<text x="445" y="473" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">CAUSAL READ</text>
+<text x="445" y="497" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="445" dy="0">Must include known dependencies.</tspan>
+<tspan x="445" dy="18">An unrelated write need not be visible</tspan>
+<tspan x="445" dy="18">merely because wall-clock time passed.</tspan>
+</text>
+<rect x="799" y="445" width="345" height="145" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="799" y="445" width="7" height="145" rx="3" fill="#B96B08"/>
+<text x="817" y="473" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">EVENTUAL READ</text>
+<text x="817" y="497" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="817" dy="0">May return v10 during propagation.</tspan>
+<tspan x="817" dy="18">Converges after updates are delivered</tspan>
+<tspan x="817" dy="18">and conflicts are resolved.</tspan>
+</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

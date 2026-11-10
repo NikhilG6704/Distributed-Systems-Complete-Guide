@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Bully election algorithm: highest active process wins</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">P2 detects failure; P3 and P4 answer OK; P4 eventually finds no higher active process and announces itself coordinator.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="65" y="160" width="170" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="150.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P1</text>
+<text x="150.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID = 1</text>
+<rect x="335" y="160" width="170" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="420.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P2</text>
+<text x="420.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID = 2</text>
+<rect x="605" y="160" width="170" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="690.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P3</text>
+<text x="690.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID = 3</text>
+<rect x="875" y="160" width="170" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="960.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P4</text>
+<text x="960.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID = 4</text>
+<rect x="1145" y="160" width="170" height="90" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="1230.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">P5</text>
+<text x="1230.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">FAILED</text>
+<line x1="420" y1="290" x2="690" y2="290" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<line x1="420" y1="320" x2="960" y2="320" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<line x1="420" y1="350" x2="1230" y2="350" stroke="#C34C4C" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<text x="685" y="275" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#C7861A" text-anchor="middle" style="">ELECTION → P3, P4, P5</text>
+<line x1="690" y1="395" x2="420" y2="395" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="960" y1="425" x2="420" y2="425" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="690" y="410" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="middle" style="">OK responses</text>
+<line x1="690" y1="495" x2="960" y2="495" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<text x="825" y="480" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">P3 starts higher election</text>
+<line x1="960" y1="535" x2="1230" y2="535" stroke="#C34C4C" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<text x="1095" y="520" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">no reply from P5</text>
+<path d="M 960 560 C 960 625, 700 625, 420 560" fill="none" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="690" y="640" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">P4 declares coordinator → COORDINATOR broadcast</text>
+<rect x="80" y="705" width="610" height="105" rx="12" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.6"/>
+<text x="96" y="730" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="start" style="">MESSAGE COST</text>
+<text x="96" y="754.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Classic simultaneous cascades can create O(N²) messages in the worst case; a</text>
+<text x="96" y="771.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">single isolated election is often O(N) messages.</text>
+<rect x="735" y="705" width="625" height="105" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.6"/>
+<text x="751" y="730" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="start" style="">PARTITION CAVEAT</text>
+<text x="751" y="754.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Textbook Bully assumes known membership and reliable process reachability.</text>
+<text x="751" y="771.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Partitions or delayed messages can yield inconsistent coordinator beliefs.</text>
+</svg>

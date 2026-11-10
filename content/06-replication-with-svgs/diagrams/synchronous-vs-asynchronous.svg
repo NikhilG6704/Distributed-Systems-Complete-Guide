@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Synchronous vs. asynchronous replication">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Synchronous vs. asynchronous replication</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">The acknowledgment point determines latency and the amount of acknowledged data exposed to failover loss</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="70" y="180" width="710" height="600" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="94" y="218" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#0F9D8A" text-anchor="start">SYNCHRONOUS / ACK-GATED</text>
+<rect x="130" y="260" width="250" height="100" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="130" y="260" width="9" height="100" rx="5" fill="#2F6FED"/>
+<text x="158" y="298" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Leader</text>
+<text x="158" y="328" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="158" dy="0">Append + flush record</tspan>
+</text>
+<rect x="475" y="260" width="250" height="100" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="475" y="260" width="9" height="100" rx="5" fill="#0F9D8A"/>
+<text x="503" y="298" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Follower</text>
+<text x="503" y="328" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="503" dy="0">Receive + persist</tspan>
+</text>
+<line x1="380" y1="310" x2="465" y2="310" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-teal)"/>
+<text x="422.5" y="294.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">replicate</text>
+<line x1="475" y1="390" x2="380" y2="390" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-teal)"/>
+<text x="427.5" y="374.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">ACK</text>
+<rect x="235" y="465" width="420" height="115" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="235" y="465" width="9" height="115" rx="5" fill="#27845B"/>
+<text x="263" y="503" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Client success</text>
+<text x="263" y="533" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="263" dy="0">Only after configured replica condition</tspan>
+</text>
+<rect x="565" y="479" width="76" height="29" rx="14" fill="#E8F5ED"/>
+<text x="603.0" y="499" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#27845B" text-anchor="middle">WAIT</text>
+<line x1="355" y1="360" x2="355" y2="455" stroke="#27845B" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-green)"/>
+<text x="130" y="650" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="130" dy="0">Higher commit latency; depends on ACK policy.</tspan>
+<tspan x="130" dy="26">Synchronous transmission alone does not imply durable</tspan>
+<tspan x="130" dy="26">follower flush or a consensus commit.</tspan>
+</text>
+<rect x="820" y="180" width="710" height="600" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="844" y="218" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#D88A18" text-anchor="start">ASYNCHRONOUS / DECOUPLED</text>
+<rect x="880" y="260" width="250" height="100" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="880" y="260" width="9" height="100" rx="5" fill="#2F6FED"/>
+<text x="908" y="298" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Leader</text>
+<text x="908" y="328" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="908" dy="0">Append + local policy</tspan>
+</text>
+<rect x="1225" y="260" width="250" height="100" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1225" y="260" width="9" height="100" rx="5" fill="#D88A18"/>
+<text x="1253" y="298" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Follower</text>
+<text x="1253" y="328" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1253" dy="0">Apply later</tspan>
+</text>
+<line x1="1130" y1="310" x2="1215" y2="310" stroke="#D88A18" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-amber)"/>
+<text x="1172.5" y="294.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D88A18" text-anchor="middle">background stream</text>
+<rect x="985" y="465" width="420" height="115" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="985" y="465" width="9" height="115" rx="5" fill="#D88A18"/>
+<text x="1013" y="503" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Client success</text>
+<text x="1013" y="533" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1013" dy="0">May precede remote apply</tspan>
+</text>
+<rect x="1282" y="479" width="109" height="29" rx="14" fill="#FFF4DE"/>
+<text x="1336.5" y="499" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#D88A18" text-anchor="middle">EARLY ACK</text>
+<line x1="1005" y1="360" x2="1005" y2="455" stroke="#D88A18" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-amber)"/>
+<text x="880" y="650" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="880" dy="0">Lower write latency; followers can lag.</tspan>
+<tspan x="880" dy="26">Failover may lose acknowledged writes not present</tspan>
+<tspan x="880" dy="26">on the promoted replica.</tspan>
+</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Semi-synchronous replication sits between these models and depends on timeout / fallback configuration.</text>
+</svg>

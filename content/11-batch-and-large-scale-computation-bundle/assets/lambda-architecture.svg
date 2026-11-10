@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Lambda architecture</title><desc id="desc">A batch layer recomputes accurate historical views while a speed layer produces low-latency updates.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Lambda architecture</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">A batch layer recomputes accurate historical views while a speed layer produces low-latency updates.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="60" y="350" width="220" height="145" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="78" y="381" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Immutable event history</text>
+<text x="78" y="410" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">append-only source</text>
+<text x="78" y="435" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">full replay</text>
+<text x="78" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">capability</text>
+<rect x="365" y="155" width="440" height="500" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#3973A8" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="383" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#3973A8" text-anchor="start">Batch layer</text>
+<rect x="410" y="235" width="350" height="120" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="428" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Batch compute</text>
+<text x="428" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">scheduled full / incremental</text>
+<text x="428" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">jobs</text>
+<text x="428" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">historical recomputation</text>
+<rect x="410" y="440" width="350" height="105" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="428" y="471" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Batch views</text>
+<text x="428" y="500" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">accurate, corrected results</text>
+<text x="428" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">long time horizon</text>
+<rect x="865" y="155" width="350" height="500" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#B87918" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="883" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#B87918" text-anchor="start">Speed layer</text>
+<rect x="905" y="235" width="270" height="120" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="923" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Stream processor</text>
+<text x="923" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">consume new events</text>
+<text x="923" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">low-latency</text>
+<text x="923" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">approximation</text>
+<rect x="905" y="440" width="270" height="105" rx="18" fill="#FFF1D9" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="923" y="471" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Realtime views</text>
+<text x="923" y="500" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">recent updates</text>
+<text x="923" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">short-latency results</text>
+<rect x="1280" y="315" width="265" height="180" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1298" y="346" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Serving layer</text>
+<text x="1298" y="375" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">merge / reconcile views</text>
+<text x="1298" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">query API / materialized</text>
+<text x="1298" y="425" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">view</text>
+<path d="M 280,410 L 330,410 L 330,295 L 410,295" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="272" y="271" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="330" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">history</text>
+<path d="M 280,410 L 330,410 L 330,130 L 875,130 L 875,295 L 905,295" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="817" y="106" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="875" y="125" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">live events</text>
+<path d="M 585,355 L 585,440" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="527.0" y="373.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="585.0" y="392.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">compute views</text>
+<path d="M 1040,355 L 1040,440" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="982.0" y="373.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1040.0" y="392.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">update views</text>
+<path d="M 760,495 L 1230,495 L 1230,375 L 1280,375" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1172" y="351" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1230" y="370" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">batch view</text>
+<path d="M 1175,495 L 1235,495 L 1235,445 L 1280,445" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="1177" y="421" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1235" y="440" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">speed view</text>
+<text x="800" y="735" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">Trade-off: duplicated computation and reconciliation complexity in exchange for historical accuracy plus low latency.</text>
+</svg>

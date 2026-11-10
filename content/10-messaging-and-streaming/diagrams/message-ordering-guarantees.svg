@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Ordering guarantees and parallelism</title><desc id="desc">Global ordering serializes the stream; partition or key ordering preserves local order while allowing unrelated work in parallel.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Ordering guarantees and parallelism</text>
+<text class="subtitle" x="66" y="88">Global ordering serializes the stream; partition or key ordering preserves local order while allowing unrelated work in parallel.</text>
+
+<rect x="55" y="145" width="400" height="630" rx="22" fill="#F9FBFE" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="77" y="182" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">Global order</text>
+<rect x="77" y="195" width="56" height="4" rx="2" fill="#C43D4B" stroke="#C43D4B" stroke-width="0"/>
+<rect x="150" y="235" width="205" height="58" rx="12" fill="#FFFFFF" stroke="#C43D4B" stroke-width="1.8"/>
+<text x="252" y="271" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">event 1</text>
+<path d="M252,293 L252,323" fill="none" stroke="#C43D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+<rect x="150" y="323" width="205" height="58" rx="12" fill="#FFFFFF" stroke="#C43D4B" stroke-width="1.8"/>
+<text x="252" y="359" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">event 2</text>
+<path d="M252,381 L252,411" fill="none" stroke="#C43D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+<rect x="150" y="411" width="205" height="58" rx="12" fill="#FFFFFF" stroke="#C43D4B" stroke-width="1.8"/>
+<text x="252" y="447" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">event 3</text>
+<path d="M252,469 L252,499" fill="none" stroke="#C43D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+<rect x="150" y="499" width="205" height="58" rx="12" fill="#FFFFFF" stroke="#C43D4B" stroke-width="1.8"/>
+<text x="252" y="535" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">event 4</text>
+<path d="M252,557 L252,587" fill="none" stroke="#C43D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+<rect x="150" y="587" width="205" height="58" rx="12" fill="#FFFFFF" stroke="#C43D4B" stroke-width="1.8"/>
+<text x="252" y="623" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">event 5</text>
+<text x="252" y="720" text-anchor="middle" style="fill:#5F7087;font-weight:650;font-size:15px">One serialized sequence</text>
+<rect x="520" y="145" width="865" height="630" rx="22" fill="#F9FBFE" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="542" y="182" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">Per-key / per-partition order</text>
+<rect x="542" y="195" width="56" height="4" rx="2" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="570" y="266" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:16px">Account A</text>
+<rect x="770" y="235" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8"/>
+<text x="832" y="273" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">A1</text>
+<path d="M895,266 L935,266" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="935" y="235" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8"/>
+<text x="997" y="273" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">A2</text>
+<path d="M1060,266 L1100,266" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="1100" y="235" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8"/>
+<text x="1162" y="273" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">A3</text>
+<text x="570" y="421" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:16px">Account B</text>
+<rect x="770" y="390" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.8"/>
+<text x="832" y="428" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">B1</text>
+<path d="M895,421 L935,421" fill="none" stroke="#0B8A67" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+<rect x="935" y="390" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.8"/>
+<text x="997" y="428" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">B2</text>
+<path d="M1060,421 L1100,421" fill="none" stroke="#0B8A67" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+<rect x="1100" y="390" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#0B8A67" stroke-width="1.8"/>
+<text x="1162" y="428" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">B3</text>
+<text x="570" y="576" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:16px">Account C</text>
+<rect x="770" y="545" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#7052C7" stroke-width="1.8"/>
+<text x="832" y="583" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">C1</text>
+<path d="M895,576 L935,576" fill="none" stroke="#7052C7" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="935" y="545" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#7052C7" stroke-width="1.8"/>
+<text x="997" y="583" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">C2</text>
+<path d="M1060,576 L1100,576" fill="none" stroke="#7052C7" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="1100" y="545" width="125" height="62" rx="12" fill="#FFFFFF" stroke="#7052C7" stroke-width="1.8"/>
+<text x="1162" y="583" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:17px">C3</text>
+<text x="950" y="745" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Each key keeps local sequence; independent keys execute concurrently.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

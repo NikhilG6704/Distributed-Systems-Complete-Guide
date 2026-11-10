@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Spark on Kubernetes: two schedulers, two levels</title><desc id="desc">Kubernetes places driver and executor Pods on nodes; the Spark driver assigns Spark tasks to executor slots.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Spark on Kubernetes: two schedulers, two levels</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">Kubernetes places driver and executor Pods on nodes; the Spark driver assigns Spark tasks to executor slots.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="55" y="145" width="480" height="560" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#7955A6" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="73" y="174" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#7955A6" text-anchor="start">Kubernetes control plane</text>
+<rect x="95" y="220" width="390" height="100" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="113" y="251" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">API server + controllers</text>
+<text x="113" y="280" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">desired Pods, status, reconciliation</text>
+<rect x="95" y="405" width="390" height="115" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="113" y="436" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Kubernetes scheduler</text>
+<text x="113" y="465" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Pod requests / limits</text>
+<text x="113" y="490" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">node affinity · taints · quotas</text>
+<rect x="620" y="145" width="920" height="560" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#64748B" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="638" y="174" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#64748B" text-anchor="start">Worker nodes</text>
+<rect x="665" y="235" width="350" height="180" rx="18" fill="#F0E9FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="683" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Driver Pod</text>
+<text x="683" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Spark driver process</text>
+<text x="683" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">DAG + task scheduler</text>
+<text x="683" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">requests executor Pods</text>
+<rect x="1110" y="205" width="365" height="150" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1128" y="236" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Executor Pod A</text>
+<text x="1128" y="265" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">executor slots</text>
+<text x="1128" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Spark tasks + shuffle</text>
+<rect x="1110" y="430" width="365" height="150" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1128" y="461" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Executor Pod B</text>
+<text x="1128" y="490" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">executor slots</text>
+<text x="1128" y="515" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Spark tasks + cache</text>
+<path d="M 285,320 L 285,405" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="227.0" y="338.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="285.0" y="357.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">schedule Pods</text>
+<path d="M 485,460 L 575,460 L 575,320 L 665,320" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="517" y="296" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="575" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">place driver</text>
+<path d="M 485,460 L 585,460 L 585,175 L 1065,175 L 1065,280" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="527" y="151" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="585" y="170" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">place executor Pods</text>
+<path d="M 1015,310 L 1060,310 L 1060,270 L 1110,270" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="1002" y="246" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1060" y="265" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">Spark task assignment</text>
+<path d="M 1015,355 L 1065,355 L 1065,495 L 1110,495" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<path d="M 1015,390 L 1080,390 L 1080,530 L 1110,530" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="1022" y="506" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1080" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">shuffle / results</text>
+<text x="800" y="750" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#526581" text-anchor="middle">Kubernetes schedules Pods; Spark schedules tasks. Resource requests, limits, storage, and shuffle lifecycle affect performance.</text>
+</svg>

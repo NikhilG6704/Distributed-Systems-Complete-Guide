@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Leaderless replication">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Leaderless replication</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">A coordinator fans writes to replicas and reconciles parallel read responses</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="80" y="375" width="300" height="135" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="80" y="375" width="9" height="135" rx="5" fill="#2F6FED"/>
+<text x="108" y="413" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Client</text>
+<text x="108" y="443" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="108" dy="0">PUT /items/42</tspan>
+<tspan x="108" dy="22">GET /items/42</tspan>
+</text>
+<rect x="610" y="365" width="360" height="155" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="610" y="365" width="9" height="155" rx="5" fill="#7957C8"/>
+<text x="638" y="403" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Coordinator</text>
+<text x="638" y="433" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="638" dy="0">Select replica set</tspan>
+<tspan x="638" dy="22">Collect W write ACKs</tspan>
+<tspan x="638" dy="22">Collect R read responses</tspan>
+</text>
+<rect x="1170" y="220" width="330" height="130" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1170" y="220" width="9" height="130" rx="5" fill="#0F9D8A"/>
+<text x="1198" y="258" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Replica A</text>
+<text x="1198" y="288" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1198" dy="0">Local version v7</tspan>
+<tspan x="1198" dy="22">No permanent primary</tspan>
+</text>
+<line x1="970" y1="440" x2="1160" y2="285" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="8 7" marker-end="url(#arrow-teal)"/>
+<text x="1065.0" y="352.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">fan-out / response</text>
+<rect x="1170" y="430" width="330" height="130" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1170" y="430" width="9" height="130" rx="5" fill="#D88A18"/>
+<text x="1198" y="468" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Replica B</text>
+<text x="1198" y="498" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1198" dy="0">Local version v6</tspan>
+<tspan x="1198" dy="22">No permanent primary</tspan>
+</text>
+<line x1="970" y1="440" x2="1160" y2="495" stroke="#D88A18" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="8 7" marker-end="url(#arrow-amber)"/>
+<text x="1065.0" y="457.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D88A18" text-anchor="middle">fan-out / response</text>
+<rect x="1170" y="640" width="330" height="130" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1170" y="640" width="9" height="130" rx="5" fill="#2F6FED"/>
+<text x="1198" y="678" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Replica C</text>
+<text x="1198" y="708" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1198" dy="0">Local version v7</tspan>
+<tspan x="1198" dy="22">No permanent primary</tspan>
+</text>
+<line x1="970" y1="440" x2="1160" y2="705" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="8 7" marker-end="url(#arrow-blue)"/>
+<text x="1065.0" y="562.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">fan-out / response</text>
+<line x1="380" y1="440" x2="600" y2="440" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<text x="490.0" y="426.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">request</text>
+<rect x="550" y="690" width="430" height="34" rx="17" fill="#F0EBFC"/>
+<text x="765.0" y="713" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7957C8" text-anchor="middle">R + W &gt; N gives set intersection</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Read reconciliation, version semantics, replica membership and sloppy-quorum rules determine actual guarantees.</text>
+</svg>

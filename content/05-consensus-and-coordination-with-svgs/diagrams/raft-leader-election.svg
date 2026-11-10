@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Raft leader election: five-node example</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A fails in term 10; B wins term 11 with a 3-of-5 majority, including its own vote.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="110" y="180" width="140" height="90" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="180.0" y="209" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">A</text>
+<text x="180.0" y="232.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">old leader</text>
+<rect x="375" y="180" width="140" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="445.0" y="209" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#2864A6" text-anchor="middle" style="">B</text>
+<text x="445.0" y="232.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="640" y="180" width="140" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="710.0" y="209" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#2864A6" text-anchor="middle" style="">C</text>
+<text x="710.0" y="232.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="905" y="180" width="140" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="975.0" y="209" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#2864A6" text-anchor="middle" style="">D</text>
+<text x="975.0" y="232.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="1170" y="180" width="140" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1240.0" y="209" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#2864A6" text-anchor="middle" style="">E</text>
+<text x="1240.0" y="232.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="105" y="300" width="150" height="32" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.5"/>
+<text x="180.0" y="322" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">CRASHED</text>
+<text x="445" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#C7861A" text-anchor="middle" style="">B times out first → term 11 → self-vote</text>
+<line x1="445" y1="390" x2="710" y2="390" stroke="#C7861A" stroke-width="2" marker-end="url(#arr-amber)"/>
+<text x="577.5" y="375" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">RequestVote</text>
+<line x1="445" y1="390" x2="975" y2="390" stroke="#C7861A" stroke-width="2" marker-end="url(#arr-amber)"/>
+<text x="710.0" y="375" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">RequestVote</text>
+<line x1="445" y1="390" x2="1240" y2="390" stroke="#C7861A" stroke-width="2" marker-end="url(#arr-amber)"/>
+<text x="842.5" y="375" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">RequestVote</text>
+<line x1="710" y1="445" x2="445" y2="445" stroke="#148A83" stroke-width="2" marker-end="url(#arr-teal)"/>
+<text x="577.5" y="430" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="middle" style="">voteGranted</text>
+<line x1="975" y1="445" x2="445" y2="445" stroke="#148A83" stroke-width="2" marker-end="url(#arr-teal)"/>
+<text x="710.0" y="430" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="middle" style="">voteGranted</text>
+<rect x="300" y="490" width="550" height="95" rx="12" fill="#F3F6FA" stroke="#2D8A57" stroke-width="1.6"/>
+<text x="316" y="515" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="start" style="">QUORUM ACHIEVED</text>
+<text x="316" y="539.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">B + C + D = 3 of 5. B becomes leader for term 11.</text>
+<line x1="445" y1="585" x2="180" y2="670" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<line x1="445" y1="585" x2="710" y2="670" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<line x1="445" y1="585" x2="975" y2="670" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<line x1="445" y1="585" x2="1240" y2="670" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="710" y="695" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">HEARTBEATS / AppendEntries establish leadership</text>
+<rect x="75" y="755" width="1290" height="70" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="91" y="780" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">SPLIT VOTE</text>
+<text x="91" y="804.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">If votes split, no candidate has a majority. Candidates wait for independently randomized election timeouts and retry in a later term.</text>
+</svg>

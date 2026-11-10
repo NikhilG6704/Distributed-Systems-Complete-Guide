@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Messaging delivery semantics</title><desc id="desc">The crash window between processing and acknowledgment determines whether loss or duplicates are possible.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Messaging delivery semantics</text>
+<text class="subtitle" x="66" y="88">The crash window between processing and acknowledgment determines whether loss or duplicates are possible.</text>
+
+<rect x="60" y="145" width="1320" height="185" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="88" y="181" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">At-most-once</text>
+<text x="88" y="207" text-anchor="start" style="fill:#5F7087;font-size:14px">Commit / ack before effect</text>
+<rect x="430" y="233" width="150" height="30" rx="15" fill="#FDECEF" stroke="#C43D4B" stroke-width="1.1"/>
+<text x="505.0" y="253" text-anchor="middle" style="fill:#C43D4B;font-weight:700;font-size:13px">Read</text>
+<rect x="650" y="233" width="150" height="30" rx="15" fill="#FDECEF" stroke="#C43D4B" stroke-width="1.1"/>
+<text x="725.0" y="253" text-anchor="middle" style="fill:#C43D4B;font-weight:700;font-size:13px">Process</text>
+<rect x="870" y="233" width="150" height="30" rx="15" fill="#FDECEF" stroke="#C43D4B" stroke-width="1.1"/>
+<text x="945.0" y="253" text-anchor="middle" style="fill:#C43D4B;font-weight:700;font-size:13px">Crash window</text>
+<rect x="1090" y="233" width="150" height="30" rx="15" fill="#FDECEF" stroke="#C43D4B" stroke-width="1.1"/>
+<text x="1165.0" y="253" text-anchor="middle" style="fill:#C43D4B;font-weight:700;font-size:13px">Restart</text>
+<path d="M580,248 L650,248" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M800,248 L870,248" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1020,248 L1090,248" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="945" y="295" text-anchor="middle" style="fill:#C43D4B;font-weight:650;font-size:13px">Offset committed; crash before effect → possible loss</text>
+<rect x="60" y="360" width="1320" height="185" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="88" y="396" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">At-least-once</text>
+<text x="88" y="422" text-anchor="start" style="fill:#5F7087;font-size:14px">Effect before ack; retry on uncertainty</text>
+<rect x="430" y="448" width="150" height="30" rx="15" fill="#FFF5DF" stroke="#C17A0B" stroke-width="1.1"/>
+<text x="505.0" y="468" text-anchor="middle" style="fill:#C17A0B;font-weight:700;font-size:13px">Read</text>
+<rect x="650" y="448" width="150" height="30" rx="15" fill="#FFF5DF" stroke="#C17A0B" stroke-width="1.1"/>
+<text x="725.0" y="468" text-anchor="middle" style="fill:#C17A0B;font-weight:700;font-size:13px">Process</text>
+<rect x="870" y="448" width="150" height="30" rx="15" fill="#FFF5DF" stroke="#C17A0B" stroke-width="1.1"/>
+<text x="945.0" y="468" text-anchor="middle" style="fill:#C17A0B;font-weight:700;font-size:13px">Crash window</text>
+<rect x="1090" y="448" width="150" height="30" rx="15" fill="#FFF5DF" stroke="#C17A0B" stroke-width="1.1"/>
+<text x="1165.0" y="468" text-anchor="middle" style="fill:#C17A0B;font-weight:700;font-size:13px">Restart</text>
+<path d="M580,463 L650,463" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M800,463 L870,463" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1020,463 L1090,463" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="945" y="510" text-anchor="middle" style="fill:#C17A0B;font-weight:650;font-size:13px">Effect completed; crash before ack → possible duplicate</text>
+<rect x="60" y="575" width="1320" height="185" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="88" y="611" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">Transactional boundary</text>
+<text x="88" y="637" text-anchor="start" style="fill:#5F7087;font-size:14px">Effect and progress commit atomically</text>
+<rect x="430" y="663" width="150" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="505.0" y="683" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">Read</text>
+<rect x="650" y="663" width="150" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="725.0" y="683" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">Process</text>
+<rect x="870" y="663" width="150" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="945.0" y="683" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">Crash window</text>
+<rect x="1090" y="663" width="150" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="1165.0" y="683" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">Restart</text>
+<path d="M580,678 L650,678" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M800,678 L870,678" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1020,678 L1090,678" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="945" y="725" text-anchor="middle" style="fill:#0B8A67;font-weight:650;font-size:13px">State + offset committed together → replay-safe boundary</text>
+<text x="720" y="825" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Exactly-once is always scoped: broker, processor state, database transaction, or external business effect.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

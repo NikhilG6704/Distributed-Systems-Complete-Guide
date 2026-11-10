@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">HBase RegionServer storage path</title><desc id="desc">HMaster assigns regions; RegionServers serve rows using WAL, MemStore, and immutable HFiles.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">HBase RegionServer storage path</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">HMaster assigns regions; RegionServers serve rows using WAL, MemStore, and immutable HFiles.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="500" y="140" width="420" height="95" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5"/>
+<rect x="500" y="140" width="7" height="95" rx="4" fill="#7656C8"/>
+<text x="518" y="169" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="700" fill="#23364D" text-anchor="start" style="">HMaster</text>
+<text x="518" y="193" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="518" dy="0">Region assignment • schema/admin • cluster management</tspan></text>
+<rect x="70" y="330" width="600" height="440" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<text x="95" y="370" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" fill="#2F6FED" text-anchor="start" style="">RegionServer A</text>
+<rect x="95" y="390" width="210" height="28" rx="14" fill="#EAF1FF" stroke="#EAF1FF" stroke-width="1"/>
+<text x="200.0" y="409" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#2F6FED" text-anchor="middle" style="">Region 1: [a–m)</text>
+<rect x="105" y="455" width="230" height="115" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="105" y="455" width="7" height="115" rx="4" fill="#D58A19"/>
+<text x="123" y="484" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">WAL</text>
+<text x="123" y="508" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="123" dy="0">Append mutations before ack</tspan></text>
+<rect x="380" y="455" width="245" height="115" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5"/>
+<rect x="380" y="455" width="7" height="115" rx="4" fill="#119A8A"/>
+<text x="398" y="484" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Region / Store</text>
+<text x="398" y="508" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="398" dy="0">Column family MemStore</tspan></text>
+<rect x="380" y="620" width="245" height="105" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="380" y="620" width="7" height="105" rx="4" fill="#2F6FED"/>
+<text x="398" y="649" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">HFiles</text>
+<text x="398" y="673" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="398" dy="0">Immutable StoreFiles</tspan></text>
+<path d="M335,510 H380" fill="none" stroke="#D58A19" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<path d="M500,570 V620" fill="none" stroke="#119A8A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<text x="105" y="700" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="600" fill="#5E7086" text-anchor="start" style="">Flush / compaction</text>
+<rect x="760" y="330" width="600" height="440" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<text x="785" y="370" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" fill="#119A8A" text-anchor="start" style="">RegionServer B</text>
+<rect x="785" y="390" width="210" height="28" rx="14" fill="#E6F6F3" stroke="#E6F6F3" stroke-width="1"/>
+<text x="890.0" y="409" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#119A8A" text-anchor="middle" style="">Region 2: [m–z)</text>
+<rect x="795" y="455" width="230" height="115" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="795" y="455" width="7" height="115" rx="4" fill="#D58A19"/>
+<text x="813" y="484" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">WAL</text>
+<text x="813" y="508" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="813" dy="0">Append mutations before ack</tspan></text>
+<rect x="1070" y="455" width="245" height="115" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5"/>
+<rect x="1070" y="455" width="7" height="115" rx="4" fill="#119A8A"/>
+<text x="1088" y="484" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Region / Store</text>
+<text x="1088" y="508" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1088" dy="0">Column family MemStore</tspan></text>
+<rect x="1070" y="620" width="245" height="105" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="1070" y="620" width="7" height="105" rx="4" fill="#2F6FED"/>
+<text x="1088" y="649" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">HFiles</text>
+<text x="1088" y="673" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1088" dy="0">Immutable StoreFiles</tspan></text>
+<path d="M1025,510 H1070" fill="none" stroke="#D58A19" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<path d="M1190,570 V620" fill="none" stroke="#119A8A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<text x="795" y="700" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="600" fill="#5E7086" text-anchor="start" style="">Flush / compaction</text>
+<path d="M710,235 V285 H370 V330" fill="none" stroke="#5E7086" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#arr-gray)"/>
+<path d="M710,285 H1060 V330" fill="none" stroke="#5E7086" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#arr-gray)"/>
+<rect x="970" y="150" width="230" height="28" rx="14" fill="#EAF1FF" stroke="#EAF1FF" stroke-width="1"/>
+<text x="1085.0" y="169" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#2F6FED" text-anchor="middle" style="">Client routes by row key</text>
+<text x="720" y="835" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#5E7086" text-anchor="middle" style="">A Region is a key range; each RegionServer owns regions and merges recent MemStore state with HFiles on reads.</text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">hbase-regionserver-architecture.svg</text>
+</svg>

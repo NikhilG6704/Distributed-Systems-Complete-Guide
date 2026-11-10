@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Flink checkpoint barriers and recovery</title><desc id="desc">Checkpoint barriers align in-flight data with operator snapshots and source positions for consistent recovery.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Flink checkpoint barriers and recovery</text>
+<text class="subtitle" x="66" y="88">Checkpoint barriers align in-flight data with operator snapshots and source positions for consistent recovery.</text>
+
+<rect x="65" y="355" width="180" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="65" y="355" width="180" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="83" y="394" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Source</text>
+<text x="83" y="422" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="83" dy="0">records + offset</tspan>
+</text>
+<rect x="360" y="285" width="235" height="270" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="360" y="285" width="235" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="378" y="324" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Operator A</text>
+<text x="378" y="352" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="378" dy="0">state snapshot</tspan>
+<tspan x="378" dy="22">barrier 12</tspan>
+</text>
+<rect x="720" y="285" width="235" height="270" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="720" y="285" width="235" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="738" y="324" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Operator B</text>
+<text x="738" y="352" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="738" dy="0">keyed state</tspan>
+<tspan x="738" dy="22">barrier 12</tspan>
+</text>
+<rect x="1080" y="355" width="260" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1080" y="355" width="260" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="1098" y="394" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Transactional sink</text>
+<text x="1098" y="422" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1098" dy="0">pre-commit / commit</tspan>
+</text>
+<path d="M245,420 L360,420" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M595,420 L720,420" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M955,420 L1080,420" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M310,250 L310,600" fill="none" stroke="#7052C7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<rect x="238" y="205" width="145" height="30" rx="15" fill="#F1EDFF" stroke="#7052C7" stroke-width="1.1"/>
+<text x="310.5" y="225" text-anchor="middle" style="fill:#7052C7;font-weight:700;font-size:13px">Barrier 12</text>
+<path d="M665,250 L665,600" fill="none" stroke="#7052C7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<rect x="593" y="205" width="145" height="30" rx="15" fill="#F1EDFF" stroke="#7052C7" stroke-width="1.1"/>
+<text x="665.5" y="225" text-anchor="middle" style="fill:#7052C7;font-weight:700;font-size:13px">Barrier 12</text>
+<path d="M1020,250 L1020,600" fill="none" stroke="#7052C7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<rect x="948" y="205" width="145" height="30" rx="15" fill="#F1EDFF" stroke="#7052C7" stroke-width="1.1"/>
+<text x="1020.5" y="225" text-anchor="middle" style="fill:#7052C7;font-weight:700;font-size:13px">Barrier 12</text>
+<rect x="390" y="660" width="650" height="105" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="390" y="660" width="650" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="408" y="699" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Checkpoint storage</text>
+<text x="408" y="727" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="408" dy="0">Operator state + source offsets persisted as one consistent checkpoint.</tspan>
+</text>
+<path d="M477 555 V625 H510 V660" fill="none" stroke="#7052C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<path d="M837 555 V625 H720 V660" fill="none" stroke="#7052C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<text x="720" y="820" text-anchor="middle" style="fill:#5F7087;font-weight:650;font-size:14px">After failure: restore the latest completed checkpoint and replay from its coordinated source positions.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

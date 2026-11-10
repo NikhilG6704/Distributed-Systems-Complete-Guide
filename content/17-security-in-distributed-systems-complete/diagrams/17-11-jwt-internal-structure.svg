@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">JWT internal structure</title><desc id="desc">Three Base64url-encoded JWS segments; encoding is not encryption.</desc>
+<defs>
+ <marker id="arrow-data" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-control" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0E7490"/></marker>
+ <marker id="arrow-crypto" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7C3AED"/></marker>
+ <marker id="arrow-policy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#A16207"/></marker>
+ <marker id="arrow-threat" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C2413B"/></marker>
+ <marker id="arrow-good" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#15803D"/></marker>
+ <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#10233F" flood-opacity=".08"/></filter>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="12" fill="#17365D"/>
+<text x="64" y="68" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#17243A">17-11 · JWT internal structure</text>
+<text x="66" y="108" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" fill="#53657D">Three Base64url-encoded JWS segments; encoding is not encryption.</text>
+<line x1="64" y1="132" x2="1536" y2="132" stroke="#D9E1EC" stroke-width="2"/>
+
+<rect x="65" y="180" width="1470" height="290" rx="22" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="10 8" opacity=".55"/>
+<rect x="83" y="168" width="180" height="28" rx="8" fill="#F7F9FC"/>
+<text x="93" y="188" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.2" fill="#475569">JWS STRUCTURE</text>
+<path d="M 490.0,325.0 L 500.0,320.0 L 500.0,210.0 L 1140.0,210.0 L 1140.0,320.0 L 1150.0,325.0" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-crypto)"/>
+<path d="M 1035.0,325.0 L 1040.0,320.0 L 1140.0,320.0 L 1150.0,325.0" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-crypto)"/>
+<path d="M 1150.0,325.0 L 1140.0,320.0 L 1140.0,600.0 L 1310.0,600.0 L 1300.0,597.5" fill="none" stroke="#15803D" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-good)"/>
+<rect x="100" y="230" width="390" height="190" rx="18" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="101" y="231" width="388" height="8" rx="4" fill="#2563EB" opacity=".9"/>
+<circle cx="124" cy="261" r="7" fill="#2563EB"/>
+<text x="142" y="268" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">HEADER</text>
+<text x="122" y="300" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">{&quot;alg&quot;:&quot;RS256&quot;,&quot;kid&quot;:&quot;k1&quot;}</text>
+<rect x="605" y="230" width="430" height="190" rx="18" fill="#FFF5D9" stroke="#A16207" stroke-width="2"/>
+<rect x="606" y="231" width="428" height="8" rx="4" fill="#A16207" opacity=".9"/>
+<circle cx="629" cy="261" r="7" fill="#A16207"/>
+<text x="647" y="268" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">PAYLOAD</text>
+<text x="627" y="300" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">{&quot;iss&quot;:&quot;idp&quot;,&quot;sub&quot;:&quot;u42&quot;,&quot;aud&quot;:&quot;orders&quot;,&quot;e</text>
+<text x="627" y="322" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">xp&quot;:…}</text>
+<rect x="1150" y="230" width="360" height="190" rx="18" fill="#F1EBFF" stroke="#7C3AED" stroke-width="2"/>
+<rect x="1151" y="231" width="358" height="8" rx="4" fill="#7C3AED" opacity=".9"/>
+<circle cx="1174" cy="261" r="7" fill="#7C3AED"/>
+<text x="1192" y="268" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">SIGNATURE</text>
+<text x="1172" y="300" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Sign(encodedHeader + &quot;.&quot; +</text>
+<text x="1172" y="322" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">encodedPayload)</text>
+<rect x="300" y="535" width="1000" height="125" rx="18" fill="#E8F6EC" stroke="#15803D" stroke-width="2"/>
+<rect x="301" y="536" width="998" height="8" rx="4" fill="#15803D" opacity=".9"/>
+<circle cx="324" cy="566" r="7" fill="#15803D"/>
+<text x="342" y="573" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Compact token</text>
+<text x="322" y="605" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">header.payload.signature</text>
+<rect x="52" y="770" width="1496" height="46" rx="13" fill="#FDECEB" stroke="#C2413B" stroke-width="1.2"/>
+<text x="72" y="796" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#34445B">The payload is readable by anyone holding the token. Use JWE or application-level encryption when confidentiality is required.</text>
+<line x1="65" y1="870" x2="93" y2="870" stroke="#2563EB" stroke-width="4"/>
+<text x="103" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Identity / request</text>
+<line x1="350" y1="870" x2="378" y2="870" stroke="#0F766E" stroke-width="4"/>
+<text x="388" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Data flow</text>
+<line x1="635" y1="870" x2="663" y2="870" stroke="#7C3AED" stroke-width="4"/>
+<text x="673" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Crypto</text>
+<line x1="920" y1="870" x2="948" y2="870" stroke="#A16207" stroke-width="4"/>
+<text x="958" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Policy / control</text>
+<line x1="1220" y1="870" x2="1248" y2="870" stroke="#C2413B" stroke-width="4"/>
+<text x="1258" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Threat / deny</text>
+<text x="1535" y="893" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#8290A3">CHAPTER 17 · SECURITY IN DISTRIBUTED SYSTEMS</text>
+</svg>

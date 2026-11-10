@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">STRIDE threat modeling</title><desc id="desc">Associate each STRIDE category with a concrete microservice threat and a mitigation.</desc>
+<defs>
+ <marker id="arrow-data" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-control" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0E7490"/></marker>
+ <marker id="arrow-crypto" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7C3AED"/></marker>
+ <marker id="arrow-policy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#A16207"/></marker>
+ <marker id="arrow-threat" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C2413B"/></marker>
+ <marker id="arrow-good" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#15803D"/></marker>
+ <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#10233F" flood-opacity=".08"/></filter>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="12" fill="#17365D"/>
+<text x="64" y="68" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#17243A">17-04 · STRIDE threat modeling</text>
+<text x="66" y="108" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" fill="#53657D">Associate each STRIDE category with a concrete microservice threat and a mitigation.</text>
+<line x1="64" y1="132" x2="1536" y2="132" stroke="#D9E1EC" stroke-width="2"/>
+
+<rect x="35" y="160" width="1530" height="280" rx="22" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="10 8" opacity=".55"/>
+<rect x="53" y="148" width="240" height="28" rx="8" fill="#F7F9FC"/>
+<text x="63" y="168" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.2" fill="#475569">APPLICATION DATA FLOW</text>
+<rect x="35" y="455" width="1530" height="290" rx="22" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="10 8" opacity=".55"/>
+<rect x="53" y="443" width="200" height="28" rx="8" fill="#F7F9FC"/>
+<text x="63" y="463" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.2" fill="#475569">THREAT CATEGORIES</text>
+<path d="M 375.0,262.5 L 380.0,260.0 L 450.0,260.0 L 460.0,262.5" fill="none" stroke="#0F766E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 760.0,262.5 L 770.0,260.0 L 840.0,260.0 L 845.0,262.5" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 1145.0,262.5 L 1160.0,260.0 L 1220.0,260.0 L 1230.0,262.5" fill="none" stroke="#0F766E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 845.0,262.5 L 840.0,260.0 L 840.0,370.0 L 380.0,370.0 L 380.0,460.0 L 375.0,462.5" fill="none" stroke="#0F766E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 760.0,462.5 L 770.0,460.0 L 820.0,460.0 L 820.0,260.0 L 840.0,260.0 L 845.0,262.5" fill="none" stroke="#A16207" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-policy)" stroke-dasharray="8 6"/>
+<path d="M 845.0,462.5 L 840.0,460.0 L 780.0,460.0 L 780.0,260.0 L 770.0,260.0 L 760.0,262.5" fill="none" stroke="#C2413B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-threat)" stroke-dasharray="8 6"/>
+<path d="M 1380.0,390.0 L 1380.0,380.0 L 1380.0,340.0 L 1380.0,335.0" fill="none" stroke="#C2413B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-threat)" stroke-dasharray="8 6"/>
+<path d="M 375.0,662.5 L 380.0,660.0 L 440.0,660.0 L 440.0,460.0 L 450.0,460.0 L 460.0,462.5" fill="none" stroke="#C2413B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-threat)" stroke-dasharray="8 6"/>
+<path d="M 460.0,662.5 L 450.0,660.0 L 400.0,660.0 L 400.0,460.0 L 380.0,460.0 L 375.0,462.5" fill="none" stroke="#C2413B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-threat)" stroke-dasharray="8 6"/>
+<path d="M 995.0,590.0 L 1000.0,580.0 L 780.0,580.0 L 780.0,340.0 L 610.0,340.0 L 610.0,335.0" fill="none" stroke="#C2413B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-threat)" stroke-dasharray="8 6"/>
+<path d="M 1380.0,590.0 L 1380.0,580.0 L 1170.0,580.0 L 1170.0,340.0 L 1000.0,340.0 L 995.0,335.0" fill="none" stroke="#C2413B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-threat)" stroke-dasharray="8 6"/>
+<rect x="75" y="190" width="300" height="145" rx="18" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="76" y="191" width="298" height="8" rx="4" fill="#2563EB" opacity=".9"/>
+<circle cx="99" cy="221" r="7" fill="#2563EB"/>
+<text x="117" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Client</text>
+<text x="97" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Untrusted input; user</text>
+<text x="97" y="282" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">identity</text>
+<rect x="460" y="190" width="300" height="145" rx="18" fill="#E6F6FA" stroke="#0E7490" stroke-width="2"/>
+<rect x="461" y="191" width="298" height="8" rx="4" fill="#0E7490" opacity=".9"/>
+<circle cx="484" cy="221" r="7" fill="#0E7490"/>
+<text x="502" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Gateway</text>
+<text x="482" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Authentication + rate</text>
+<text x="482" y="282" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">limiting</text>
+<rect x="845" y="190" width="300" height="145" rx="18" fill="#E6F5F2" stroke="#0F766E" stroke-width="2"/>
+<rect x="846" y="191" width="298" height="8" rx="4" fill="#0F766E" opacity=".9"/>
+<circle cx="869" cy="221" r="7" fill="#0F766E"/>
+<text x="887" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Order service</text>
+<text x="867" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Business logic and policy</text>
+<rect x="1230" y="190" width="300" height="145" rx="18" fill="#E6F5F2" stroke="#0F766E" stroke-width="2"/>
+<rect x="1231" y="191" width="298" height="8" rx="4" fill="#0F766E" opacity=".9"/>
+<circle cx="1254" cy="221" r="7" fill="#0F766E"/>
+<text x="1272" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Message broker</text>
+<text x="1252" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Asynchronous commands</text>
+<rect x="75" y="390" width="300" height="145" rx="18" fill="#E6F5F2" stroke="#0F766E" stroke-width="2"/>
+<rect x="76" y="391" width="298" height="8" rx="4" fill="#0F766E" opacity=".9"/>
+<circle cx="99" cy="421" r="7" fill="#0F766E"/>
+<text x="117" y="428" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Order database</text>
+<text x="97" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Sensitive customer state</text>
+<rect x="460" y="390" width="300" height="145" rx="18" fill="#FFF5D9" stroke="#A16207" stroke-width="2"/>
+<rect x="461" y="391" width="298" height="8" rx="4" fill="#A16207" opacity=".9"/>
+<circle cx="484" cy="421" r="7" fill="#A16207"/>
+<text x="502" y="428" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Operator API</text>
+<text x="482" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Privileged configuration</text>
+<rect x="845" y="390" width="300" height="145" rx="18" fill="#FDECEB" stroke="#C2413B" stroke-width="2"/>
+<rect x="846" y="391" width="298" height="8" rx="4" fill="#C2413B" opacity=".9"/>
+<circle cx="869" cy="421" r="7" fill="#C2413B"/>
+<text x="887" y="428" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">S — Spoofing</text>
+<text x="867" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Fake user or workload</text>
+<text x="867" y="482" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">identity</text>
+<rect x="1230" y="390" width="300" height="145" rx="18" fill="#FDECEB" stroke="#C2413B" stroke-width="2"/>
+<rect x="1231" y="391" width="298" height="8" rx="4" fill="#C2413B" opacity=".9"/>
+<circle cx="1254" cy="421" r="7" fill="#C2413B"/>
+<text x="1272" y="428" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">T — Tampering</text>
+<text x="1252" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Alter order message or</text>
+<text x="1252" y="482" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">amount</text>
+<rect x="75" y="590" width="300" height="145" rx="18" fill="#FDECEB" stroke="#C2413B" stroke-width="2"/>
+<rect x="76" y="591" width="298" height="8" rx="4" fill="#C2413B" opacity=".9"/>
+<circle cx="99" cy="621" r="7" fill="#C2413B"/>
+<text x="117" y="628" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">R — Repudiation</text>
+<text x="97" y="660" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Deny privileged action</text>
+<rect x="460" y="590" width="300" height="145" rx="18" fill="#FDECEB" stroke="#C2413B" stroke-width="2"/>
+<rect x="461" y="591" width="298" height="8" rx="4" fill="#C2413B" opacity=".9"/>
+<circle cx="484" cy="621" r="7" fill="#C2413B"/>
+<text x="502" y="628" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">I — Disclosure</text>
+<text x="482" y="660" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Read another tenant’s order</text>
+<rect x="845" y="590" width="300" height="145" rx="18" fill="#FDECEB" stroke="#C2413B" stroke-width="2"/>
+<rect x="846" y="591" width="298" height="8" rx="4" fill="#C2413B" opacity=".9"/>
+<circle cx="869" cy="621" r="7" fill="#C2413B"/>
+<text x="887" y="628" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">D — DoS</text>
+<text x="867" y="660" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Exhaust gateway or worker</text>
+<text x="867" y="682" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">capacity</text>
+<rect x="1230" y="590" width="300" height="145" rx="18" fill="#FDECEB" stroke="#C2413B" stroke-width="2"/>
+<rect x="1231" y="591" width="298" height="8" rx="4" fill="#C2413B" opacity=".9"/>
+<circle cx="1254" cy="621" r="7" fill="#C2413B"/>
+<text x="1272" y="628" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">E — Elevation</text>
+<text x="1252" y="660" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Exploit service role / admin</text>
+<text x="1252" y="682" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">API</text>
+<line x1="65" y1="870" x2="93" y2="870" stroke="#2563EB" stroke-width="4"/>
+<text x="103" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Identity / request</text>
+<line x1="350" y1="870" x2="378" y2="870" stroke="#0F766E" stroke-width="4"/>
+<text x="388" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Data flow</text>
+<line x1="635" y1="870" x2="663" y2="870" stroke="#7C3AED" stroke-width="4"/>
+<text x="673" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Crypto</text>
+<line x1="920" y1="870" x2="948" y2="870" stroke="#A16207" stroke-width="4"/>
+<text x="958" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Policy / control</text>
+<line x1="1220" y1="870" x2="1248" y2="870" stroke="#C2413B" stroke-width="4"/>
+<text x="1258" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Threat / deny</text>
+<text x="1535" y="893" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#8290A3">CHAPTER 17 · SECURITY IN DISTRIBUTED SYSTEMS</text>
+</svg>

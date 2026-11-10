@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Single-leader write and read paths">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Single-leader write and read paths</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">Write acknowledgment gates are policy choices; follower reads carry an applied-position watermark</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="65" y="170" width="1470" height="335" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="89" y="208" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#2F6FED" text-anchor="start">WRITE PATH · ordered, durable log replication</text>
+<rect x="95" y="255" width="220" height="125" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="95" y="255" width="9" height="125" rx="5" fill="#2F6FED"/>
+<text x="123" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">1 · Client</text>
+<text x="123" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="123" dy="0">Submit write</tspan>
+</text>
+<line x1="315" y1="318" x2="357" y2="318" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<rect x="365" y="255" width="220" height="125" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="365" y="255" width="9" height="125" rx="5" fill="#2F6FED"/>
+<text x="393" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">2 · Leader</text>
+<text x="393" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="393" dy="0">Validate + append WAL</tspan>
+</text>
+<line x1="585" y1="318" x2="627" y2="318" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<rect x="635" y="255" width="220" height="125" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="635" y="255" width="9" height="125" rx="5" fill="#2F6FED"/>
+<text x="663" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">3 · Local storage</text>
+<text x="663" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="663" dy="0">Flush log record</tspan>
+</text>
+<line x1="855" y1="318" x2="897" y2="318" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<rect x="905" y="255" width="220" height="125" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="905" y="255" width="9" height="125" rx="5" fill="#0F9D8A"/>
+<text x="933" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">4 · Followers</text>
+<text x="933" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="933" dy="0">Receive / flush entry</tspan>
+</text>
+<line x1="1125" y1="318" x2="1167" y2="318" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<rect x="1175" y="255" width="220" height="125" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1175" y="255" width="9" height="125" rx="5" fill="#7957C8"/>
+<text x="1203" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">5 · Leader</text>
+<text x="1203" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1203" dy="0">Evaluate ACK policy</tspan>
+</text>
+<rect x="110" y="415" width="300" height="34" rx="17" fill="#FFF4DE"/>
+<text x="260.0" y="438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D88A18" text-anchor="middle">LOCAL-ONLY · local flush</text>
+<rect x="470" y="415" width="300" height="34" rx="17" fill="#E5F6F2"/>
+<text x="620.0" y="438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">ONE FOLLOWER · configured ACK</text>
+<rect x="830" y="415" width="300" height="34" rx="17" fill="#F0EBFC"/>
+<text x="980.0" y="438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7957C8" text-anchor="middle">QUORUM / ALL · policy-specific</text>
+<rect x="65" y="555" width="1470" height="250" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="89" y="593" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#0F9D8A" text-anchor="start">READ PATH · choose source deliberately</text>
+<rect x="135" y="625" width="350" height="110" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="135" y="625" width="9" height="110" rx="5" fill="#2F6FED"/>
+<text x="163" y="663" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Leader read</text>
+<text x="163" y="693" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="163" dy="0">Reads leader-applied state</tspan>
+<tspan x="163" dy="22">Strongest path in simple single-leader design</tspan>
+</text>
+<rect x="1115" y="625" width="350" height="110" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1115" y="625" width="9" height="110" rx="5" fill="#D88A18"/>
+<text x="1143" y="663" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Follower read</text>
+<text x="1143" y="693" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1143" dy="0">May be stale / lagging</tspan>
+<tspan x="1143" dy="22">Return applied LSN watermark</tspan>
+</text>
+<line x1="485" y1="680" x2="1110" y2="680" stroke="#7A8CA5" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="8 7" marker-end="url(#arrow-slate)"/>
+<text x="797.5" y="664.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7A8CA5" text-anchor="middle">routing policy decides</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Transmission, follower persistence, commit, and client acknowledgment are distinct events; product semantics differ.</text>
+</svg>

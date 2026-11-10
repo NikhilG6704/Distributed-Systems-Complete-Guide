@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Consul architecture: agents, catalog, Raft and gossip</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Gossip disseminates membership and failure information; Raft commits authoritative server state.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="55" y="160" width="260" height="100" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="185.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">CLIENT AGENTS</text>
+<text x="185.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">register services</text>
+<text x="185.0" y="230.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">run health checks</text>
+<rect x="1125" y="160" width="260" height="100" rx="16" fill="#EAF5EE" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1255.0" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">APPLICATIONS</text>
+<text x="1255.0" y="212.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">DNS / HTTP discovery</text>
+<text x="1255.0" y="230.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">healthy instances</text>
+<rect x="420" y="175" width="180" height="95" rx="16" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="510.0" y="204" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">SERVER LEADER</text>
+<text x="510.0" y="227.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">Raft voter</text>
+<rect x="650" y="175" width="180" height="95" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="740.0" y="204" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#148A83" text-anchor="middle" style="">SERVER 2</text>
+<text x="740.0" y="227.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">Raft voter</text>
+<rect x="880" y="175" width="180" height="95" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="970.0" y="204" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#148A83" text-anchor="middle" style="">SERVER 3</text>
+<text x="970.0" y="227.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">Raft voter</text>
+<line x1="315" y1="210" x2="420" y2="210" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="368" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#2864A6" text-anchor="middle" style="">catalog / KV</text>
+<line x1="1060" y1="210" x2="1125" y2="210" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="1090" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">queries</text>
+<line x1="600" y1="220" x2="650" y2="220" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="830" y1="220" x2="880" y2="220" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="750" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="middle" style="">RAFT: authoritative replicated catalog / KV state</text>
+<rect x="90" y="400" width="1260" height="135" rx="18" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.5"/>
+<text x="720" y="435" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#C7861A" text-anchor="middle" style="">GOSSIP / SERF MEMBERSHIP PLANE</text>
+<rect x="160" y="455" width="260" height="58" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="290.0" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="middle" style="">LAN GOSSIP</text>
+<text x="290.0" y="507.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">agents + local servers</text>
+<rect x="590" y="455" width="260" height="58" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="middle" style="">WAN GOSSIP</text>
+<text x="720.0" y="507.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">datacenter members</text>
+<rect x="1020" y="455" width="260" height="58" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="1150.0" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="middle" style="">HEALTH SIGNALS</text>
+<text x="1150.0" y="507.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">failure suspicion</text>
+<line x1="420" y1="484" x2="590" y2="484" stroke="#C7861A" stroke-width="2" marker-end="url(#arr-amber)"/>
+<line x1="850" y1="484" x2="1020" y2="484" stroke="#C7861A" stroke-width="2" marker-end="url(#arr-amber)"/>
+<rect x="85" y="625" width="600" height="125" rx="12" fill="#F3F6FA" stroke="#2D8A57" stroke-width="1.6"/>
+<text x="101" y="650" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="start" style="">SERVICE DISCOVERY</text>
+<text x="101" y="674.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Agents register services and health checks; catalog queries return eligible</text>
+<text x="101" y="691.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">instances. Health status is evidence, not a guarantee that an endpoint</text>
+<text x="101" y="709.1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">remains healthy.</text>
+<rect x="740" y="625" width="625" height="125" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="756" y="650" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">TWO DIFFERENT PLANES</text>
+<text x="756" y="674.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Raft establishes consistent server state. LAN/WAN gossip spreads membership</text>
+<text x="756" y="691.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">and failure suspicions; gossip is not the Raft commit protocol.</text>
+</svg>

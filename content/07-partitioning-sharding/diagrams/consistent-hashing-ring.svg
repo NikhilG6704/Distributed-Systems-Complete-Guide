@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Consistent hashing ring">
+<title>Consistent hashing ring</title><desc>Keys and nodes occupy one circular hash space; adding a node normally moves only keys in the new node’s ownership interval.</desc>
+<defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#63788D"/></marker>
+          <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#3977B8"/></marker>
+          <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#11998E"/></marker>
+          <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#E79A35"/></marker>
+          <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#D95F59"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#19344D" flood-opacity="0.08"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="56" y="54" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Consistent hashing ring</text>
+<text x="56" y="86" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Keys and nodes occupy one circular hash space; adding a node normally moves only keys in the new node’s ownership interval.</text>
+<line x1="56" y1="108" x2="1384" y2="108" stroke="#D7E1EA" stroke-width="2" stroke-linecap="round"/>
+<rect x="56" y="140" width="642" height="650" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="140" width="7" height="650" rx="3" fill="#3977B8" stroke="none" stroke-width="1.5"/>
+<text x="80" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Before: four nodes</text>
+<text x="80" y="201" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Each key belongs to its first node encountered clockwise.</text>
+<rect x="742" y="140" width="642" height="650" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="742" y="140" width="7" height="650" rx="3" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="766" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">After: node N5 joins</text>
+<text x="766" y="201" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">N5 is inserted between N2 and N3; only keys in that interval move.</text>
+<circle cx="377" cy="455" r="190" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="10"/>
+<path d="M 251.6 312.5 A 190 190 0 0 1 481.5 295.4" fill="none" stroke="#63788D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="567.0" cy="455.0" r="17" fill="#3977B8" stroke="#FFFFFF" stroke-width="3"/>
+<text x="605.0" y="460.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#3977B8" text-anchor="middle" opacity="1" style="">N1</text>
+<circle cx="377.0" cy="645.0" r="17" fill="#11998E" stroke="#FFFFFF" stroke-width="3"/>
+<text x="377.0" y="688.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#11998E" text-anchor="middle" opacity="1" style="">N2</text>
+<circle cx="187.0" cy="455.0" r="17" fill="#8064B4" stroke="#FFFFFF" stroke-width="3"/>
+<text x="149.0" y="460.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#8064B4" text-anchor="middle" opacity="1" style="">N3</text>
+<circle cx="376.99999999999994" cy="265.0" r="17" fill="#E79A35" stroke="#FFFFFF" stroke-width="3"/>
+<text x="376.99999999999994" y="232.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#E79A35" text-anchor="middle" opacity="1" style="">N4</text>
+<circle cx="541.5448267190434" cy="550.0" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="508.6358613752347" y="535.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k1</text>
+<circle cx="457.2974697307329" cy="627.1984795369635" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="441.2379757845863" y="596.7587836295708" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k2</text>
+<circle cx="312.01617276812294" cy="633.5415979493226" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="325.0129382144984" y="601.8332783594581" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k3</text>
+<circle cx="265.32080206443015" cy="608.71322893124" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="287.6566416515441" y="581.970583144992" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k4</text>
+<circle cx="198.45840205067742" cy="519.9838272318771" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="234.16672164054194" y="510.9870617855017" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k5</text>
+<circle cx="231.4515558073942" cy="332.87035415955756" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="260.56124464591534" y="361.29628332764605" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k6</text>
+<circle cx="485.9795229066988" cy="299.3611115850915" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="464.183618325359" y="334.48888926807325" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k7</text>
+<circle cx="555.5415979493226" cy="390.01617276812294" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="519.8332783594581" y="407.0129382144984" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k8</text>
+<circle cx="1063" cy="455" r="190" fill="#FBFCFE" stroke="#D7E1EA" stroke-width="10"/>
+<path d="M 937.6 312.5 A 190 190 0 0 1 1167.5 295.4" fill="none" stroke="#63788D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<circle cx="1253.0" cy="455.0" r="17" fill="#3977B8" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1291.0" y="460.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#3977B8" text-anchor="middle" opacity="1" style="">N1</text>
+<circle cx="1063.0" cy="645.0" r="17" fill="#11998E" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1063.0" y="688.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#11998E" text-anchor="middle" opacity="1" style="">N2</text>
+<circle cx="928.649711574556" cy="589.350288425444" r="17" fill="#D95F59" stroke="#FFFFFF" stroke-width="3"/>
+<text x="901.7796538894672" y="621.2203461105329" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#D95F59" text-anchor="middle" opacity="1" style="">N5</text>
+<circle cx="873.0" cy="455.0" r="17" fill="#8064B4" stroke="#FFFFFF" stroke-width="3"/>
+<text x="835.0" y="460.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#8064B4" text-anchor="middle" opacity="1" style="">N3</text>
+<circle cx="1063.0" cy="265.0" r="17" fill="#E79A35" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1063.0" y="232.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="750" fill="#E79A35" text-anchor="middle" opacity="1" style="">N4</text>
+<circle cx="1227.5448267190434" cy="550.0" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1194.6358613752348" y="535.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k1</text>
+<circle cx="1143.297469730733" cy="627.1984795369635" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1127.2379757845863" y="596.7587836295708" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k2</text>
+<circle cx="998.0161727681229" cy="633.5415979493226" r="7" fill="#D95F59" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1011.0129382144984" y="601.8332783594581" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#D95F59" text-anchor="middle" opacity="1" style="">k3</text>
+<circle cx="951.3208020644302" cy="608.71322893124" r="7" fill="#D95F59" stroke="#FFFFFF" stroke-width="2"/>
+<text x="973.6566416515441" y="581.970583144992" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#D95F59" text-anchor="middle" opacity="1" style="">k4</text>
+<circle cx="884.4584020506775" cy="519.9838272318771" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="920.1667216405419" y="510.9870617855017" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k5</text>
+<circle cx="917.4515558073942" cy="332.87035415955756" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="946.5612446459154" y="361.29628332764605" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k6</text>
+<circle cx="1171.9795229066988" cy="299.3611115850915" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1150.183618325359" y="334.48888926807325" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k7</text>
+<circle cx="1241.5415979493225" cy="390.01617276812294" r="7" fill="#0E2438" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1205.833278359458" y="407.0129382144984" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" font-weight="650" fill="#63788D" text-anchor="middle" opacity="1" style="">k8</text>
+<rect x="105" y="690" width="250" height="30" rx="15" fill="#FCEBE9" stroke="none" stroke-width="1.5"/>
+<text x="230.0" y="710" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#D95F59" text-anchor="middle" opacity="1" style="">k3 and k4 move N3 → N5</text>
+<rect x="790" y="690" width="250" height="30" rx="15" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="915.0" y="710" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#11998E" text-anchor="middle" opacity="1" style="">Other keys keep ownership</text>
+<text x="1063" y="748" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">Only the interval newly claimed by N5 changes owner.</text>
+<text x="56" y="876" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Consistent hashing limits remapping; it does not eliminate data movement or guarantee perfectly even load.</text>
+</svg>

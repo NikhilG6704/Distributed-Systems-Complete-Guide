@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">SSTable compaction</title><desc id="desc">Sorted immutable inputs are merged into a replacement file; metadata installation precedes safe retirement of old files.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">SSTable compaction</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">Sorted immutable inputs are merged into a replacement file; metadata installation precedes safe retirement of old files.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="70" y="175" width="260" height="145" rx="12" fill="#FFFFFF" stroke="#2F6FED" stroke-width="2"/>
+<text x="88" y="203" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#2F6FED" text-anchor="start" style="">SST-A</text>
+<rect x="88" y="215" width="224" height="20" rx="4" fill="#EAF1FF" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="230" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">a:1</text>
+<rect x="88" y="238" width="224" height="20" rx="4" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="253" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">c:old</text>
+<rect x="88" y="261" width="224" height="20" rx="4" fill="#EAF1FF" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="276" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">f:7</text>
+<rect x="88" y="284" width="224" height="20" rx="4" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="299" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">h:2</text>
+<rect x="70" y="355" width="260" height="145" rx="12" fill="#FFFFFF" stroke="#7656C8" stroke-width="2"/>
+<text x="88" y="383" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#7656C8" text-anchor="start" style="">SST-B</text>
+<rect x="88" y="395" width="224" height="20" rx="4" fill="#EAF1FF" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="410" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">b:4</text>
+<rect x="88" y="418" width="224" height="20" rx="4" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="433" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">c:new</text>
+<rect x="88" y="441" width="224" height="20" rx="4" fill="#EAF1FF" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="456" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">e:9</text>
+<rect x="88" y="464" width="224" height="20" rx="4" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="479" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">g:del</text>
+<rect x="70" y="535" width="260" height="145" rx="12" fill="#FFFFFF" stroke="#119A8A" stroke-width="2"/>
+<text x="88" y="563" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#119A8A" text-anchor="start" style="">SST-C</text>
+<rect x="88" y="575" width="224" height="20" rx="4" fill="#EAF1FF" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">c:older</text>
+<rect x="88" y="598" width="224" height="20" rx="4" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="613" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">d:5</text>
+<rect x="88" y="621" width="224" height="20" rx="4" fill="#EAF1FF" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="636" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">g:3</text>
+<rect x="88" y="644" width="224" height="20" rx="4" fill="#F4F7FB" stroke="#CAD5E2" stroke-width="0.7"/>
+<text x="100" y="659" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#23364D" text-anchor="start" style="">i:8</text>
+<rect x="445" y="315" width="280" height="175" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="445" y="315" width="7" height="175" rx="4" fill="#D58A19"/>
+<text x="463" y="344" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#23364D" text-anchor="start" style="">K-way sorted merge</text>
+<text x="463" y="368" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="463" dy="0">Advance smallest key</tspan><tspan x="463" dy="21.299999999999997">Group equal keys</tspan><tspan x="463" dy="21.299999999999997">Choose highest sequence version</tspan><tspan x="463" dy="21.299999999999997">Respect snapshot / tombstone rules</tspan></text>
+<path d="M330,245 H390 V400 H445" fill="none" stroke="#2F6FED" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M330,425 H390 V400 H445" fill="none" stroke="#7656C8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M330,605 H390 V400 H445" fill="none" stroke="#119A8A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<rect x="830" y="315" width="250" height="175" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="830" y="315" width="7" height="175" rx="4" fill="#119A8A"/>
+<text x="848" y="344" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="700" fill="#23364D" text-anchor="start" style="">Output SSTable</text>
+<text x="848" y="368" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="848" dy="0">a:1</tspan><tspan x="848" dy="22.72">b:c-new</tspan><tspan x="848" dy="22.72">d:5</tspan><tspan x="848" dy="22.72">e:9</tspan><tspan x="848" dy="22.72">f:7</tspan><tspan x="848" dy="22.72">h:2</tspan><tspan x="848" dy="22.72">i:8</tspan></text>
+<path d="M725,400 H830" fill="none" stroke="#119A8A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<rect x="1160" y="180" width="220" height="110" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="1160" y="180" width="7" height="110" rx="4" fill="#2F6FED"/>
+<text x="1178" y="209" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Manifest install</text>
+<text x="1178" y="233" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1178" dy="0">Atomically publish new file set</tspan></text>
+<rect x="1160" y="370" width="220" height="110" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1160" y="370" width="7" height="110" rx="4" fill="#D58A19"/>
+<text x="1178" y="399" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Old-file retirement</text>
+<text x="1178" y="423" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1178" dy="0">Wait until no reader needs inputs</tspan></text>
+<rect x="1160" y="560" width="220" height="110" rx="14" fill="#FDECEC" stroke="#D94B4B" stroke-width="1.5"/>
+<rect x="1160" y="560" width="7" height="110" rx="4" fill="#D94B4B"/>
+<text x="1178" y="589" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#23364D" text-anchor="start" style="">Space reclaimed</text>
+<text x="1178" y="613" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1178" dy="0">Delete obsolete files safely</tspan></text>
+<path d="M1080,400 H1120 V235 H1160" fill="none" stroke="#2F6FED" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M1270,290 V370" fill="none" stroke="#D58A19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<path d="M1270,480 V560" fill="none" stroke="#D94B4B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-red)"/>
+<rect x="70" y="730" width="265" height="28" rx="14" fill="#FDECEC" stroke="#FDECEC" stroke-width="1"/>
+<text x="202.5" y="749" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#D94B4B" text-anchor="middle" style="">Tombstone: g:del</text>
+<text x="70" y="785" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#5E7086" text-anchor="start"><tspan x="70" dy="0">The delete marker is retained until it is safe</tspan><tspan x="70" dy="20">to prove no older value can reappear.</tspan></text>
+<rect x="445" y="730" width="280" height="28" rx="14" fill="#FFF4DF" stroke="#FFF4DF" stroke-width="1"/>
+<text x="585.0" y="749" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#D58A19" text-anchor="middle" style="">Compaction cost</text>
+<text x="445" y="785" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#5E7086" text-anchor="start"><tspan x="445" dy="0">Extra disk reads/writes and temporary space;</tspan><tspan x="445" dy="20">background throughput must keep up with ingest.</tspan></text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">sstable-compaction.svg</text>
+</svg>

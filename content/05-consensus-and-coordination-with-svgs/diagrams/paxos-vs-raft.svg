@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Paxos and Raft: related ideas, different protocol structure</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Both provide crash-fault consensus, but their control flow and state-recovery rules are not mechanically interchangeable.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="55" y="140" width="640" height="600" rx="18" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<rect x="745" y="140" width="640" height="600" rx="18" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="375" y="185" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800" fill="#2864A6" text-anchor="middle" style="">PAXOS</text>
+<text x="1065" y="185" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800" fill="#148A83" text-anchor="middle" style="">RAFT</text>
+<rect x="105" y="230" width="220" height="85" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="215.0" y="259" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PROPOSER</text>
+<text x="215.0" y="282.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">ballot n</text>
+<rect x="430" y="230" width="220" height="85" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="540.0" y="259" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">ACCEPTOR QUORUM</text>
+<text x="540.0" y="282.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">promise / accept</text>
+<line x1="325" y1="270" x2="430" y2="270" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="380" y="250" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PREPARE</text>
+<line x1="430" y1="310" x2="325" y2="350" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="370" y="335" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="middle" style="">PROMISE</text>
+<rect x="105" y="390" width="220" height="85" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="215.0" y="419" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PROPOSER</text>
+<text x="215.0" y="442.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">ACCEPT(n, v)</text>
+<rect x="430" y="390" width="220" height="85" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="540.0" y="419" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#148A83" text-anchor="middle" style="">ACCEPTORS</text>
+<text x="540.0" y="442.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">ACCEPTED</text>
+<line x1="325" y1="430" x2="430" y2="430" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<rect x="265" y="540" width="245" height="85" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="387.5" y="569" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#7257A8" text-anchor="middle" style="">LEARNER</text>
+<text x="387.5" y="592.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">chosen slot / value</text>
+<line x1="540" y1="475" x2="440" y2="540" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<rect x="795" y="230" width="220" height="85" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="905.0" y="259" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C7861A" text-anchor="middle" style="">CANDIDATE</text>
+<text x="905.0" y="282.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">term t • RequestVote</text>
+<rect x="1120" y="230" width="220" height="85" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="1230.0" y="259" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#148A83" text-anchor="middle" style="">VOTERS</text>
+<text x="1230.0" y="282.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">majority grants votes</text>
+<line x1="1015" y1="270" x2="1120" y2="270" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<line x1="1120" y1="310" x2="1015" y2="350" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<rect x="795" y="390" width="220" height="85" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="905.0" y="419" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#148A83" text-anchor="middle" style="">LEADER</text>
+<text x="905.0" y="442.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">AppendEntries</text>
+<rect x="1120" y="390" width="220" height="85" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="1230.0" y="419" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#148A83" text-anchor="middle" style="">FOLLOWERS</text>
+<text x="1230.0" y="442.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">replicate log</text>
+<line x1="1015" y1="430" x2="1120" y2="430" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<rect x="930" y="540" width="245" height="85" rx="16" fill="#EAF5EE" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1052.5" y="569" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">COMMITTED LOG</text>
+<text x="1052.5" y="592.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">log index / state machine</text>
+<line x1="1225" y1="475" x2="1100" y2="540" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<rect x="90" y="775" width="1260" height="58" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="106" y="800" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">ANALOGIES, NOT IDENTITIES</text>
+<text x="106" y="824.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Ballot ↔ term; quorum ↔ majority; chosen slot ↔ committed log index. The details of leader recovery, log safety, and commitment differ.</text>
+</svg>

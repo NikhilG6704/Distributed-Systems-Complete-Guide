@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Kafka consumer-group rebalancing</title><desc id="desc">A partition is assigned to one consumer in a group at a time; membership changes trigger reassignment.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Kafka consumer-group rebalancing</text>
+<text class="subtitle" x="66" y="88">A partition is assigned to one consumer in a group at a time; membership changes trigger reassignment.</text>
+
+<rect x="55" y="140" width="625" height="650" rx="22" fill="#F9FBFE" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="77" y="177" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">Before: 3 consumers</text>
+<rect x="77" y="190" width="56" height="4" rx="2" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<rect x="760" y="140" width="625" height="650" rx="22" fill="#F9FBFE" stroke="#CAD5E2" stroke-width="1.3"/>
+<text x="782" y="177" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:20px">After: 4 consumers join</text>
+<rect x="782" y="190" width="56" height="4" rx="2" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<rect x="105" y="235" width="150" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="105" y="235" width="150" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="123" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C1</text>
+<text x="123" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="123" dy="0">consumer</tspan>
+</text>
+<rect x="105" y="355" width="150" height="190" rx="14" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.3"/>
+<text x="180" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">
+<tspan x="180" dy="0">P0</tspan>
+<tspan x="180" dy="34">P1</tspan>
+<tspan x="180" dy="34">P2</tspan>
+<tspan x="180" dy="34">P3</tspan>
+</text>
+<rect x="295" y="235" width="150" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="295" y="235" width="150" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="313" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C2</text>
+<text x="313" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="313" dy="0">consumer</tspan>
+</text>
+<rect x="295" y="355" width="150" height="190" rx="14" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.3"/>
+<text x="370" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">
+<tspan x="370" dy="0">P4</tspan>
+<tspan x="370" dy="34">P5</tspan>
+<tspan x="370" dy="34">P6</tspan>
+<tspan x="370" dy="34">P7</tspan>
+</text>
+<rect x="485" y="235" width="150" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="485" y="235" width="150" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="503" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C3</text>
+<text x="503" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="503" dy="0">consumer</tspan>
+</text>
+<rect x="485" y="355" width="150" height="190" rx="14" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.3"/>
+<text x="560" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">
+<tspan x="560" dy="0">P8</tspan>
+<tspan x="560" dy="34">P9</tspan>
+<tspan x="560" dy="34">P10</tspan>
+<tspan x="560" dy="34">P11</tspan>
+</text>
+<text x="365" y="610" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">4 partitions per consumer</text>
+<rect x="260" y="685" width="170" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="345.0" y="705" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">Stable ownership</text>
+<rect x="790" y="235" width="122" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="790" y="235" width="122" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="808" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C1</text>
+<text x="808" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="808" dy="0">consumer</tspan>
+</text>
+<rect x="790" y="355" width="122" height="190" rx="14" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.3"/>
+<text x="851" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">
+<tspan x="851" dy="0">P0</tspan>
+<tspan x="851" dy="34">P1</tspan>
+<tspan x="851" dy="34">P2</tspan>
+</text>
+<rect x="935" y="235" width="122" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="935" y="235" width="122" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="953" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C2</text>
+<text x="953" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="953" dy="0">consumer</tspan>
+</text>
+<rect x="935" y="355" width="122" height="190" rx="14" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.3"/>
+<text x="996" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">
+<tspan x="996" dy="0">P3</tspan>
+<tspan x="996" dy="34">P4</tspan>
+<tspan x="996" dy="34">P5</tspan>
+</text>
+<rect x="1080" y="235" width="122" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1080" y="235" width="122" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="1098" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C3</text>
+<text x="1098" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1098" dy="0">consumer</tspan>
+</text>
+<rect x="1080" y="355" width="122" height="190" rx="14" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.3"/>
+<text x="1141" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">
+<tspan x="1141" dy="0">P6</tspan>
+<tspan x="1141" dy="34">P7</tspan>
+<tspan x="1141" dy="34">P8</tspan>
+</text>
+<rect x="1225" y="235" width="122" height="88" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1225" y="235" width="122" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="1243" y="274" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">C4</text>
+<text x="1243" y="302" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1243" dy="0">consumer</tspan>
+</text>
+<rect x="1225" y="355" width="122" height="190" rx="14" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.3"/>
+<text x="1286" y="390" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:15px">
+<tspan x="1286" dy="0">P9</tspan>
+<tspan x="1286" dy="34">P10</tspan>
+<tspan x="1286" dy="34">P11</tspan>
+</text>
+<text x="1070" y="610" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:16px">3 partitions per consumer</text>
+<rect x="970" y="685" width="205" height="30" rx="15" fill="#FFF5DF" stroke="#C17A0B" stroke-width="1.1"/>
+<text x="1072.5" y="705" text-anchor="middle" style="fill:#C17A0B;font-weight:700;font-size:13px">Reassignment / pause</text>
+<text x="720" y="825" text-anchor="middle" style="fill:#5F7087;font-weight:650;font-size:14px">More consumers than partitions leaves some consumers idle; rebalance strategy affects stop-the-world disruption.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

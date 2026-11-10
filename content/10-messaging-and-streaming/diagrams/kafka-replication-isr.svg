@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Kafka replication, ISR and leader failover</title><desc id="desc">Acknowledged replicated progress depends on leader state, ISR membership, min.insync.replicas, and producer acknowledgments.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Kafka replication, ISR and leader failover</text>
+<text class="subtitle" x="66" y="88">Acknowledged replicated progress depends on leader state, ISR membership, min.insync.replicas, and producer acknowledgments.</text>
+
+<rect x="80" y="245" width="265" height="150" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="80" y="245" width="265" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="98" y="284" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Producer</text>
+<text x="98" y="312" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="98" dy="0">acks=all</tspan>
+<tspan x="98" dy="22">min.insync.replicas=2</tspan>
+</text>
+<rect x="470" y="190" width="280" height="200" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="470" y="190" width="280" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="488" y="229" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Broker A · Leader</text>
+<text x="488" y="257" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="488" dy="0">Partition P0</tspan>
+<tspan x="488" dy="22">LEO = 105</tspan>
+<tspan x="488" dy="22">HW = 103</tspan>
+</text>
+<rect x="880" y="170" width="235" height="155" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="880" y="170" width="235" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="898" y="209" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Broker B · Follower</text>
+<text x="898" y="237" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="898" dy="0">LEO = 105</tspan>
+<tspan x="898" dy="22">ISR member</tspan>
+</text>
+<rect x="880" y="405" width="235" height="155" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="880" y="405" width="235" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="898" y="444" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Broker C · Follower</text>
+<text x="898" y="472" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="898" dy="0">LEO = 101</tspan>
+<tspan x="898" dy="22">lagging / outside ISR</tspan>
+</text>
+<path d="M345,320 L470,285" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="407.5" y="280" text-anchor="middle" style="fill:#2563EB;font-weight:650;font-size:13px">produce</text>
+<path d="M750,260 L880,245" fill="none" stroke="#7052C7" stroke-width="2.7" stroke-linecap="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<text x="815.0" y="225" text-anchor="middle" style="fill:#7052C7;font-weight:650;font-size:13px">replica fetch</text>
+<path d="M750,320 L880,465" fill="none" stroke="#7052C7" stroke-width="2.7" stroke-linecap="round" stroke-dasharray="8 7" marker-end="url(#arrow-purple)"/>
+<rect x="510" y="425" width="210" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="615.0" y="445" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">High watermark = 103</text>
+<text x="1000" y="620" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Eligible leader must contain</text>
+<text x="1000" y="645" text-anchor="middle" style="fill:#5F7087;font-size:15px">committed records.</text>
+<rect x="410" y="680" width="690" height="105" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="410" y="680" width="690" height="9" rx="5" fill="#C43D4B" stroke="#C43D4B" stroke-width="0"/>
+<text x="428" y="719" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Failure path</text>
+<text x="428" y="747" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="428" dy="0">Leader A fails → controller elects an eligible ISR replica.</tspan>
+<tspan x="428" dy="21">If no eligible replica exists, availability and data-loss policy become a trade-off.</tspan>
+</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

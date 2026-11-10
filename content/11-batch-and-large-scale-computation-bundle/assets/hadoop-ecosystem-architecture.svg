@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Hadoop ecosystem: storage, resource management, execution</title><desc id="desc">HDFS stores durable blocks; YARN allocates containers; MapReduce executes tasks near input where possible.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Hadoop ecosystem: storage, resource management, execution</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">HDFS stores durable blocks; YARN allocates containers; MapReduce executes tasks near input where possible.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="65" y="330" width="220" height="145" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="83" y="361" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Client / workflow</text>
+<text x="83" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">submit MapReduce</text>
+<text x="83" y="415" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">job</text>
+<text x="83" y="440" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">read status /</text>
+<text x="83" y="465" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">results</text>
+<rect x="355" y="145" width="330" height="540" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#7955A6" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="373" y="174" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#7955A6" text-anchor="start">YARN resource management</text>
+<rect x="400" y="210" width="240" height="115" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="418" y="241" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">ResourceManager</text>
+<text x="418" y="270" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">scheduler</text>
+<text x="418" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">application tracking</text>
+<rect x="400" y="455" width="240" height="115" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="418" y="486" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">ApplicationMaster</text>
+<text x="418" y="515" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">requests containers</text>
+<text x="418" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">tracks map / reduce</text>
+<rect x="760" y="145" width="500" height="540" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#64748B" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="778" y="174" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#64748B" text-anchor="start">Worker nodes</text>
+<rect x="795" y="230" width="200" height="175" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="813" y="261" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">NodeManager A</text>
+<text x="813" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">container</text>
+<text x="813" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">map / reduce task</text>
+<text x="813" y="340" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">local block / spill</text>
+<rect x="1030" y="230" width="200" height="175" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1048" y="261" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">NodeManager B</text>
+<text x="1048" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">container</text>
+<text x="1048" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">map / reduce task</text>
+<text x="1048" y="340" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">local block / spill</text>
+<rect x="795" y="470" width="200" height="175" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="813" y="501" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">NodeManager C</text>
+<text x="813" y="530" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">container</text>
+<text x="813" y="555" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">map / reduce task</text>
+<text x="813" y="580" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">local block / spill</text>
+<rect x="1030" y="470" width="200" height="175" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1048" y="501" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">NodeManager D</text>
+<text x="1048" y="530" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">container</text>
+<text x="1048" y="555" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">map / reduce task</text>
+<text x="1048" y="580" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">local block / spill</text>
+<rect x="1320" y="330" width="220" height="145" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1338" y="361" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">HDFS</text>
+<text x="1338" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">NameNode metadata</text>
+<text x="1338" y="415" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">DataNode blocks ×</text>
+<text x="1338" y="440" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">replicas</text>
+<path d="M 285,390 L 400,265" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="284.5" y="303.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="342.5" y="322.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">submit</text>
+<path d="M 520,325 L 520,455" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="462.0" y="366.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="520.0" y="385.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">launch AM</text>
+<path d="M 640,510 L 710,510 L 710,315 L 795,315" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="652" y="291" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="710" y="310" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">container request</text>
+<path d="M 640,510 L 735,510 L 735,190 L 985,190 L 985,315" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<path d="M 640,510 L 690,510 L 690,555 L 795,555" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<path d="M 285,430 L 320,430 L 320,700 L 1290,700 L 1290,430" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="262" y="676" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="320" y="695" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">read / write</text>
+<path d="M 995,405 L 995,650 L 1290,650 L 1290,395" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1232" y="626" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1290" y="645" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">HDFS blocks</text>
+<path d="M 1230,545 L 1270,545 L 1270,465 L 1320,465" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="1212" y="441" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1270" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">shuffle / output</text>
+<text x="800" y="755" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="start">Control plane assigns resources; data plane reads HDFS and exchanges intermediate output.</text>
+</svg>

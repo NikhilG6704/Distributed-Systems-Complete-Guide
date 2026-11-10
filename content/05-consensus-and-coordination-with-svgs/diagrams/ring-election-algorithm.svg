@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Ring election algorithm: circulate IDs, elect maximum</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A logical ring circulates the election token, then announces the highest live process in a second pass.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="635" y="142" width="170" height="96" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="171" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P1</text>
+<text x="720.0" y="194.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID 1</text>
+<rect x="975" y="312" width="170" height="96" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1060.0" y="341" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P2</text>
+<text x="1060.0" y="364.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID 2</text>
+<rect x="815" y="602" width="170" height="96" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="900.0" y="631" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P3</text>
+<text x="900.0" y="654.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID 3</text>
+<rect x="435" y="602" width="170" height="96" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="520.0" y="631" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P4</text>
+<text x="520.0" y="654.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">ID 4</text>
+<rect x="275" y="312" width="170" height="96" rx="16" fill="#EAF5EE" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="360.0" y="341" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">P5</text>
+<text x="360.0" y="364.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#203247" text-anchor="middle" style="">MAX ID</text>
+<line x1="804.970583144992" y1="214.5967477524977" x2="975.029416855008" y2="335.40325224750234" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="1014.1076524234232" y1="408.1567726214737" x2="945.8923475765768" y2="601.8432273785263" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="805.0" y1="650.0" x2="615.0" y2="650.0" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="474.1076524234232" y1="601.8432273785263" x2="405.8923475765768" y2="408.1567726214737" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="445.90362144086913" y1="336.5146532025694" x2="634.0963785591309" y2="213.4853467974306" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<rect x="60" y="145" width="190" height="32" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.5"/>
+<text x="155.0" y="167" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">INITIATOR: P3</text>
+<text x="720" y="420" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="middle" style="">ELECTION TOKEN: [P3, P4, P5, P1, P2]</text>
+<text x="720" y="455" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800" fill="#2D8A57" text-anchor="middle" style="">highest live ID = P5</text>
+<rect x="65" y="750" width="620" height="75" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="81" y="775" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">FAILURE HANDLING</text>
+<text x="81" y="799.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">A repaired logical ring skips a failed successor and reconnects to the next</text>
+<text x="81" y="816.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">reachable process.</text>
+<rect x="735" y="750" width="630" height="75" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="751" y="775" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">MESSAGE COST</text>
+<text x="751" y="799.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Two full traversals are typical: election IDs then coordinator announcement.</text>
+<text x="751" y="816.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">O(N) assumes one complete traversal and repaired ring.</text>
+</svg>

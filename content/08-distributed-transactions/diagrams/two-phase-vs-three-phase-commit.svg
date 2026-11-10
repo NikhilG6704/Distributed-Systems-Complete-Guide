@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+<title id="title">Two-Phase Commit vs Three-Phase Commit</title><desc id="desc">3PC inserts a pre-commit phase to reduce uncertainty under stronger timing and failure assumptions.</desc>
+<rect width="1600" height="850" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Two-Phase Commit vs Three-Phase Commit</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">3PC inserts a pre-commit phase to reduce uncertainty under stronger timing and failure assumptions.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="60" y="160" width="715" height="615" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="196" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">2PC</text>
+<text x="82" y="223" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Prepare → Vote → Commit / Abort</text>
+<rect x="825" y="160" width="715" height="615" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="847" y="196" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">3PC</text>
+<text x="847" y="223" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">CanCommit → PreCommit → DoCommit</text>
+<rect x="115" y="260" width="270" height="92" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="133" y="291" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">1 · PREPARE</text>
+<text x="133" y="320" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Can you commit?</text>
+<line x1="250" y1="352" x2="250" y2="397" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="115" y="405" width="270" height="92" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="133" y="436" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">2 · VOTE</text>
+<text x="133" y="465" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">YES / NO; YES is durable</text>
+<line x1="250" y1="497" x2="250" y2="542" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="115" y="550" width="270" height="92" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="133" y="581" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">3 · DECISION</text>
+<text x="133" y="610" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">COMMIT or ABORT</text>
+<text x="445" y="300" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#B63C43" font-weight="700" text-anchor="start" font-style="normal">Failure after YES</text>
+<text x="445" y="335" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Coordinator may be unable</text>
+<text x="445" y="358" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">to decide safely. Participants</text>
+<text x="445" y="381" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">can remain PREPARED and block.</text>
+<rect x="440" y="455" width="260" height="32" rx="16" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="570.0" y="477.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#B63C43" font-weight="700" text-anchor="middle" font-style="normal">Blocking under uncertainty</text>
+<rect x="880" y="260" width="300" height="92" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="898" y="291" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">1 · CAN COMMIT</text>
+<text x="898" y="320" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">All participants vote ready</text>
+<line x1="1030" y1="352" x2="1030" y2="397" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="880" y="405" width="300" height="92" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="898" y="436" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">2 · PRE-COMMIT</text>
+<text x="898" y="465" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Participants enter prepared-to-commit</text>
+<line x1="1030" y1="497" x2="1030" y2="542" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="880" y="550" width="300" height="92" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="898" y="581" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">3 · DO COMMIT</text>
+<text x="898" y="610" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Proceed to final commit</text>
+<text x="1220" y="300" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#6D55A5" font-weight="700" text-anchor="start" font-style="normal">Assumptions</text>
+<text x="1220" y="335" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Progress relies on bounded</text>
+<text x="1220" y="358" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">network delay and restricted</text>
+<text x="1220" y="381" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">failure behavior. Arbitrary</text>
+<text x="1220" y="404" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">partitions still break the model.</text>
+<rect x="1210" y="500" width="270" height="32" rx="16" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="1345.0" y="522.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#A76512" font-weight="700" text-anchor="middle" font-style="normal">Not partition-proof</text>
+<line x1="54" y1="796" x2="1546" y2="796" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="825" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">3PC is not a universal replacement for 2PC; asynchronous networks do not provide the timing assumptions it needs.</text>
+</svg>

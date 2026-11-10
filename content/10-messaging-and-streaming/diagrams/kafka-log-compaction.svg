@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Kafka log compaction</title><desc id="desc">Compaction retains the latest keyed state according to cleaner progress; tombstones mark deletions temporarily.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Kafka log compaction</text>
+<text class="subtitle" x="66" y="88">Compaction retains the latest keyed state according to cleaner progress; tombstones mark deletions temporarily.</text>
+
+<text x="100" y="170" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:19px">Before compaction · append-only history</text>
+<rect x="90" y="225" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="180" y="260" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:19px">K1</text>
+<text x="180" y="300" text-anchor="middle" style="fill:#2563EB;font-weight:700;font-size:14px">A</text>
+<text x="180" y="327" text-anchor="middle" style="fill:#5F7087;font-size:12px">offset 0</text>
+<rect x="300" y="225" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="390" y="260" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:19px">K2</text>
+<text x="390" y="300" text-anchor="middle" style="fill:#2563EB;font-weight:700;font-size:14px">B</text>
+<text x="390" y="327" text-anchor="middle" style="fill:#5F7087;font-size:12px">offset 1</text>
+<rect x="510" y="225" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#0B8A67" stroke-width="2"/>
+<text x="600" y="260" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:19px">K1</text>
+<text x="600" y="300" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:14px">C</text>
+<text x="600" y="327" text-anchor="middle" style="fill:#5F7087;font-size:12px">offset 2</text>
+<rect x="720" y="225" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="810" y="260" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:19px">K3</text>
+<text x="810" y="300" text-anchor="middle" style="fill:#2563EB;font-weight:700;font-size:14px">D</text>
+<text x="810" y="327" text-anchor="middle" style="fill:#5F7087;font-size:12px">offset 3</text>
+<rect x="930" y="225" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#C43D4B" stroke-width="2"/>
+<text x="1020" y="260" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:19px">K2</text>
+<text x="1020" y="300" text-anchor="middle" style="fill:#C43D4B;font-weight:700;font-size:14px">TOMBSTONE</text>
+<text x="1020" y="327" text-anchor="middle" style="fill:#5F7087;font-size:12px">offset 4</text>
+<rect x="1140" y="225" width="180" height="120" rx="14" fill="#FFFFFF" stroke="#0B8A67" stroke-width="2"/>
+<text x="1230" y="260" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:19px">K1</text>
+<text x="1230" y="300" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:14px">E</text>
+<text x="1230" y="327" text-anchor="middle" style="fill:#5F7087;font-size:12px">offset 5</text>
+<path d="M100,410 L1320,410" fill="none" stroke="#7052C7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<text x="710.0" y="397" text-anchor="middle" style="fill:#7052C7;font-weight:650;font-size:13px">cleaner scans segments</text>
+<text x="100" y="490" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:19px">After cleaner has advanced</text>
+<rect x="270" y="545" width="250" height="125" rx="16" fill="#FFFFFF" stroke="#C43D4B" stroke-width="2"/>
+<text x="395" y="583" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:20px">K2</text>
+<text x="395" y="620" text-anchor="middle" style="fill:#C43D4B;font-weight:700;font-size:15px">tombstone retained</text>
+<rect x="580" y="545" width="250" height="125" rx="16" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="705" y="583" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:20px">K3</text>
+<text x="705" y="620" text-anchor="middle" style="fill:#2563EB;font-weight:700;font-size:15px">D</text>
+<rect x="890" y="545" width="250" height="125" rx="16" fill="#FFFFFF" stroke="#0B8A67" stroke-width="2"/>
+<text x="1015" y="583" text-anchor="middle" style="fill:#17263C;font-weight:700;font-size:20px">K1</text>
+<text x="1015" y="620" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:15px">E</text>
+<text x="720" y="740" text-anchor="middle" style="fill:#5F7087;font-weight:650;font-size:15px">Tombstone removal is delayed by delete-retention policy; compaction is not an instantaneous rewrite.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

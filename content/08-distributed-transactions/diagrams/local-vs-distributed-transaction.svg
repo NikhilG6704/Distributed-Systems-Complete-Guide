@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
+<title id="title">Local vs distributed transaction</title><desc id="desc">A local transaction has one database authority; a distributed transaction crosses independent participants and network failure boundaries.</desc>
+<rect width="1600" height="780" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Local vs distributed transaction</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">A local transaction has one database authority; a distributed transaction crosses independent participants and network failure boundaries.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="54" y="155" width="700" height="540" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="76" y="191" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">LOCAL DATABASE TRANSACTION</text>
+<text x="76" y="218" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">One transaction manager owns the complete commit decision.</text>
+<rect x="846" y="155" width="700" height="540" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="868" y="191" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">DISTRIBUTED TRANSACTION</text>
+<text x="868" y="218" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">A coordinator must obtain and recover decisions across participants.</text>
+<rect x="105" y="255" width="170" height="88" rx="14" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="123" y="286" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Client</text>
+<text x="123" y="315" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">BEGIN / SQL / COMMIT</text>
+<rect x="350" y="255" width="175" height="88" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="368" y="286" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Transaction manager</text>
+<text x="368" y="315" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">One local log</text>
+<rect x="590" y="255" width="125" height="88" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="608" y="286" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Database</text>
+<text x="608" y="315" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Rows + WAL</text>
+<line x1="275" y1="299" x2="350" y2="299" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="525" y1="299" x2="590" y2="299" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="325" y="225" width="410" height="160" rx="18" fill="none" stroke="#2867B2" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="530" y="410" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#2867B2" font-weight="600" text-anchor="middle" font-style="normal">Single atomic boundary</text>
+<rect x="170" y="490" width="185" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="262.5" y="512.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">One commit record</text>
+<rect x="405" y="490" width="185" height="32" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="497.5" y="512.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">Local rollback</text>
+<text x="110" y="570" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Failure recovery is handled by the same engine.</text>
+<text x="110" y="597" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">No remote database is implicitly enlisted.</text>
+<rect x="900" y="245" width="160" height="78" rx="14" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="918" y="276" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Client</text>
+<text x="918" y="305" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Checkout</text>
+<rect x="1110" y="245" width="170" height="78" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="1128" y="276" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Coordinator</text>
+<text x="1128" y="305" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Global decision</text>
+<line x1="1060" y1="284" x2="1110" y2="284" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="870" y="435" width="185" height="100" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="888" y="466" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Order DB</text>
+<text x="888" y="495" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Order state</text>
+<line x1="1195" y1="323" x2="962" y2="435" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="962" y="395" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#2867B2" font-weight="600" text-anchor="middle" font-style="normal">PREPARE / COMMIT</text>
+<rect x="1090" y="435" width="185" height="100" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="1108" y="466" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Inventory DB</text>
+<text x="1108" y="495" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Stock hold</text>
+<line x1="1195" y1="323" x2="1182" y2="435" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="1182" y="395" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#2867B2" font-weight="600" text-anchor="middle" font-style="normal">PREPARE / COMMIT</text>
+<rect x="1310" y="435" width="185" height="100" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="1328" y="466" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Payment DB</text>
+<text x="1328" y="495" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Payment state</text>
+<line x1="1195" y1="323" x2="1402" y2="435" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<text x="1402" y="395" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#2867B2" font-weight="600" text-anchor="middle" font-style="normal">PREPARE / COMMIT</text>
+<rect x="850" y="405" width="675" height="255" rx="18" fill="none" stroke="#6D55A5" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1185" y="685" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#6D55A5" font-weight="600" text-anchor="middle" font-style="normal">Independent participant boundaries</text>
+<rect x="875" y="565" width="150" height="32" rx="16" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="950.0" y="587.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#B63C43" font-weight="700" text-anchor="middle" font-style="normal">Network loss</text>
+<rect x="1080" y="565" width="150" height="32" rx="16" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="1155.0" y="587.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#A76512" font-weight="700" text-anchor="middle" font-style="normal">Coordinator crash</text>
+<rect x="1285" y="565" width="180" height="32" rx="16" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="1375.0" y="587.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#B63C43" font-weight="700" text-anchor="middle" font-style="normal">Partial uncertainty</text>
+<line x1="54" y1="726" x2="1546" y2="726" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="755" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Key idea: adding SQL statements does not create a distributed transaction; authority and recovery boundaries matter.</text>
+</svg>

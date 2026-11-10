@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Raft log matching: repairing a conflicting suffix</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A matching (prevLogIndex, prevLogTerm) establishes a common prefix; conflicting uncommitted suffixes are replaced.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<text x="100" y="160" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#142B4A" text-anchor="start" style="">LEADER LOG</text>
+<text x="100" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#142B4A" text-anchor="start" style="">FOLLOWER LOG</text>
+<rect x="260" y="200" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="327" y="229" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 1</text>
+<text x="327" y="254" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 2</text>
+<rect x="415" y="200" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="482" y="229" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 2</text>
+<text x="482" y="254" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 2</text>
+<rect x="570" y="200" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="637" y="229" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 3</text>
+<text x="637" y="254" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 4</text>
+<rect x="725" y="200" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="792" y="229" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 4</text>
+<text x="792" y="254" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 4</text>
+<rect x="880" y="200" width="135" height="75" rx="10" fill="#EAF2FB" stroke="#2864A6" stroke-width="2"/>
+<text x="947" y="229" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="middle" style="">index 5</text>
+<text x="947" y="254" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 7</text>
+<rect x="1035" y="200" width="135" height="75" rx="10" fill="#EAF2FB" stroke="#2864A6" stroke-width="2"/>
+<text x="1102" y="229" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="middle" style="">index 6</text>
+<text x="1102" y="254" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 7</text>
+<rect x="260" y="430" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="327" y="459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 1</text>
+<text x="327" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 2</text>
+<rect x="415" y="430" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="482" y="459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 2</text>
+<text x="482" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 2</text>
+<rect x="570" y="430" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="637" y="459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 3</text>
+<text x="637" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 4</text>
+<rect x="725" y="430" width="135" height="75" rx="10" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2"/>
+<text x="792" y="459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">index 4</text>
+<text x="792" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 4</text>
+<rect x="880" y="430" width="135" height="75" rx="10" fill="#FBEDED" stroke="#C34C4C" stroke-width="2"/>
+<text x="947" y="459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">index 5</text>
+<text x="947" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 5</text>
+<rect x="1035" y="430" width="135" height="75" rx="10" fill="#FBEDED" stroke="#C34C4C" stroke-width="2"/>
+<text x="1102" y="459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">index 6</text>
+<text x="1102" y="484" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#203247" text-anchor="middle" style="">term 5</text>
+<line x1="880" y1="285" x2="880" y2="430" stroke="#148A83" stroke-width="2" marker-end="url(#arr-teal)"/>
+<text x="905" y="355" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#C34C4C" text-anchor="start" style="">mismatch at index 5</text>
+<rect x="1000" y="195" width="350" height="115" rx="12" fill="#E8F6F4" stroke="#148A83" stroke-width="1.6"/>
+<text x="1016" y="220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="start" style="">CONSISTENCY CHECK</text>
+<text x="1016" y="244.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">prevLogIndex=4</text>
+<text x="1016" y="261.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">prevLogTerm=4</text>
+<rect x="1000" y="430" width="350" height="130" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="1016" y="455" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">RECONCILE</text>
+<text x="1016" y="479.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Delete follower’s conflicting uncommitted</text>
+<text x="1016" y="496.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">suffix at 5; append leader entries 5–6.</text>
+<path d="M 1050 575 C 900 690, 650 690, 500 560" fill="none" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<rect x="120" y="690" width="1220" height="82" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="136" y="715" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">SAFETY</text>
+<text x="136" y="739.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Committed prefixes cannot conflict under Raft’s invariants. A leader never overwrites its own log; a follower truncates only the conflicting suffix</text>
+<text x="136" y="756.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">after a valid consistency check.</text>
+</svg>

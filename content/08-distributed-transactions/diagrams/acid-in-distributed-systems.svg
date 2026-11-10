@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+<title id="title">ACID properties in a distributed bank transfer</title><desc id="desc">A two-participant transfer needs a commit protocol, invariant checks, concurrency control, and durable replicated decisions.</desc>
+<rect width="1600" height="820" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">ACID properties in a distributed bank transfer</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">A two-participant transfer needs a commit protocol, invariant checks, concurrency control, and durable replicated decisions.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<text x="70" y="170" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#2867B2" font-weight="700" text-anchor="start" font-style="normal">TRANSFER: Account A → Account B</text>
+<rect x="70" y="220" width="270" height="105" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="88" y="251" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Coordinator</text>
+<text x="88" y="280" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Transfer ID: TX-2048</text>
+<text x="88" y="303" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Tracks global outcome</text>
+<rect x="1260" y="220" width="270" height="105" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="1278" y="251" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Client acknowledgment</text>
+<text x="1278" y="280" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Return success only after</text>
+<text x="1278" y="303" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">the required durable outcome</text>
+<rect x="600" y="220" width="180" height="105" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="618" y="251" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Source partition</text>
+<text x="618" y="280" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Debit A</text>
+<rect x="850" y="220" width="180" height="105" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="868" y="251" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Destination partition</text>
+<text x="868" y="280" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Credit B</text>
+<line x1="340" y1="272" x2="600" y2="272" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="780" y1="272" x2="850" y2="272" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="1030" y1="272" x2="1260" y2="272" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="70" y="355" width="1460" height="82" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<rect x="86" y="377" width="205" height="38" rx="16" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="188.5" y="402.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#B63C43" font-weight="700" text-anchor="middle" font-style="normal">A • ATOMICITY</text>
+<text x="330" y="386" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">PREPARE both participants</text>
+<text x="330" y="409" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Record one durable COMMIT / ABORT</text>
+<text x="330" y="432" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Resolve both sides; no half-transfer</text>
+<rect x="70" y="455" width="1460" height="82" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<rect x="86" y="477" width="205" height="38" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="188.5" y="502.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">C • CONSISTENCY</text>
+<text x="330" y="486" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Check balance ≥ 0 and transfer amount &gt; 0</text>
+<text x="330" y="509" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Preserve total value (ignoring fees)</text>
+<text x="330" y="532" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Enforce account and ledger invariants</text>
+<rect x="70" y="555" width="1460" height="82" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<rect x="86" y="577" width="205" height="38" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="188.5" y="602.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">I • ISOLATION</text>
+<text x="330" y="586" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Locks / MVCC / serializable validation</text>
+<text x="330" y="609" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Prevent conflicting transfers from overspending</text>
+<text x="330" y="632" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Define a consistent transaction view</text>
+<rect x="70" y="655" width="1460" height="82" rx="12" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="1"/>
+<rect x="86" y="677" width="205" height="38" rx="16" fill="#F1EDFA" stroke="#6D55A5" stroke-width="1"/>
+<text x="188.5" y="702.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#6D55A5" font-weight="700" text-anchor="middle" font-style="normal">D • DURABILITY</text>
+<text x="330" y="686" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">WAL / redo record on each participant</text>
+<text x="330" y="709" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Replicated log or quorum as configured</text>
+<text x="330" y="732" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">Recover committed outcome after crashes</text>
+<rect x="1160" y="757" width="300" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1310.0" y="779.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">ACK after durable decision</text>
+<line x1="54" y1="766" x2="1546" y2="766" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="795" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">ACID is a set of transaction guarantees; replication consistency models are a separate concept.</text>
+</svg>

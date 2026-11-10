@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950" role="img" aria-labelledby="title desc">
+<title id="title">Isolation levels: visibility and conflict behavior</title><desc id="desc">Same business story, three different concurrency outcomes. T1 reads an account and T2 updates it.</desc>
+<rect width="1600" height="950" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Isolation levels: visibility and conflict behavior</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Same business story, three different concurrency outcomes. T1 reads an account and T2 updates it.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="60" y="190" width="1480" height="200" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="226" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">READ COMMITTED</text>
+<text x="82" y="253" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Each statement gets a fresh committed snapshot.</text>
+<text x="95" y="296" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<text x="95" y="354" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<line x1="310" y1="278" x2="310" y2="368" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="600" y1="278" x2="600" y2="368" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="890" y1="278" x2="890" y2="368" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="1190" y1="278" x2="1190" y2="368" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<rect x="250" y="270" width="150" height="82" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="268" y="301" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Read 1,000</text>
+<rect x="560" y="327" width="150" height="82" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="578" y="358" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Write 800</text>
+<rect x="850" y="327" width="140" height="82" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="868" y="358" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMMIT</text>
+<rect x="1120" y="270" width="150" height="82" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="1138" y="301" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Read 800</text>
+<text x="1320" y="309" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#2867B2" font-weight="600" text-anchor="middle" font-style="normal">New statement snapshot</text>
+<rect x="60" y="415" width="1480" height="200" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="451" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">SNAPSHOT ISOLATION</text>
+<text x="82" y="478" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">T1 keeps its transaction-start snapshot.</text>
+<text x="95" y="521" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<text x="95" y="579" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<line x1="310" y1="503" x2="310" y2="593" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="600" y1="503" x2="600" y2="593" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="890" y1="503" x2="890" y2="593" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="1190" y1="503" x2="1190" y2="593" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<rect x="250" y="495" width="150" height="82" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="268" y="526" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Read 1,000</text>
+<rect x="560" y="552" width="150" height="82" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="578" y="583" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Write 800</text>
+<rect x="850" y="552" width="140" height="82" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="868" y="583" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMMIT</text>
+<rect x="1120" y="495" width="150" height="82" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="1138" y="526" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Read 1,000</text>
+<text x="1320" y="534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#167B70" font-weight="600" text-anchor="middle" font-style="normal">Same transaction snapshot</text>
+<rect x="60" y="640" width="1480" height="200" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="676" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">SERIALIZABLE</text>
+<text x="82" y="703" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">The engine rejects an execution that cannot be serialized.</text>
+<text x="95" y="746" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<text x="95" y="804" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<line x1="310" y1="728" x2="310" y2="818" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="600" y1="728" x2="600" y2="818" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="890" y1="728" x2="890" y2="818" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<line x1="1190" y1="728" x2="1190" y2="818" stroke="#E7ECF2" stroke-width="1" stroke-linecap="round"/>
+<rect x="250" y="720" width="150" height="82" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="268" y="751" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Read set</text>
+<rect x="560" y="777" width="170" height="82" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="578" y="808" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Concurrent write</text>
+<rect x="850" y="777" width="160" height="82" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="868" y="808" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMMIT attempt</text>
+<rect x="1120" y="720" width="175" height="82" rx="14" fill="#FCEBED" stroke="#B63C43" stroke-width="2"/>
+<text x="1138" y="751" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">SERIALIZATION
+ABORT</text>
+<text x="1320" y="759" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#B63C43" font-weight="600" text-anchor="middle" font-style="normal">Retry transaction</text>
+<line x1="54" y1="896" x2="1546" y2="896" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="925" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Snapshot Isolation is not Serializable: disjoint writes can still violate a shared invariant (write skew).</text>
+</svg>

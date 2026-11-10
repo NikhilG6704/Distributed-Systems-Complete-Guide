@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Raft membership change: joint consensus</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">The transitional configuration requires overlapping majorities from both the old and new voter sets.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="55" y="150" width="420" height="490" rx="18" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="265" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">1  OLD CONFIGURATION</text>
+<text x="265" y="220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#203247" text-anchor="middle" style="">C_old = {A, B, C}</text>
+<rect x="90" y="275" width="90" height="70" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="135.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">A</text>
+<text x="135.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="220" y="275" width="90" height="70" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="265.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">B</text>
+<text x="265.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="350" y="275" width="90" height="70" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="395.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">C</text>
+<text x="395.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="83" y="515" width="365" height="90" rx="12" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.6"/>
+<text x="99" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="start" style="">QUORUM</text>
+<text x="99" y="564.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Majority of the active configuration.</text>
+<rect x="505" y="150" width="420" height="490" rx="18" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="715" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#7257A8" text-anchor="middle" style="">2  JOINT CONFIGURATION</text>
+<text x="715" y="220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#203247" text-anchor="middle" style="">C_old,new = {A, B, C, D, E}</text>
+<rect x="540" y="275" width="90" height="70" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="585.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7257A8" text-anchor="middle" style="">A</text>
+<text x="585.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="670" y="275" width="90" height="70" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="715.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7257A8" text-anchor="middle" style="">B</text>
+<text x="715.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="800" y="275" width="90" height="70" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="845.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7257A8" text-anchor="middle" style="">C</text>
+<text x="845.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="540" y="400" width="90" height="70" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="585.0" y="429" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7257A8" text-anchor="middle" style="">D</text>
+<text x="585.0" y="452.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="670" y="400" width="90" height="70" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="715.0" y="429" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7257A8" text-anchor="middle" style="">E</text>
+<text x="715.0" y="452.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="533" y="515" width="365" height="90" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="549" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">DUAL QUORUM</text>
+<text x="549" y="564.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Need a majority of C_old and a majority of</text>
+<text x="549" y="581.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">C_new.</text>
+<rect x="955" y="150" width="420" height="490" rx="18" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="1165" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">3  NEW CONFIGURATION</text>
+<text x="1165" y="220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#203247" text-anchor="middle" style="">C_new = {A, B, C, D, E}</text>
+<rect x="990" y="275" width="90" height="70" rx="16" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1035.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">A</text>
+<text x="1035.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="1120" y="275" width="90" height="70" rx="16" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1165.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">B</text>
+<text x="1165.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="1250" y="275" width="90" height="70" rx="16" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1295.0" y="304" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">C</text>
+<text x="1295.0" y="327.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="990" y="400" width="90" height="70" rx="16" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1035.0" y="429" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">D</text>
+<text x="1035.0" y="452.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="1120" y="400" width="90" height="70" rx="16" fill="#E8F6F4" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="1165.0" y="429" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">E</text>
+<text x="1165.0" y="452.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="400" fill="#203247" text-anchor="middle" style="">voter</text>
+<rect x="983" y="515" width="365" height="90" rx="12" fill="#F3F6FA" stroke="#2D8A57" stroke-width="1.6"/>
+<text x="999" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2D8A57" text-anchor="start" style="">QUORUM</text>
+<text x="999" y="564.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Majority of the active configuration.</text>
+<line x1="475" y1="390" x2="505" y2="390" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<line x1="925" y1="390" x2="955" y2="390" stroke="#2D8A57" stroke-width="3" marker-end="url(#arr-blue)"/>
+<rect x="70" y="700" width="1295" height="100" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="86" y="725" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">SAFE ROLLOUT</text>
+<text x="86" y="749.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Add new nodes as learners and let them catch up before promoting them to voters. Commit the joint configuration, then commit the new configuration; remove old</text>
+<text x="86" y="766.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">voters only after the transition is safe.</text>
+</svg>

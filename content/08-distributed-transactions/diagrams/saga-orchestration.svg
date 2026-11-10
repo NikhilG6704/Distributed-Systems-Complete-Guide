@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Saga orchestration</title><desc id="desc">A durable orchestrator executes local transactions and issues compensations in reverse business order when a later step fails.</desc>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Saga orchestration</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">A durable orchestrator executes local transactions and issues compensations in reverse business order when a later step fails.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="620" y="165" width="360" height="100" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="638" y="196" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="21" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Saga orchestrator</text>
+<text x="638" y="225" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Persist state, step result, retry count</text>
+<rect x="80" y="370" width="270" height="110" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="98" y="401" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Order</text>
+<text x="98" y="430" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Create pending</text>
+<text x="98" y="454" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">local DB commit</text>
+<line x1="800" y1="265" x2="215" y2="370" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="80" y="655" width="270" height="105" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="98" y="686" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMPENSATE</text>
+<text x="98" y="715" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Cancel order</text>
+<text x="98" y="739" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">business action</text>
+<line x1="215" y1="480" x2="215" y2="655" stroke="#A76512" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#arr-amber)"/>
+<rect x="450" y="370" width="270" height="110" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="468" y="401" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Inventory</text>
+<text x="468" y="430" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Reserve stock</text>
+<text x="468" y="454" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">local DB commit</text>
+<line x1="800" y1="265" x2="585" y2="370" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="450" y="655" width="270" height="105" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="468" y="686" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMPENSATE</text>
+<text x="468" y="715" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Release stock</text>
+<text x="468" y="739" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">business action</text>
+<line x1="585" y1="480" x2="585" y2="655" stroke="#A76512" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#arr-amber)"/>
+<rect x="820" y="370" width="270" height="110" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="838" y="401" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Payment</text>
+<text x="838" y="430" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Charge payment</text>
+<text x="838" y="454" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">local DB commit</text>
+<line x1="800" y1="265" x2="955" y2="370" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="820" y="655" width="270" height="105" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="838" y="686" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMPENSATE</text>
+<text x="838" y="715" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Refund payment</text>
+<text x="838" y="739" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">business action</text>
+<line x1="955" y1="480" x2="955" y2="655" stroke="#A76512" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#arr-amber)"/>
+<rect x="1190" y="370" width="270" height="110" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="1208" y="401" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Shipping</text>
+<text x="1208" y="430" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Create shipment</text>
+<text x="1208" y="454" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">local DB commit</text>
+<line x1="800" y1="265" x2="1325" y2="370" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="1190" y="655" width="270" height="105" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="1208" y="686" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">COMPENSATE</text>
+<text x="1208" y="715" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Cancel shipment</text>
+<text x="1208" y="739" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">business action</text>
+<line x1="1325" y1="480" x2="1325" y2="655" stroke="#A76512" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#arr-amber)"/>
+<line x1="350" y1="425" x2="445" y2="425" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="720" y1="425" x2="815" y2="425" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="1090" y1="425" x2="1185" y2="425" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="650" y="520" width="300" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="800.0" y="542.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">All steps succeed → CONFIRM</text>
+<path d="M1325 485 L1325 590 L955 590 L955 655" fill="none" stroke="#B63C43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-red)"/>
+<text x="1130" y="575" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#B63C43" font-weight="700" text-anchor="start" font-style="normal">Failure → compensate in reverse order</text>
+<rect x="90" y="805" width="330" height="32" rx="16" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="255.0" y="827.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#A76512" font-weight="700" text-anchor="middle" font-style="normal">Compensation may be imperfect</text>
+<rect x="620" y="805" width="350" height="32" rx="16" fill="#F1EDFA" stroke="#6D55A5" stroke-width="1"/>
+<text x="795.0" y="827.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#6D55A5" font-weight="700" text-anchor="middle" font-style="normal">Retry / timeout / human repair</text>
+<rect x="1150" y="805" width="300" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1300.0" y="827.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">Eventual consistency</text>
+<line x1="54" y1="846" x2="1546" y2="846" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="875" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Saga compensation is a new business transaction—not a rollback that erases history or external effects.</text>
+</svg>

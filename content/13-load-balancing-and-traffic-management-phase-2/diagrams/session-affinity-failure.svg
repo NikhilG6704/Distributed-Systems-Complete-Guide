@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Session-affinity failure and recovery</title><desc id="desc">A failed sticky target must not destroy user state or strand the session.</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+ <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6d82"/></marker>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+</defs>
+<rect width="1280" height="760" fill="#f4f7fb"/>
+<rect x="0" y="0" width="1280" height="11" fill="#2563eb"/>
+<text x="54" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2563eb">DISTRIBUTED SYSTEMS  /  TRAFFIC MANAGEMENT</text>
+<text x="54" y="94" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#14243a">Session-affinity failure and recovery</text>
+<text x="54" y="126" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#5d6d82">A failed sticky target must not destroy user state or strand the session.</text>
+<line x1="54" y1="148" x2="1226" y2="148" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<rect x="54.0" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="54.0" y="305" width="7" height="190" rx="4" fill="#2563eb"/>
+<text x="76.0" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Pinned</text>
+<circle cx="79.0" cy="361" r="3" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="92.0" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Client maps to App</text>
+<circle cx="79.0" cy="379" r="3" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="92.0" y="383" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">2</text>
+<line x1="247.0" y1="400.0" x2="294.5" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="299.5" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="299.5" y="305" width="7" height="190" rx="4" fill="#dc5252"/>
+<text x="321.5" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Failure</text>
+<circle cx="324.5" cy="361" r="3" fill="#dc5252" stroke="none" stroke-width="1"/>
+<text x="337.5" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">App 2 unavailable</text>
+<line x1="492.5" y1="400.0" x2="540.0" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="545.0" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="545.0" y="305" width="7" height="190" rx="4" fill="#d97706"/>
+<text x="567.0" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Re-map</text>
+<circle cx="570.0" cy="361" r="3" fill="#d97706" stroke="none" stroke-width="1"/>
+<text x="583.0" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">LB selects App 1</text>
+<line x1="738.0" y1="400.0" x2="785.5" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="790.5" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="790.5" y="305" width="7" height="190" rx="4" fill="#0f9d75"/>
+<text x="812.5" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Restore</text>
+<circle cx="815.5" cy="361" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="828.5" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Read shared</text>
+<circle cx="815.5" cy="379" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="828.5" y="383" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">session</text>
+<line x1="983.5" y1="400.0" x2="1031.0" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1036.0" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="1036.0" y="305" width="7" height="190" rx="4" fill="#0891b2"/>
+<text x="1058.0" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Continue</text>
+<circle cx="1061.0" cy="361" r="3" fill="#0891b2" stroke="none" stroke-width="1"/>
+<text x="1074.0" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">User resumes</text>
+<circle cx="1061.0" cy="379" r="3" fill="#0891b2" stroke="none" stroke-width="1"/>
+<text x="1074.0" y="383" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">workflow</text>
+<rect x="64" y="200" width="144.4" height="26" rx="13" fill="#7556c8" opacity="0.13"/>
+<text x="136.2" y="218" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#7556c8">STATE TRANSITIONS</text>
+<text x="250" y="222" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="500" fill="#5d6d82">Thresholds, policy guards, and timers determine when transitions are allowed.</text>
+<rect x="54" y="654" width="1172" height="64" rx="13" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="72" y="669" width="101.2" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="122.6" y="687" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">DESIGN NOTE</text>
+<text x="190" y="681" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Cookie affinity alone cannot preserve in-memory sessions; durable shared state or replication is required.</text>
+<text x="1224" y="741" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="500" fill="#5d6d82">session-affinity-failure.svg</text>
+</svg>

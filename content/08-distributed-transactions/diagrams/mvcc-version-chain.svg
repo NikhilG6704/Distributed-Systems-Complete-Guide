@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+<title id="title">MVCC version chain and snapshot visibility</title><desc id="desc">Each committed update creates a version. A transaction reads the version visible to its snapshot, not necessarily the newest version.</desc>
+<rect width="1600" height="820" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">MVCC version chain and snapshot visibility</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Each committed update creates a version. A transaction reads the version visible to its snapshot, not necessarily the newest version.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<text x="80" y="175" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#2867B2" font-weight="700" text-anchor="start" font-style="normal">ROW: account_id = 42</text>
+<rect x="160" y="260" width="230" height="125" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="178" y="291" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">v1</text>
+<text x="178" y="320" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">balance = 1,000</text>
+<text x="178" y="343" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">commit TS 10</text>
+<rect x="465" y="260" width="230" height="125" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="483" y="291" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">v2</text>
+<text x="483" y="320" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">balance = 800</text>
+<text x="483" y="343" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">commit TS 20</text>
+<rect x="770" y="260" width="230" height="125" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="788" y="291" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">v3</text>
+<text x="788" y="320" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">balance = 650</text>
+<text x="788" y="343" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">commit TS 30</text>
+<rect x="1075" y="260" width="230" height="125" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="1093" y="291" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">v4</text>
+<text x="1093" y="320" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">balance = 500</text>
+<text x="1093" y="343" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">commit TS 40</text>
+<line x1="390" y1="322" x2="465" y2="322" stroke="#62758A" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-muted)"/>
+<line x1="695" y1="322" x2="770" y2="322" stroke="#62758A" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-muted)"/>
+<line x1="1000" y1="322" x2="1075" y2="322" stroke="#62758A" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-muted)"/>
+<text x="90" y="480" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#167B70" font-weight="700" text-anchor="start" font-style="normal">Snapshot at TS 25</text>
+<line x1="290" y1="500" x2="725" y2="500" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<path d="M725 500 L725 420" fill="none" stroke="#167B70" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<rect x="480" y="525" width="250" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="605.0" y="547.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">T1 sees v2 = 800</text>
+<text x="900" y="480" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#6D55A5" font-weight="700" text-anchor="start" font-style="normal">Snapshot at TS 35</text>
+<line x1="1100" y1="500" x2="1330" y2="500" stroke="#6D55A5" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<path d="M1100 500 L1100 420" fill="none" stroke="#6D55A5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-purple)"/>
+<rect x="1030" y="525" width="250" height="32" rx="16" fill="#F1EDFA" stroke="#6D55A5" stroke-width="1"/>
+<text x="1155.0" y="547.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#6D55A5" font-weight="700" text-anchor="middle" font-style="normal">New T sees v3 = 650</text>
+<rect x="80" y="625" width="1440" height="120" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="102" y="661" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">VERSION CLEANUP / VACUUM</text>
+<text x="102" y="688" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Versions older than every active snapshot may become reclaimable; long-running snapshots can delay cleanup.</text>
+<rect x="115" y="680" width="255" height="32" rx="16" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="242.5" y="702.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#A76512" font-weight="700" text-anchor="middle" font-style="normal">Oldest active snapshot</text>
+<line x1="370" y1="696" x2="540" y2="696" stroke="#A76512" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-amber)"/>
+<rect x="555" y="680" width="245" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="677.5" y="702.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">Safe-to-reclaim horizon</text>
+<line x1="800" y1="696" x2="985" y2="696" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1000" y="680" width="280" height="32" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="1140.0" y="702.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">Garbage collection</text>
+<line x1="54" y1="766" x2="1546" y2="766" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="795" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">MVCC is a concurrency-control/storage technique; the isolation guarantee depends on the engine and validation rules.</text>
+</svg>

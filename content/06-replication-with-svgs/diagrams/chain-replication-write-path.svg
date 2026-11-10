@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Chain replication write path">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Chain replication write path</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">A client receives success only after the update reaches and is applied at the tail</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<text x="170" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="middle">Client</text>
+<line x1="170" y1="220" x2="170" y2="750" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="7 7"/>
+<text x="470" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="middle">Head</text>
+<line x1="470" y1="220" x2="470" y2="750" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="7 7"/>
+<text x="820" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="middle">Middle</text>
+<line x1="820" y1="220" x2="820" y2="750" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="7 7"/>
+<text x="1170" y="190" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="middle">Tail</text>
+<line x1="1170" y1="220" x2="1170" y2="750" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="7 7"/>
+<circle cx="170" cy="270" r="9" fill="#2F6FED"/>
+<text x="188" y="275" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="650" fill="#2F6FED" text-anchor="start">write K=v2</text>
+<circle cx="470" cy="350" r="9" fill="#2F6FED"/>
+<text x="488" y="355" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="650" fill="#2F6FED" text-anchor="start">apply K=v2</text>
+<circle cx="820" cy="450" r="9" fill="#0F9D8A"/>
+<text x="838" y="455" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="650" fill="#0F9D8A" text-anchor="start">apply K=v2</text>
+<circle cx="1170" cy="550" r="9" fill="#27845B"/>
+<text x="1188" y="555" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="650" fill="#27845B" text-anchor="start">apply K=v2</text>
+<circle cx="170" cy="690" r="9" fill="#27845B"/>
+<text x="188" y="695" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="650" fill="#27845B" text-anchor="start">success ACK</text>
+<line x1="180" y1="270" x2="460" y2="350" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<text x="320.0" y="295.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">1 · request</text>
+<line x1="480" y1="350" x2="810" y2="450" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-teal)"/>
+<text x="645.0" y="385.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">2 · forward</text>
+<line x1="830" y1="450" x2="1160" y2="550" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-teal)"/>
+<text x="995.0" y="485.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">3 · forward</text>
+<line x1="1160" y1="570" x2="180" y2="690" stroke="#27845B" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-green)"/>
+<text x="670.0" y="615.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#27845B" text-anchor="middle">4 · tail ACK / success</text>
+<rect x="585" y="775" width="430" height="34" rx="17" fill="#E8F5ED"/>
+<text x="800.0" y="798" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#27845B" text-anchor="middle">Ordered prefix visible at the tail</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">The tail acknowledgment certifies that all earlier updates in the chain have passed through the tail under the chain protocol.</text>
+</svg>

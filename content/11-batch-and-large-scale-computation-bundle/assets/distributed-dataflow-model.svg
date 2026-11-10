@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Distributed dataflow model</title><desc id="desc">A graph of operators connected by partitioned streams; state, windows, exchanges, and checkpoints shape execution.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Distributed dataflow model</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">A graph of operators connected by partitioned streams; state, windows, exchanges, and checkpoints shape execution.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="55" y="330" width="180" height="145" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="73" y="361" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Sources</text>
+<text x="73" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">files / topics</text>
+<text x="73" y="415" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">bounded or</text>
+<text x="73" y="440" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">unbounded</text>
+<rect x="300" y="180" width="210" height="125" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="318" y="211" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Parse + filter</text>
+<text x="318" y="240" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">stateless</text>
+<text x="318" y="265" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">operators</text>
+<text x="318" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">parallel instances</text>
+<rect x="300" y="440" width="210" height="125" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="318" y="471" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Key / partition</text>
+<text x="318" y="500" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">route by key</text>
+<text x="318" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">exchange boundary</text>
+<rect x="590" y="180" width="230" height="125" rx="18" fill="#F0E9FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="608" y="211" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Window + state</text>
+<text x="608" y="240" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">event-time windows</text>
+<text x="608" y="265" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">keyed state</text>
+<rect x="590" y="440" width="230" height="125" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="608" y="471" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Join / aggregate</text>
+<text x="608" y="500" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">combine records</text>
+<text x="608" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">emit partial results</text>
+<rect x="900" y="300" width="235" height="145" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="918" y="331" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Sink</text>
+<text x="918" y="360" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">table / object store</text>
+<text x="918" y="385" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">serving database</text>
+<rect x="1210" y="160" width="300" height="115" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1228" y="191" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Checkpoint store</text>
+<text x="1228" y="220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">operator state</text>
+<text x="1228" y="245" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">source offsets</text>
+<rect x="1210" y="430" width="300" height="115" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1228" y="461" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Coordinator</text>
+<text x="1228" y="490" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">checkpoint barriers</text>
+<text x="1228" y="515" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">recovery / backpressure</text>
+<path d="M 235,375 L 270,375 L 270,245 L 300,245" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="212" y="221" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="270" y="240" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">records</text>
+<path d="M 510,245 L 590,245" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="492.0" y="221.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="550.0" y="240.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">records</text>
+<path d="M 405,305 L 405,440" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="347.0" y="348.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="405.0" y="367.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">keying</text>
+<path d="M 510,500 L 590,500" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="492.0" y="476.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="550.0" y="495.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">partitioned</text>
+<path d="M 820,245 L 865,245 L 865,350 L 900,350" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="807" y="326" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="865" y="345" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">stateful output</text>
+<path d="M 820,500 L 865,500 L 865,395 L 900,395" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="807" y="371" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="865" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">aggregate</text>
+<path d="M 1015,300 L 1080,300 L 1080,215 L 1210,215" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1022" y="191" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1080" y="210" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">snapshot</text>
+<path d="M 1360,275 L 1360,430" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="1302.0" y="328.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1360.0" y="347.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">checkpoint barrier</text>
+<path d="M 1210,490 L 1170,490 L 1170,415 L 1135,415" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="1112" y="391" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1170" y="410" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">restore / coordinate</text>
+<text x="800" y="725" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">The programming model describes semantics; the runner/runtime determines scheduling, state backend, and fault recovery.</text>
+</svg>

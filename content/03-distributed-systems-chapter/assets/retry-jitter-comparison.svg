@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000" role="img" aria-labelledby="title desc">
+<title id="title">Retry jitter: unsynchronized clients reduce retry bursts</title><desc id="desc">Jitter spreads attempts over time; it reduces synchronization, not necessarily the total number of retries.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#138A83"/></marker>
+          <marker id="arr-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7655C7"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#C74747"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52647A"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#213047" flood-opacity=".08"/></filter>
+        </defs>
+<rect width="1500" height="1000" fill="#F7F9FC"/>
+<text x="750.0" y="42" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="27" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Retry jitter: unsynchronized clients reduce retry bursts</text>
+<text x="750.0" y="72" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#52647A" text-anchor="middle" opacity="1">Jitter spreads attempts over time; it reduces synchronization, not necessarily the total number of retries.</text>
+<rect x="55" y="130" width="1390" height="235" rx="14" fill="#FFFFFF" stroke="#E7EDF4" stroke-width="1.2"/>
+<text x="85" y="168" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#C74747" text-anchor="start" opacity="1">NO JITTER</text>
+<text x="85" y="193" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="start" opacity="1">Every client retries at the same instant</text>
+<line x1="390" y1="295" x2="1380" y2="295" stroke="#91A2B7" stroke-width="1.5" fill="none" marker-end="url(#arr-gray)"/>
+<circle cx="700" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="700" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="960" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="281" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="264" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="247" r="5" fill="#C74747" opacity=".8"/>
+<circle cx="1220" cy="230" r="5" fill="#C74747" opacity=".8"/>
+<text x="900" y="240" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#C74747" text-anchor="middle" opacity="1">Aligned vertical bursts</text>
+<rect x="55" y="405" width="1390" height="235" rx="14" fill="#FFFFFF" stroke="#E7EDF4" stroke-width="1.2"/>
+<text x="85" y="443" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#138A83" text-anchor="start" opacity="1">FULL JITTER</text>
+<text x="85" y="468" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="start" opacity="1">Delay sampled uniformly from 0 to cap</text>
+<line x1="390" y1="570" x2="1380" y2="570" stroke="#91A2B7" stroke-width="1.5" fill="none" marker-end="url(#arr-gray)"/>
+<circle cx="490" cy="558" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="537" cy="535" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="584" cy="512" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="631" cy="489" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="678" cy="546" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="535" cy="523" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="582" cy="500" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="629" cy="557" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="676" cy="534" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="533" cy="511" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="580" cy="488" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="627" cy="545" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="674" cy="522" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="531" cy="499" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="578" cy="556" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="806" cy="551" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="853" cy="528" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="900" cy="505" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="947" cy="482" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="804" cy="539" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="851" cy="516" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="898" cy="493" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="945" cy="550" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="802" cy="527" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="849" cy="504" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="896" cy="481" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="943" cy="538" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="800" cy="515" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="847" cy="492" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="894" cy="549" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1122" cy="544" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1169" cy="521" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1216" cy="498" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1073" cy="555" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1120" cy="532" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1167" cy="509" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1214" cy="486" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1071" cy="543" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1118" cy="520" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1165" cy="497" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1212" cy="554" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1069" cy="531" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1116" cy="508" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1163" cy="485" r="5" fill="#138A83" opacity=".78"/>
+<circle cx="1210" cy="542" r="5" fill="#138A83" opacity=".78"/>
+<text x="900" y="515" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#138A83" text-anchor="middle" opacity="1">Retry events distributed across a window</text>
+<rect x="55" y="680" width="1390" height="235" rx="14" fill="#FFFFFF" stroke="#E7EDF4" stroke-width="1.2"/>
+<text x="85" y="718" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" fill="#7655C7" text-anchor="start" opacity="1">EQUAL JITTER</text>
+<text x="85" y="743" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="start" opacity="1">Delay sampled from cap/2 to cap</text>
+<line x1="390" y1="845" x2="1380" y2="845" stroke="#91A2B7" stroke-width="1.5" fill="none" marker-end="url(#arr-gray)"/>
+<circle cx="600" cy="833" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="647" cy="810" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="694" cy="787" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="741" cy="764" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="788" cy="821" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="645" cy="798" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="692" cy="775" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="739" cy="832" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="786" cy="809" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="643" cy="786" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="690" cy="763" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="737" cy="820" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="784" cy="797" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="641" cy="774" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="688" cy="831" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="916" cy="826" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="963" cy="803" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1010" cy="780" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1057" cy="757" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="914" cy="814" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="961" cy="791" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1008" cy="768" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1055" cy="825" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="912" cy="802" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="959" cy="779" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1006" cy="756" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1053" cy="813" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="910" cy="790" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="957" cy="767" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1004" cy="824" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1232" cy="819" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1279" cy="796" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1326" cy="773" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1183" cy="830" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1230" cy="807" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1277" cy="784" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1324" cy="761" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1181" cy="818" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1228" cy="795" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1275" cy="772" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1322" cy="829" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1179" cy="806" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1226" cy="783" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1273" cy="760" r="5" fill="#7655C7" opacity=".78"/>
+<circle cx="1320" cy="817" r="5" fill="#7655C7" opacity=".78"/>
+<text x="900" y="790" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#7655C7" text-anchor="middle" opacity="1">Retry events distributed across a window</text>
+<rect x="180" y="970" width="1140" height="40" rx="10" fill="#F0F3F7" stroke="#16243A" stroke-width="1.5"/>
+<text x="750.0" y="994" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#16243A" text-anchor="middle">
+<tspan x="750.0" dy="0">Full jitter: U(0, cap)    •    Equal jitter: cap/2 + U(0, cap/2)    •    No jitter: deterministic capped delay</tspan>
+</text>
+</svg>

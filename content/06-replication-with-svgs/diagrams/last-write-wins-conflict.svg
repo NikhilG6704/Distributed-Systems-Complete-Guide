@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Last-write-wins conflict">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Last-write-wins conflict</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">Wall-clock timestamp order can select a value that does not reflect user intent or true event order</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="70" y="180" width="1460" height="560" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="94" y="218" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#D84B4B" text-anchor="start">Two concurrent writes during a network delay</text>
+<rect x="140" y="285" width="430" height="150" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="140" y="285" width="9" height="150" rx="5" fill="#2F6FED"/>
+<text x="168" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Region A · write W1</text>
+<text x="168" y="353" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="168" dy="0">Address = Chennai</tspan>
+<tspan x="168" dy="22">Physical clock: 10:00:05</tspan>
+</text>
+<rect x="1030" y="285" width="430" height="150" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1030" y="285" width="9" height="150" rx="5" fill="#0F9D8A"/>
+<text x="1058" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Region B · write W2</text>
+<text x="1058" y="353" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1058" dy="0">Address = Berlin</tspan>
+<tspan x="1058" dy="22">Physical clock: 10:00:08</tspan>
+</text>
+<line x1="570" y1="350" x2="1020" y2="350" stroke="#D84B4B" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-red)"/>
+<text x="795.0" y="332.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D84B4B" text-anchor="middle">messages delayed / clocks skewed</text>
+<rect x="580" y="500" width="440" height="135" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="580" y="500" width="9" height="135" rx="5" fill="#D88A18"/>
+<text x="608" y="538" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">LWW resolver</text>
+<text x="608" y="568" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="608" dy="0">Compare timestamps; W2 wins</tspan>
+<tspan x="608" dy="22">W1 may be discarded</tspan>
+</text>
+<rect x="879" y="514" width="127" height="29" rx="14" fill="#FFF4DE"/>
+<text x="942.5" y="534" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#D88A18" text-anchor="middle">WINNER = W2</text>
+<line x1="355" y1="435" x2="680" y2="500" stroke="#2F6FED" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="6 6"/>
+<line x1="1245" y1="435" x2="920" y2="500" stroke="#0F9D8A" stroke-width="2" stroke-linecap="round" opacity="1" stroke-dasharray="6 6"/>
+<rect x="515" y="690" width="570" height="34" rx="17" fill="#FDECEC"/>
+<text x="800.0" y="713" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D84B4B" text-anchor="middle">Timestamp order is not causal order</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Use deterministic tie-breakers, understand clock error bounds, and avoid LWW where losing concurrent intent is unacceptable.</text>
+</svg>

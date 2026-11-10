@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Replication architecture overview">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Replication architecture overview</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">Three-region e-commerce deployment, with an inset showing how replication differs from sharding</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="80" y="190" width="430" height="380" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="104" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#2F6FED" text-anchor="start">INDIA</text>
+<rect x="150" y="255" width="290" height="115" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="150" y="255" width="9" height="115" rx="5" fill="#2F6FED"/>
+<text x="178" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Application tier</text>
+<text x="178" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="178" dy="0">Regional API / web clients</tspan>
+<tspan x="178" dy="22">Route writes to leader; reads by policy</tspan>
+</text>
+<rect x="150" y="420" width="290" height="105" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="150" y="420" width="9" height="105" rx="5" fill="#2F6FED"/>
+<text x="178" y="458" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Leader A</text>
+<text x="178" y="488" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="178" dy="0">Database replica · N = 3</tspan>
+<tspan x="178" dy="22">Independent failure domain</tspan>
+</text>
+<rect x="350" y="434" width="76" height="29" rx="14" fill="#EAF1FF"/>
+<text x="388.0" y="454" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#2F6FED" text-anchor="middle">WRITE</text>
+<line x1="295" y1="370" x2="295" y2="418" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-blue)"/>
+<rect x="575" y="190" width="430" height="380" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="599" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#0F9D8A" text-anchor="start">EUROPE</text>
+<rect x="645" y="255" width="290" height="115" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="645" y="255" width="9" height="115" rx="5" fill="#0F9D8A"/>
+<text x="673" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Application tier</text>
+<text x="673" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="673" dy="0">Regional API / web clients</tspan>
+<tspan x="673" dy="22">Route writes to leader; reads by policy</tspan>
+</text>
+<rect x="645" y="420" width="290" height="105" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="645" y="420" width="9" height="105" rx="5" fill="#0F9D8A"/>
+<text x="673" y="458" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Follower B</text>
+<text x="673" y="488" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="673" dy="0">Database replica · N = 3</tspan>
+<tspan x="673" dy="22">Independent failure domain</tspan>
+</text>
+<rect x="830" y="434" width="91" height="29" rx="14" fill="#E5F6F2"/>
+<text x="875.5" y="454" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0F9D8A" text-anchor="middle">REPLICA</text>
+<line x1="790" y1="370" x2="790" y2="418" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-teal)"/>
+<rect x="1070" y="190" width="430" height="380" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="1094" y="228" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#7957C8" text-anchor="start">UNITED STATES</text>
+<rect x="1140" y="255" width="290" height="115" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1140" y="255" width="9" height="115" rx="5" fill="#7957C8"/>
+<text x="1168" y="293" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Application tier</text>
+<text x="1168" y="323" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1168" dy="0">Regional API / web clients</tspan>
+<tspan x="1168" dy="22">Route writes to leader; reads by policy</tspan>
+</text>
+<rect x="1140" y="420" width="290" height="105" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1140" y="420" width="9" height="105" rx="5" fill="#7957C8"/>
+<text x="1168" y="458" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Follower C</text>
+<text x="1168" y="488" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1168" dy="0">Database replica · N = 3</tspan>
+<tspan x="1168" dy="22">Independent failure domain</tspan>
+</text>
+<rect x="1325" y="434" width="91" height="29" rx="14" fill="#F0EBFC"/>
+<text x="1370.5" y="454" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7957C8" text-anchor="middle">REPLICA</text>
+<line x1="1285" y1="370" x2="1285" y2="418" stroke="#7957C8" stroke-width="3" stroke-linecap="round" opacity="1" marker-end="url(#arrow-purple)"/>
+<line x1="440" y1="480" x2="645" y2="480" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="10 8" marker-end="url(#arrow-blue)"/>
+<text x="542.5" y="466.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">WAL / log stream</text>
+<line x1="935" y1="480" x2="1140" y2="480" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="10 8" marker-end="url(#arrow-blue)"/>
+<text x="1037.5" y="466.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">WAL / log stream</text>
+<line x1="65" y1="620" x2="1535" y2="620" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="95" y="650" width="660" height="165" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="119" y="688" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#0F9D8A" text-anchor="start">Replication = copies of the same shard</text>
+<rect x="135" y="705" width="150" height="82" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="135" y="705" width="9" height="82" rx="5" fill="#0F9D8A"/>
+<text x="163" y="743" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Copy A</text>
+<text x="163" y="773" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="163" dy="0">Same logical data</tspan>
+</text>
+<rect x="350" y="705" width="150" height="82" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="350" y="705" width="9" height="82" rx="5" fill="#0F9D8A"/>
+<text x="378" y="743" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Copy B</text>
+<text x="378" y="773" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="378" dy="0">Same logical data</tspan>
+</text>
+<rect x="565" y="705" width="150" height="82" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="565" y="705" width="9" height="82" rx="5" fill="#0F9D8A"/>
+<text x="593" y="743" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Copy C</text>
+<text x="593" y="773" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="593" dy="0">Same logical data</tspan>
+</text>
+<rect x="835" y="650" width="670" height="165" rx="20" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5"/>
+<text x="859" y="688" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#7957C8" text-anchor="start">Sharding = different data subsets</text>
+<rect x="875" y="705" width="240" height="82" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="875" y="705" width="9" height="82" rx="5" fill="#7957C8"/>
+<text x="903" y="743" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Shard 1</text>
+<text x="903" y="773" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="903" dy="0">Keys / range A–M</tspan>
+</text>
+<rect x="1215" y="705" width="240" height="82" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1215" y="705" width="9" height="82" rx="5" fill="#7957C8"/>
+<text x="1243" y="743" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Shard 2</text>
+<text x="1243" y="773" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1243" dy="0">Keys / range N–Z</tspan>
+</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Remote asynchronous apply can lag leader acknowledgment; replica count alone does not define commit durability.</text>
+</svg>

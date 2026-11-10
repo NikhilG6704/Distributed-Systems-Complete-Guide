@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Pod readiness and endpoint routing</title><desc id="desc">Readiness and termination updates EndpointSlices so new traffic avoids unavailable Pods.</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+ <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6d82"/></marker>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+</defs>
+<rect width="1280" height="760" fill="#f4f7fb"/>
+<rect x="0" y="0" width="1280" height="11" fill="#2563eb"/>
+<text x="54" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2563eb">DISTRIBUTED SYSTEMS  /  TRAFFIC MANAGEMENT</text>
+<text x="54" y="94" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#14243a">Pod readiness and endpoint routing</text>
+<text x="54" y="126" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#5d6d82">Readiness and termination updates EndpointSlices so new traffic avoids unavailable Pods.</text>
+<line x1="54" y1="148" x2="1226" y2="148" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<rect x="54.0" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="54.0" y="305" width="7" height="190" rx="4" fill="#0f9d75"/>
+<text x="76.0" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Pod Ready</text>
+<circle cx="79.0" cy="361" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="92.0" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Endpoint published</text>
+<line x1="247.0" y1="400.0" x2="376.33333333333337" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="381.33333333333337" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="381.33333333333337" y="305" width="7" height="190" rx="4" fill="#d97706"/>
+<text x="403.33333333333337" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Not Ready</text>
+<circle cx="406.33333333333337" cy="361" r="3" fill="#d97706" stroke="none" stroke-width="1"/>
+<text x="419.33333333333337" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Endpoint condition</text>
+<circle cx="406.33333333333337" cy="379" r="3" fill="#d97706" stroke="none" stroke-width="1"/>
+<text x="419.33333333333337" y="383" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">false</text>
+<line x1="574.3333333333334" y1="400.0" x2="703.6666666666667" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="708.6666666666667" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="708.6666666666667" y="305" width="7" height="190" rx="4" fill="#7556c8"/>
+<text x="730.6666666666667" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Terminating</text>
+<circle cx="733.6666666666667" cy="361" r="3" fill="#7556c8" stroke="none" stroke-width="1"/>
+<text x="746.6666666666667" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">Endpoint drains /</text>
+<circle cx="733.6666666666667" cy="379" r="3" fill="#7556c8" stroke="none" stroke-width="1"/>
+<text x="746.6666666666667" y="383" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">removal</text>
+<line x1="901.6666666666667" y1="400.0" x2="1031.0" y2="400.0" stroke="#5d6d82" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1036.0" y="305" width="190" height="190" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="1036.0" y="305" width="7" height="190" rx="4" fill="#dc5252"/>
+<text x="1058.0" y="336" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#14243a">Removed</text>
+<circle cx="1061.0" cy="361" r="3" fill="#dc5252" stroke="none" stroke-width="1"/>
+<text x="1074.0" y="365" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">No new Service</text>
+<circle cx="1061.0" cy="379" r="3" fill="#dc5252" stroke="none" stroke-width="1"/>
+<text x="1074.0" y="383" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="500" fill="#5d6d82">selection</text>
+<rect x="64" y="200" width="144.4" height="26" rx="13" fill="#7556c8" opacity="0.13"/>
+<text x="136.2" y="218" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#7556c8">STATE TRANSITIONS</text>
+<text x="250" y="222" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="500" fill="#5d6d82">Thresholds, policy guards, and timers determine when transitions are allowed.</text>
+<rect x="54" y="654" width="1172" height="64" rx="13" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="72" y="669" width="101.2" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="122.6" y="687" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">DESIGN NOTE</text>
+<text x="190" y="681" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Readiness controls serving eligibility; liveness controls restart behavior and should not be conflated.</text>
+<text x="1224" y="741" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="500" fill="#5d6d82">kubernetes-pod-endpoint-routing.svg</text>
+</svg>

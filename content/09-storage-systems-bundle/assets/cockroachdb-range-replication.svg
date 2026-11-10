@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">CockroachDB range replication</title><desc id="desc">A key range is replicated using Raft; a leaseholder coordinates serving operations while replicas maintain consensus state.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">CockroachDB range replication</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">A key range is replicated using Raft; a leaseholder coordinates serving operations while replicas maintain consensus state.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="60" y="150" width="230" height="90" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="60" y="150" width="7" height="90" rx="4" fill="#2F6FED"/>
+<text x="78" y="179" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">SQL client</text>
+<text x="78" y="203" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="78" dy="0">Transaction / query</tspan></text>
+<rect x="380" y="150" width="260" height="90" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="380" y="150" width="7" height="90" rx="4" fill="#119A8A"/>
+<text x="398" y="179" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Node A • leaseholder</text>
+<text x="398" y="203" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="398" dy="0">Range lease + request serving</tspan></text>
+<path d="M290,195 H380" fill="none" stroke="#2F6FED" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<rect x="820" y="150" width="250" height="90" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="820" y="150" width="7" height="90" rx="4" fill="#2F6FED"/>
+<text x="838" y="179" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Node B • follower</text>
+<text x="838" y="203" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="838" dy="0">Raft replica</tspan></text>
+<rect x="1130" y="150" width="250" height="90" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5"/>
+<rect x="1130" y="150" width="7" height="90" rx="4" fill="#7656C8"/>
+<text x="1148" y="179" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Node C • follower</text>
+<text x="1148" y="203" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1148" dy="0">Raft replica</tspan></text>
+<rect x="80" y="390" width="360" height="145" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5"/>
+<rect x="80" y="390" width="7" height="145" rx="4" fill="#119A8A"/>
+<text x="98" y="419" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Range R1 • replica 1</text>
+<text x="98" y="443" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="98" dy="0">Key span [k100, k200)</tspan><tspan x="98" dy="19.88">MVCC versions • Raft log</tspan></text>
+<rect x="530" y="390" width="360" height="145" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="530" y="390" width="7" height="145" rx="4" fill="#2F6FED"/>
+<text x="548" y="419" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Range R1 • replica 2</text>
+<text x="548" y="443" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="548" dy="0">Key span [k100, k200)</tspan><tspan x="548" dy="19.88">MVCC versions • Raft log</tspan></text>
+<rect x="980" y="390" width="360" height="145" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5"/>
+<rect x="980" y="390" width="7" height="145" rx="4" fill="#7656C8"/>
+<text x="998" y="419" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Range R1 • replica 3</text>
+<text x="998" y="443" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="998" dy="0">Key span [k100, k200)</tspan><tspan x="998" dy="19.88">MVCC versions • Raft log</tspan></text>
+<path d="M510,240 V310 H260 V390" fill="none" stroke="#119A8A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<path d="M945,240 V310 H710 V390" fill="none" stroke="#2F6FED" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M1255,240 V310 H1160 V390" fill="none" stroke="#7656C8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<path d="M440,460 H530" fill="none" stroke="#2F6FED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M890,460 H980" fill="none" stroke="#7656C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-gray)"/>
+<rect x="500" y="570" width="430" height="28" rx="14" fill="#EAF1FF" stroke="#EAF1FF" stroke-width="1"/>
+<text x="715.0" y="589" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#2F6FED" text-anchor="middle" style="">Raft replication • quorum commit</text>
+<text x="500" y="615" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#5E7086" text-anchor="start"><tspan x="500" dy="0">Leaseholder proposes log entry; followers replicate it.</tspan><tspan x="500" dy="20">Commit requires a Raft majority, not every replica.</tspan></text>
+<rect x="80" y="720" width="520" height="90" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="80" y="720" width="7" height="90" rx="4" fill="#D58A19"/>
+<text x="98" y="749" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Range split</text>
+<text x="98" y="773" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="98" dy="0">Large / hot range divides into smaller key spans</tspan></text>
+<rect x="820" y="720" width="520" height="90" rx="14" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="820" y="720" width="7" height="90" rx="4" fill="#119A8A"/>
+<text x="838" y="749" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Rebalance</text>
+<text x="838" y="773" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="838" dy="0">Replicas move to improve load and failure-domain placement</tspan></text>
+<path d="M710,535 V670 H340 V720" fill="none" stroke="#D58A19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<path d="M1160,535 V670 H1080 V720" fill="none" stroke="#119A8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<text x="720" y="860" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#5E7086" text-anchor="middle" style="">Leaseholder and Raft leader are related but distinct concepts in CockroachDB; do not conflate request-serving leases with consensus.</text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">cockroachdb-range-replication.svg</text>
+</svg>

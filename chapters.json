@@ -1,0 +1,154 @@
+[
+  {
+    "id": "01-distributed-systems-foundations",
+    "number": 1,
+    "title": "1. Distributed Systems Foundations",
+    "file": "content/01-distributed-systems-foundations/01-distributed-systems-foundations.md",
+    "bytes": 202647,
+    "summary": "A comprehensive foundation for understanding distributed systems, reasoning about failures, designing resilient services, and preparing for system-design interviews. Read Sections 5–9 in…"
+  },
+  {
+    "id": "02-distributed-systems-chapter",
+    "number": 2,
+    "title": "Time, Clocks, and Ordering in Distributed Systems",
+    "file": "content/02-distributed-systems-chapter/02-time-clocks-and-ordering.md",
+    "bytes": 157896,
+    "summary": "This chapter explains how distributed systems represent time, infer causality, order events, and preserve consistency when machines do not share a perfectly synchronized clock. It moves…"
+  },
+  {
+    "id": "03-distributed-systems-chapter",
+    "number": 3,
+    "title": "Communication in Distributed Systems",
+    "file": "content/03-distributed-systems-chapter/03-communication.md",
+    "bytes": 199836,
+    "summary": "Purpose: A standalone engineering reference for how distributed components exchange information, how communication fails, and how APIs, serialization, messaging, retries, idempotency, and…"
+  },
+  {
+    "id": "04-consistency-models",
+    "number": 4,
+    "title": "Consistency Models in Distributed Systems",
+    "file": "content/04-consistency-models/04-consistency-models.md",
+    "bytes": 228073,
+    "summary": "This chapter explains how replicated systems expose data to clients, order concurrent operations, recover from replica divergence, and trade coordination against latency and availability.…"
+  },
+  {
+    "id": "05-consensus-and-coordination-with-svgs",
+    "number": 5,
+    "title": "Consensus and Coordination in Distributed Systems",
+    "file": "content/05-consensus-and-coordination-with-svgs/05-consensus-and-coordination.md",
+    "bytes": 255614,
+    "summary": "This chapter is a standalone technical reference for agreement, replicated state machines, distributed commit, leader election, locks, leases, fencing, and coordination services. It…"
+  },
+  {
+    "id": "06-replication-with-svgs",
+    "number": 6,
+    "title": "Replication in Distributed Systems",
+    "file": "content/06-replication-with-svgs/06-replication.md",
+    "bytes": 227987,
+    "summary": "This chapter explains how distributed systems maintain multiple copies of data, how updates move among those copies, how failures are handled, and how replication architectures trade…"
+  },
+  {
+    "id": "07-partitioning-sharding",
+    "number": 7,
+    "title": "Partitioning (Sharding)",
+    "file": "content/07-partitioning-sharding/07-partitioning-sharding.md",
+    "bytes": 173360,
+    "summary": "This chapter focuses on architectural reasoning, real-world database behavior, numerical examples, operational trade-offs, and system-design practice. Code is intentionally limited; the…"
+  },
+  {
+    "id": "08-distributed-transactions",
+    "number": 8,
+    "title": "Distributed Transactions",
+    "file": "content/08-distributed-transactions/08-distributed-transactions.md",
+    "bytes": 210801,
+    "summary": "Advanced distributed-systems study notes Focus: preserving business and data correctness under concurrency, independent failures, network uncertainty, and partial completion. This chapter…"
+  },
+  {
+    "id": "09-storage-systems-bundle",
+    "number": 9,
+    "title": "Storage Systems",
+    "file": "content/09-storage-systems-bundle/09-storage-systems.md",
+    "bytes": 223656,
+    "summary": "A deep, architecture-first guide to the storage engines and distributed data platforms that underpin modern applications. The focus is on physical organization, read/write paths,…"
+  },
+  {
+    "id": "10-messaging-and-streaming",
+    "number": 10,
+    "title": "Messaging and Streaming",
+    "file": "content/10-messaging-and-streaming/10-messaging-and-streaming.md",
+    "bytes": 270982,
+    "summary": "Chapter objective: Understand asynchronous communication and event-driven systems from first principles, then develop the ability to design, operate, and troubleshoot reliable messaging and…"
+  },
+  {
+    "id": "11-batch-and-large-scale-computation-bundle",
+    "number": 11,
+    "title": "Batch and Large-Scale Computation",
+    "file": "content/11-batch-and-large-scale-computation-bundle/11-batch-and-large-scale-computation.md",
+    "bytes": 200584,
+    "summary": "This chapter treats large-scale computation as a problem of partitioning, moving, scheduling, executing, recovering, and optimizing work across a fleet of machines. It is an architecture…"
+  },
+  {
+    "id": "12-caching-and-content-delivery-with-diagrams",
+    "number": 12,
+    "title": "Caching and Content Delivery",
+    "file": "content/12-caching-and-content-delivery-with-diagrams/12-caching-and-content-delivery.md",
+    "bytes": 234380,
+    "summary": "Distributed systems, backend engineering, platform architecture, and system-design interviews."
+  },
+  {
+    "id": "13-load-balancing-and-traffic-management-phase-2",
+    "number": 13,
+    "title": "Load Balancing and Traffic Management",
+    "file": "content/13-load-balancing-and-traffic-management-phase-2/13-load-balancing-and-traffic-management.md",
+    "bytes": 227564,
+    "summary": "A practical, architecture-first reference for distributing requests, controlling admission, routing traffic across regions, protecting dependencies, and operating resilient distributed…"
+  },
+  {
+    "id": "14-fault-tolerance-and-reliability-phase-2",
+    "number": 14,
+    "title": "Fault Tolerance and Reliability",
+    "file": "content/14-fault-tolerance-and-reliability-phase-2/14-fault-tolerance-and-reliability.md",
+    "bytes": 231150,
+    "summary": "Filename: 14-fault-tolerance-and-reliability.md Domain: Distributed Systems, Site Reliability Engineering, Cloud Infrastructure Purpose: A practical reference for designing, operating, and…"
+  },
+  {
+    "id": "15-scalability-and-architecture-patterns-with-diagrams",
+    "number": 15,
+    "title": "Scalability and Architecture Patterns",
+    "file": "content/15-scalability-and-architecture-patterns-with-diagrams/15-scalability-and-architecture-patterns.md",
+    "bytes": 244706,
+    "summary": "Filename: 15-scalability-and-architecture-patterns.md Scope: Distributed systems, backend architecture, cloud infrastructure, SaaS platforms, and system design interviews Phase: Phase 2 —…"
+  },
+  {
+    "id": "16-observability-complete",
+    "number": 16,
+    "title": "Observability in Distributed Systems",
+    "file": "content/16-observability-complete/16-observability.md",
+    "bytes": 248747,
+    "summary": "Metrics, logs, traces, OpenTelemetry, monitoring, SRE practices, production debugging, deterministic replay, telemetry architecture, security, cost, system design, and interview preparation."
+  },
+  {
+    "id": "17-security-in-distributed-systems-complete",
+    "number": 17,
+    "title": "Security in Distributed Systems",
+    "file": "content/17-security-in-distributed-systems-complete/17-security-in-distributed-systems.md",
+    "bytes": 259428,
+    "summary": "Architecture, protocols, operations, failure analysis, and senior-level system design."
+  },
+  {
+    "id": "18-verification-and-testing-complete",
+    "number": 18,
+    "title": "Verification and Testing in Distributed Systems",
+    "file": "content/18-verification-and-testing-complete/18-verification-and-testing.md",
+    "bytes": 263358,
+    "summary": "Filename: 18-verification-and-testing.md Scope: formal specification, model checking, fault injection, property-based testing, simulation, operational verification, and production…"
+  },
+  {
+    "id": "19-landmark-papers",
+    "number": 19,
+    "title": "Landmark Papers in Distributed Systems",
+    "file": "content/19-landmark-papers/19-landmark-papers.md",
+    "bytes": 246830,
+    "summary": "Filename: 19-landmark-papers.md Scope: Foundational theory, consensus, storage, databases, stream processing, messaging, and observability Reading level: Advanced undergraduate through…"
+  }
+]

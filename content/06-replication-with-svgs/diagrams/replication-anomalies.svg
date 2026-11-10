@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Replication anomalies caused by lag">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Replication anomalies caused by lag</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">Four user-visible anomalies from routing reads to replicas at different progress points</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="90" y="180" width="1420" height="130" rx="16" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.2"/>
+<rect x="120" y="200" width="220" height="34" rx="17" fill="#FDECEC"/>
+<text x="230.0" y="223" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D84B4B" text-anchor="middle">READ-AFTER-WRITE</text>
+<text x="385" y="232" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="650" fill="#172B4D" text-anchor="start">Write x=2 at leader → read follower x=1</text>
+<text x="385" y="268" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#5E718B" text-anchor="start">Read-your-writes violation</text>
+<text x="1435" y="253" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#D84B4B" text-anchor="middle">→</text>
+<rect x="90" y="340" width="1420" height="130" rx="16" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.2"/>
+<rect x="120" y="360" width="220" height="34" rx="17" fill="#FFF4DE"/>
+<text x="230.0" y="383" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D88A18" text-anchor="middle">MONOTONIC READS</text>
+<text x="385" y="392" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="650" fill="#172B4D" text-anchor="start">Read version 8 → later read version 6</text>
+<text x="385" y="428" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#5E718B" text-anchor="start">User moves backward in history</text>
+<text x="1435" y="413" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#D88A18" text-anchor="middle">→</text>
+<rect x="90" y="500" width="1420" height="130" rx="16" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.2"/>
+<rect x="120" y="520" width="220" height="34" rx="17" fill="#F0EBFC"/>
+<text x="230.0" y="543" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7957C8" text-anchor="middle">CAUSAL ORDER</text>
+<text x="385" y="552" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="650" fill="#172B4D" text-anchor="start">Reply visible before referenced post</text>
+<text x="385" y="588" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#5E718B" text-anchor="start">Dependency appears out of order</text>
+<text x="1435" y="573" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#7957C8" text-anchor="middle">→</text>
+<rect x="90" y="660" width="1420" height="130" rx="16" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.2"/>
+<rect x="120" y="680" width="220" height="34" rx="17" fill="#EAF1FF"/>
+<text x="230.0" y="703" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">CROSS-REPLICA READ</text>
+<text x="385" y="712" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="650" fill="#172B4D" text-anchor="start">Replica A returns v10; B returns v8</text>
+<text x="385" y="748" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#5E718B" text-anchor="start">Different requests disagree</text>
+<text x="1435" y="733" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#2F6FED" text-anchor="middle">→</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Mitigations include leader reads, consistency tokens, sticky/session routing, causal metadata, and waiting for a replica watermark.</text>
+</svg>

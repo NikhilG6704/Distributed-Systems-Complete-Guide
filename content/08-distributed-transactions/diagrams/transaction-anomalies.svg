@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">Transaction anomalies: recognize the schedule</title><desc id="desc">Compact schedules use R=read, W=write, C=commit, A=abort. Each panel shows a distinct failure pattern.</desc>
+<rect width="1600" height="1120" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Transaction anomalies: recognize the schedule</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Compact schedules use R=read, W=write, C=commit, A=abort. Each panel shows a distinct failure pattern.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="60" y="160" width="720" height="245" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="196" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">DIRTY READ</text>
+<text x="82" y="223" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Uncommitted data escaped.</text>
+<text x="88" y="273" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<rect x="142" y="242" width="600" height="55" rx="8" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="160" y="276" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T1: W(balance=0) → A</text>
+<text x="88" y="348" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<rect x="142" y="317" width="600" height="55" rx="8" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="160" y="351" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T2: R(balance=0) before T1 aborts</text>
+<rect x="820" y="160" width="720" height="245" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="842" y="196" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">NON-REPEATABLE READ</text>
+<text x="842" y="223" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Same row, new committed value.</text>
+<text x="848" y="273" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<rect x="902" y="242" width="600" height="55" rx="8" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="920" y="276" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T1: R(price=10) → R(price=12)</text>
+<text x="848" y="348" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<rect x="902" y="317" width="600" height="55" rx="8" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="920" y="351" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T2: W(price=12) → C</text>
+<rect x="60" y="445" width="720" height="245" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="481" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">PHANTOM READ</text>
+<text x="82" y="508" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Predicate result set changed.</text>
+<text x="88" y="558" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<rect x="142" y="527" width="600" height="55" rx="8" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="160" y="561" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T1: SELECT orders &gt; 100 → 4 rows</text>
+<text x="88" y="633" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<rect x="142" y="602" width="600" height="55" rx="8" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="160" y="636" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T2: INSERT qualifying order → C; T1 repeats → 5</text>
+<rect x="820" y="445" width="720" height="245" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="842" y="481" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">LOST UPDATE</text>
+<text x="842" y="508" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">One read-modify-write is overwritten.</text>
+<text x="848" y="558" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<rect x="902" y="527" width="600" height="55" rx="8" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="920" y="561" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T1: R(5), compute 6, W(6)</text>
+<text x="848" y="633" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<rect x="902" y="602" width="600" height="55" rx="8" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="920" y="636" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T2: R(5), compute 7, W(7) → C</text>
+<rect x="60" y="730" width="720" height="245" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="82" y="766" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">WRITE SKEW</text>
+<text x="82" y="793" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Disjoint writes break shared invariant.</text>
+<text x="88" y="843" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<rect x="142" y="812" width="600" height="55" rx="8" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="160" y="846" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T1: read A=on,B=on; W(A=off)</text>
+<text x="88" y="918" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<rect x="142" y="887" width="600" height="55" rx="8" fill="#FCEBED" stroke="#B63C43" stroke-width="1"/>
+<text x="160" y="921" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T2: read A=on,B=on; W(B=off); both C</text>
+<rect x="820" y="730" width="720" height="245" rx="20" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="842" y="766" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="22" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">READ SKEW</text>
+<text x="842" y="793" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Related values from different snapshots.</text>
+<text x="848" y="843" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T1</text>
+<rect x="902" y="812" width="600" height="55" rx="8" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="920" y="846" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T1 reads A before transfer; B after transfer</text>
+<text x="848" y="918" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">T2</text>
+<rect x="902" y="887" width="600" height="55" rx="8" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="920" y="921" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="500" text-anchor="start" font-style="normal">T2 transfers 100 from A to B and commits</text>
+<line x1="54" y1="1066" x2="1546" y2="1066" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="1095" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">The correct fix depends on the anomaly: locks, atomic conditional updates, stable snapshots, or serializable validation.</text>
+</svg>

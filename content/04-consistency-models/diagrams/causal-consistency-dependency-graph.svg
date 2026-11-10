@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Causal consistency: dependencies must arrive first">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Causal consistency: dependencies must arrive first</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">A dependent comment may arrive over the network first, but a replica must buffer it until the post it depends on is visible.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="48" y="169" font-size="16" font-weight="bold" fill="#172B4D" text-anchor="start">Alice</text>
+<line x1="170" y1="165" x2="1140" y2="165" stroke="#D7E0EC" stroke-width="1.5" stroke-linecap="round"/>
+<text x="48" y="284" font-size="16" font-weight="bold" fill="#172B4D" text-anchor="start">Bob</text>
+<line x1="170" y1="280" x2="1140" y2="280" stroke="#D7E0EC" stroke-width="1.5" stroke-linecap="round"/>
+<text x="48" y="434" font-size="16" font-weight="bold" fill="#172B4D" text-anchor="start">Replica R3</text>
+<line x1="170" y1="430" x2="1140" y2="430" stroke="#D7E0EC" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="210" y="130" width="190" height="70" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="305.0" y="154" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">Write post P</text>
+<text x="305.0" y="173" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">Alice publishes</text>
+<rect x="500" y="245" width="190" height="70" rx="13" fill="#F0EBFB" stroke="#7652C8" stroke-width="1.4"/>
+<text x="595.0" y="269" font-size="16" font-weight="bold" fill="#7652C8" text-anchor="middle">Read post P</text>
+<text x="595.0" y="288" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">Bob observes P</text>
+<rect x="790" y="245" width="205" height="70" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="892.5" y="269" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Write comment C</text>
+<text x="892.5" y="288" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">reply depends on P</text>
+<line x1="400" y1="165" x2="500" y2="280" stroke="#7652C8" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<line x1="690" y1="280" x2="790" y2="280" stroke="#0F8B78" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<text x="740" y="260" font-size="11" font-weight="semibold" fill="#0F8B78" text-anchor="middle">happens-before</text>
+<rect x="260" y="405" width="180" height="70" rx="13" fill="#FFF3DD" stroke="#B96B08" stroke-width="1.4"/>
+<text x="350.0" y="429" font-size="16" font-weight="bold" fill="#B96B08" text-anchor="middle">Receive C</text>
+<text x="350.0" y="448" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">first on network</text>
+<rect x="560" y="405" width="180" height="70" rx="13" fill="#FCEBED" stroke="#C63D4B" stroke-width="1.4"/>
+<text x="650.0" y="429" font-size="16" font-weight="bold" fill="#C63D4B" text-anchor="middle">Buffer C</text>
+<text x="650.0" y="448" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">dependency missing</text>
+<rect x="860" y="405" width="180" height="70" rx="13" fill="#E7F5ED" stroke="#24845B" stroke-width="1.4"/>
+<text x="950.0" y="429" font-size="16" font-weight="bold" fill="#24845B" text-anchor="middle">Apply P, then C</text>
+<text x="950.0" y="448" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">valid visible order</text>
+<line x1="890" y1="315" x2="350" y2="405" stroke="#B96B08" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-amber)"/>
+<line x1="440" y1="440" x2="560" y2="440" stroke="#C63D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<line x1="740" y1="440" x2="860" y2="440" stroke="#24845B" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-green)"/>
+<text x="505" y="475" font-size="12" font-weight="semibold" fill="#C63D4B" text-anchor="middle">C is pending</text>
+<text x="800" y="475" font-size="12" font-weight="semibold" fill="#24845B" text-anchor="middle">P becomes available</text>
+<rect x="80" y="535" width="1040" height="75" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="80" y="535" width="7" height="75" rx="3" fill="#7652C8"/>
+<text x="98" y="563" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">CONCURRENT INDEPENDENT WRITES</text>
+<text x="98" y="587" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="98" dy="0">W(X) and W(Y) have no causal edge. Different replicas may expose them in different relative orders.</tspan>
+</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

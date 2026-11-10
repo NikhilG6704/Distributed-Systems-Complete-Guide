@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">FLP impossibility: bivalent configurations</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">In a fully asynchronous model, an adversarial schedule can delay decision indefinitely without violating safety.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<text x="85" y="145" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#142B4A" text-anchor="start" style="">CONFIGURATION GRAPH</text>
+<rect x="180" y="230" width="170" height="80" rx="20" fill="#F1EDFA" stroke="#7257A8" stroke-width="2"/>
+<text x="265" y="260.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">C₀</text>
+<text x="265" y="281.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">BIVALENT</text>
+<rect x="470" y="185" width="170" height="80" rx="20" fill="#F1EDFA" stroke="#7257A8" stroke-width="2"/>
+<text x="555" y="215.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">C₁</text>
+<text x="555" y="236.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">BIVALENT</text>
+<rect x="470" y="315" width="170" height="80" rx="20" fill="#F1EDFA" stroke="#7257A8" stroke-width="2"/>
+<text x="555" y="345.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">C₂</text>
+<text x="555" y="366.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">BIVALENT</text>
+<rect x="770" y="185" width="170" height="80" rx="20" fill="#F1EDFA" stroke="#7257A8" stroke-width="2"/>
+<text x="855" y="215.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">C₃</text>
+<text x="855" y="236.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">BIVALENT</text>
+<rect x="770" y="315" width="170" height="80" rx="20" fill="#EAF2FB" stroke="#2864A6" stroke-width="2"/>
+<text x="855" y="345.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">C₄</text>
+<text x="855" y="366.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">0-VALENT</text>
+<rect x="1080" y="185" width="170" height="80" rx="20" fill="#F1EDFA" stroke="#7257A8" stroke-width="2"/>
+<text x="1165" y="215.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">C₅</text>
+<text x="1165" y="236.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#7257A8" text-anchor="middle" style="">BIVALENT</text>
+<rect x="1080" y="315" width="170" height="80" rx="20" fill="#FBF3E5" stroke="#C7861A" stroke-width="2"/>
+<text x="1165" y="345.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#C7861A" text-anchor="middle" style="">C₆</text>
+<text x="1165" y="366.6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#C7861A" text-anchor="middle" style="">1-VALENT</text>
+<line x1="350" y1="260" x2="470" y2="225" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="405" y="220" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="middle" style="">eP</text>
+<line x1="350" y1="280" x2="470" y2="350" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="405" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="middle" style="">eQ</text>
+<line x1="640" y1="225" x2="770" y2="225" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<text x="705" y="210" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#7257A8" text-anchor="middle" style="">delayed step</text>
+<line x1="640" y1="355" x2="770" y2="355" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<text x="705" y="340" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="600" fill="#C7861A" text-anchor="middle" style="">critical event</text>
+<line x1="940" y1="225" x2="1080" y2="225" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<line x1="940" y1="355" x2="1080" y2="355" stroke="#C7861A" stroke-width="3" marker-end="url(#arr-amber)"/>
+<path d="M 270 390 C 430 500, 690 500, 855 390" fill="none" stroke="#C34C4C" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#arr-red)"/>
+<text x="560" y="505" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">adversarial schedule keeps a bivalent execution reachable</text>
+<rect x="70" y="560" width="620" height="190" rx="12" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.6"/>
+<text x="86" y="585" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="start" style="">INDISTINGUISHABLE OBSERVATIONS</text>
+<text x="86" y="609.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">From P’s perspective, “Q crashed” and “Q’s message is merely delayed” can</text>
+<text x="86" y="626.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">look identical until a message arrives. P cannot safely infer which world it</text>
+<text x="86" y="644.1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">is in.</text>
+<rect x="735" y="560" width="635" height="190" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="751" y="585" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">THEOREM BOUNDARY</text>
+<text x="751" y="609.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Deterministic protocol • asynchronous message passing • one possible crash.</text>
+<text x="751" y="626.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Safety can hold, but termination is not guaranteed in every execution. FLP does</text>
+<text x="751" y="644.1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">not say practical consensus never works.</text>
+</svg>

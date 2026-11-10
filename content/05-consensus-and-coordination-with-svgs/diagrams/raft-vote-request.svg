@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="920" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Raft RequestVote RPC and log freshness</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A voter grants at most one vote per term and only to a candidate whose log is sufficiently up to date.</text>
+<text x="1392" y="900" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="42.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="130.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">CANDIDATE</text>
+<line x1="130.0" y1="195" x2="130.0" y2="740" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="1222.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1310.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">VOTER</text>
+<line x1="1310.0" y1="195" x2="1310.0" y2="740" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="55" y="212" width="1330" height="36" rx="6" fill="#EAF2FB" stroke="none" stroke-width="0"/>
+<text x="75" y="236" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="start" style="">REQUEST VOTE RPC</text>
+<line x1="130.0" y1="277" x2="1310.0" y2="277" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="267" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">RequestVote(term, candidateId, lastLogIndex, lastLogTerm)</text>
+<path d="M 1310.0 334 C 1425.0 304, 1425.0 364, 1310.0 339" fill="none" stroke="#C7861A" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-amber)"/>
+<text x="1310.0" y="324" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#C7861A" text-anchor="middle" style="">term &lt; currentTerm?</text>
+<path d="M 1310.0 391 C 1425.0 361, 1425.0 421, 1310.0 396" fill="none" stroke="#C7861A" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-amber)"/>
+<text x="1310.0" y="381" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#C7861A" text-anchor="middle" style="">already voted for another candidate?</text>
+<path d="M 1310.0 448 C 1425.0 418, 1425.0 478, 1310.0 453" fill="none" stroke="#C7861A" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-amber)"/>
+<text x="1310.0" y="438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#C7861A" text-anchor="middle" style="">candidate log at least as up-to-date?</text>
+<line x1="1310.0" y1="505" x2="130.0" y2="505" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="720.0" y="495" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">response(term, voteGranted=true/false)</text>
+<rect x="80" y="552" width="1280" height="90" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="96" y="577" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">PROTOCOL NOTE</text>
+<text x="96" y="601.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Up-to-date comparison is lexicographic: compare lastLogTerm first; if equal, compare lastLogIndex. A stale candidate cannot collect votes from a majority under</text>
+<text x="96" y="618.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Raft’s voting rules.</text>
+</svg>

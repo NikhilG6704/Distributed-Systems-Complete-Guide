@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="700" viewBox="0 0 1440 700" role="img" aria-labelledby="svg-title svg-desc">
+<title id="svg-title">Noisy Neighbor Problem</title>
+<desc id="svg-desc">Show one tenant consuming disproportionate CPU, database connections, queue capacity, and storage, degrading other tenants.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.09"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#F8FAFC"/>
+<path d="M0 0H1440V12H0Z" fill="#243B53"/>
+<text x="72" y="84" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#102A43">Noisy Neighbor Problem</text>
+<text x="72" y="122" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" fill="#526579">Show one tenant consuming disproportionate CPU, database connections, queue capacity, and storage, degrading other tenants.</text>
+<line x1="72" y1="155" x2="1368" y2="155" stroke="#D8E1EA" stroke-width="2"/>
+
+<path d="M 298.0 326.0 L 314.0 326.0 L 314.0 326.0 L 330.0 326.0" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="314.0" y="313.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#64748B">route</text>
+<path d="M 566.0 326.0 L 582.0 326.0 L 582.0 326.0 L 598.0 326.0" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="582.0" y="313.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#64748B">process</text>
+<path d="M 834.0 326.0 L 850.0 326.0 L 850.0 326.0 L 866.0 326.0" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="850.0" y="313.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#64748B">persist</text>
+<path d="M 1102.0 326.0 L 1118.0 326.0 L 1118.0 326.0 L 1134.0 326.0" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1118.0" y="313.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#64748B">scale</text>
+<g filter="url(#shadow)"><rect x="74.0" y="260" width="220" height="132" rx="16" fill="#FDECEC" stroke="#C44747" stroke-width="2.2"/></g>
+<rect x="90.0" y="276" width="7" height="100" rx="3.5" fill="#C44747"/>
+<text x="112.0" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#8F2929">Tenant A burst</text>
+<text x="112.0" y="336" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">Heavy queries and job</text>
+<text x="112.0" y="356" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">volume</text>
+<g filter="url(#shadow)"><rect x="342.0" y="260" width="220" height="132" rx="16" fill="#E7F6EF" stroke="#1E8056" stroke-width="2.2"/></g>
+<rect x="358.0" y="276" width="7" height="100" rx="3.5" fill="#1E8056"/>
+<text x="380.0" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#15583B">Shared resources</text>
+<text x="380.0" y="336" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">CPU, connections, queue,</text>
+<text x="380.0" y="356" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">storage</text>
+<g filter="url(#shadow)"><rect x="610.0" y="260" width="220" height="132" rx="16" fill="#EAF2FF" stroke="#2457A7" stroke-width="2.2"/></g>
+<rect x="626.0" y="276" width="7" height="100" rx="3.5" fill="#2457A7"/>
+<text x="648.0" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#193B73">Tenant B</text>
+<text x="648.0" y="336" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">Normal workload waits</text>
+<text x="648.0" y="356" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">behind A</text>
+<g filter="url(#shadow)"><rect x="878.0" y="260" width="220" height="132" rx="16" fill="#FDECEC" stroke="#C44747" stroke-width="2.2"/></g>
+<rect x="894.0" y="276" width="7" height="100" rx="3.5" fill="#C44747"/>
+<text x="916.0" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#8F2929">Saturation</text>
+<text x="916.0" y="336" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">Latency and errors spread</text>
+<text x="916.0" y="356" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">to peers</text>
+<g filter="url(#shadow)"><rect x="1146.0" y="260" width="220" height="132" rx="16" fill="#FFF3DB" stroke="#B87916" stroke-width="2.2"/></g>
+<rect x="1162.0" y="276" width="7" height="100" rx="3.5" fill="#B87916"/>
+<text x="1184.0" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#80520E">Mitigation</text>
+<text x="1184.0" y="336" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">Quotas, fair queues,</text>
+<text x="1184.0" y="356" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#334155">isolation</text>
+<rect x="72" y="475" width="1296" height="104" rx="14" fill="#FFFFFF" stroke="#D8E1EA"/>
+<text x="98" y="510" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#243B53">Architecture reading</text>
+<text x="98" y="539" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#526579">Follow the arrows from left to right. Each boundary is an operational decision point: measure capacity, make ownership explicit, and define</text>
+<text x="98" y="539" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13.5" fill="#526579">behavior when a dependency is slow or unavailable.</text>
+<rect x="95" y="625" width="18" height="18" rx="4" fill="#EAF2FF" stroke="#2457A7"/>
+<text x="122" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">Compute</text>
+<rect x="273" y="625" width="18" height="18" rx="4" fill="#E7F6EF" stroke="#1E8056"/>
+<text x="300" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">Data</text>
+<rect x="451" y="625" width="18" height="18" rx="4" fill="#F1ECFF" stroke="#7050B8"/>
+<text x="478" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">Traffic</text>
+<rect x="629" y="625" width="18" height="18" rx="4" fill="#FFF3DB" stroke="#B87916"/>
+<text x="656" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">Control</text>
+<rect x="807" y="625" width="18" height="18" rx="4" fill="#FFF0E7" stroke="#C56B32"/>
+<text x="834" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">Queue</text>
+<rect x="985" y="625" width="18" height="18" rx="4" fill="#FDECEC" stroke="#C44747"/>
+<text x="1012" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">Risk</text>
+<rect x="1163" y="625" width="18" height="18" rx="4" fill="#EEF2F5" stroke="#64748B"/>
+<text x="1190" y="639" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12.5" fill="#526579">External</text>
+<text x="1368" y="675" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#94A3B8">Scalability &amp; Architecture Patterns · Technical reference</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Straggler mitigation with speculative execution</title><desc id="desc">One slow attempt delays stage completion; a duplicate attempt can win if the slowdown is transient and the task is safe to retry.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Straggler mitigation with speculative execution</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">One slow attempt delays stage completion; a duplicate attempt can win if the slowdown is transient and the task is safe to retry.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="55" y="160" width="680" height="500" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="73" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">Original stage attempts</text>
+<rect x="95" y="245" width="230" height="75" rx="18" fill="#E6F4E7" stroke="#3F8750" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="113" y="276" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Task 1</text>
+<text x="113" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">elapsed / duration: 20</text>
+<rect x="385" y="245" width="290" height="75" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="403" y="276" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Worker execution</text>
+<text x="403" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">partition work in progress</text>
+<path d="M 325,283 L 385,283" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="95" y="350" width="230" height="75" rx="18" fill="#E6F4E7" stroke="#3F8750" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="113" y="381" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Task 2</text>
+<text x="113" y="410" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">elapsed / duration: 20</text>
+<rect x="385" y="350" width="290" height="75" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="403" y="381" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Worker execution</text>
+<text x="403" y="410" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">partition work in progress</text>
+<path d="M 325,388 L 385,388" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="95" y="455" width="230" height="75" rx="18" fill="#E6F4E7" stroke="#3F8750" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="113" y="486" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Task 3</text>
+<text x="113" y="515" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">elapsed / duration: 20</text>
+<rect x="385" y="455" width="290" height="75" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="403" y="486" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Worker execution</text>
+<text x="403" y="515" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">partition work in progress</text>
+<path d="M 325,493 L 385,493" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="95" y="560" width="230" height="75" rx="18" fill="#FCE4E4" stroke="#BA4B4B" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="113" y="591" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Task 4 · straggler</text>
+<text x="113" y="620" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">elapsed / duration:</text>
+<rect x="385" y="560" width="290" height="75" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="403" y="591" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Worker execution</text>
+<text x="403" y="620" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">partition work in progress</text>
+<path d="M 325,598 L 385,598" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="825" y="160" width="680" height="500" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#7955A6" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="843" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#7955A6" text-anchor="start">Speculation and completion</text>
+<rect x="865" y="255" width="245" height="105" rx="18" fill="#FCE4E4" stroke="#BA4B4B" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="883" y="286" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Detection</text>
+<text x="883" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">task progress far</text>
+<text x="883" y="340" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">behind</text>
+<rect x="1200" y="255" width="245" height="105" rx="18" fill="#FFF1D9" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1218" y="286" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Duplicate attempt</text>
+<text x="1218" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">same partition on</text>
+<text x="1218" y="340" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">worker B</text>
+<rect x="865" y="465" width="245" height="105" rx="18" fill="#FCE4E4" stroke="#BA4B4B" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="883" y="496" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Attempt A</text>
+<text x="883" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">original slow attempt</text>
+<text x="883" y="550" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">eventually completes</text>
+<rect x="1200" y="465" width="245" height="105" rx="18" fill="#E6F4E7" stroke="#3F8750" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1218" y="496" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Attempt B · winner</text>
+<text x="1218" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">finishes first</text>
+<text x="1218" y="550" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">result accepted</text>
+<path d="M 675,595 L 770,595 L 770,305 L 865,305" fill="none" stroke="#BA4B4B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-warning)"/>
+<rect x="712" y="281" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="770" y="300" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#BA4B4B" text-anchor="middle">slow task detected</text>
+<path d="M 1110,305 L 1200,305" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="1097.0" y="281.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1155.0" y="300.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">launch copy</text>
+<path d="M 1320,360 L 1320,465" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1262.0" y="388.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1320.0" y="407.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">completion race</text>
+<path d="M 1110,520 L 1200,520" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1097.0" y="496.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1155.0" y="515.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">first success wins</text>
+<path d="M 1320,570 L 1145,570 L 1145,570 L 1110,570" fill="none" stroke="#BA4B4B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-warning)"/>
+<rect x="1087" y="546" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1145" y="565" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#BA4B4B" text-anchor="middle">cancel loser</text>
+<text x="800" y="745" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">Speculation is not a fix for skew or intrinsically expensive work; external side effects must be idempotent.</text>
+</svg>

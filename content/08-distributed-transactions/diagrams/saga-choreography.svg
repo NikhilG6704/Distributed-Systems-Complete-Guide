@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="880" viewBox="0 0 1600 880" role="img" aria-labelledby="title desc">
+<title id="title">Saga choreography</title><desc id="desc">Services react to domain events and publish the next event. Failure is propagated through compensating events.</desc>
+<rect width="1600" height="880" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Saga choreography</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Services react to domain events and publish the next event. Failure is propagated through compensating events.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="130" y="180" width="230" height="85" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="148" y="211" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Order service</text>
+<text x="148" y="240" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Local transaction</text>
+<rect x="500" y="180" width="230" height="85" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="518" y="211" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Inventory service</text>
+<text x="518" y="240" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Local transaction</text>
+<rect x="870" y="180" width="230" height="85" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="888" y="211" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Payment service</text>
+<text x="888" y="240" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Local transaction</text>
+<rect x="1240" y="180" width="230" height="85" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="1258" y="211" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Shipping service</text>
+<text x="1258" y="240" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Local transaction</text>
+<line x1="360" y1="222" x2="500" y2="222" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="395" y="330" width="180" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="485.0" y="352.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">OrderCreated</text>
+<line x1="485" y1="362" x2="385" y2="265" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="730" y1="222" x2="870" y2="222" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="765" y="420" width="180" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="855.0" y="442.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">InventoryReserved</text>
+<line x1="855" y1="452" x2="755" y2="265" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="1100" y1="222" x2="1240" y2="222" stroke="#2867B2" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="1135" y="510" width="180" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="1225.0" y="532.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">PaymentCompleted</text>
+<line x1="1225" y1="542" x2="1125" y2="265" stroke="#167B70" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1250" y="600" width="220" height="80" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="1268" y="631" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">ShipmentCreated</text>
+<text x="1268" y="660" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">OrderConfirmed</text>
+<line x1="1355" y1="265" x2="1355" y2="600" stroke="#167B70" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#arr-teal)"/>
+<text x="100" y="630" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#B63C43" font-weight="700" text-anchor="start" font-style="normal">Failure branch</text>
+<rect x="100" y="665" width="340" height="85" rx="14" fill="#FCEBED" stroke="#B63C43" stroke-width="2"/>
+<text x="118" y="696" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">PaymentFailed</text>
+<text x="118" y="725" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Publish PaymentDeclined</text>
+<rect x="610" y="665" width="340" height="85" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="628" y="696" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">InventoryReleased</text>
+<text x="628" y="725" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Compensation event</text>
+<rect x="1120" y="665" width="350" height="85" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="1138" y="696" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">OrderCancelled</text>
+<text x="1138" y="725" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Terminal business state</text>
+<line x1="440" y1="708" x2="610" y2="708" stroke="#B63C43" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<line x1="950" y1="708" x2="1120" y2="708" stroke="#A76512" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-amber)"/>
+<text x="800" y="815" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#62758A" font-weight="600" text-anchor="middle" font-style="normal">Requires event IDs, idempotent handlers, trace/correlation IDs, and explicit state transitions.</text>
+<line x1="54" y1="826" x2="1546" y2="826" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="855" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Choreography reduces central control but spreads workflow knowledge across event contracts and consumers.</text>
+</svg>

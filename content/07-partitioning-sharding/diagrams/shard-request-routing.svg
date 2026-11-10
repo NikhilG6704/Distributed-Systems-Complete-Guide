@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Shard request routing">
+<title>Shard request routing</title><desc>Routing combines logical key ownership with live endpoint discovery and replica-role selection; these are separate control-plane concerns.</desc>
+<defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#63788D"/></marker>
+          <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#3977B8"/></marker>
+          <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#11998E"/></marker>
+          <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#E79A35"/></marker>
+          <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#D95F59"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#19344D" flood-opacity="0.08"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="56" y="54" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Shard request routing</text>
+<text x="56" y="86" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Routing combines logical key ownership with live endpoint discovery and replica-role selection; these are separate control-plane concerns.</text>
+<line x1="56" y1="108" x2="1384" y2="108" stroke="#D7E1EA" stroke-width="2" stroke-linecap="round"/>
+<rect x="56" y="140" width="410" height="485" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="140" width="7" height="485" rx="3" fill="#3977B8" stroke="none" stroke-width="1.5"/>
+<text x="80" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">CLIENT-SIDE ROUTING</text>
+<rect x="515" y="140" width="410" height="485" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="515" y="140" width="7" height="485" rx="3" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="539" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">PROXY-BASED ROUTING</text>
+<rect x="974" y="140" width="410" height="485" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="974" y="140" width="7" height="485" rx="3" fill="#8064B4" stroke="none" stroke-width="1.5"/>
+<text x="998" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">COORDINATOR-BASED ROUTING</text>
+<rect x="110" y="245" width="300" height="76" rx="12" fill="#E8F1FA" stroke="#3977B8" stroke-width="1.5"/>
+<text x="260.0" y="272" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Application + shard map</text>
+<text x="260.0" y="294" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="260.0" dy="0">hash(user_id) → Shard 5</tspan></text>
+<line x1="260" y1="321" x2="260" y2="385" stroke="#3977B8" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+<rect x="155" y="390" width="210" height="95" rx="12" fill="#E8F1FA" stroke="#3977B8" stroke-width="1.5"/>
+<text x="260.0" y="417" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 5</text>
+<text x="260.0" y="439" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="260.0" dy="0">direct connection</tspan></text>
+<text x="260" y="535" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">Few hops; clients must refresh</text>
+<text x="260" y="555" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">stale maps and role changes.</text>
+<rect x="570" y="245" width="300" height="76" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="720.0" y="272" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Application</text>
+<text x="720.0" y="294" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="720.0" dy="0">database request</tspan></text>
+<line x1="720" y1="321" x2="720" y2="355" stroke="#11998E" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+<rect x="615" y="360" width="210" height="80" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="720.0" y="387" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Proxy / router</text>
+<text x="720.0" y="409" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="720.0" dy="0">resolve shard</tspan></text>
+<line x1="720" y1="440" x2="720" y2="480" stroke="#11998E" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+<rect x="615" y="485" width="210" height="75" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="720.0" y="512" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 5</text>
+<text x="720.0" y="534" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="720.0" dy="0">forwarded request</tspan></text>
+<text x="720" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">Central policy and pooling;</text>
+<rect x="1028" y="245" width="300" height="76" rx="12" fill="#F0EBF8" stroke="#8064B4" stroke-width="1.5"/>
+<text x="1178.0" y="272" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Application</text>
+<text x="1178.0" y="294" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1178.0" dy="0">distributed query</tspan></text>
+<line x1="1178" y1="321" x2="1178" y2="355" stroke="#8064B4" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1075" y="360" width="205" height="76" rx="12" fill="#F0EBF8" stroke="#8064B4" stroke-width="1.5"/>
+<text x="1177.5" y="387" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Query coordinator</text>
+<text x="1177.5" y="409" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1177.5" dy="0">plan + prune</tspan></text>
+<line x1="1178" y1="436" x2="1055" y2="490" stroke="#8064B4" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1000" y="490" width="105" height="66" rx="12" fill="#E8F1FA" stroke="#3977B8" stroke-width="1.5"/>
+<text x="1052.5" y="517" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 1</text>
+<text x="1052.5" y="539" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1052.5" dy="0">worker</tspan></text>
+<line x1="1178" y1="436" x2="1165" y2="490" stroke="#8064B4" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1110" y="490" width="105" height="66" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="1162.5" y="517" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 2</text>
+<text x="1162.5" y="539" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1162.5" dy="0">worker</tspan></text>
+<line x1="1178" y1="436" x2="1275" y2="490" stroke="#8064B4" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1220" y="490" width="105" height="66" rx="12" fill="#FFF3E2" stroke="#E79A35" stroke-width="1.5"/>
+<text x="1272.5" y="517" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 3</text>
+<text x="1272.5" y="539" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1272.5" dy="0">worker</tspan></text>
+<text x="1178" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="500" fill="#63788D" text-anchor="middle" opacity="1" style="">Fan-out, merge, and partial-failure</text>
+<rect x="56" y="665" width="1328" height="135" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="665" width="7" height="135" rx="3" fill="#E79A35" stroke="none" stroke-width="1.5"/>
+<text x="80" y="701" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Control plane: related, but distinct responsibilities</text>
+<rect x="100" y="715" width="315" height="60" rx="12" fill="#E8F1FA" stroke="#3977B8" stroke-width="1.5"/>
+<text x="257.5" y="742" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Partition directory</text>
+<text x="257.5" y="764" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="257.5" dy="0">logical partition → shard</tspan></text>
+<rect x="560" y="715" width="315" height="60" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="717.5" y="742" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Service discovery</text>
+<text x="717.5" y="764" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="717.5" dy="0">node endpoint + health</tspan></text>
+<rect x="1020" y="715" width="315" height="60" rx="12" fill="#F0EBF8" stroke="#8064B4" stroke-width="1.5"/>
+<text x="1177.5" y="742" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Role / load policy</text>
+<text x="1177.5" y="764" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1177.5" dy="0">leader vs eligible read replica</tspan></text>
+<text x="56" y="876" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Shard routing chooses the data owner; service discovery finds endpoints; load balancing selects among eligible targets.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">2PC blocking: prepared participants in doubt</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">The coordinator failure can strand participants holding locks because they cannot infer the global decision.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="90" y="155" width="260" height="100" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="220.0" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">COORDINATOR</text>
+<text x="220.0" y="207.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">crashed before decision</text>
+<text x="220.0" y="225.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">was durably recorded</text>
+<rect x="585" y="155" width="285" height="100" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="727.5" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C7861A" text-anchor="middle" style="">PARTICIPANT 1</text>
+<text x="727.5" y="207.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">YES → PREPARED</text>
+<text x="727.5" y="225.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">locks retained</text>
+<rect x="1080" y="155" width="285" height="100" rx="16" fill="#FBF3E5" stroke="#C7861A" stroke-width="2" filter="url(#shadow)"/>
+<text x="1222.5" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C7861A" text-anchor="middle" style="">PARTICIPANT 2</text>
+<text x="1222.5" y="207.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">YES → PREPARED</text>
+<text x="1222.5" y="225.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">locks retained</text>
+<line x1="350" y1="205" x2="585" y2="205" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<line x1="870" y1="205" x2="1080" y2="205" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="470" y="187" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="middle" style="">PREPARE / YES</text>
+<text x="975" y="187" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="middle" style="">PREPARE / YES</text>
+<rect x="585" y="345" width="285" height="95" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="727.5" y="374" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">IN DOUBT</text>
+<text x="727.5" y="397.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">cannot commit or abort</text>
+<rect x="1080" y="345" width="285" height="95" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="1222.5" y="374" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">IN DOUBT</text>
+<text x="1222.5" y="397.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">cannot commit or abort</text>
+<line x1="725" y1="255" x2="725" y2="345" stroke="#C34C4C" stroke-width="2" marker-end="url(#arr-red)"/>
+<line x1="1220" y1="255" x2="1220" y2="345" stroke="#C34C4C" stroke-width="2" marker-end="url(#arr-red)"/>
+<rect x="635" y="465" width="185" height="32" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.5"/>
+<text x="727.5" y="487" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">LOCKS HELD</text>
+<rect x="1130" y="465" width="185" height="32" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.5"/>
+<text x="1222.5" y="487" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">LOCKS HELD</text>
+<rect x="430" y="535" width="585" height="72" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="722" y="565" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">NETWORK PARTITION / NO RECOVERY CONTACT</text>
+<text x="722" y="590" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="middle" style="">Participants wait for coordinator log or a safe termination protocol.</text>
+<path d="M 220 255 C 220 430, 350 500, 430 565" fill="none" stroke="#C34C4C" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-red)"/>
+<rect x="75" y="680" width="600" height="130" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="91" y="705" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">WHY NOT DECIDE LOCALLY?</text>
+<text x="91" y="729.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">COMMIT may already be durable but not delivered. An independent ABORT could</text>
+<text x="91" y="746.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">contradict it; an independent COMMIT could contradict a prior ABORT.</text>
+<rect x="735" y="680" width="630" height="130" rx="12" fill="#E8F6F4" stroke="#148A83" stroke-width="1.6"/>
+<text x="751" y="705" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="start" style="">RECOVERY</text>
+<text x="751" y="729.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">After coordinator recovery, read its durable log and retransmit the recorded</text>
+<text x="751" y="746.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">decision. A participant can finish only when it learns a decision or a</text>
+<text x="751" y="764.1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">protocol-safe termination rule applies.</text>
+</svg>

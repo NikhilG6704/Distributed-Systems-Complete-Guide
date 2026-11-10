@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Distributed key-value store</title><desc id="desc">A key is mapped to a partition; a replica policy determines which nodes store and acknowledge it.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#119A8A"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D58A19"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D94B4B"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E7086"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#23364D" flood-opacity=".09"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="54" y="58" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#14263D" text-anchor="start" style="">Distributed key-value store</text>
+<text x="54" y="91" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#5E7086" text-anchor="start" style="">A key is mapped to a partition; a replica policy determines which nodes store and acknowledge it.</text>
+<path d="M54,112 L1386,112" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round" marker-end="url(#arr-gray)"/>
+<rect x="60" y="170" width="210" height="100" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5"/>
+<rect x="60" y="170" width="7" height="100" rx="4" fill="#2F6FED"/>
+<text x="78" y="199" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Client</text>
+<text x="78" y="223" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="78" dy="0">PUT(user:42, value)</tspan></text>
+<rect x="350" y="170" width="240" height="100" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5"/>
+<rect x="350" y="170" width="7" height="100" rx="4" fill="#119A8A"/>
+<text x="368" y="199" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Hash / range router</text>
+<text x="368" y="223" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="368" dy="0">key → partition P-7</tspan></text>
+<rect x="680" y="150" width="330" height="140" rx="14" fill="#F0ECFB" stroke="#7656C8" stroke-width="1.5"/>
+<rect x="680" y="150" width="7" height="140" rx="4" fill="#7656C8"/>
+<text x="698" y="179" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Partition map</text>
+<text x="698" y="203" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="698" dy="0">P-7 → replica group A/B/C</tspan><tspan x="698" dy="19.88">Placement • ownership • epoch</tspan></text>
+<path d="M270,220 H350" fill="none" stroke="#2F6FED" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M590,220 H680" fill="none" stroke="#5E7086" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#arr-gray)"/>
+<rect x="210" y="430" width="260" height="130" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="210" y="430" width="7" height="130" rx="4" fill="#2F6FED"/>
+<text x="228" y="459" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Replica A • coordinator</text>
+<text x="228" y="483" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="228" dy="0">Accept write / coordinate</tspan></text>
+<rect x="610" y="430" width="260" height="130" rx="14" fill="#E6F6F3" stroke="#119A8A" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="610" y="430" width="7" height="130" rx="4" fill="#119A8A"/>
+<text x="628" y="459" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Replica B • follower</text>
+<text x="628" y="483" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="628" dy="0">Persist replicated value</tspan></text>
+<rect x="1010" y="430" width="260" height="130" rx="14" fill="#FDECEC" stroke="#D94B4B" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1010" y="430" width="7" height="130" rx="4" fill="#D94B4B"/>
+<text x="1028" y="459" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Replica C • unavailable</text>
+<text x="1028" y="483" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="1028" dy="0">Node / network failure</tspan></text>
+<path d="M470,270 V340 H340 V430" fill="none" stroke="#2F6FED" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M470,270 V340 H740 V430" fill="none" stroke="#2F6FED" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<path d="M470,270 V340 H1140 V430" fill="none" stroke="#2F6FED" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-blue)"/>
+<rect x="300" y="595" width="260" height="28" rx="14" fill="#E6F6F3" stroke="#E6F6F3" stroke-width="1"/>
+<text x="430.0" y="614" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#119A8A" text-anchor="middle" style="">W=2 acknowledgements (example)</text>
+<path d="M340,560 V595" fill="none" stroke="#119A8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<path d="M740,560 V595" fill="none" stroke="#119A8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-teal)"/>
+<rect x="1010" y="595" width="240" height="28" rx="14" fill="#FDECEC" stroke="#FDECEC" stroke-width="1"/>
+<text x="1130.0" y="614" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#D94B4B" text-anchor="middle" style="">Failure does not block if quorum met</text>
+<rect x="340" y="700" width="760" height="95" rx="14" fill="#FFF4DF" stroke="#D58A19" stroke-width="1.5"/>
+<rect x="340" y="700" width="7" height="95" rx="4" fill="#D58A19"/>
+<text x="358" y="729" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#23364D" text-anchor="start" style="">Hinted handoff / anti-entropy repair</text>
+<text x="358" y="753" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" fill="#5E7086" text-anchor="start"><tspan x="358" dy="0">Temporarily store missed updates or compare replica state; restore the intended replica set when the node recovers.</tspan></text>
+<path d="M1140,560 V650 H720 V700" fill="none" stroke="#D58A19" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-amber)"/>
+<path d="M740,560 V660 H920 V700" fill="none" stroke="#D58A19" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#arr-amber)"/>
+<text x="720" y="855" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#5E7086" text-anchor="middle" style="">Quorum arithmetic alone does not guarantee strong consistency; membership, versioning, concurrent writes, and protocol semantics matter.</text>
+<path d="M54,852 L1386,852" fill="none" stroke="#CAD5E2" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#5E7086" text-anchor="start" style="">Conceptual architecture • labels and scale are illustrative</text>
+<text x="1386" y="877" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#5E7086" text-anchor="end" style="">distributed-key-value-store.svg</text>
+</svg>

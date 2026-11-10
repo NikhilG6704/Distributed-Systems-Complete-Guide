@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Multi-leader replication">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Multi-leader replication</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">Three writable regional leaders accept local writes and exchange changes asynchronously</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<rect x="165" y="375" width="330" height="130" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="165" y="375" width="9" height="130" rx="5" fill="#2F6FED"/>
+<text x="193" y="413" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">INDIA · Leader A</text>
+<text x="193" y="443" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="193" dy="0">Local writes accepted</tspan>
+<tspan x="193" dy="22">Local log + outbound changes</tspan>
+</text>
+<rect x="381" y="389" width="100" height="29" rx="14" fill="#EAF1FF"/>
+<text x="431.0" y="409" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#2F6FED" text-anchor="middle">WRITABLE</text>
+<rect x="635" y="235" width="330" height="130" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="635" y="235" width="9" height="130" rx="5" fill="#0F9D8A"/>
+<text x="663" y="273" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">EUROPE · Leader B</text>
+<text x="663" y="303" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="663" dy="0">Local writes accepted</tspan>
+<tspan x="663" dy="22">Local log + outbound changes</tspan>
+</text>
+<rect x="851" y="249" width="100" height="29" rx="14" fill="#E5F6F2"/>
+<text x="901.0" y="269" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#0F9D8A" text-anchor="middle">WRITABLE</text>
+<rect x="1105" y="375" width="330" height="130" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="1105" y="375" width="9" height="130" rx="5" fill="#7957C8"/>
+<text x="1133" y="413" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">US · Leader C</text>
+<text x="1133" y="443" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="1133" dy="0">Local writes accepted</tspan>
+<tspan x="1133" dy="22">Local log + outbound changes</tspan>
+</text>
+<rect x="1321" y="389" width="100" height="29" rx="14" fill="#F0EBFC"/>
+<text x="1371.0" y="409" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7957C8" text-anchor="middle">WRITABLE</text>
+<line x1="480" y1="350" x2="640" y2="315" stroke="#2F6FED" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-blue)"/>
+<text x="560.0" y="320.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2F6FED" text-anchor="middle">async changes</text>
+<line x1="960" y1="315" x2="1120" y2="350" stroke="#0F9D8A" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-teal)"/>
+<text x="1040.0" y="320.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#0F9D8A" text-anchor="middle">async changes</text>
+<line x1="1110" y1="510" x2="490" y2="510" stroke="#7957C8" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="9 7" marker-end="url(#arrow-purple)"/>
+<text x="800.0" y="492.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7957C8" text-anchor="middle">bidirectional sync</text>
+<rect x="585" y="635" width="430" height="110" rx="18" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="585" y="635" width="9" height="110" rx="5" fill="#D88A18"/>
+<text x="613" y="673" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Conflict detection / merge</text>
+<text x="613" y="703" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="start">
+<tspan x="613" dy="0">Concurrent versions may require LWW, vectors, or app logic</tspan>
+</text>
+<line x1="330" y1="510" x2="800" y2="635" stroke="#2F6FED" stroke-width="2" stroke-linecap="round" opacity="0.85" stroke-dasharray="6 6"/>
+<line x1="800" y1="370" x2="800" y2="635" stroke="#0F9D8A" stroke-width="2" stroke-linecap="round" opacity="0.85" stroke-dasharray="6 6"/>
+<line x1="1270" y1="510" x2="800" y2="635" stroke="#7957C8" stroke-width="2" stroke-linecap="round" opacity="0.85" stroke-dasharray="6 6"/>
+<rect x="560" y="775" width="480" height="34" rx="17" fill="#FFF4DE"/>
+<text x="800.0" y="798" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#D88A18" text-anchor="middle">Local write availability ≠ conflict-free writes</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Replication loops are prevented with origin / transaction metadata and product-specific topology rules.</text>
+</svg>

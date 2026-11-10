@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Strong vs. weak consistency: different coordination paths">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Strong vs. weak consistency: different coordination paths</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">The important distinction is the observable contract, not whether every physical replica is synchronously copied on every request.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<rect x="45" y="120" width="530" height="420" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="45" y="120" width="7" height="420" rx="3" fill="#2563EB"/>
+<text x="63" y="148" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">STRONG REAL-TIME CONTRACT</text>
+<text x="63" y="172" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="63" dy="0">Client sends write to leader / coordinator.</tspan>
+<tspan x="63" dy="18">Consensus or required quorum replicates log.</tspan>
+<tspan x="63" dy="18">Commit rule establishes an authoritative order.</tspan>
+<tspan x="63" dy="18">Acknowledgement follows the commit condition.</tspan>
+<tspan x="63" dy="18">Read uses leader, read-index, or safe quorum.</tspan>
+<tspan x="63" dy="18">A partitioned minority may wait or reject.</tspan>
+</text>
+<rect x="110" y="290" width="130" height="70" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="175.0" y="314" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">Client</text>
+<text x="175.0" y="333" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">write</text>
+<rect x="290" y="290" width="150" height="70" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="365.0" y="314" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Leader / quorum</text>
+<text x="365.0" y="333" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">order + commit</text>
+<rect x="455" y="290" width="100" height="70" rx="13" fill="#F0EBFB" stroke="#7652C8" stroke-width="1.4"/>
+<text x="505.0" y="314" font-size="16" font-weight="bold" fill="#7652C8" text-anchor="middle">Replicas</text>
+<text x="505.0" y="333" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">apply log</text>
+<line x1="240" y1="325" x2="290" y2="325" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="440" y1="325" x2="455" y2="325" stroke="#0F8B78" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="220" y="395" width="220" height="27" rx="13" fill="#EAF1FF"/>
+<text x="330.0" y="413" font-size="12" font-weight="semibold" fill="#2563EB" text-anchor="middle">ACK after commit</text>
+<rect x="625" y="120" width="530" height="420" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="625" y="120" width="7" height="420" rx="3" fill="#B96B08"/>
+<text x="643" y="148" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">WEAKER / EVENTUAL PATH</text>
+<text x="643" y="172" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="643" dy="0">Client writes to a nearby replica.</tspan>
+<tspan x="643" dy="18">Local node acknowledges under its policy.</tspan>
+<tspan x="643" dy="18">Updates propagate asynchronously.</tspan>
+<tspan x="643" dy="18">Reads may observe temporarily stale data.</tspan>
+<tspan x="643" dy="18">Repair / merge resolves concurrent versions.</tspan>
+<tspan x="643" dy="18">Availability and latency may improve.</tspan>
+</text>
+<rect x="690" y="290" width="130" height="70" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="755.0" y="314" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">Client</text>
+<text x="755.0" y="333" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">write</text>
+<rect x="870" y="290" width="130" height="70" rx="13" fill="#FFF3DD" stroke="#B96B08" stroke-width="1.4"/>
+<text x="935.0" y="314" font-size="16" font-weight="bold" fill="#B96B08" text-anchor="middle">Local replica</text>
+<text x="935.0" y="333" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">fast ACK</text>
+<rect x="1040" y="290" width="100" height="70" rx="13" fill="#F0EBFB" stroke="#7652C8" stroke-width="1.4"/>
+<text x="1090.0" y="314" font-size="16" font-weight="bold" fill="#7652C8" text-anchor="middle">Peers</text>
+<text x="1090.0" y="333" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">async</text>
+<line x1="820" y1="325" x2="870" y2="325" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="1000" y1="325" x2="1040" y2="325" stroke="#B96B08" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-amber)"/>
+<rect x="850" y="395" width="220" height="27" rx="13" fill="#FFF3DD"/>
+<text x="960.0" y="413" font-size="12" font-weight="semibold" fill="#B96B08" text-anchor="middle">propagate / repair</text>
+<text x="310" y="505" font-size="13" font-weight="bold" fill="#2563EB" text-anchor="middle">Coordination cost ↑   ·   real-time freshness ↑</text>
+<text x="890" y="505" font-size="13" font-weight="bold" fill="#B96B08" text-anchor="middle">Coordination cost ↓   ·   temporary staleness possible</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Rendezvous hashing (highest random weight)">
+<title>Rendezvous hashing (highest random weight)</title><desc>Each key is scored against every candidate node; the highest deterministic score wins. A new node only takes keys for which it scores highest.</desc>
+<defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#63788D"/></marker>
+          <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#3977B8"/></marker>
+          <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#11998E"/></marker>
+          <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#E79A35"/></marker>
+          <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#D95F59"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#19344D" flood-opacity="0.08"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="56" y="54" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Rendezvous hashing (highest random weight)</text>
+<text x="56" y="86" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Each key is scored against every candidate node; the highest deterministic score wins. A new node only takes keys for which it scores highest.</text>
+<line x1="56" y1="108" x2="1384" y2="108" stroke="#D7E1EA" stroke-width="2" stroke-linecap="round"/>
+<rect x="56" y="140" width="1328" height="330" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="140" width="7" height="330" rx="3" fill="#3977B8" stroke="none" stroke-width="1.5"/>
+<text x="80" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Select the owner for one key</text>
+<text x="80" y="201" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Example hash scores for key `product:42`; the maximum score determines placement.</text>
+<text x="105" y="273" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="650" fill="#17324D" text-anchor="start" opacity="1" style="">Node A</text>
+<rect x="260" y="255" width="650" height="28" rx="14" fill="#EDF2F7" stroke="none" stroke-width="1.5"/>
+<rect x="260" y="255" width="266.5" height="28" rx="14" fill="#3977B8" stroke="none" stroke-width="1.5"/>
+<text x="930" y="275" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="750" fill="#3977B8" text-anchor="start" opacity="1" style="">0.41</text>
+<text x="105" y="335" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="650" fill="#17324D" text-anchor="start" opacity="1" style="">Node B</text>
+<rect x="260" y="317" width="650" height="28" rx="14" fill="#EDF2F7" stroke="none" stroke-width="1.5"/>
+<rect x="260" y="317" width="578.5" height="28" rx="14" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="930" y="337" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="750" fill="#11998E" text-anchor="start" opacity="1" style="">0.89</text>
+<text x="105" y="397" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="650" fill="#17324D" text-anchor="start" opacity="1" style="">Node C</text>
+<rect x="260" y="379" width="650" height="28" rx="14" fill="#EDF2F7" stroke="none" stroke-width="1.5"/>
+<rect x="260" y="379" width="468.0" height="28" rx="14" fill="#8064B4" stroke="none" stroke-width="1.5"/>
+<text x="930" y="399" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="750" fill="#8064B4" text-anchor="start" opacity="1" style="">0.72</text>
+<rect x="1060" y="240" width="260" height="140" rx="16" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="1190" y="278" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#63788D" text-anchor="middle" opacity="1" style="">Selected owner</text>
+<text x="1190" y="322" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="750" fill="#11998E" text-anchor="middle" opacity="1" style="">Node B</text>
+<text x="1190" y="350" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="550" fill="#17324D" text-anchor="middle" opacity="1" style="">highest score = 0.89</text>
+<rect x="56" y="510" width="1328" height="290" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="510" width="7" height="290" rx="3" fill="#E79A35" stroke="none" stroke-width="1.5"/>
+<text x="80" y="546" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Add Node D: recompute scores</text>
+<text x="80" y="571" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Existing nodes retain their relative scores; only keys for which D wins change ownership.</text>
+<text x="120" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">KEY</text>
+<text x="390" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">A</text>
+<text x="535" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">B</text>
+<text x="680" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">C</text>
+<text x="850" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">D (new)</text>
+<text x="1060" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">OWNER BEFORE</text>
+<text x="1250" y="590" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="750" fill="#63788D" text-anchor="middle" opacity="1" style="">OWNER AFTER</text>
+<line x1="90" y1="626" x2="1350" y2="626" stroke="#D7E1EA" stroke-width="1" stroke-linecap="round"/>
+<text x="120" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">product:42</text>
+<text x="390" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.41</text>
+<text x="535" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.89</text>
+<text x="680" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.72</text>
+<text x="850" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.95</text>
+<text x="1060" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#11998E" text-anchor="middle" opacity="1" style="">B</text>
+<text x="1250" y="618" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#D95F59" text-anchor="middle" opacity="1" style="">D</text>
+<line x1="90" y1="678" x2="1350" y2="678" stroke="#D7E1EA" stroke-width="1" stroke-linecap="round"/>
+<text x="120" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">product:77</text>
+<text x="390" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.83</text>
+<text x="535" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.56</text>
+<text x="680" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.62</text>
+<text x="850" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.24</text>
+<text x="1060" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#11998E" text-anchor="middle" opacity="1" style="">A</text>
+<text x="1250" y="670" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#11998E" text-anchor="middle" opacity="1" style="">A</text>
+<line x1="90" y1="730" x2="1350" y2="730" stroke="#D7E1EA" stroke-width="1" stroke-linecap="round"/>
+<text x="120" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">product:91</text>
+<text x="390" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.33</text>
+<text x="535" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.48</text>
+<text x="680" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.91</text>
+<text x="850" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#17324D" text-anchor="middle" opacity="1" style="">.66</text>
+<text x="1060" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#11998E" text-anchor="middle" opacity="1" style="">C</text>
+<text x="1250" y="722" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#11998E" text-anchor="middle" opacity="1" style="">C</text>
+<rect x="1040" y="760" width="285" height="30" rx="15" fill="#FFF3E2" stroke="none" stroke-width="1.5"/>
+<text x="1182.5" y="780" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#E79A35" text-anchor="middle" opacity="1" style="">Only product:42 moves in this sample</text>
+<text x="56" y="876" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Naive rendezvous scoring costs O(number of nodes) evaluations per key; optimized variants can reduce lookup cost.</text>
+</svg>

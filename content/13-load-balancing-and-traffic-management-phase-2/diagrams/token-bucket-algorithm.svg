@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Token bucket rate limiting</title><desc id="desc">Tokens refill at a steady rate; each admitted request consumes one token.</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+ <marker id="arrow-muted" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5d6d82"/></marker>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+</defs>
+<rect width="1280" height="760" fill="#f4f7fb"/>
+<rect x="0" y="0" width="1280" height="11" fill="#2563eb"/>
+<text x="54" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2563eb">DISTRIBUTED SYSTEMS  /  TRAFFIC MANAGEMENT</text>
+<text x="54" y="94" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#14243a">Token bucket rate limiting</text>
+<text x="54" y="126" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#5d6d82">Tokens refill at a steady rate; each admitted request consumes one token.</text>
+<line x1="54" y1="148" x2="1226" y2="148" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<rect x="70" y="250" width="260" height="230" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="70" y="250" width="7" height="230" rx="4" fill="#0891b2"/>
+<text x="92" y="281" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Capacity</text>
+<circle cx="95" cy="306" r="3" fill="#0891b2" stroke="none" stroke-width="1"/>
+<text x="108" y="310" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">100 tokens maximum</text>
+<rect x="470" y="250" width="330" height="270" rx="20" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+<rect x="475" y="255" width="320" height="38" rx="12" fill="#dbeafe" stroke="#dbeafe" stroke-width="0"/>
+<text x="635" y="282" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="750" fill="#2563eb">BOUNDED ADMISSION STATE</text>
+<circle cx="535" cy="365" r="15" fill="#d97706" stroke="none" stroke-width="1"/>
+<circle cx="583" cy="365" r="15" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<circle cx="631" cy="365" r="15" fill="#d97706" stroke="none" stroke-width="1"/>
+<circle cx="679" cy="365" r="15" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<circle cx="727" cy="365" r="15" fill="#d97706" stroke="none" stroke-width="1"/>
+<circle cx="558" cy="430" r="15" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="613" cy="430" r="15" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="668" cy="430" r="15" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="723" cy="430" r="15" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="635" y="490" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">tokens / queued work / counters</text>
+<rect x="900" y="250" width="280" height="230" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="900" y="250" width="7" height="230" rx="4" fill="#0f9d75"/>
+<text x="922" y="281" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Decision</text>
+<circle cx="925" cy="306" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="938" y="310" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">Token available → admit; empty</text>
+<circle cx="925" cy="324" r="3" fill="#0f9d75" stroke="none" stroke-width="1"/>
+<text x="938" y="328" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">→ 429</text>
+<line x1="340" y1="365" x2="455" y2="365" stroke="#2563eb" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="815" y1="365" x2="885" y2="365" stroke="#2563eb" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="410" y="545" width="460" height="75" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+<rect x="410" y="545" width="7" height="75" rx="4" fill="#7556c8"/>
+<text x="432" y="576" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#14243a">Refill</text>
+<circle cx="435" cy="601" r="3" fill="#7556c8" stroke="none" stroke-width="1"/>
+<text x="448" y="605" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">10 tokens / second</text>
+<rect x="54" y="654" width="1172" height="64" rx="13" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="72" y="669" width="101.2" height="26" rx="13" fill="#2563eb" opacity="0.13"/>
+<text x="122.6" y="687" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">DESIGN NOTE</text>
+<text x="190" y="681" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="500" fill="#5d6d82">At 30 requests/s with 10 tokens/s refill, a full bucket absorbs an initial burst, then sustained excess is rejected.</text>
+<text x="1224" y="741" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="500" fill="#5d6d82">token-bucket-algorithm.svg</text>
+</svg>

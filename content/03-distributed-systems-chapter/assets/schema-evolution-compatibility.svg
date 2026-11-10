@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="1000" viewBox="0 0 1550 1000" role="img" aria-labelledby="title desc">
+<title id="title">Safe schema evolution during rolling deployments</title><desc id="desc">Expand, deploy tolerant readers, enable additive writer fields, observe, then contract only after old versions retire.</desc>
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FED"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#138A83"/></marker>
+          <marker id="arr-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7655C7"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#C74747"/></marker>
+          <marker id="arr-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52647A"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#213047" flood-opacity=".08"/></filter>
+        </defs>
+<rect width="1550" height="1000" fill="#F7F9FC"/>
+<text x="775.0" y="42" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="27" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Safe schema evolution during rolling deployments</text>
+<text x="775.0" y="72" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#52647A" text-anchor="middle" opacity="1">Expand, deploy tolerant readers, enable additive writer fields, observe, then contract only after old versions retire.</text>
+<text x="775" y="130" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">DEPLOYMENT TIMELINE</text>
+<line x1="180" y1="205" x2="1370" y2="205" stroke="#91A2B7" stroke-width="3" fill="none" marker-end="url(#arr-gray)"/>
+<circle cx="230" cy="205" r="11" fill="#2F6FED" stroke="white" stroke-width="3"/>
+<text x="230" y="245" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2F6FED" text-anchor="middle" opacity="1">1. Expand</text>
+<text x="230" y="270" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="middle" opacity="1">Add optional currency field</text>
+<circle cx="520" cy="205" r="11" fill="#138A83" stroke="white" stroke-width="3"/>
+<text x="520" y="245" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#138A83" text-anchor="middle" opacity="1">2. Readers</text>
+<text x="520" y="270" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="middle" opacity="1">Deploy tolerant consumers</text>
+<circle cx="835" cy="205" r="11" fill="#7655C7" stroke="white" stroke-width="3"/>
+<text x="835" y="245" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#7655C7" text-anchor="middle" opacity="1">3. Writer</text>
+<text x="835" y="270" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="middle" opacity="1">Emit currency after rollout</text>
+<circle cx="1160" cy="205" r="11" fill="#D97706" stroke="white" stroke-width="3"/>
+<text x="1160" y="245" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#D97706" text-anchor="middle" opacity="1">4. Contract</text>
+<text x="1160" y="270" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="middle" opacity="1">Remove legacy only later</text>
+<text x="70" y="346" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="start" opacity="1">Order producer</text>
+<line x1="210" y1="338" x2="1430" y2="338" stroke="#E7EDF4" stroke-width="2" fill="none" marker-end="url(#arr-gray)"/>
+<rect x="245" y="308" width="180" height="58" rx="14" fill="#EAF1FF" stroke="#2F6FED" stroke-width="2" filter="url(#shadow)"/>
+<rect x="245" y="308" width="7" height="58" rx="4" fill="blue" stroke="blue" stroke-width="0"/>
+<text x="335.0" y="336" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Producer v1</text>
+<text x="335.0" y="361" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="335.0" dy="0">no currency</tspan>
+</text>
+<rect x="880" y="308" width="180" height="58" rx="14" fill="#F1ECFF" stroke="#7655C7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="880" y="308" width="7" height="58" rx="4" fill="purple" stroke="purple" stroke-width="0"/>
+<text x="970.0" y="336" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Producer v2</text>
+<text x="970.0" y="361" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="970.0" dy="0">currency optional</tspan>
+</text>
+<text x="70" y="456" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="start" opacity="1">Inventory</text>
+<line x1="210" y1="448" x2="1430" y2="448" stroke="#E7EDF4" stroke-width="2" fill="none" marker-end="url(#arr-gray)"/>
+<rect x="285" y="418" width="185" height="58" rx="14" fill="#E7F6F3" stroke="#138A83" stroke-width="2" filter="url(#shadow)"/>
+<rect x="285" y="418" width="7" height="58" rx="4" fill="teal" stroke="teal" stroke-width="0"/>
+<text x="377.5" y="446" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Inventory v1</text>
+<text x="377.5" y="471" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="377.5" dy="0">tolerates unknown field</tspan>
+</text>
+<rect x="575" y="418" width="185" height="58" rx="14" fill="#E8F6EE" stroke="#23865B" stroke-width="2" filter="url(#shadow)"/>
+<rect x="575" y="418" width="7" height="58" rx="4" fill="green" stroke="green" stroke-width="0"/>
+<text x="667.5" y="446" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Inventory v2</text>
+<text x="667.5" y="471" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="667.5" dy="0">reads currency</tspan>
+</text>
+<text x="70" y="561" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="start" opacity="1">Payment</text>
+<line x1="210" y1="553" x2="1430" y2="553" stroke="#E7EDF4" stroke-width="2" fill="none" marker-end="url(#arr-gray)"/>
+<rect x="285" y="523" width="185" height="58" rx="14" fill="#E7F6F3" stroke="#138A83" stroke-width="2" filter="url(#shadow)"/>
+<rect x="285" y="523" width="7" height="58" rx="4" fill="teal" stroke="teal" stroke-width="0"/>
+<text x="377.5" y="551" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Payment v1</text>
+<text x="377.5" y="576" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="377.5" dy="0">tolerates unknown field</tspan>
+</text>
+<rect x="575" y="523" width="185" height="58" rx="14" fill="#E8F6EE" stroke="#23865B" stroke-width="2" filter="url(#shadow)"/>
+<rect x="575" y="523" width="7" height="58" rx="4" fill="green" stroke="green" stroke-width="0"/>
+<text x="667.5" y="551" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Payment v2</text>
+<text x="667.5" y="576" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="667.5" dy="0">reads currency</tspan>
+</text>
+<text x="70" y="666" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="start" opacity="1">Analytics</text>
+<line x1="210" y1="658" x2="1430" y2="658" stroke="#E7EDF4" stroke-width="2" fill="none" marker-end="url(#arr-gray)"/>
+<rect x="285" y="628" width="185" height="58" rx="14" fill="#E7F6F3" stroke="#138A83" stroke-width="2" filter="url(#shadow)"/>
+<rect x="285" y="628" width="7" height="58" rx="4" fill="teal" stroke="teal" stroke-width="0"/>
+<text x="377.5" y="656" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Analytics v1</text>
+<text x="377.5" y="681" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="377.5" dy="0">tolerates unknown field</tspan>
+</text>
+<rect x="575" y="628" width="185" height="58" rx="14" fill="#E8F6EE" stroke="#23865B" stroke-width="2" filter="url(#shadow)"/>
+<rect x="575" y="628" width="7" height="58" rx="4" fill="green" stroke="green" stroke-width="0"/>
+<text x="667.5" y="656" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Analytics v2</text>
+<text x="667.5" y="681" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="667.5" dy="0">reads currency</tspan>
+</text>
+<text x="70" y="771" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="start" opacity="1">Notification</text>
+<line x1="210" y1="763" x2="1430" y2="763" stroke="#E7EDF4" stroke-width="2" fill="none" marker-end="url(#arr-gray)"/>
+<rect x="285" y="733" width="185" height="58" rx="14" fill="#E7F6F3" stroke="#138A83" stroke-width="2" filter="url(#shadow)"/>
+<rect x="285" y="733" width="7" height="58" rx="4" fill="teal" stroke="teal" stroke-width="0"/>
+<text x="377.5" y="761" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Notification v1</text>
+<text x="377.5" y="786" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="377.5" dy="0">tolerates unknown field</tspan>
+</text>
+<rect x="575" y="733" width="185" height="58" rx="14" fill="#E8F6EE" stroke="#23865B" stroke-width="2" filter="url(#shadow)"/>
+<rect x="575" y="733" width="7" height="58" rx="4" fill="green" stroke="green" stroke-width="0"/>
+<text x="667.5" y="761" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#16243A" text-anchor="middle" opacity="1">Notification v2</text>
+<text x="667.5" y="786" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="11" font-weight="normal" fill="#52647A" text-anchor="middle">
+<tspan x="667.5" dy="0">reads currency</tspan>
+</text>
+<rect x="70" y="835" width="675" height="105" rx="12" fill="#FFFFFF" stroke="#E7EDF4" stroke-width="1.5"/>
+<text x="95" y="865" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" font-weight="bold" fill="#16243A" text-anchor="start" opacity="1">Reader / writer compatibility (conceptual)</text>
+<text x="95" y="895" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="start" opacity="1">Old reader + new writer: safe only if unknown additive field is ignored.</text>
+<text x="95" y="920" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#52647A" text-anchor="start" opacity="1">New reader + old writer: safe if the reader handles missing field/default.</text>
+<rect x="790" y="835" width="650" height="105" rx="10" fill="#FFF3E2" stroke="#D97706" stroke-width="1.5"/>
+<text x="1115.0" y="859" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#16243A" text-anchor="middle">
+<tspan x="1115.0" dy="0">Rollout discipline: expand → deploy tolerant readers → enable new writer</tspan>
+<tspan x="1115.0" dy="16.25">→ observe metrics / DLQ → contract after old producers and consumers retire.</tspan>
+</text>
+</svg>

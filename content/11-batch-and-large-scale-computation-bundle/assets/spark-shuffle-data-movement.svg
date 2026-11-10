@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Spark shuffle: map-side write to reduce-side fetch</title><desc id="desc">Each map task writes output buckets; each reduce task fetches its bucket from all relevant map outputs.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Spark shuffle: map-side write to reduce-side fetch</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">Each map task writes output buckets; each reduce task fetches its bucket from all relevant map outputs.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="50" y="150" width="390" height="550" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="68" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">Map-side workers</text>
+<rect x="85" y="235" width="145" height="100" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Map 1</text>
+<text x="103" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">input partition</text>
+<text x="103" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">local combine</text>
+<rect x="265" y="235" width="140" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="283" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#172B4D" text-anchor="start">Shuffle file 1</text>
+<text x="283" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">bucket 0 / 1 / 2</text>
+<path d="M 230,285 L 265,285" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="85" y="390" width="145" height="100" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="421" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Map 2</text>
+<text x="103" y="450" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">input partition</text>
+<text x="103" y="475" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">local combine</text>
+<rect x="265" y="390" width="140" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="283" y="421" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#172B4D" text-anchor="start">Shuffle file 2</text>
+<text x="283" y="450" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">bucket 0 / 1 / 2</text>
+<path d="M 230,440 L 265,440" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="85" y="545" width="145" height="100" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="103" y="576" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Map 3</text>
+<text x="103" y="605" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">input partition</text>
+<text x="103" y="630" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">local combine</text>
+<rect x="265" y="545" width="140" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="283" y="576" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#172B4D" text-anchor="start">Shuffle file 3</text>
+<text x="283" y="605" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">bucket 0 / 1 / 2</text>
+<path d="M 230,595 L 265,595" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="525" y="150" width="500" height="550" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#B87918" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="543" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#B87918" text-anchor="start">Network exchange</text>
+<rect x="575" y="255" width="400" height="110" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="593" y="286" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Fetch by reduce partition</text>
+<text x="593" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">R0 pulls bucket 0 from every mapper</text>
+<text x="593" y="340" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">R1 pulls bucket 1 · R2 pulls bucket 2</text>
+<rect x="575" y="450" width="400" height="120" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="593" y="481" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Merge / sort / spill</text>
+<text x="593" y="510" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">decompress + deserialize</text>
+<text x="593" y="535" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">merge sorted runs; spill if memory is</text>
+<text x="593" y="560" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">tight</text>
+<path d="M 405,285 L 475,285 L 475,300 L 575,300" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<path d="M 405,440 L 475,440 L 475,300 L 575,300" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<path d="M 405,595 L 475,595 L 475,300 L 575,300" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<path d="M 775,365 L 775,450" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="717.0" y="383.5" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="775.0" y="402.5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">fetch blocks</text>
+<rect x="1110" y="150" width="440" height="550" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="1128" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">Reduce-side workers</text>
+<rect x="1150" y="235" width="350" height="100" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1168" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Reduce task 0</text>
+<text x="1168" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">read its bucket from all mapper</text>
+<text x="1168" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">outputs</text>
+<rect x="1150" y="390" width="350" height="100" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1168" y="421" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Reduce task 1</text>
+<text x="1168" y="450" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">read its bucket from all mapper</text>
+<text x="1168" y="475" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">outputs</text>
+<rect x="1150" y="545" width="350" height="100" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1168" y="576" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Reduce task 2</text>
+<text x="1168" y="605" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">read its bucket from all mapper</text>
+<text x="1168" y="630" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">outputs</text>
+<path d="M 975,510 L 1060,510 L 1060,285 L 1150,285" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 975,510 L 1060,510 L 1060,440 L 1150,440" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 975,510 L 1060,510 L 1060,595 L 1150,595" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<text x="800" y="755" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">Shuffle cost includes serialization, network transfer, disk I/O, sorting/merging, and metadata.</text>
+</svg>

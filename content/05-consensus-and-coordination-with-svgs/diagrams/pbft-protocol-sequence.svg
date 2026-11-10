@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1650" viewBox="0 0 1440 1650">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="1650" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">PBFT: pre-prepare, prepare, commit, reply</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Four replicas tolerate one Byzantine replica in the classic PBFT configuration. Messages are authenticated and digest/sequence matched.</text>
+<text x="1392" y="1630" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="42.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="130.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">CLIENT</text>
+<line x1="130.0" y1="195" x2="130.0" y2="1470" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="337.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="425.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PRIMARY R0</text>
+<line x1="425.0" y1="195" x2="425.0" y2="1470" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="632.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">BACKUP R1</text>
+<line x1="720.0" y1="195" x2="720.0" y2="1470" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="927.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1015.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">BACKUP R2</text>
+<line x1="1015.0" y1="195" x2="1015.0" y2="1470" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="1222.0" y="130" width="176" height="65" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1310.0" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#2864A6" text-anchor="middle" style="">BACKUP R3</text>
+<line x1="1310.0" y1="195" x2="1310.0" y2="1470" stroke="#CBD5DF" stroke-width="1.5" stroke-dasharray="6 7"/>
+<rect x="55" y="212" width="1330" height="36" rx="6" fill="#EAF2FB" stroke="none" stroke-width="0"/>
+<text x="75" y="236" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="start" style="">CLIENT REQUEST</text>
+<line x1="130.0" y1="277" x2="425.0" y2="277" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="277.5" y="267" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">REQUEST(operation)</text>
+<rect x="55" y="311" width="1330" height="36" rx="6" fill="#F1EDFA" stroke="none" stroke-width="0"/>
+<text x="75" y="335" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="start" style="">PRE-PREPARE  •  PRIMARY FAN-OUT</text>
+<line x1="425.0" y1="376" x2="720.0" y2="376" stroke="#7257A8" stroke-width="2.5" marker-end="url(#arr-purple)"/>
+<text x="572.5" y="366" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">PRE-PREPARE(v, n, digest d)</text>
+<line x1="425.0" y1="433" x2="1015.0" y2="433" stroke="#7257A8" stroke-width="2.5" marker-end="url(#arr-purple)"/>
+<text x="720.0" y="423" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">PRE-PREPARE(v, n, digest d)</text>
+<line x1="425.0" y1="490" x2="1310.0" y2="490" stroke="#7257A8" stroke-width="2.5" marker-end="url(#arr-purple)"/>
+<text x="867.5" y="480" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#7257A8" text-anchor="middle" style="">PRE-PREPARE(v, n, digest d)</text>
+<rect x="55" y="524" width="1330" height="36" rx="6" fill="#EAF2FB" stroke="none" stroke-width="0"/>
+<text x="75" y="548" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="start" style="">PREPARE  •  BACKUPS EXCHANGE</text>
+<line x1="720.0" y1="589" x2="1015.0" y2="589" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="867.5" y="579" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(v, n, d)</text>
+<line x1="1015.0" y1="646" x2="1310.0" y2="646" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="1162.5" y="636" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(v, n, d)</text>
+<line x1="1310.0" y1="703" x2="720.0" y2="703" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="1015.0" y="693" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(v, n, d)</text>
+<line x1="720.0" y1="760" x2="425.0" y2="760" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="572.5" y="750" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(v, n, d)</text>
+<line x1="1015.0" y1="817" x2="425.0" y2="817" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="720.0" y="807" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(v, n, d)</text>
+<line x1="1310.0" y1="874" x2="425.0" y2="874" stroke="#2864A6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="867.5" y="864" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2864A6" text-anchor="middle" style="">PREPARE(v, n, d)</text>
+<rect x="55" y="908" width="1330" height="36" rx="6" fill="#E8F6F4" stroke="none" stroke-width="0"/>
+<text x="75" y="932" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="start" style="">COMMIT  •  REPLICA QUORUM</text>
+<line x1="425.0" y1="973" x2="720.0" y2="973" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="572.5" y="963" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">COMMIT(v, n, d)</text>
+<line x1="720.0" y1="1030" x2="1015.0" y2="1030" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="867.5" y="1020" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">COMMIT(v, n, d)</text>
+<line x1="1015.0" y1="1087" x2="1310.0" y2="1087" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="1162.5" y="1077" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">COMMIT(v, n, d)</text>
+<line x1="1310.0" y1="1144" x2="425.0" y2="1144" stroke="#148A83" stroke-width="2.5" marker-end="url(#arr-teal)"/>
+<text x="867.5" y="1134" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#148A83" text-anchor="middle" style="">COMMIT(v, n, d)</text>
+<rect x="55" y="1178" width="1330" height="36" rx="6" fill="#F3F6FA" stroke="none" stroke-width="0"/>
+<text x="75" y="1202" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2D8A57" text-anchor="start" style="">EXECUTE + REPLY</text>
+<line x1="425.0" y1="1243" x2="130.0" y2="1243" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="277.5" y="1233" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">reply(result)</text>
+<line x1="720.0" y1="1300" x2="130.0" y2="1300" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="425.0" y="1290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">reply(result)</text>
+<line x1="1015.0" y1="1357" x2="130.0" y2="1357" stroke="#2D8A57" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+<text x="572.5" y="1347" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" fill="#2D8A57" text-anchor="middle" style="">reply(result)</text>
+<rect x="80" y="1404" width="1280" height="90" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="96" y="1429" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">PROTOCOL NOTE</text>
+<text x="96" y="1453.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">For f=1: N=4 replicas = primary + 3 backups. Prepared evidence is 2f+1 matching messages including pre-prepare under the classic count; commit certificate is</text>
+<text x="96" y="1470.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">2f+1; client accepts f+1 matching replies. View change carries checkpoint and prepared evidence.</text>
+<rect x="80" y="1515" width="1280" height="95" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="96" y="1540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">VIEW CHANGE / RECOVERY</text>
+<text x="96" y="1564.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Replicas exchange VIEW-CHANGE evidence containing checkpoint and prepared certificates. The new primary proposes NEW-VIEW; lagging replicas may require state</text>
+<text x="96" y="1581.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">transfer from a stable checkpoint.</text>
+</svg>

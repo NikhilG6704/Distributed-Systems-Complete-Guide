@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Mutual TLS handshake</title><desc id="desc">Both peers validate certificates and prove possession of their corresponding private keys.</desc>
+<defs>
+ <marker id="arrow-data" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-control" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0E7490"/></marker>
+ <marker id="arrow-crypto" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7C3AED"/></marker>
+ <marker id="arrow-policy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#A16207"/></marker>
+ <marker id="arrow-threat" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C2413B"/></marker>
+ <marker id="arrow-good" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#15803D"/></marker>
+ <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#10233F" flood-opacity=".08"/></filter>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="12" fill="#17365D"/>
+<text x="64" y="68" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#17243A">17-16 · Mutual TLS handshake</text>
+<text x="66" y="108" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" fill="#53657D">Both peers validate certificates and prove possession of their corresponding private keys.</text>
+<line x1="64" y1="132" x2="1536" y2="132" stroke="#D9E1EC" stroke-width="2"/>
+
+<path d="M 400.0,292.5 L 410.0,290.0 L 410.0,200.0 L 1110.0,200.0 L 1110.0,290.0 L 1120.0,292.5" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 1120.0,292.5 L 1110.0,290.0 L 1110.0,200.0 L 410.0,200.0 L 410.0,290.0 L 400.0,292.5" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 610.0,292.5 L 600.0,290.0 L 420.0,290.0 L 420.0,580.0 L 410.0,580.0 L 400.0,582.5" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-crypto)"/>
+<path d="M 910.0,292.5 L 920.0,290.0 L 1100.0,290.0 L 1100.0,580.0 L 1110.0,580.0 L 1120.0,582.5" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-crypto)"/>
+<path d="M 400.0,582.5 L 410.0,580.0 L 600.0,580.0 L 610.0,582.5" fill="none" stroke="#15803D" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-good)"/>
+<path d="M 1120.0,582.5 L 1110.0,580.0 L 920.0,580.0 L 910.0,582.5" fill="none" stroke="#15803D" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-good)"/>
+<rect x="100" y="220" width="300" height="145" rx="18" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="101" y="221" width="298" height="8" rx="4" fill="#2563EB" opacity=".9"/>
+<circle cx="124" cy="251" r="7" fill="#2563EB"/>
+<text x="142" y="258" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Client workload</text>
+<text x="122" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Client certificate + private</text>
+<text x="122" y="312" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">key</text>
+<rect x="1120" y="220" width="300" height="145" rx="18" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="1121" y="221" width="298" height="8" rx="4" fill="#2563EB" opacity=".9"/>
+<circle cx="1144" cy="251" r="7" fill="#2563EB"/>
+<text x="1162" y="258" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Server workload</text>
+<text x="1142" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Server certificate + private</text>
+<text x="1142" y="312" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">key</text>
+<rect x="610" y="220" width="300" height="145" rx="18" fill="#F1EBFF" stroke="#7C3AED" stroke-width="2"/>
+<rect x="611" y="221" width="298" height="8" rx="4" fill="#7C3AED" opacity=".9"/>
+<circle cx="634" cy="251" r="7" fill="#7C3AED"/>
+<text x="652" y="258" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Trust bundle / CA</text>
+<text x="632" y="290" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Chain, SAN, EKU, expiry,</text>
+<text x="632" y="312" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">revocation policy</text>
+<rect x="100" y="510" width="300" height="145" rx="18" fill="#E8F6EC" stroke="#15803D" stroke-width="2"/>
+<rect x="101" y="511" width="298" height="8" rx="4" fill="#15803D" opacity=".9"/>
+<circle cx="124" cy="541" r="7" fill="#15803D"/>
+<text x="142" y="548" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Client verifies server</text>
+<text x="122" y="580" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">CA chain + hostname / SAN</text>
+<rect x="1120" y="510" width="300" height="145" rx="18" fill="#E8F6EC" stroke="#15803D" stroke-width="2"/>
+<rect x="1121" y="511" width="298" height="8" rx="4" fill="#15803D" opacity=".9"/>
+<circle cx="1144" cy="541" r="7" fill="#15803D"/>
+<text x="1162" y="548" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Server verifies client</text>
+<text x="1142" y="580" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">CA chain + workload identity</text>
+<rect x="610" y="510" width="300" height="145" rx="18" fill="#F1EBFF" stroke="#7C3AED" stroke-width="2"/>
+<rect x="611" y="511" width="298" height="8" rx="4" fill="#7C3AED" opacity=".9"/>
+<circle cx="634" cy="541" r="7" fill="#7C3AED"/>
+<text x="652" y="548" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Authenticated channel</text>
+<text x="632" y="580" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Ephemeral session keys +</text>
+<text x="632" y="602" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">AEAD</text>
+<line x1="65" y1="870" x2="93" y2="870" stroke="#2563EB" stroke-width="4"/>
+<text x="103" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Identity / request</text>
+<line x1="350" y1="870" x2="378" y2="870" stroke="#0F766E" stroke-width="4"/>
+<text x="388" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Data flow</text>
+<line x1="635" y1="870" x2="663" y2="870" stroke="#7C3AED" stroke-width="4"/>
+<text x="673" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Crypto</text>
+<line x1="920" y1="870" x2="948" y2="870" stroke="#A16207" stroke-width="4"/>
+<text x="958" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Policy / control</text>
+<line x1="1220" y1="870" x2="1248" y2="870" stroke="#C2413B" stroke-width="4"/>
+<text x="1258" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Threat / deny</text>
+<text x="1535" y="893" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#8290A3">CHAPTER 17 · SECURITY IN DISTRIBUTED SYSTEMS</text>
+</svg>

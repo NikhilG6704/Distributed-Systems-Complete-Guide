@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Quorum intersection: a necessary overlap, not a full proof">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Quorum intersection: a necessary overlap, not a full proof</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">With N=3, R=2, W=2, any read quorum and write quorum intersect in at least one replica.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<rect x="45" y="125" width="535" height="435" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="45" y="125" width="7" height="435" rx="3" fill="#0F8B78"/>
+<text x="63" y="153" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">INTERSECTING QUORUMS</text>
+<text x="63" y="177" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="63" dy="0">N = 3 replicas · R = 2 · W = 2</tspan>
+<tspan x="63" dy="18">Write quorum = {A, B}</tspan>
+<tspan x="63" dy="18">Read quorum = {B, C}</tspan>
+<tspan x="63" dy="18">Intersection = {B} → at least one shared member</tspan>
+</text>
+<text x="235" y="285" font-size="13" font-weight="bold" fill="#2563EB" text-anchor="middle">WRITE SET  {A, B}</text>
+<text x="405" y="320" font-size="13" font-weight="bold" fill="#0F8B78" text-anchor="middle">READ SET  {B, C}</text>
+<rect x="105" y="305" width="255" height="180" rx="14" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="275" y="340" width="255" height="180" rx="14" fill="none" stroke="#0F8B78" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="160" cy="415" r="43" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<text x="160" y="423" font-size="23" font-weight="bold" fill="#2563EB" text-anchor="middle">A</text>
+<circle cx="315" cy="415" r="43" fill="#E5F6F1" stroke="#0F8B78" stroke-width="2"/>
+<text x="315" y="423" font-size="23" font-weight="bold" fill="#0F8B78" text-anchor="middle">B</text>
+<circle cx="470" cy="415" r="43" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<text x="470" y="423" font-size="23" font-weight="bold" fill="#2563EB" text-anchor="middle">C</text>
+<rect x="270" y="500" width="115" height="27" rx="13" fill="#E7F5ED"/>
+<text x="327.5" y="518" font-size="12" font-weight="semibold" fill="#24845B" text-anchor="middle">B is shared</text>
+<rect x="625" y="125" width="530" height="435" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="625" y="125" width="7" height="435" rx="3" fill="#C63D4B"/>
+<text x="643" y="153" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">DISJOINT COUNTEREXAMPLE</text>
+<text x="643" y="177" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="643" dy="0">N = 3 replicas · R = 1 · W = 1</tspan>
+<tspan x="643" dy="18">Write quorum = {A}</tspan>
+<tspan x="643" dy="18">Read quorum = {C}</tspan>
+<tspan x="643" dy="18">No intersection: the read may miss the write.</tspan>
+</text>
+<text x="735" y="295" font-size="13" font-weight="bold" fill="#2563EB" text-anchor="middle">WRITE {A}</text>
+<text x="1045" y="295" font-size="13" font-weight="bold" fill="#C63D4B" text-anchor="middle">READ {C}</text>
+<rect x="680" y="315" width="110" height="160" rx="12" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="995" y="315" width="110" height="160" rx="12" fill="none" stroke="#C63D4B" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="735" cy="395" r="43" fill="#EAF1FF" stroke="#2563EB" stroke-width="2"/>
+<text x="735" y="403" font-size="23" font-weight="bold" fill="#2563EB" text-anchor="middle">A</text>
+<circle cx="890" cy="395" r="43" fill="#EDF1F6" stroke="#52657D" stroke-width="2"/>
+<text x="890" y="403" font-size="23" font-weight="bold" fill="#52657D" text-anchor="middle">B</text>
+<circle cx="1050" cy="395" r="43" fill="#FCEBED" stroke="#C63D4B" stroke-width="2"/>
+<text x="1050" y="403" font-size="23" font-weight="bold" fill="#C63D4B" text-anchor="middle">C</text>
+<text x="890" y="500" font-size="13" font-weight="bold" fill="#C63D4B" text-anchor="middle">No shared replica</text>
+<text x="600" y="590" font-size="12" font-weight="semibold" fill="#5F7188" text-anchor="middle">R + W &gt; N is not sufficient for linearizability: commit status, freshness, version selection, and membership rules still matter.</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

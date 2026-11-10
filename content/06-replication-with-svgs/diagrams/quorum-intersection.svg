@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Quorum intersection">
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2F6FED"/></marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0F9D8A"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D88A18"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#D84B4B"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7957C8"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#27845B"/></marker>
+    <marker id="arrow-slate" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#7A8CA5"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1B3555" flood-opacity="0.10"/></filter>
+  </defs>
+<rect x="0" y="0" width="1600" height="900" rx="18" fill="#F4F7FB"/>
+<text x="64" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#172B4D" text-anchor="start">Quorum intersection</text>
+<text x="66" y="111" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#5E718B" text-anchor="start">For N=5, R=3 and W=3, any read set and write set chosen from the same five replicas overlap</text>
+<line x1="64" y1="137" x2="1536" y2="137" stroke="#CCD6E3" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<text x="120" y="205" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#2F6FED" text-anchor="start">WRITE QUORUM · W = 3</text>
+<text x="920" y="205" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#0F9D8A" text-anchor="start">READ QUORUM · R = 3</text>
+<circle cx="220" cy="450" r="62" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="3"/>
+<text x="220" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D" text-anchor="middle">A</text>
+<circle cx="450" cy="450" r="62" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="3"/>
+<text x="450" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D" text-anchor="middle">B</text>
+<circle cx="800" cy="450" r="62" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="3"/>
+<text x="800" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D" text-anchor="middle">C</text>
+<circle cx="1060" cy="450" r="62" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="3"/>
+<text x="1060" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D" text-anchor="middle">D</text>
+<circle cx="1320" cy="450" r="62" fill="#FFFFFF" stroke="#CCD6E3" stroke-width="3"/>
+<text x="1320" y="460" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D" text-anchor="middle">E</text>
+<line x1="220" y1="340" x2="220" y2="385" stroke="#2F6FED" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<line x1="450" y1="340" x2="450" y2="385" stroke="#2F6FED" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<line x1="800" y1="340" x2="800" y2="385" stroke="#2F6FED" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<line x1="800" y1="515" x2="800" y2="565" stroke="#0F9D8A" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<line x1="1060" y1="515" x2="1060" y2="565" stroke="#0F9D8A" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<line x1="1320" y1="515" x2="1320" y2="565" stroke="#0F9D8A" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<rect x="160" y="600" width="540" height="95" rx="18" fill="#EAF1FF"/>
+<text x="430" y="638" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#2F6FED" text-anchor="middle">W = {A, B, C}</text>
+<text x="430" y="671" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="middle">write must reach 3 replicas</text>
+<rect x="900" y="600" width="540" height="95" rx="18" fill="#E5F6F2"/>
+<text x="1170" y="638" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#0F9D8A" text-anchor="middle">R = {C, D, E}</text>
+<text x="1170" y="671" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#5E718B" text-anchor="middle">read queries 3 replicas</text>
+<rect x="620" y="740" width="360" height="34" rx="17" fill="#E8F5ED"/>
+<text x="800.0" y="763" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#27845B" text-anchor="middle">Intersection = {C}</text>
+<line x1="64" y1="850" x2="1536" y2="850" stroke="#CCD6E3" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<text x="66" y="878" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#5E718B" text-anchor="start">Intersection is not enough for linearizability: versions, ordering, membership, and commit rules still matter.</text>
+</svg>

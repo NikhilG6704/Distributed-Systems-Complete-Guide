@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">CQRS architecture</title><desc id="desc">Commands use a write model optimized for invariants; queries use read models shaped for retrieval.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">CQRS architecture</text>
+<text class="subtitle" x="66" y="88">Commands use a write model optimized for invariants; queries use read models shaped for retrieval.</text>
+
+<rect x="70" y="350" width="170" height="130" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="70" y="350" width="170" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="88" y="389" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Client</text>
+<text x="88" y="417" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="88" dy="0">command / query</tspan>
+</text>
+<rect x="355" y="190" width="245" height="155" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="355" y="190" width="245" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="373" y="229" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Command handler</text>
+<text x="373" y="257" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="373" dy="0">validate rules</tspan>
+<tspan x="373" dy="22">update write model</tspan>
+</text>
+<rect x="355" y="500" width="245" height="155" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="355" y="500" width="245" height="9" rx="5" fill="#0E8AA8" stroke="#0E8AA8" stroke-width="0"/>
+<text x="373" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Query handler</text>
+<text x="373" y="567" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="373" dy="0">read optimized view</tspan>
+</text>
+<rect x="730" y="190" width="235" height="155" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="730" y="190" width="235" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="748" y="229" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Write database</text>
+<text x="748" y="257" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="748" dy="0">normalized state</tspan>
+<tspan x="748" dy="22">transactional commit</tspan>
+</text>
+<rect x="730" y="500" width="235" height="155" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="730" y="500" width="235" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="748" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Read database</text>
+<text x="748" y="567" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="748" dy="0">denormalized views</tspan>
+<tspan x="748" dy="22">search / dashboards</tspan>
+</text>
+<rect x="1100" y="325" width="230" height="160" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1100" y="325" width="230" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="1118" y="364" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Event / projection pipeline</text>
+<text x="1118" y="392" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1118" dy="0">outbox / broker</tspan>
+<tspan x="1118" dy="22">projector updates views</tspan>
+</text>
+<path d="M240 390 H300 V270 H355" fill="none" stroke="#2563EB" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<path d="M240 440 H300 V575 H355" fill="none" stroke="#0E8AA8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600,270 L730,270" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M600,575 L730,575" fill="none" stroke="#0E8AA8" stroke-width="3" stroke-linecap="round"/>
+<path d="M965 270 H1030 V380 H1100" fill="none" stroke="#C17A0B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<path d="M1100 440 H1035 V575 H965" fill="none" stroke="#0B8A67" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<text x="720" y="735" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Write and read models may lag; expose freshness or pending states where the product requires it.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Multi-region consistency: one topology, multiple contracts">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Multi-region consistency: one topology, multiple contracts</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">Choose the read/write path per invariant: coordinated reservations, session-aware profile reads, and asynchronous catalog propagation.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<rect x="70" y="130" width="300" height="140" rx="15" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<text x="88" y="160" font-size="16" font-weight="bold" fill="#172B4D" text-anchor="start">INDIA</text>
+<rect x="132" y="185" width="176" height="65" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="220.0" y="209" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">App + DB A</text>
+<text x="220.0" y="228" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">regional replica</text>
+<rect x="445" y="130" width="300" height="140" rx="15" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<text x="463" y="160" font-size="16" font-weight="bold" fill="#172B4D" text-anchor="start">EUROPE</text>
+<rect x="507" y="185" width="176" height="65" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="595.0" y="209" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">App + DB B</text>
+<text x="595.0" y="228" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">regional replica</text>
+<rect x="820" y="130" width="300" height="140" rx="15" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<text x="838" y="160" font-size="16" font-weight="bold" fill="#172B4D" text-anchor="start">UNITED STATES</text>
+<rect x="882" y="185" width="176" height="65" rx="13" fill="#EAF1FF" stroke="#2563EB" stroke-width="1.4"/>
+<text x="970.0" y="209" font-size="16" font-weight="bold" fill="#2563EB" text-anchor="middle">App + DB C</text>
+<text x="970.0" y="228" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">regional replica</text>
+<line x1="370" y1="218" x2="445" y2="218" stroke="#B96B08" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#arr-amber)"/>
+<line x1="745" y1="218" x2="820" y2="218" stroke="#B96B08" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#arr-amber)"/>
+<text x="408" y="201" font-size="11" font-weight="semibold" fill="#B96B08" text-anchor="middle">async</text>
+<text x="783" y="201" font-size="11" font-weight="semibold" fill="#B96B08" text-anchor="middle">async</text>
+<rect x="45" y="320" width="350" height="190" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="45" y="320" width="7" height="190" rx="3" fill="#2563EB"/>
+<text x="63" y="348" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">1 · PAYMENT / INVENTORY</text>
+<text x="63" y="372" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="63" dy="0">Strong transaction / reservation.</tspan>
+<tspan x="63" dy="18">Leader or quorum path coordinates commit.</tspan>
+<tspan x="63" dy="18">Partition without quorum: wait or fail safely.</tspan>
+</text>
+<rect x="425" y="320" width="350" height="190" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="425" y="320" width="7" height="190" rx="3" fill="#7652C8"/>
+<text x="443" y="348" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">2 · PROFILE READ</text>
+<text x="443" y="372" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="443" dy="0">Session token carries minimum version.</tspan>
+<tspan x="443" dy="18">Route to a replica at least that fresh.</tspan>
+<tspan x="443" dy="18">May wait/reroute; avoids user regression.</tspan>
+</text>
+<rect x="805" y="320" width="350" height="190" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="805" y="320" width="7" height="190" rx="3" fill="#B96B08"/>
+<text x="823" y="348" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">3 · PRODUCT CATALOG</text>
+<text x="823" y="372" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="823" dy="0">Local read may be served quickly.</tspan>
+<tspan x="823" dy="18">Asynchronous propagation + cache/index refresh.</tspan>
+<tspan x="823" dy="18">Temporary staleness is acceptable by policy.</tspan>
+</text>
+<line x1="220" y1="270" x2="220" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="595" y1="270" x2="595" y2="320" stroke="#7652C8" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-purple)"/>
+<line x1="970" y1="270" x2="970" y2="320" stroke="#B96B08" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-amber)"/>
+<rect x="105" y="545" width="990" height="65" rx="12" fill="#20344F"/>
+<text x="600" y="572" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">OPERATE WITH MEASUREMENT</text>
+<text x="600" y="593" font-size="13" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Track WAN RTT · replica lag · quorum health · lease/leader placement · repair backlog</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Apache Spark cluster architecture</title><desc id="desc">The driver builds jobs and schedules tasks; executors run tasks and manage cached and shuffle data.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Apache Spark cluster architecture</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">The driver builds jobs and schedules tasks; executors run tasks and manage cached and shuffle data.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="70" y="270" width="235" height="175" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="88" y="301" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Spark application</text>
+<text x="88" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">SparkSession /</text>
+<text x="88" y="355" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">Context</text>
+<text x="88" y="380" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">DAG + task</text>
+<text x="88" y="405" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">schedulers</text>
+<text x="88" y="430" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">job planning</text>
+<rect x="395" y="185" width="230" height="130" rx="18" fill="#EEE8FB" stroke="#7955A6" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="413" y="216" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Cluster manager</text>
+<text x="413" y="245" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">YARN · Kubernetes</text>
+<text x="413" y="270" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">or Spark Standalone</text>
+<rect x="710" y="130" width="760" height="570" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#64748B" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="728" y="159" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#64748B" text-anchor="start">Worker fleet</text>
+<rect x="755" y="220" width="300" height="185" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="773" y="251" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Worker node 1</text>
+<text x="773" y="280" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Executor process</text>
+<text x="773" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">task slots / threads</text>
+<text x="773" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">cache + shuffle blocks</text>
+<rect x="1120" y="220" width="300" height="185" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1138" y="251" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Worker node 2</text>
+<text x="1138" y="280" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Executor process</text>
+<text x="1138" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">task slots / threads</text>
+<text x="1138" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">cache + shuffle blocks</text>
+<rect x="755" y="465" width="300" height="185" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="773" y="496" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Worker node 3</text>
+<text x="773" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Executor process</text>
+<text x="773" y="550" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">task slots / threads</text>
+<text x="773" y="575" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">cache + shuffle blocks</text>
+<rect x="1120" y="465" width="300" height="185" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1138" y="496" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#172B4D" text-anchor="start">Worker node 4</text>
+<text x="1138" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">Executor process</text>
+<text x="1138" y="550" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">task slots / threads</text>
+<text x="1138" y="575" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">cache + shuffle blocks</text>
+<rect x="70" y="545" width="235" height="115" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="88" y="576" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">Distributed storage</text>
+<text x="88" y="605" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">HDFS / object store</text>
+<text x="88" y="630" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581" text-anchor="start">source and sink data</text>
+<path d="M 305,330 L 395,250" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="292.0" y="266.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="350.0" y="285.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">request</text>
+<path d="M 625,250 L 680,250 L 680,285 L 755,285" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="622" y="261" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="680" y="280" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">launch executor</text>
+<path d="M 625,250 L 690,175 L 1080,175 L 1080,285" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<path d="M 305,365 L 340,365 L 340,740 L 730,740 L 730,525" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<rect x="282" y="716" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="340" y="735" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#7955A6" text-anchor="middle">tasks</text>
+<path d="M 305,365 L 350,365 L 350,770 L 1090,770 L 1090,525" fill="none" stroke="#7955A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-control)"/>
+<path d="M 305,585 L 350,585 L 350,395 L 755,395" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="292" y="371" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="350" y="390" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">read partitions</text>
+<path d="M 1055,405 L 1080,405 L 1080,445 L 1120,445" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="1022" y="421" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1080" y="440" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">shuffle</text>
+<path d="M 1420,650 L 1490,650 L 1490,785 L 40,785 L 40,600 L 70,600" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="-18" y="761" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="40" y="780" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">write output</text>
+<text x="800" y="755" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#526581" text-anchor="middle">Spark task scheduling is distinct from the cluster manager’s resource allocation.</text>
+</svg>

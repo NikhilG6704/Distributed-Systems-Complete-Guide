@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Transactional messaging and exactly-once scope</title><desc id="desc">Kafka transactions can atomically publish records and consumed offsets inside Kafka; an unrelated database needs its own integration strategy.</desc>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<text x="54" y="62" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="34" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Transactional messaging and exactly-once scope</text>
+<text x="54" y="100" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="17" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Kafka transactions can atomically publish records and consumed offsets inside Kafka; an unrelated database needs its own integration strategy.</text>
+<line x1="54" y1="126" x2="1546" y2="126" stroke="#C9D4DF" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<defs>
+<marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#2867B2"/></marker>
+<marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#167B70"/></marker>
+<marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#B63C43"/></marker>
+<marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#A76512"/></marker>
+<marker id="arr-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#62758A"/></marker>
+<marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#6D55A5"/></marker>
+</defs>
+<rect x="70" y="230" width="230" height="105" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="88" y="261" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Input topic</text>
+<text x="88" y="290" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Records + offsets</text>
+<rect x="390" y="230" width="250" height="105" rx="14" fill="#FFFFFF" stroke="#C9D4DF" stroke-width="2"/>
+<text x="408" y="261" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Consumer / processor</text>
+<text x="408" y="290" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Read → transform</text>
+<rect x="750" y="210" width="330" height="145" rx="14" fill="#F1EDFA" stroke="#6D55A5" stroke-width="2"/>
+<text x="768" y="241" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="20" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Kafka transaction</text>
+<text x="768" y="270" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Write output records</text>
+<text x="768" y="294" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Commit consumed offsets</text>
+<rect x="1200" y="230" width="300" height="105" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="1218" y="261" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Output topic</text>
+<text x="1218" y="290" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Visible after commit</text>
+<line x1="300" y1="280" x2="390" y2="280" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="640" y1="280" x2="750" y2="280" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<line x1="1080" y1="280" x2="1200" y2="280" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="390" y="500" width="270" height="110" rx="14" fill="#FFF3DF" stroke="#A76512" stroke-width="2"/>
+<text x="408" y="531" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="19" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">External database</text>
+<text x="408" y="560" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="16" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">UPDATE account / ledger</text>
+<line x1="515" y1="335" x2="515" y2="500" stroke="#A76512" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#arr-amber)"/>
+<rect x="355" y="465" width="990" height="180" rx="18" fill="none" stroke="#B63C43" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="850" y="680" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#B63C43" font-weight="600" text-anchor="middle" font-style="normal">Outside Kafka’s atomic transaction boundary</text>
+<rect x="760" y="520" width="250" height="90" rx="14" fill="#E7F5F2" stroke="#167B70" stroke-width="2"/>
+<text x="778" y="551" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Outbox / dedup key</text>
+<text x="778" y="580" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Bridge external effect</text>
+<line x1="660" y1="555" x2="760" y2="555" stroke="#167B70" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="1100" y="520" width="220" height="90" rx="14" fill="#EAF2FC" stroke="#2867B2" stroke-width="2"/>
+<text x="1118" y="551" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" fill="#14263D" font-weight="700" text-anchor="start" font-style="normal">Idempotent sink</text>
+<text x="1118" y="580" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="15" fill="#24364B" font-weight="400" text-anchor="start" font-style="normal">Unique event ID</text>
+<line x1="1010" y1="555" x2="1100" y2="555" stroke="#2867B2" stroke-width="3" stroke-linecap="round" marker-end="url(#arr-blue)"/>
+<rect x="90" y="760" width="300" height="32" rx="16" fill="#EAF2FC" stroke="#2867B2" stroke-width="1"/>
+<text x="240.0" y="782.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#2867B2" font-weight="700" text-anchor="middle" font-style="normal">At-least-once delivery</text>
+<rect x="445" y="760" width="300" height="32" rx="16" fill="#E7F5F2" stroke="#167B70" stroke-width="1"/>
+<text x="595.0" y="782.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#167B70" font-weight="700" text-anchor="middle" font-style="normal">Idempotent producer</text>
+<rect x="800" y="760" width="300" height="32" rx="16" fill="#F1EDFA" stroke="#6D55A5" stroke-width="1"/>
+<text x="950.0" y="782.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#6D55A5" font-weight="700" text-anchor="middle" font-style="normal">Transactional offsets</text>
+<rect x="1155" y="760" width="300" height="32" rx="16" fill="#FFF3DF" stroke="#A76512" stroke-width="1"/>
+<text x="1305.0" y="782.0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="14" fill="#A76512" font-weight="700" text-anchor="middle" font-style="normal">External effects need design</text>
+<line x1="54" y1="846" x2="1546" y2="846" stroke="#C9D4DF" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="875" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="13" fill="#62758A" font-weight="400" text-anchor="start" font-style="normal">Always state the scope: exactly-once within a broker transaction is not automatically exactly-once across external systems.</text>
+</svg>

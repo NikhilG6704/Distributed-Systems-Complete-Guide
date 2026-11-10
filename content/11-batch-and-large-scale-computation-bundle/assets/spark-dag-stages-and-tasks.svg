@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Spark DAG: transformations, stages, and tasks</title><desc id="desc">Narrow transformations pipeline within a stage; a wide dependency introduces a shuffle and a stage boundary.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">Spark DAG: transformations, stages, and tasks</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">Narrow transformations pipeline within a stage; a wide dependency introduces a shuffle and a stage boundary.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="55" y="155" width="450" height="520" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="73" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">Stage 0 · input partitions</text>
+<rect x="90" y="235" width="145" height="85" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="108" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Partition 0</text>
+<text x="108" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">read input</text>
+<rect x="310" y="235" width="155" height="85" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="328" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">filter → map</text>
+<text x="328" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">pipelined task</text>
+<path d="M 235,277 L 310,277" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="90" y="365" width="145" height="85" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="108" y="396" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Partition 1</text>
+<text x="108" y="425" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">read input</text>
+<rect x="310" y="365" width="155" height="85" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="328" y="396" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">filter → map</text>
+<text x="328" y="425" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">pipelined task</text>
+<path d="M 235,407 L 310,407" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="90" y="495" width="145" height="85" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="108" y="526" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Partition 2</text>
+<text x="108" y="555" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">read input</text>
+<rect x="310" y="495" width="155" height="85" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="328" y="526" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">filter → map</text>
+<text x="328" y="555" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">pipelined task</text>
+<path d="M 235,537 L 310,537" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="575" y="155" width="400" height="520" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#B87918" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="593" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#B87918" text-anchor="start">Shuffle boundary</text>
+<rect x="625" y="265" width="300" height="115" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="643" y="296" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#172B4D" text-anchor="start">reduceByKey</text>
+<text x="643" y="325" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">redistribute records by key</text>
+<text x="643" y="350" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">map-side combine may reduce</text>
+<rect x="625" y="460" width="300" height="105" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="643" y="491" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="start">Shuffle blocks</text>
+<text x="643" y="520" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">map outputs partitioned</text>
+<text x="643" y="545" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">reduce tasks fetch blocks</text>
+<path d="M 465,410 L 535,410 L 535,320 L 625,320" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="477" y="296" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="535" y="315" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">exchange</text>
+<path d="M 775,380 L 775,460" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="717.0" y="396.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="775.0" y="415.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">materialize</text>
+<rect x="1045" y="155" width="490" height="520" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="1063" y="184" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">Stage 1 · reduce partitions</text>
+<rect x="1085" y="235" width="185" height="85" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1103" y="266" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Reduce task 1</text>
+<text x="1103" y="295" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">one output</text>
+<rect x="1085" y="365" width="185" height="85" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1103" y="396" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Reduce task 2</text>
+<text x="1103" y="425" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">one output</text>
+<rect x="1085" y="495" width="185" height="85" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1103" y="526" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">Reduce task 3</text>
+<text x="1103" y="555" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="450" fill="#526581" text-anchor="start">one output</text>
+<rect x="1310" y="365" width="185" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1328" y="396" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#172B4D" text-anchor="start">Action</text>
+<text x="1328" y="425" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="450" fill="#526581" text-anchor="start">save output</text>
+<path d="M 925,510 L 1005,510 L 1005,277 L 1085,277" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 925,510 L 1005,510 L 1005,407 L 1085,407" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 925,510 L 1005,510 L 1005,537 L 1085,537" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 1270,407 L 1310,407" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1232.0" y="383.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1290.0" y="402.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">result</text>
+<text x="800" y="735" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#526581" text-anchor="middle">A task usually processes one partition for one stage attempt; actual plans may add exchanges or coalesce partitions.</text>
+</svg>

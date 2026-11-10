@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Zab: Discovery, Synchronization, Broadcast</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">ZooKeeper Atomic Broadcast establishes a new epoch and reconciles history before normal proposal/commit traffic.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="65" y="220" width="370" height="190" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="250.0" y="249" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2864A6" text-anchor="middle" style="">1  DISCOVERY</text>
+<text x="250.0" y="272.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">Followers report</text>
+<text x="250.0" y="294.95" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">last zxid / epoch</text>
+<text x="250.0" y="317.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">and history</text>
+<rect x="505" y="220" width="370" height="190" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="690.0" y="249" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#7257A8" text-anchor="middle" style="">2  SYNCHRONIZATION</text>
+<text x="690.0" y="272.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">Leader establishes</text>
+<text x="690.0" y="294.95" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">epoch; histories</text>
+<text x="690.0" y="317.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">are reconciled</text>
+<rect x="945" y="220" width="370" height="190" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="1130.0" y="249" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#148A83" text-anchor="middle" style="">3  BROADCAST</text>
+<text x="1130.0" y="272.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">PROPOSAL → ACK</text>
+<text x="1130.0" y="294.95" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">quorum → COMMIT</text>
+<text x="1130.0" y="317.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#203247" text-anchor="middle" style="">ordered updates</text>
+<line x1="435" y1="315" x2="505" y2="315" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<line x1="875" y1="315" x2="945" y2="315" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<rect x="95" y="495" width="565" height="100" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="111" y="520" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">ZXID</text>
+<text x="111" y="544.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">zxid = (epoch, counter). Epoch distinguishes leadership generations;</text>
+<text x="111" y="561.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">counter orders transactions within an epoch.</text>
+<rect x="760" y="495" width="585" height="100" rx="12" fill="#E8F6F4" stroke="#148A83" stroke-width="1.6"/>
+<text x="776" y="520" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="start" style="">QUORUM ACKS</text>
+<text x="776" y="544.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">The leader broadcasts proposals and commits after the required voting</text>
+<text x="776" y="561.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">quorum acknowledges; followers preserve agreed history.</text>
+<path d="M 1120 430 C 1100 690, 230 690, 230 430" fill="none" stroke="#C34C4C" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arr-red)"/>
+<text x="675" y="680" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">leader failure → return to Discovery / new epoch</text>
+<rect x="100" y="735" width="1240" height="70" rx="12" fill="#FBF3E5" stroke="#C7861A" stroke-width="1.6"/>
+<text x="116" y="760" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C7861A" text-anchor="start" style="">IMPLEMENTATION NOTE</text>
+<text x="116" y="784.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">The exact election and recovery details depend on ZooKeeper version and configuration. Zab is ZooKeeper’s atomic-broadcast protocol, not the whole</text>
+<text x="116" y="801.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">ZooKeeper service.</text>
+</svg>

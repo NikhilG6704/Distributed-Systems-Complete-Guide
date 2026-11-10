@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">MapReduce word count: worked data flow</title><desc id="desc">The same word is routed to the same reducer key, where grouped counts are summed.</desc>
+<rect width="1600" height="900" fill="#FBFCFE"/>
+<rect x="0" y="0" width="1600" height="112" fill="#F1F5FA"/>
+<text x="64" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="750" fill="#172B4D">MapReduce word count: worked data flow</text>
+<text x="66" y="82" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="450" fill="#526581">The same word is routed to the same reducer key, where grouped counts are summed.</text>
+<text x="1535" y="49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="650" fill="#8293AA" text-anchor="end">DISTRIBUTED COMPUTATION · CHAPTER 11</text><defs>
+          <marker id="arrow-data" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#3973A8"/></marker>
+          <marker id="arrow-control" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#7955A6"/></marker>
+          <marker id="arrow-network" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#B87918"/></marker>
+          <marker id="arrow-warning" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#BA4B4B"/></marker>
+          <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#172B4D" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="45" y="160" width="330" height="575" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#3973A8" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="63" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#3973A8" text-anchor="start">1 · Input lines</text>
+<rect x="75" y="245" width="270" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="93" y="276" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="start">Line 1</text>
+<text x="93" y="305" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">distributed systems are</text>
+<text x="93" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">powerful</text>
+<rect x="75" y="405" width="270" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="93" y="436" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="start">Line 2</text>
+<text x="93" y="465" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">distributed systems scale</text>
+<rect x="75" y="565" width="270" height="100" rx="18" fill="#DCEBFA" stroke="#3973A8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="93" y="596" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B4D" text-anchor="start">Line 3</text>
+<text x="93" y="625" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">systems require</text>
+<text x="93" y="650" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="450" fill="#526581" text-anchor="start">coordination</text>
+<rect x="430" y="160" width="370" height="575" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="448" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">2 · Map emits (word, 1)</text>
+<rect x="455" y="220" width="145" height="34" rx="17" fill="#E5F0FF" stroke="#3973A8" stroke-width="1.5"/>
+<text x="527.5" y="243" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(distributed, 1)</text>
+<rect x="455" y="312" width="145" height="34" rx="17" fill="#E5F0FF" stroke="#3973A8" stroke-width="1.5"/>
+<text x="527.5" y="335" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(systems, 1)</text>
+<rect x="455" y="404" width="145" height="34" rx="17" fill="#E5F0FF" stroke="#3973A8" stroke-width="1.5"/>
+<text x="527.5" y="427" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(are, 1)</text>
+<rect x="455" y="496" width="145" height="34" rx="17" fill="#E5F0FF" stroke="#3973A8" stroke-width="1.5"/>
+<text x="527.5" y="519" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(powerful, 1)</text>
+<rect x="455" y="588" width="145" height="34" rx="17" fill="#E5F0FF" stroke="#3973A8" stroke-width="1.5"/>
+<text x="527.5" y="611" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(distributed, 1)</text>
+<rect x="625" y="220" width="145" height="34" rx="17" fill="#E6F4E7" stroke="#3F8750" stroke-width="1.5"/>
+<text x="697.5" y="243" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(systems, 1)</text>
+<rect x="625" y="312" width="145" height="34" rx="17" fill="#E6F4E7" stroke="#3F8750" stroke-width="1.5"/>
+<text x="697.5" y="335" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(scale, 1)</text>
+<rect x="625" y="404" width="145" height="34" rx="17" fill="#E6F4E7" stroke="#3F8750" stroke-width="1.5"/>
+<text x="697.5" y="427" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(systems, 1)</text>
+<rect x="625" y="496" width="145" height="34" rx="17" fill="#E6F4E7" stroke="#3F8750" stroke-width="1.5"/>
+<text x="697.5" y="519" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(require, 1)</text>
+<rect x="625" y="588" width="145" height="34" rx="17" fill="#E6F4E7" stroke="#3F8750" stroke-width="1.5"/>
+<text x="697.5" y="611" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#172B4D" text-anchor="middle">(coordination, 1)</text>
+<rect x="855" y="160" width="330" height="575" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#B87918" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="873" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#B87918" text-anchor="start">3 · Shuffle groups by key</text>
+<rect x="885" y="215" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="246" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">are</text>
+<rect x="885" y="285" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="316" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">coordination</text>
+<rect x="885" y="355" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="386" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">distributed</text>
+<rect x="885" y="425" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="456" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">powerful</text>
+<rect x="885" y="495" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="526" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">require</text>
+<rect x="885" y="565" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="596" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">scale</text>
+<rect x="885" y="635" width="270" height="55" rx="18" fill="#FFF0D8" stroke="#B87918" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="903" y="666" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">systems</text>
+<rect x="1230" y="160" width="325" height="575" rx="22" fill="#FFFFFF" fill-opacity=".36" stroke="#24836D" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="1248" y="189" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#24836D" text-anchor="start">4 · Reduce sums</text>
+<rect x="1260" y="215" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="246" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">are</text>
+<rect x="1260" y="285" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="316" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">coordination</text>
+<rect x="1260" y="355" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="386" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">distributed</text>
+<rect x="1260" y="425" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="456" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">powerful</text>
+<rect x="1260" y="495" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="526" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">require</text>
+<rect x="1260" y="565" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="596" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">scale</text>
+<rect x="1260" y="635" width="265" height="55" rx="18" fill="#E3F4EF" stroke="#24836D" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1278" y="666" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#172B4D" text-anchor="start">systems</text>
+<path d="M 345,300 L 400,300 L 400,250 L 455,250" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 345,460 L 405,460 L 405,530 L 455,530" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 345,615 L 420,615 L 420,625 L 455,625" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<path d="M 800,440 L 885,440" fill="none" stroke="#B87918" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-network)"/>
+<rect x="784.5" y="416.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="842.5" y="435.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#B87918" text-anchor="middle">shuffle</text>
+<path d="M 1155,440 L 1260,440" fill="none" stroke="#3973A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-data)"/>
+<rect x="1149.5" y="416.0" width="116" height="28" rx="10" fill="#FFFFFF" stroke="#D6DFEA"/>
+<text x="1207.5" y="435.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#3973A8" text-anchor="middle">reduce</text>
+<text x="800" y="780" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="650" fill="#172B4D" text-anchor="middle">Final output: are 1 · coordination 1 · distributed 2 · powerful 1 · require 1 · scale 1 · systems 3</text>
+</svg>

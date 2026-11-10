@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Coordination services: ZooKeeper vs etcd vs Consul</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Each service uses a replicated coordination core but exposes a different data model and operational focus.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="55" y="150" width="420" height="480" rx="16" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="265" y="195" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800" fill="#2864A6" text-anchor="middle" style="">ZOOKEEPER</text>
+<rect x="90" y="230" width="350" height="48" rx="9" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.2"/>
+<text x="265" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Hierarchical znodes</text>
+<rect x="90" y="300" width="350" height="48" rx="9" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.2"/>
+<text x="265" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Persistent / ephemeral</text>
+<rect x="90" y="370" width="350" height="48" rx="9" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.2"/>
+<text x="265" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Sequential lock recipes</text>
+<rect x="90" y="440" width="350" height="48" rx="9" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.2"/>
+<text x="265" y="470" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Watches + sessions</text>
+<rect x="90" y="510" width="350" height="48" rx="9" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.2"/>
+<text x="265" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Zab atomic broadcast</text>
+<rect x="170" y="590" width="190" height="32" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.5"/>
+<text x="265.0" y="612" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#2864A6" text-anchor="middle" style="">CONSENSUS CORE</text>
+<rect x="510" y="150" width="420" height="480" rx="16" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="720" y="195" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800" fill="#148A83" text-anchor="middle" style="">etcd</text>
+<rect x="545" y="230" width="350" height="48" rx="9" fill="#E8F6F4" stroke="#148A83" stroke-width="1.2"/>
+<text x="720" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Flat key-value MVCC</text>
+<rect x="545" y="300" width="350" height="48" rx="9" fill="#E8F6F4" stroke="#148A83" stroke-width="1.2"/>
+<text x="720" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Monotonic revisions</text>
+<rect x="545" y="370" width="350" height="48" rx="9" fill="#E8F6F4" stroke="#148A83" stroke-width="1.2"/>
+<text x="720" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Transactions + compares</text>
+<rect x="545" y="440" width="350" height="48" rx="9" fill="#E8F6F4" stroke="#148A83" stroke-width="1.2"/>
+<text x="720" y="470" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Leases, locks, elections</text>
+<rect x="545" y="510" width="350" height="48" rx="9" fill="#E8F6F4" stroke="#148A83" stroke-width="1.2"/>
+<text x="720" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Raft consensus</text>
+<rect x="625" y="590" width="190" height="32" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="1.5"/>
+<text x="720.0" y="612" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="middle" style="">CONSENSUS CORE</text>
+<rect x="965" y="150" width="420" height="480" rx="16" fill="#F3F6FA" stroke="#D7E0E8" stroke-width="1.5"/>
+<text x="1175" y="195" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800" fill="#7257A8" text-anchor="middle" style="">CONSUL</text>
+<rect x="1000" y="230" width="350" height="48" rx="9" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.2"/>
+<text x="1175" y="260" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Service catalog + KV</text>
+<rect x="1000" y="300" width="350" height="48" rx="9" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.2"/>
+<text x="1175" y="330" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Health checks / DNS</text>
+<rect x="1000" y="370" width="350" height="48" rx="9" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.2"/>
+<text x="1175" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Sessions + lock delay</text>
+<rect x="1000" y="440" width="350" height="48" rx="9" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.2"/>
+<text x="1175" y="470" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">LAN / WAN gossip</text>
+<rect x="1000" y="510" width="350" height="48" rx="9" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.2"/>
+<text x="1175" y="540" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#203247" text-anchor="middle" style="">Raft server state</text>
+<rect x="1080" y="590" width="190" height="32" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.5"/>
+<text x="1175.0" y="612" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#7257A8" text-anchor="middle" style="">CONSENSUS CORE</text>
+<rect x="75" y="690" width="600" height="105" rx="12" fill="#EAF2FB" stroke="#2864A6" stroke-width="1.6"/>
+<text x="91" y="715" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#2864A6" text-anchor="start" style="">COORDINATION STATE</text>
+<text x="91" y="739.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Use small, correctness-sensitive metadata: ownership, configuration,</text>
+<text x="91" y="756.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">membership, leader information.</text>
+<rect x="735" y="690" width="630" height="105" rx="12" fill="#F1EDFA" stroke="#7257A8" stroke-width="1.6"/>
+<text x="751" y="715" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#7257A8" text-anchor="start" style="">DISCOVERY / MEMBERSHIP</text>
+<text x="751" y="739.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">Consul emphasizes service catalog and health; gossip spreads membership.</text>
+<text x="751" y="756.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">ZooKeeper and etcd can support discovery patterns through their primitives.</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Stream-processing pipeline</title><desc id="desc">A broker feeds continuous operators; state, windows, checkpoints, and sinks define the processing lifecycle.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Stream-processing pipeline</text>
+<text class="subtitle" x="66" y="88">A broker feeds continuous operators; state, windows, checkpoints, and sinks define the processing lifecycle.</text>
+
+<rect x="60" y="340" width="190" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="60" y="340" width="190" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="78" y="379" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Event sources</text>
+<text x="78" y="407" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="78" dy="0">payments</tspan>
+<tspan x="78" dy="22">clicks / telemetry</tspan>
+</text>
+<rect x="330" y="340" width="205" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="330" y="340" width="205" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="348" y="379" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Message broker</text>
+<text x="348" y="407" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="348" dy="0">topics / partitions</tspan>
+<tspan x="348" dy="22">retained input</tspan>
+</text>
+<rect x="625" y="245" width="260" height="330" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="625" y="245" width="260" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="643" y="284" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Stream processor</text>
+<text x="643" y="312" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="643" dy="0">filter · map · join</tspan>
+<tspan x="643" dy="22">keyed state</tspan>
+<tspan x="643" dy="22">time windows</tspan>
+<tspan x="643" dy="22">checkpoint / recovery</tspan>
+</text>
+<rect x="980" y="170" width="185" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="980" y="170" width="185" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="998" y="209" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Alert sink</text>
+<text x="998" y="237" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="998" dy="0">fraud / rules</tspan>
+</text>
+<rect x="980" y="385" width="185" height="135" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="980" y="385" width="185" height="9" rx="5" fill="#0E8AA8" stroke="#0E8AA8" stroke-width="0"/>
+<text x="998" y="424" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Serving DB</text>
+<text x="998" y="452" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="998" dy="0">materialized views</tspan>
+</text>
+<rect x="1210" y="285" width="170" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1210" y="285" width="170" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="1228" y="324" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Data lake</text>
+<text x="1228" y="352" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1228" dy="0">raw / curated</tspan>
+</text>
+<path d="M250,412 L330,412" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M535,412 L625,412" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M885 330 H930 V237 H980" fill="none" stroke="#C17A0B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<path d="M885 440 H930 V452 H980" fill="none" stroke="#0E8AA8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1165 452 H1190 V357 H1210" fill="none" stroke="#2563EB" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="650" y="635" width="220" height="30" rx="15" fill="#F1EDFF" stroke="#7052C7" stroke-width="1.1"/>
+<text x="760.0" y="655" text-anchor="middle" style="fill:#7052C7;font-weight:700;font-size:13px">event time + watermarks</text>
+<rect x="895" y="635" width="200" height="30" rx="15" fill="#E8F7F1" stroke="#0B8A67" stroke-width="1.1"/>
+<text x="995.0" y="655" text-anchor="middle" style="fill:#0B8A67;font-weight:700;font-size:13px">state + checkpoints</text>
+<text x="720" y="735" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Broker durability, processor recovery, and sink idempotency are separate correctness boundaries.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

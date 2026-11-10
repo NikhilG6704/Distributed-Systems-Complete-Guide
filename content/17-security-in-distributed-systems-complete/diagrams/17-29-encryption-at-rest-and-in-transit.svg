@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Encryption at rest and in transit</title><desc id="desc">Protect data on persistent media and while crossing network boundaries; neither replaces authorization.</desc>
+<defs>
+ <marker id="arrow-data" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-control" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0E7490"/></marker>
+ <marker id="arrow-crypto" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7C3AED"/></marker>
+ <marker id="arrow-policy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#A16207"/></marker>
+ <marker id="arrow-threat" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C2413B"/></marker>
+ <marker id="arrow-good" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#15803D"/></marker>
+ <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#10233F" flood-opacity=".08"/></filter>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="12" fill="#17365D"/>
+<text x="64" y="68" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#17243A">17-29 · Encryption at rest and in transit</text>
+<text x="66" y="108" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" fill="#53657D">Protect data on persistent media and while crossing network boundaries; neither replaces authorization.</text>
+<line x1="64" y1="132" x2="1536" y2="132" stroke="#D9E1EC" stroke-width="2"/>
+
+<rect x="40" y="230" width="700" height="230" rx="22" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="10 8" opacity=".55"/>
+<rect x="58" y="218" width="320" height="28" rx="8" fill="#F7F9FC"/>
+<text x="68" y="238" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.2" fill="#475569">IN TRANSIT — NETWORK BOUNDARY</text>
+<rect x="1160" y="230" width="390" height="230" rx="22" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="10 8" opacity=".55"/>
+<rect x="1178" y="218" width="290" height="28" rx="8" fill="#F7F9FC"/>
+<text x="1188" y="238" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.2" fill="#475569">AT REST — STORAGE BOUNDARY</text>
+<path d="M 380.0,402.5 L 390.0,400.0 L 420.0,400.0 L 430.0,402.5" fill="none" stroke="#0F766E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-data)"/>
+<path d="M 730.0,402.5 L 740.0,400.0 L 780.0,400.0 L 790.0,402.5" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-crypto)"/>
+<path d="M 1090.0,402.5 L 1100.0,400.0 L 1180.0,400.0 L 1190.0,402.5" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-crypto)"/>
+<path d="M 1090.0,672.5 L 1100.0,670.0 L 1180.0,670.0 L 1180.0,400.0 L 1190.0,402.5" fill="none" stroke="#A16207" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" opacity=".92" marker-end="url(#arrow-policy)" stroke-dasharray="8 6"/>
+<rect x="80" y="330" width="300" height="145" rx="18" fill="#EEF2F7" stroke="#475569" stroke-width="2"/>
+<rect x="81" y="331" width="298" height="8" rx="4" fill="#475569" opacity=".9"/>
+<circle cx="104" cy="361" r="7" fill="#475569"/>
+<text x="122" y="368" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Client / service A</text>
+<text x="102" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Application plaintext</text>
+<rect x="430" y="330" width="300" height="145" rx="18" fill="#F1EBFF" stroke="#7C3AED" stroke-width="2"/>
+<rect x="431" y="331" width="298" height="8" rx="4" fill="#7C3AED" opacity=".9"/>
+<circle cx="454" cy="361" r="7" fill="#7C3AED"/>
+<text x="472" y="368" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">TLS / mTLS</text>
+<text x="452" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Encrypt bytes over network</text>
+<rect x="790" y="330" width="300" height="145" rx="18" fill="#E6F5F2" stroke="#0F766E" stroke-width="2"/>
+<rect x="791" y="331" width="298" height="8" rx="4" fill="#0F766E" opacity=".9"/>
+<circle cx="814" cy="361" r="7" fill="#0F766E"/>
+<text x="832" y="368" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Service B</text>
+<text x="812" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Decrypt inside authorized</text>
+<text x="812" y="422" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">endpoint</text>
+<rect x="1190" y="330" width="300" height="145" rx="18" fill="#F1EBFF" stroke="#7C3AED" stroke-width="2"/>
+<rect x="1191" y="331" width="298" height="8" rx="4" fill="#7C3AED" opacity=".9"/>
+<circle cx="1214" cy="361" r="7" fill="#7C3AED"/>
+<text x="1232" y="368" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">Encrypted storage</text>
+<text x="1212" y="400" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Disk / DB / object / backup</text>
+<rect x="790" y="600" width="300" height="145" rx="18" fill="#FFF5D9" stroke="#A16207" stroke-width="2"/>
+<rect x="791" y="601" width="298" height="8" rx="4" fill="#A16207" opacity=".9"/>
+<circle cx="814" cy="631" r="7" fill="#A16207"/>
+<text x="832" y="638" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#17243A">KMS / key policy</text>
+<text x="812" y="670" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15.5" fill="#53657D">Key lifecycle and access</text>
+<line x1="65" y1="870" x2="93" y2="870" stroke="#2563EB" stroke-width="4"/>
+<text x="103" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Identity / request</text>
+<line x1="350" y1="870" x2="378" y2="870" stroke="#0F766E" stroke-width="4"/>
+<text x="388" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Data flow</text>
+<line x1="635" y1="870" x2="663" y2="870" stroke="#7C3AED" stroke-width="4"/>
+<text x="673" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Crypto</text>
+<line x1="920" y1="870" x2="948" y2="870" stroke="#A16207" stroke-width="4"/>
+<text x="958" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Policy / control</text>
+<line x1="1220" y1="870" x2="1248" y2="870" stroke="#C2413B" stroke-width="4"/>
+<text x="1258" y="875" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" fill="#53657D">Threat / deny</text>
+<text x="1535" y="893" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" fill="#8290A3">CHAPTER 17 · SECURITY IN DISTRIBUTED SYSTEMS</text>
+</svg>

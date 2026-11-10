@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Kafka capacity and throughput planning</title><desc id="desc">Size producer ingress, retained bytes, replication traffic, and consumer service rate separately.</desc>
+<defs>
+ <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563EB"/></marker>
+ <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0B8A67"/></marker>
+ <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C17A0B"/></marker>
+ <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#C43D4B"/></marker>
+ <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7052C7"/></marker>
+ <style>
+  text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17263C}
+  .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+  .subtitle{font-size:15px;fill:#5F7087}
+  .panel-title{font-size:20px;font-weight:700}
+  .card-title{font-size:18px;font-weight:700}
+  .body{font-size:15px;fill:#5F7087}
+  .small{font-size:13px;fill:#5F7087}
+  .tiny{font-size:11px;fill:#5F7087}
+  .label{font-size:14px;font-weight:650}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#F5F8FC"/>
+<text class="title" x="64" y="58">Kafka capacity and throughput planning</text>
+<text class="subtitle" x="66" y="88">Size producer ingress, retained bytes, replication traffic, and consumer service rate separately.</text>
+
+<rect x="75" y="230" width="220" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="75" y="230" width="220" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="93" y="269" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Producers</text>
+<text x="93" y="297" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="93" dy="0">100k msg/s</tspan>
+<tspan x="93" dy="22">2 KB average</tspan>
+</text>
+<rect x="385" y="230" width="220" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="385" y="230" width="220" height="9" rx="5" fill="#7052C7" stroke="#7052C7" stroke-width="0"/>
+<text x="403" y="269" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Topic partitions</text>
+<text x="403" y="297" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="403" dy="0">partitioned ingress</tspan>
+<tspan x="403" dy="22">batch + compress</tspan>
+</text>
+<rect x="700" y="230" width="220" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="700" y="230" width="220" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="718" y="269" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Broker storage</text>
+<text x="718" y="297" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="718" dy="0">7-day retention</tspan>
+<tspan x="718" dy="22">replication factor 3</tspan>
+</text>
+<rect x="1015" y="230" width="220" height="145" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="1015" y="230" width="220" height="9" rx="5" fill="#0E8AA8" stroke="#0E8AA8" stroke-width="0"/>
+<text x="1033" y="269" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Consumer groups</text>
+<text x="1033" y="297" text-anchor="start" style="fill:#5F7087;font-size:15px">
+<tspan x="1033" dy="0">parallel processors</tspan>
+<tspan x="1033" dy="22">lag / service rate</tspan>
+</text>
+<path d="M295,302 L385,302" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M605,302 L700,302" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M920,302 L1015,302" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="160" y="500" width="315" height="150" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="160" y="500" width="315" height="9" rx="5" fill="#2563EB" stroke="#2563EB" stroke-width="0"/>
+<text x="178" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Ingress estimate</text>
+<text x="178" y="567" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="178" dy="0">100,000 × 2 KB = 200 MB/s</tspan>
+<tspan x="178" dy="21">≈ 17.28 TB/day logical</tspan>
+</text>
+<rect x="565" y="500" width="315" height="150" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="565" y="500" width="315" height="9" rx="5" fill="#0B8A67" stroke="#0B8A67" stroke-width="0"/>
+<text x="583" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Replica estimate</text>
+<text x="583" y="567" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="583" dy="0">Logical 7-day bytes × 3</tspan>
+<tspan x="583" dy="21">before compression / overhead</tspan>
+</text>
+<rect x="970" y="500" width="315" height="150" rx="18" fill="#FFFFFF" stroke="#CAD5E2" stroke-width="1.5"/>
+<rect x="970" y="500" width="315" height="9" rx="5" fill="#C17A0B" stroke="#C17A0B" stroke-width="0"/>
+<text x="988" y="539" text-anchor="start" style="fill:#17263C;font-weight:700;font-size:18px">Bottleneck checks</text>
+<text x="988" y="567" text-anchor="start" style="fill:#5F7087;font-size:14px">
+<tspan x="988" dy="0">disk · network · CPU · hot keys</tspan>
+<tspan x="988" dy="21">consumer throughput and lag</tspan>
+</text>
+<path d="M495 375 V435 H318 V500" fill="none" stroke="#2563EB" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-blue)"/>
+<path d="M810 375 V435 H722 V500" fill="none" stroke="#0B8A67" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-green)"/>
+<path d="M1125 375 V435 H1127 V500" fill="none" stroke="#C17A0B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-amber)"/>
+<text x="720" y="735" text-anchor="middle" style="fill:#17263C;font-weight:650;font-size:15px">Capacity is not one number: include segment/index overhead, compression variance, failure headroom, and recovery bandwidth.</text>
+<path d="M64 842 H1376" stroke="#CAD5E2" stroke-width="1"/>
+<text x="66" y="868" text-anchor="start" style="fill:#5F7087;font-size:12px">Conceptual architecture; exact behavior depends on product and configuration.</text>
+</svg>

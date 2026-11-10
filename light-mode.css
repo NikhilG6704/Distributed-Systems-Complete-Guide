@@ -1,0 +1,95 @@
+body.light{color-scheme:light;--bg:#f4f5ef;--panel:#fbfcf8;--panel2:#e9eee5;--ink:#19231a;--soft:#435044;--muted:#5d6a5d;--line:#d5ddd1;--acid:#3e641f;--acid-dim:rgba(62,100,31,.12)}
+body.light{background:var(--bg);color:var(--ink)}
+body.light .sidebar{background:#edf1e9;border-color:#d4ddd1}
+body.light .brand{color:#1c291d;border-color:#d4ddd1}
+body.light .brand small,body.light .side-label,body.light .side-label span{color:#586757}
+body.light .chapter-link{color:#374637}
+body.light .chapter-link .num{color:#62725f}
+body.light .chapter-link:hover{background:#e2e9de;color:#19231a}
+body.light .chapter-link.active{background:#dce9d0;color:#294717}
+body.light .side-bottom{border-color:#d4ddd1}
+body.light .progress-track{background:#d5ddd0}
+body.light .theme-toggle{color:#42513e}
+body.light .main-area{color:var(--ink)}
+body.light .topbar{background:rgba(244,245,239,.94);border-color:#d5ddd1;color:var(--ink)}
+body.light .breadcrumbs,body.light .breadcrumbs a{color:#556451}
+body.light .breadcrumbs span:nth-child(2){color:#8a9685}
+body.light .search-trigger,body.light .filter-wrap{background:#fbfcf8;border-color:#cbd6c8;color:#465545}
+body.light .search-trigger:hover,body.light .icon-btn:hover{background:#e7ede3;border-color:#a9b99d;color:#2e4d1e}
+body.light .icon-btn{color:#556451}
+body.light .hero-lede,body.light .article-deck{color:#435044}
+body.light .hero-stats{border-color:#d4ddd1}
+body.light .hero-stats span,body.light .eyebrow,body.light .art-caption,body.light .art-index{color:#53634f}
+body.light .eyebrow-line{background:#91a183}
+body.light .network-art{background:radial-gradient(ellipse at 53% 44%,rgba(110,143,69,.13),transparent 56%),#e9eee5;border-color:#cbd6c8}
+body.light .network-art>svg{color:#687962}
+body.light .net-lines{stroke:#6f8067;opacity:.75}
+body.light .net-nodes circle{fill:#f3f6ed;stroke:#667c55}
+body.light .net-nodes .leader{fill:#e3edcf;stroke:#52722f;filter:none}
+body.light .net-labels{fill:#32442d}
+body.light .net-labels text:nth-child(2),body.light .svg-note{fill:#526a3d}
+body.light .packet{fill:#456e22;filter:none}
+body.light .chapter-card{background:linear-gradient(145deg,#fbfcf8,#eff3ea);border-color:#d2dbcf;color:#19231a}
+body.light .chapter-card:hover{background:#e9f0e1;border-color:#8da77a}
+body.light .chapter-card h3{color:#1e2b1f}
+body.light .chapter-card p{color:#536251}
+body.light .card-top,body.light .card-arrow{color:#52654d}
+body.light .chapter-card:after{border-color:#c4d1bd;box-shadow:0 0 0 10px #f2f5ed,0 0 0 11px #c4d1bd,0 0 0 22px #f2f5ed,0 0 0 23px #c4d1bd}
+body.light .section-heading h2{color:#1d291e}
+body.light .home-footer,body.light .site-footer{color:#586656;border-color:#d5ddd1}
+body.light .filter-wrap input{color:#19231a}
+body.light .filter-wrap input::placeholder{color:#697767}
+body.light .article-kicker{color:#3e641f}
+body.light .article h1,body.light .prose h1,body.light .prose h2,body.light .prose h3,body.light .prose h4{color:#19231a}
+body.light .article-header{border-color:#d6ddd2}
+body.light .article-meta{color:#5c6a58}
+body.light .prose{color:#2f3c30}
+body.light .prose strong{color:#19231a}
+body.light .prose h2{border-color:#d6ddd2}
+body.light .prose a{color:#315d1c;text-decoration-color:#9aaa84}
+body.light .prose blockquote{background:#e9efe4;color:#374636;border-color:#587b35}
+body.light .prose code{background:#e8eee2;color:#304e21;border-color:#ccd8c5}
+body.light .prose pre{background:#202820;color:#edf1e8;border-color:#3a4739}
+body.light .prose th{background:#e5ecdf;color:#304e21}
+body.light .prose td{color:#2f3b30;border-color:#cbd5c8}
+body.light .prose th,body.light .prose hr{border-color:#cbd5c8}
+body.light .prose img{border-color:#cbd5c8;background:#fff}
+body.light .toc{border-color:#cbd6c8}
+body.light .toc-title{color:#42513e}
+body.light .toc a,body.light .toc>ul a{color:#4b5a49}
+body.light .toc a:hover,body.light .toc a.active,body.light .toc>ul a:hover{color:#315d1c;border-color:#52722f}
+body.light .toc-bottom{color:#53634f;border-color:#d5ddd1}
+body.light .chapter-nav a{border-color:#cbd6c8;color:#1e2a1f}
+body.light .chapter-nav a:hover{border-color:#7b9864;background:#edf3e8}
+body.light .chapter-nav span{color:#586956}
+body.light .search-dialog{background:#fbfcf8;border-color:#cbd6c8}
+body.light .search-box{border-color:#d4ddd1}
+body.light .search-box input{color:#19231a}
+body.light .search-result{color:#19231a}
+body.light .search-result:hover,body.light .search-result.selected{background:#e9eee5}
+body.light .search-result small{color:#53634f}
+body.light .search-result p,body.light .search-hint{color:#4a5948}
+body.light kbd{color:#52614e;border-color:#cbd6c8}
+body.light .reopen-side{background:#fbfcf8;border-color:#9cad8d;color:#315d1c}
+body.light .read-toggle{color:#566451;border-color:#bac8b4}
+body.light .read-toggle.is-read{color:#315d1c;background:#e3ecd9;border-color:#9aaf86}
+body.light .side-toggle{color:#435340;border-color:#c4d0c1}
+body.light .tool-overlay{background:rgba(24,34,23,.4)}
+body.light .tool-dialog{background:#fbfcf8;border-color:#c8d3c5;color:#19231a}
+body.light .tool-title{color:#1d291e}
+body.light .tool-subtitle{color:#52624f}
+body.light .tool-head,body.light .tool-foot{border-color:#d5ddd1}
+body.light .tool-close,body.light .tool-btn{background:#f3f6ef;border-color:#cbd6c8;color:#40513e}
+body.light .tool-close:hover,body.light .tool-btn:hover{background:#e7eee1;border-color:#9bad8a;color:#315d1c}
+body.light .tool-btn.primary{background:#3e641f;border-color:#3e641f;color:#fff}
+body.light .tool-btn.primary:hover{background:#315219}
+body.light .saved-status,body.light .tool-foot>span{color:#53634f}
+body.light .note-info{background:#edf2e9;color:#3e4e3c;border-color:#d1dccb}
+body.light .note-area{background:#fff;color:#1d291e}
+body.light .note-area::placeholder{color:#768372}
+body.light .file-preview,body.light .flow-scroll{background:#f1f4ed}
+body.light .file-text{background:#fff;color:#283729}
+body.light .file-unavailable{color:#53634f}
+body.light .file-unavailable h3{color:#1d291e}
+body.light .file-pdf{background:#e9eee5}
+body.light math[display="block"]{color:#1d291e}

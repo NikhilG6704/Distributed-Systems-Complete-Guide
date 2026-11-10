@@ -1,0 +1,35 @@
+.tool-dialog.flow-dialog,.tool-dialog.file-dialog{width:min(1080px,100%)}
+.flow-scroll{overflow:auto;padding:25px 24px 30px;background:#111612;overscroll-behavior:contain}
+.flow-svg{display:block;width:100%;min-width:700px;height:auto;max-height:58vh;color:var(--acid)}
+.flow-edge{fill:none;stroke:#809464;stroke-width:1.7;opacity:.9}
+.edge-label{fill:#9aa891;font:10px var(--mono);letter-spacing:.02em}
+.flow-packet{fill:var(--acid);filter:drop-shadow(0 0 5px #d8f36a88)}
+.flow-node rect{fill:#1b241c;stroke:#60734a;stroke-width:1.3}
+.flow-node:nth-of-type(3n) rect{stroke:#84965f}
+.flow-index{fill:#28331f;stroke:#71834f}
+.flow-number{fill:#e0f27a;font:10px var(--mono)}
+.flow-title{fill:#edf1e7;font:600 14px var(--sans)}
+.flow-detail{fill:#a2ad9b;font:10px var(--sans)}
+.state-title{fill:#e0f27a;font:600 14px var(--mono);letter-spacing:.08em}
+.state-detail{fill:#a9b4a0;font:11px var(--sans)}
+.file-preview{min-height:160px;max-height:72vh;overflow:auto;background:#111612}
+.file-text{margin:0;min-height:200px;max-height:72vh;overflow:auto;padding:23px;color:#dbe2d6;font:12px/1.65 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2}
+.file-pdf{display:block;width:100%;height:min(70vh,760px);border:0;background:#222}
+.file-media{min-height:260px;display:grid;place-items:center;padding:20px}
+.file-media img,.file-media video{max-width:100%;max-height:68vh;object-fit:contain;border-radius:5px}
+.file-media audio{width:min(520px,100%)}
+.file-audio{align-content:center;gap:18px}
+.file-symbol{font:48px var(--serif);color:var(--acid)}
+.file-unavailable{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;color:#aab3a5}
+.file-unavailable h3{font:22px var(--serif);color:var(--ink);margin:10px 0}
+.file-unavailable p{max-width:42ch;line-height:1.5}
+.flow-dialog .tool-subtitle{max-width:70ch;line-height:1.5}
+.tool-dialog.file-dialog .tool-subtitle{letter-spacing:.06em}
+body.left-closed .reopen-left,body.right-closed .reopen-right{animation:side-appear .25s ease both}
+@keyframes side-appear{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+.tool-overlay.light .file-text,.tool-overlay.light .file-preview,.tool-overlay.light .flow-scroll{background:#f6f7f1;color:#263124}
+.tool-overlay.light .flow-node rect{fill:#f1f4e9;stroke:#83976c}
+.tool-overlay.light .flow-title,.tool-overlay.light .state-title{fill:#283326}
+.tool-overlay.light .flow-detail,.tool-overlay.light .state-detail{fill:#5c6956}
+@media(max-width:620px){.flow-scroll{padding:16px 12px}.flow-svg{min-width:660px;max-height:60vh}.file-text{font-size:11px;padding:16px}.file-preview{max-height:75vh}.tool-actions{flex-wrap:wrap;justify-content:flex-end}}
+@media(prefers-reduced-motion:reduce){.flow-packet{display:none}}

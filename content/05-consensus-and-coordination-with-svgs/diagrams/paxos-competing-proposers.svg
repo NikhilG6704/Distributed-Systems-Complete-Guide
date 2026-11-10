@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Paxos: competing proposers and value preservation</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">A higher ballot can preempt a lower proposer; the higher proposer carries forward the highest accepted value in its quorum.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="95" y="150" width="300" height="70" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="245.0" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P1 • ballot 11</text>
+<rect x="560" y="150" width="300" height="70" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="710.0" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">ACCEPTORS</text>
+<rect x="1020" y="150" width="300" height="70" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1170.0" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">P2 • ballot 12</text>
+<line x1="395" y1="250" x2="560" y2="250" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="480" y="235" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="middle" style="">PREPARE(11)</text>
+<line x1="560" y1="300" x2="395" y2="300" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="480" y="285" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="middle" style="">PROMISE(11)</text>
+<line x1="395" y1="365" x2="560" y2="365" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="480" y="350" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="middle" style="">ACCEPT(11, X)</text>
+<line x1="1020" y1="430" x2="860" y2="430" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<text x="940" y="414" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="middle" style="">PREPARE(12)</text>
+<line x1="860" y1="485" x2="1020" y2="485" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="940" y="470" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#148A83" text-anchor="middle" style="">PROMISE(12, accepted X@11)</text>
+<line x1="1020" y1="550" x2="860" y2="550" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<text x="940" y="535" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="middle" style="">ACCEPT(12, X)</text>
+<rect x="70" y="610" width="610" height="120" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.6"/>
+<text x="86" y="635" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="start" style="">PREEMPTION</text>
+<text x="86" y="659.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">After promising ballot 12, an acceptor rejects P1’s later ACCEPT(11,X). P1</text>
+<text x="86" y="676.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">may be forced to retry with a higher ballot.</text>
+<rect x="735" y="610" width="635" height="120" rx="12" fill="#E8F6F4" stroke="#148A83" stroke-width="1.6"/>
+<text x="751" y="635" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="start" style="">SAFETY + LIVENESS</text>
+<text x="751" y="659.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">P2 sees accepted (11,X) in an intersecting quorum and must propose X. Repeated</text>
+<text x="751" y="676.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">preemption can still hurt liveness; a stable leader/backoff helps.</text>
+<path d="M 245 450 C 250 535, 400 535, 485 450" fill="none" stroke="#C7861A" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr-amber)"/>
+<text x="360" y="525" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#C7861A" text-anchor="middle" style="">retry / preemption loop</text>
+</svg>

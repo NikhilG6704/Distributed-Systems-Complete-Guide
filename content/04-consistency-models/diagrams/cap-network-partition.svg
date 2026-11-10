@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Network partition: competing observations">
+<defs>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/></marker>
+          <marker id="arr-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F8B78"/></marker>
+          <marker id="arr-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#24845B"/></marker>
+          <marker id="arr-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7652C8"/></marker>
+          <marker id="arr-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B96B08"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C63D4B"/></marker>
+          <marker id="arr-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5F7188"/></marker>
+          <style>
+            text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;fill:#172B4D}
+            .muted{fill:#5F7188}.bold{font-weight:700}.semibold{font-weight:600}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+          </style>
+        </defs>
+<rect x="0" y="0" width="1200" height="680" rx="0" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1200" height="82" rx="0" fill="#FFFFFF"/>
+<text x="36" y="38" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="start">Network partition: competing observations</text>
+<text x="36" y="64" font-size="14" font-weight="muted" fill="#5F7188" text-anchor="start">A partition is a communication failure; nodes may still be running and serving local clients.</text>
+<line x1="28" y1="82" x2="1172" y2="82" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<rect x="100" y="155" width="190" height="90" rx="13" fill="#FCEBED" stroke="#C63D4B" stroke-width="1.4"/>
+<text x="195.0" y="179" font-size="16" font-weight="bold" fill="#C63D4B" text-anchor="middle">Replica A</text>
+<text x="195.0" y="198" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">isolated side</text>
+<rect x="850" y="155" width="190" height="90" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="945.0" y="179" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Replica B</text>
+<text x="945.0" y="198" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">majority side</text>
+<rect x="850" y="300" width="190" height="90" rx="13" fill="#E5F6F1" stroke="#0F8B78" stroke-width="1.4"/>
+<text x="945.0" y="324" font-size="16" font-weight="bold" fill="#0F8B78" text-anchor="middle">Replica C</text>
+<text x="945.0" y="343" font-size="12" font-weight="normal" fill="#5F7188" text-anchor="middle">majority side</text>
+<line x1="600" y1="120" x2="600" y2="425" stroke="#C63D4B" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+<text x="600" y="110" font-size="15" font-weight="bold" fill="#C63D4B" text-anchor="middle">NETWORK PARTITION</text>
+<line x1="290" y1="200" x2="565" y2="200" stroke="#C63D4B" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="640" y1="200" x2="850" y2="200" stroke="#0F8B78" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<line x1="945" y1="245" x2="945" y2="300" stroke="#0F8B78" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-teal)"/>
+<rect x="55" y="440" width="520" height="150" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="55" y="440" width="7" height="150" rx="3" fill="#B96B08"/>
+<text x="73" y="468" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">AP VIEW · BOTH SIDES SERVE</text>
+<text x="73" y="492" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="73" dy="0">A accepts W1 → local value “blue”.</tspan>
+<tspan x="73" dy="18">B/C accept W2 → local value “green”.</tspan>
+<tspan x="73" dy="18">Reads can disagree until conflict resolution.</tspan>
+</text>
+<rect x="625" y="440" width="520" height="150" rx="14" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="1"/>
+<rect x="625" y="440" width="7" height="150" rx="3" fill="#2563EB"/>
+<text x="643" y="468" font-size="17" font-weight="bold" fill="#172B4D" text-anchor="start">CP VIEW · PRESERVE ORDER</text>
+<text x="643" y="492" font-size="13" font-weight="normal" fill="#5F7188" text-anchor="start">
+<tspan x="643" dy="0">A cannot prove quorum → request waits/rejects.</tspan>
+<tspan x="643" dy="18">B+C commit through majority consensus.</tspan>
+<tspan x="643" dy="18">After healing, A learns committed history.</tspan>
+</text>
+<text x="165" y="280" font-size="14" font-weight="semibold" fill="#5F7188" text-anchor="middle">Client A</text>
+<line x1="195" y1="260" x2="195" y2="245" stroke="#C63D4B" stroke-width="2" stroke-linecap="round" marker-end="url(#arr-red)"/>
+<text x="945" y="430" font-size="14" font-weight="semibold" fill="#5F7188" text-anchor="middle">Client B/C</text>
+<line x1="28" y1="645" x2="1172" y2="645" stroke="#D7E0EC" stroke-width="1" stroke-linecap="round"/>
+<text x="34" y="666" font-size="11" font-weight="muted" fill="#5F7188" text-anchor="start">Conceptual model — exact guarantees depend on protocol, configuration, and failure assumptions.</text>
+</svg>

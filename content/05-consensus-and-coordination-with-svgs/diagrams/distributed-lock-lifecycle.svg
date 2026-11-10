@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<defs>
+          <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2864A6"/></marker>
+          <marker id="arr-teal" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#148A83"/></marker>
+          <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C7861A"/></marker>
+          <marker id="arr-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C34C4C"/></marker>
+          <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7257A8"/></marker>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#142B4A" flood-opacity=".10"/></filter>
+        </defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="104" rx="0" fill="#142B4A" stroke="none" stroke-width="2"/>
+<text x="48" y="48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700" fill="#FFFFFF" text-anchor="start" style="">Distributed lock lifecycle</text>
+<text x="50" y="79" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#DCE7F2" text-anchor="start" style="">Ownership is granted by a coordination service; protected writes should carry ownership identity and fencing information.</text>
+<text x="1392" y="880" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="600" fill="#8090A0" text-anchor="end" style="">DISTRIBUTED SYSTEMS  •  CONSENSUS &amp; COORDINATION</text>
+<rect x="65" y="170" width="250" height="95" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="190.0" y="199" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#2864A6" text-anchor="middle" style="">CLIENT A</text>
+<text x="190.0" y="222.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">acquire(resource)</text>
+<rect x="570" y="150" width="300" height="130" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="720.0" y="179" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#148A83" text-anchor="middle" style="">COORDINATION SERVICE</text>
+<text x="720.0" y="202.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">lock record</text>
+<text x="720.0" y="220.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">session / lease ID</text>
+<text x="720.0" y="239.8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">TTL + owner</text>
+<rect x="1090" y="170" width="280" height="95" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="1230.0" y="199" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#7257A8" text-anchor="middle" style="">PROTECTED RESOURCE</text>
+<text x="1230.0" y="222.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#203247" text-anchor="middle" style="">validate owner / token</text>
+<line x1="315" y1="210" x2="570" y2="210" stroke="#2864A6" stroke-width="3" marker-end="url(#arr-blue)"/>
+<text x="440" y="193" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#2864A6" text-anchor="middle" style="">ACQUIRE</text>
+<line x1="570" y1="245" x2="315" y2="245" stroke="#148A83" stroke-width="3" marker-end="url(#arr-teal)"/>
+<text x="440" y="265" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#148A83" text-anchor="middle" style="">GRANT + token</text>
+<line x1="870" y1="210" x2="1090" y2="210" stroke="#7257A8" stroke-width="3" marker-end="url(#arr-purple)"/>
+<text x="980" y="193" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#7257A8" text-anchor="middle" style="">fenced write</text>
+<rect x="65" y="440" width="210" height="90" rx="16" fill="#EAF2FB" stroke="#2864A6" stroke-width="2" filter="url(#shadow)"/>
+<text x="170.0" y="469" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2864A6" text-anchor="middle" style="">WAITING</text>
+<line x1="275" y1="485" x2="325" y2="485" stroke="#2864A6" stroke-width="2" marker-end="url(#arr-blue)"/>
+<rect x="335" y="440" width="210" height="90" rx="16" fill="#E8F6F4" stroke="#148A83" stroke-width="2" filter="url(#shadow)"/>
+<text x="440.0" y="469" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#148A83" text-anchor="middle" style="">ACQUIRED</text>
+<line x1="545" y1="485" x2="595" y2="485" stroke="#148A83" stroke-width="2" marker-end="url(#arr-teal)"/>
+<rect x="605" y="440" width="210" height="90" rx="16" fill="#F1EDFA" stroke="#7257A8" stroke-width="2" filter="url(#shadow)"/>
+<text x="710.0" y="469" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7257A8" text-anchor="middle" style="">RENEWING</text>
+<line x1="815" y1="485" x2="865" y2="485" stroke="#7257A8" stroke-width="2" marker-end="url(#arr-purple)"/>
+<rect x="875" y="440" width="210" height="90" rx="16" fill="#EAF5EE" stroke="#2D8A57" stroke-width="2" filter="url(#shadow)"/>
+<text x="980.0" y="469" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2D8A57" text-anchor="middle" style="">RELEASED</text>
+<line x1="1085" y1="485" x2="1135" y2="485" stroke="#2D8A57" stroke-width="2" marker-end="url(#arr-blue)"/>
+<rect x="1145" y="440" width="210" height="90" rx="16" fill="#FBEDED" stroke="#C34C4C" stroke-width="2" filter="url(#shadow)"/>
+<text x="1250.0" y="469" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#C34C4C" text-anchor="middle" style="">EXPIRED</text>
+<text x="720" y="600" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#142B4A" text-anchor="middle" style="">acquire → grant → renew periodically → release OR lease timeout</text>
+<rect x="75" y="670" width="590" height="120" rx="12" fill="#E8F6F4" stroke="#148A83" stroke-width="1.6"/>
+<text x="91" y="695" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#148A83" text-anchor="start" style="">SESSION / LEASE ID</text>
+<text x="91" y="719.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">A lease or session lets the service expire abandoned ownership and notify</text>
+<text x="91" y="736.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">waiters. Notifications are hints; clients should re-check state.</text>
+<rect x="740" y="670" width="625" height="120" rx="12" fill="#FBEDED" stroke="#C34C4C" stroke-width="1.6"/>
+<text x="756" y="695" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#C34C4C" text-anchor="start" style="">RESOURCE-SIDE SAFETY</text>
+<text x="756" y="719.0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">The resource validates a monotonically increasing fencing token or equivalent</text>
+<text x="756" y="736.55" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">conditional version. A client’s local belief that it still owns the lock is</text>
+<text x="756" y="754.1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#203247" text-anchor="start" style="">not authoritative.</text>
+</svg>

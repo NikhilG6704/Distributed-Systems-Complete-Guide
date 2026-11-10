@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Range-based partitioning">
+<title>Range-based partitioning</title><desc>Ordered key ranges enable targeted range scans, but sequential inserts can concentrate on the newest range.</desc>
+<defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#63788D"/></marker>
+          <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#3977B8"/></marker>
+          <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#11998E"/></marker>
+          <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#E79A35"/></marker>
+          <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#D95F59"/></marker>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#19344D" flood-opacity="0.08"/></filter>
+        </defs>
+<rect width="1440" height="900" fill="#F4F7FB"/>
+<text x="56" y="54" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Range-based partitioning</text>
+<text x="56" y="86" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Ordered key ranges enable targeted range scans, but sequential inserts can concentrate on the newest range.</text>
+<line x1="56" y1="108" x2="1384" y2="108" stroke="#D7E1EA" stroke-width="2" stroke-linecap="round"/>
+<rect x="56" y="140" width="1328" height="360" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="140" width="7" height="360" rx="3" fill="#3977B8" stroke="none" stroke-width="1.5"/>
+<text x="80" y="176" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Ordered key space and ownership</text>
+<text x="80" y="201" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Half-open intervals [start, end) keep boundaries unambiguous.</text>
+<rect x="130.0" y="285" width="289.0" height="74" rx="10" fill="#E8F1FA" stroke="#3977B8" stroke-width="1.5"/>
+<text x="274.5" y="314" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">[0, 1M)</text>
+<text x="274.5" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="650" fill="#3977B8" text-anchor="middle" opacity="1" style="">Shard 1</text>
+<line x1="130.0" y1="272" x2="130.0" y2="367" stroke="#63788D" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="425.0" y="285" width="289.0" height="74" rx="10" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="569.5" y="314" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">[1M, 2M)</text>
+<text x="569.5" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="650" fill="#11998E" text-anchor="middle" opacity="1" style="">Shard 2</text>
+<line x1="425.0" y1="272" x2="425.0" y2="367" stroke="#63788D" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="720.0" y="285" width="289.0" height="74" rx="10" fill="#F0EBF8" stroke="#8064B4" stroke-width="1.5"/>
+<text x="864.5" y="314" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">[2M, 3M)</text>
+<text x="864.5" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="650" fill="#8064B4" text-anchor="middle" opacity="1" style="">Shard 3</text>
+<line x1="720.0" y1="272" x2="720.0" y2="367" stroke="#63788D" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="1015.0" y="285" width="289.0" height="74" rx="10" fill="#FFF3E2" stroke="#E79A35" stroke-width="1.5"/>
+<text x="1159.5" y="314" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">[3M, 4M)</text>
+<text x="1159.5" y="339" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="650" fill="#E79A35" text-anchor="middle" opacity="1" style="">Shard 4</text>
+<line x1="1015.0" y1="272" x2="1015.0" y2="367" stroke="#63788D" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="1310" y1="272" x2="1310" y2="367" stroke="#63788D" stroke-width="1.2" stroke-linecap="round"/>
+<text x="130" y="396" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#63788D" text-anchor="start" opacity="1" style="">LOW KEYS</text>
+<text x="1310" y="396" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#63788D" text-anchor="end" opacity="1" style="">HIGH KEYS</text>
+<rect x="1025.0" y="242" width="267.0" height="25" rx="12" fill="#FCEBE9" stroke="none" stroke-width="1.5"/>
+<text x="1162.5" y="260" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#D95F59" text-anchor="middle" opacity="1" style="">NEWEST KEYS</text>
+<line x1="1162.5" y1="269" x2="1162.5" y2="284" stroke="#D95F59" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowRed)"/>
+<text x="90" y="435" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#D95F59" text-anchor="start" opacity="1" style="">Sequential writes</text>
+<line x1="230" y1="430" x2="1162.5" y2="376" stroke="#D95F59" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowRed)"/>
+<rect x="56" y="530" width="642" height="270" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="56" y="530" width="7" height="270" rx="3" fill="#11998E" stroke="none" stroke-width="1.5"/>
+<text x="80" y="566" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Query A — contained range</text>
+<text x="80" y="591" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">A predicate entirely inside one key interval can be targeted.</text>
+<rect x="90" y="615" width="245" height="30" rx="15" fill="#E4F5F2" stroke="none" stroke-width="1.5"/>
+<text x="212.5" y="635" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#11998E" text-anchor="middle" opacity="1" style="">1,500,000 ≤ id &lt; 1,600,000</text>
+<line x1="350" y1="630" x2="510" y2="630" stroke="#11998E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+<rect x="515" y="590" width="145" height="95" rx="12" fill="#E4F5F2" stroke="#11998E" stroke-width="1.5"/>
+<text x="587.5" y="617" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 2</text>
+<text x="587.5" y="639" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="587.5" dy="0">Only destination</tspan></text>
+<text x="90" y="725" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#63788D" text-anchor="start" opacity="1" style="">One partition participates; no global merge is required.</text>
+<rect x="726" y="530" width="658" height="270" rx="18" fill="#FFFFFF" stroke="#D7E1EA" stroke-width="1.3" filter="url(#shadow)"/>
+<rect x="726" y="530" width="7" height="270" rx="3" fill="#E79A35" stroke="none" stroke-width="1.5"/>
+<text x="750" y="566" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#17324D" text-anchor="start" opacity="1" style="">Query B — crosses boundaries</text>
+<text x="750" y="591" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">A wider interval must touch every overlapping range.</text>
+<rect x="760" y="615" width="245" height="30" rx="15" fill="#FFF3E2" stroke="none" stroke-width="1.5"/>
+<text x="882.5" y="635" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="650" fill="#E79A35" text-anchor="middle" opacity="1" style="">2,500,000 ≤ id &lt; 3,500,000</text>
+<line x1="1018" y1="630" x2="1085" y2="630" stroke="#E79A35" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowOrange)"/>
+<rect x="1090" y="580" width="116" height="95" rx="12" fill="#F0EBF8" stroke="#8064B4" stroke-width="1.5"/>
+<text x="1148.0" y="607" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 3</text>
+<text x="1148.0" y="629" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1148.0" dy="0">Local scan</tspan></text>
+<rect x="1220" y="580" width="116" height="95" rx="12" fill="#FFF3E2" stroke="#E79A35" stroke-width="1.5"/>
+<text x="1278.0" y="607" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#17324D" text-anchor="middle" opacity="1" style="">Shard 4</text>
+<text x="1278.0" y="629" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="450" fill="#63788D" text-anchor="middle"><tspan x="1278.0" dy="0">Local scan</tspan></text>
+<text x="760" y="725" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="500" fill="#63788D" text-anchor="start" opacity="1" style="">Coordinator merges results in key order.</text>
+<text x="56" y="876" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#63788D" text-anchor="start" opacity="1" style="">Range partitioning preserves key order; split boundaries and sequential-write mitigation must be designed together.</text>
+</svg>
